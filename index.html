@@ -514,6 +514,7 @@ function renderCard(p) {
         ${spreadStr ? `<span class="tag tag-spread">Spread: ${spreadStr}</span>` : ''}
       </div>
       <div class="card-actions">
+        ${p.url ? `<button class="btn-view" onclick="window.open('${p.url}','_blank')">🔗 View</button>` : ''}
         <button class="btn-edit" onclick="openEditModal('${p.id}')">✏️ Edit</button>
         <button class="btn-delete" onclick="deleteProperty('${p.id}')">🗑️</button>
       </div>
