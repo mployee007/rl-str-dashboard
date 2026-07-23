@@ -17,7 +17,9 @@
     "estMonthly": 3600,
     "estSpread": 1600,
     "address": "Austin, TX",
-    "zip": ""
+    "zip": "",
+    "revenue": 3600,
+    "spread": 1600
   },
   {
     "id": "p2",
@@ -37,7 +39,9 @@
     "estMonthly": 5850,
     "estSpread": 3355,
     "address": "Austin, TX",
-    "zip": ""
+    "zip": "",
+    "revenue": 5850,
+    "spread": 3355
   },
   {
     "id": "p3",
@@ -57,7 +61,9 @@
     "estMonthly": 4500,
     "estSpread": 2608,
     "address": "Nashville, TN",
-    "zip": ""
+    "zip": "",
+    "revenue": 4500,
+    "spread": 2608
   },
   {
     "id": "p4",
@@ -77,7 +83,9 @@
     "estMonthly": 2800,
     "estSpread": 1380,
     "address": "Columbus, OH",
-    "zip": ""
+    "zip": "",
+    "revenue": 2800,
+    "spread": 1380
   },
   {
     "id": "p5",
@@ -97,7 +105,9 @@
     "estMonthly": 4800,
     "estSpread": 2371,
     "address": "Orlando, FL",
-    "zip": ""
+    "zip": "",
+    "revenue": 4800,
+    "spread": 2371
   },
   {
     "id": "p6",
@@ -117,7 +127,9 @@
     "estMonthly": 4500,
     "estSpread": 2146,
     "address": "Phoenix, AZ",
-    "zip": ""
+    "zip": "",
+    "revenue": 4500,
+    "spread": 2146
   },
   {
     "id": "p7",
@@ -137,7 +149,9 @@
     "estMonthly": 3500,
     "estSpread": 1685,
     "address": "Atlanta, GA",
-    "zip": ""
+    "zip": "",
+    "revenue": 3500,
+    "spread": 1685
   },
   {
     "id": "p8",
@@ -157,7 +171,9 @@
     "estMonthly": 2700,
     "estSpread": 1065,
     "address": "Memphis, TN",
-    "zip": ""
+    "zip": "",
+    "revenue": 2700,
+    "spread": 1065
   },
   {
     "id": "p9",
@@ -177,7 +193,9 @@
     "estMonthly": 2800,
     "estSpread": 1155,
     "address": "Kansas City, MO",
-    "zip": ""
+    "zip": "",
+    "revenue": 2800,
+    "spread": 1155
   },
   {
     "id": "p10",
@@ -197,7 +215,9 @@
     "estMonthly": 3000,
     "estSpread": 1186,
     "address": "San Antonio, TX",
-    "zip": ""
+    "zip": "",
+    "revenue": 3000,
+    "spread": 1186
   },
   {
     "id": "p11",
@@ -217,7 +237,9 @@
     "estMonthly": 3200,
     "estSpread": 1334,
     "address": "Charlotte, NC",
-    "zip": ""
+    "zip": "",
+    "revenue": 3200,
+    "spread": 1334
   },
   {
     "id": "p12",
@@ -237,7 +259,9 @@
     "estMonthly": 3800,
     "estSpread": 1344,
     "address": "Tampa, FL",
-    "zip": ""
+    "zip": "",
+    "revenue": 3800,
+    "spread": 1344
   },
   {
     "id": "p13",
@@ -257,7 +281,9 @@
     "estMonthly": 3500,
     "estSpread": 1700,
     "address": "Gulf Shores, AL",
-    "zip": ""
+    "zip": "",
+    "revenue": 3500,
+    "spread": 1700
   },
   {
     "id": "mem-001",
@@ -277,7 +303,9 @@
     "estMonthly": 2520,
     "estSpread": 1783,
     "status": "Research",
-    "notes": "Cheapest 2BR in Memphis. Tourists come for Graceland, Beale St. Low entry cost."
+    "notes": "Cheapest 2BR in Memphis. Tourists come for Graceland, Beale St. Low entry cost.",
+    "revenue": 2520,
+    "spread": 1783
   },
   {
     "id": "mgm-001",
@@ -297,7 +325,9 @@
     "estMonthly": 2310,
     "estSpread": 1461,
     "status": "Research",
-    "notes": "Renovated units. Montgomery has state govt + civil rights tourism. Thin STR demand."
+    "notes": "Renovated units. Montgomery has state govt + civil rights tourism. Thin STR demand.",
+    "revenue": 2310,
+    "spread": 1461
   },
   {
     "id": "srq-001",
@@ -317,7 +347,9 @@
     "estMonthly": 4200,
     "estSpread": 2705,
     "status": "Research",
-    "notes": "Beach proximity. High STR demand in Sarasota area. RentZestimate $1,456."
+    "notes": "Beach proximity. High STR demand in Sarasota area. RentZestimate $1,456.",
+    "revenue": 4200,
+    "spread": 2705
   },
   {
     "id": "mia-001",
@@ -337,7 +369,9 @@
     "estMonthly": 5250,
     "estSpread": 2990,
     "status": "Research",
-    "notes": "Miami Gardens near Miami Beach. Very high STR demand but strict regs. Premium pricing."
+    "notes": "Miami Gardens near Miami Beach. Very high STR demand but strict regs. Premium pricing.",
+    "revenue": 5250,
+    "spread": 2990
   },
   {
     "id": "tlh-001",
@@ -357,7 +391,9 @@
     "estMonthly": 3150,
     "estSpread": 1701,
     "status": "Research",
-    "notes": "FSU + state govt demand. Steady year-round occupancy. Good for college sports season."
+    "notes": "FSU + state govt demand. Steady year-round occupancy. Good for college sports season.",
+    "revenue": 3150,
+    "spread": 1701
   },
   {
     "id": "shv-001",
@@ -377,7 +413,9 @@
     "estMonthly": 2100,
     "estSpread": 1210,
     "status": "Research",
-    "notes": "Low entry cost. Casino tourism. Limited STR upside. Backup market."
+    "notes": "Low entry cost. Casino tourism. Limited STR upside. Backup market.",
+    "revenue": 2100,
+    "spread": 1210
   },
   {
     "id": "wac-001",
@@ -397,7 +435,9 @@
     "estMonthly": 3675,
     "estSpread": 2676,
     "status": "Research",
-    "notes": "Magnolia/Silos tourism drives STR demand. Baylor game days. TX-friendly STR laws."
+    "notes": "Magnolia/Silos tourism drives STR demand. Baylor game days. TX-friendly STR laws.",
+    "revenue": 3675,
+    "spread": 2676
   },
   {
     "id": "phx-001",
@@ -417,7 +457,9 @@
     "estMonthly": 4200,
     "estSpread": 2876,
     "status": "Research",
-    "notes": "Spring training + snowbirds. AZ protects STR rights. Year-round tourism."
+    "notes": "Spring training + snowbirds. AZ protects STR rights. Year-round tourism.",
+    "revenue": 4200,
+    "spread": 2876
   },
   {
     "id": "jot-001",
@@ -437,7 +479,9 @@
     "estMonthly": 5250,
     "estSpread": 3952,
     "status": "Research",
-    "notes": "Premium STR rates in Joshua Tree area. CA has strict regs but high nightly rates offset."
+    "notes": "Premium STR rates in Joshua Tree area. CA has strict regs but high nightly rates offset.",
+    "revenue": 5250,
+    "spread": 3952
   },
   {
     "id": "tac-001",
@@ -457,7 +501,9 @@
     "estMonthly": 3150,
     "estSpread": 1500,
     "status": "Research",
-    "notes": "WA has STR restrictions in some areas. Tacoma benefits from proximity to Seattle/MT Rainier."
+    "notes": "WA has STR restrictions in some areas. Tacoma benefits from proximity to Seattle/MT Rainier.",
+    "revenue": 3150,
+    "spread": 1500
   },
   {
     "id": "tul-001",
@@ -477,7 +523,9 @@
     "estMonthly": 2520,
     "estSpread": 1545,
     "status": "Research",
-    "notes": "Low cost. Oil/gas business travel. Tulsa has improving STR market."
+    "notes": "Low cost. Oil/gas business travel. Tulsa has improving STR market.",
+    "revenue": 2520,
+    "spread": 1545
   },
   {
     "id": "col-001",
@@ -497,7 +545,9 @@
     "estMonthly": 3360,
     "estSpread": 1950,
     "status": "Research",
-    "notes": "OSU football game days + business travel. Ohio State drives huge STR demand. No state restrictions."
+    "notes": "OSU football game days + business travel. Ohio State drives huge STR demand. No state restrictions.",
+    "revenue": 3360,
+    "spread": 1950
   },
   {
     "id": "cin-001",
@@ -517,7 +567,9 @@
     "estMonthly": 3255,
     "estSpread": 2157,
     "status": "Research",
-    "notes": "Cheapest 2BR found. Strong spread potential. Bengals/Reds game days. River tourism."
+    "notes": "Cheapest 2BR found. Strong spread potential. Bengals/Reds game days. River tourism.",
+    "revenue": 3255,
+    "spread": 2157
   },
   {
     "id": "pit-001",
@@ -537,7 +589,9 @@
     "estMonthly": 3255,
     "estSpread": 2235,
     "status": "Research",
-    "notes": "Low entry cost. Steelers/Penguins games. Strong medical tourism. Good spread."
+    "notes": "Low entry cost. Steelers/Penguins games. Strong medical tourism. Good spread.",
+    "revenue": 3255,
+    "spread": 2235
   },
   {
     "id": "wil-001",
@@ -557,7 +611,9 @@
     "estMonthly": 3780,
     "estSpread": 2285,
     "status": "Research",
-    "notes": "Beach town + UNC Wilmington. NC allows STRs. Great summer season."
+    "notes": "Beach town + UNC Wilmington. NC allows STRs. Great summer season.",
+    "revenue": 3780,
+    "spread": 2285
   },
   {
     "id": "gsp-001",
@@ -577,7 +633,9 @@
     "estMonthly": 3255,
     "estSpread": 2156,
     "status": "Research",
-    "notes": "Fast-growing market. Falls Park tourism. BMW corporate travel. SC-friendly STR laws."
+    "notes": "Fast-growing market. Falls Park tourism. BMW corporate travel. SC-friendly STR laws.",
+    "revenue": 3255,
+    "spread": 2156
   },
   {
     "id": "sav-001",
@@ -597,6 +655,8 @@
     "estMonthly": 3885,
     "estSpread": 2561,
     "status": "Research",
-    "notes": "Historic tourism drives STR demand. St. Patrick's Day huge. GA-friendly STR laws."
+    "notes": "Historic tourism drives STR demand. St. Patrick's Day huge. GA-friendly STR laws.",
+    "revenue": 3885,
+    "spread": 2561
   }
 ]
