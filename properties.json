@@ -302,7 +302,7 @@
     "estNightly": 120,
     "estMonthly": 2520,
     "estSpread": 1783,
-    "status": "Research",
+    "status": "research",
     "notes": "Cheapest 2BR in Memphis. Tourists come for Graceland, Beale St. Low entry cost.",
     "revenue": 2520,
     "spread": 1783
@@ -324,7 +324,7 @@
     "estNightly": 110,
     "estMonthly": 2310,
     "estSpread": 1461,
-    "status": "Research",
+    "status": "research",
     "notes": "Renovated units. Montgomery has state govt + civil rights tourism. Thin STR demand.",
     "revenue": 2310,
     "spread": 1461
@@ -346,7 +346,7 @@
     "estNightly": 200,
     "estMonthly": 4200,
     "estSpread": 2705,
-    "status": "Research",
+    "status": "research",
     "notes": "Beach proximity. High STR demand in Sarasota area. RentZestimate $1,456.",
     "revenue": 4200,
     "spread": 2705
@@ -368,7 +368,7 @@
     "estNightly": 250,
     "estMonthly": 5250,
     "estSpread": 2990,
-    "status": "Research",
+    "status": "research",
     "notes": "Miami Gardens near Miami Beach. Very high STR demand but strict regs. Premium pricing.",
     "revenue": 5250,
     "spread": 2990
@@ -390,7 +390,7 @@
     "estNightly": 150,
     "estMonthly": 3150,
     "estSpread": 1701,
-    "status": "Research",
+    "status": "research",
     "notes": "FSU + state govt demand. Steady year-round occupancy. Good for college sports season.",
     "revenue": 3150,
     "spread": 1701
@@ -412,7 +412,7 @@
     "estNightly": 100,
     "estMonthly": 2100,
     "estSpread": 1210,
-    "status": "Research",
+    "status": "research",
     "notes": "Low entry cost. Casino tourism. Limited STR upside. Backup market.",
     "revenue": 2100,
     "spread": 1210
@@ -434,7 +434,7 @@
     "estNightly": 175,
     "estMonthly": 3675,
     "estSpread": 2676,
-    "status": "Research",
+    "status": "research",
     "notes": "Magnolia/Silos tourism drives STR demand. Baylor game days. TX-friendly STR laws.",
     "revenue": 3675,
     "spread": 2676
@@ -456,7 +456,7 @@
     "estNightly": 200,
     "estMonthly": 4200,
     "estSpread": 2876,
-    "status": "Research",
+    "status": "research",
     "notes": "Spring training + snowbirds. AZ protects STR rights. Year-round tourism.",
     "revenue": 4200,
     "spread": 2876
@@ -478,7 +478,7 @@
     "estNightly": 250,
     "estMonthly": 5250,
     "estSpread": 3952,
-    "status": "Research",
+    "status": "research",
     "notes": "Premium STR rates in Joshua Tree area. CA has strict regs but high nightly rates offset.",
     "revenue": 5250,
     "spread": 3952
@@ -500,7 +500,7 @@
     "estNightly": 150,
     "estMonthly": 3150,
     "estSpread": 1500,
-    "status": "Research",
+    "status": "research",
     "notes": "WA has STR restrictions in some areas. Tacoma benefits from proximity to Seattle/MT Rainier.",
     "revenue": 3150,
     "spread": 1500
@@ -522,7 +522,7 @@
     "estNightly": 120,
     "estMonthly": 2520,
     "estSpread": 1545,
-    "status": "Research",
+    "status": "research",
     "notes": "Low cost. Oil/gas business travel. Tulsa has improving STR market.",
     "revenue": 2520,
     "spread": 1545
@@ -544,7 +544,7 @@
     "estNightly": 160,
     "estMonthly": 3360,
     "estSpread": 1950,
-    "status": "Research",
+    "status": "research",
     "notes": "OSU football game days + business travel. Ohio State drives huge STR demand. No state restrictions.",
     "revenue": 3360,
     "spread": 1950
@@ -566,7 +566,7 @@
     "estNightly": 155,
     "estMonthly": 3255,
     "estSpread": 2157,
-    "status": "Research",
+    "status": "research",
     "notes": "Cheapest 2BR found. Strong spread potential. Bengals/Reds game days. River tourism.",
     "revenue": 3255,
     "spread": 2157
@@ -588,7 +588,7 @@
     "estNightly": 155,
     "estMonthly": 3255,
     "estSpread": 2235,
-    "status": "Research",
+    "status": "research",
     "notes": "Low entry cost. Steelers/Penguins games. Strong medical tourism. Good spread.",
     "revenue": 3255,
     "spread": 2235
@@ -610,7 +610,7 @@
     "estNightly": 180,
     "estMonthly": 3780,
     "estSpread": 2285,
-    "status": "Research",
+    "status": "research",
     "notes": "Beach town + UNC Wilmington. NC allows STRs. Great summer season.",
     "revenue": 3780,
     "spread": 2285
@@ -632,7 +632,7 @@
     "estNightly": 155,
     "estMonthly": 3255,
     "estSpread": 2156,
-    "status": "Research",
+    "status": "research",
     "notes": "Fast-growing market. Falls Park tourism. BMW corporate travel. SC-friendly STR laws.",
     "revenue": 3255,
     "spread": 2156
@@ -654,7 +654,7 @@
     "estNightly": 185,
     "estMonthly": 3885,
     "estSpread": 2561,
-    "status": "Research",
+    "status": "research",
     "notes": "Historic tourism drives STR demand. St. Patrick's Day huge. GA-friendly STR laws.",
     "revenue": 3885,
     "spread": 2561
