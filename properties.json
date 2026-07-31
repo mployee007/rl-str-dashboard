@@ -607,5 +607,43 @@
     "spread": 2395,
     "status": "research",
     "notes": "Historic district. Walking distance to River St."
+  },
+  {
+    "id": "hol-001",
+    "name": "Harding Furnished House",
+    "address": "Harding near 22nd Ave, Hollywood, FL 33020",
+    "city": "Hollywood",
+    "state": "FL",
+    "zip": "33020",
+    "rent": 1800,
+    "beds": 2,
+    "baths": 1,
+    "sqft": 1100,
+    "url": "https://www.craigslist.org/view/d/hollywood-furnished-house/663LsLxE4KdomXNnG4uc9T",
+    "zpid": "",
+    "estNightly": 200,
+    "revenue": 3600,
+    "spread": 1800,
+    "status": "review",
+    "notes": "Craigslist follow-up. Furnished house. Water, electric, fast internet, and maintenance included. Washer/dryer, brand new central AC, private parking/carport, 7 minutes from the beach. About a month old when reviewed; broadened coastal-strip candidate outside original Fort Lauderdale ZIPs."
+  },
+  {
+    "id": "dan-001",
+    "name": "Dania 2/2 Monthly Furnished",
+    "address": "Dania, FL",
+    "city": "Dania",
+    "state": "FL",
+    "zip": "",
+    "rent": 2900,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1000,
+    "url": "https://www.craigslist.org/view/d/dania-2-for-rent-monthly-no-lease/svXCDQbqYZxVHkiXUReHPe",
+    "zpid": "",
+    "estNightly": 220,
+    "revenue": 3960,
+    "spread": 1060,
+    "status": "review",
+    "notes": "Craigslist follow-up. Furnished 2/2 monthly rental with in-unit washer/dryer, carport, AC, wheelchair access, and EV charging. About a month old when reviewed. Important caveat: listing says available now only from July to 11 August, so treat as short-window follow-up rather than stable long-term arbitrage inventory."
   }
 ]
