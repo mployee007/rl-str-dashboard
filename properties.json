@@ -624,8 +624,8 @@
     "estNightly": 200,
     "revenue": 3600,
     "spread": 1800,
-    "status": "review",
-    "notes": "Craigslist follow-up. Furnished house. Water, electric, fast internet, and maintenance included. Washer/dryer, brand new central AC, private parking/carport, 7 minutes from the beach. About a month old when reviewed; broadened coastal-strip candidate outside original Fort Lauderdale ZIPs."
+    "status": "contacted",
+    "notes": "Craigslist follow-up. Furnished house. Water, electric, fast internet, and maintenance included. Washer/dryer, brand new central AC, private parking/carport, 7 minutes from the beach. Craigslist relay email extracted and outreach sent 2026-07-31T19:06:15Z to Mr. Acosta via relay; awaiting reply on hold/start date and written approval for guest-use/sublease terms."
   },
   {
     "id": "dan-001",
@@ -644,6 +644,6 @@
     "revenue": 3960,
     "spread": 1060,
     "status": "review",
-    "notes": "Craigslist follow-up. Furnished 2/2 monthly rental with in-unit washer/dryer, carport, AC, wheelchair access, and EV charging. About a month old when reviewed. Important caveat: listing says available now only from July to 11 August, so treat as short-window follow-up rather than stable long-term arbitrage inventory."
+    "notes": "Craigslist follow-up. Furnished 2/2 monthly rental with in-unit washer/dryer, carport, AC, wheelchair access, and EV charging. About a month old when reviewed. Contact path remains Craigslist reply only; no direct phone/email exposed, and relay address stayed gated behind hCaptcha. Next step is manual browser reply if this short-window lead is still worth pursuing."
   }
 ]
