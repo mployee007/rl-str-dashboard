@@ -247,6 +247,35 @@
   }
   .form-group textarea { min-height: 110px; resize: vertical; }
   .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .detail-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    background: rgba(255,255,255,0.02);
+  }
+  .detail-card.full { grid-column: 1 / -1; }
+  .detail-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .detail-value {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.45;
+  }
+  .detail-link {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .detail-link:hover { text-decoration: underline; }
   .toast {
     position: fixed;
     bottom: 20px;
@@ -374,6 +403,16 @@
       <div class="modal-actions">
         <button class="btn" onclick="closeModal()">Cancel</button>
         <button class="btn btn-primary" onclick="saveProperty()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal">
+      <h2 id="detailsTitle">Property details</h2>
+      <div class="details-grid" id="detailsGrid"></div>
+      <div class="modal-actions">
+        <button class="btn" onclick="closeDetailsModal()">Close</button>
       </div>
     </div>
   </div>
@@ -521,7 +560,7 @@ function renderCard(p) {
       </div>
       ${p.notes ? `<div class="card-notes">${escapeHtml(p.notes)}</div>` : ''}
       <div class="card-actions">
-        ${p.url ? `<button onclick="window.open(${JSON.stringify(p.url)}, '_blank')">🔗 View</button>` : ''}
+        <button onclick="openDetailsModal(${JSON.stringify(p.id)})">🔎 Details</button>
         <button ${canEdit ? '' : 'disabled'} onclick="openEditModal(${JSON.stringify(p.id)})">✏️ Edit</button>
         <button class="btn-delete" ${canEdit ? '' : 'disabled'} onclick="deleteProperty(${JSON.stringify(p.id)})">🗑️</button>
       </div>
@@ -607,6 +646,47 @@ function openEditModal(id) {
   document.getElementById('fSqft').value = p.sqft || '';
   document.getElementById('fEstNightly').value = p.estNightly || '';
   document.getElementById('modal').classList.add('show');
+}
+
+function renderDetailField(label, value, { full = false, isHtml = false } = {}) {
+  const display = value === undefined || value === null || value === '' ? '—' : value;
+  return `
+    <div class="detail-card ${full ? 'full' : ''}">
+      <div class="detail-label">${escapeHtml(label)}</div>
+      <div class="detail-value">${isHtml ? display : escapeHtml(display)}</div>
+    </div>
+  `;
+}
+
+function openDetailsModal(id) {
+  const p = properties.find(x => x.id === id);
+  if (!p) return showToast('Property not found');
+  document.getElementById('detailsTitle').textContent = p.name || 'Property details';
+  const address = [p.address, p.city, p.state, p.zip].filter(Boolean).join(', ');
+  const sourceLink = p.url
+    ? `<a class="detail-link" href="${escapeHtml(p.url)}" target="_blank" rel="noopener noreferrer">Open original listing</a>`
+    : '—';
+  document.getElementById('detailsGrid').innerHTML = [
+    renderDetailField('Status', p.status || 'research'),
+    renderDetailField('City / State', [p.city, p.state].filter(Boolean).join(', ')),
+    renderDetailField('Address', address, { full: true }),
+    renderDetailField('Rent', fmtMoney(p.rent, '/mo')),
+    renderDetailField('Revenue', fmtMoney(p.revenue)),
+    renderDetailField('Spread', fmtMoney(p.spread)),
+    renderDetailField('Estimated nightly', fmtMoney(p.estNightly)),
+    renderDetailField('Beds', p.beds || ''),
+    renderDetailField('Baths', p.baths || ''),
+    renderDetailField('Sqft', p.sqft || ''),
+    renderDetailField('ZPID', p.zpid || ''),
+    renderDetailField('Property ID', p.id || ''),
+    renderDetailField('Listing URL', sourceLink, { full: true, isHtml: true }),
+    renderDetailField('Notes', p.notes || '', { full: true }),
+  ].join('');
+  document.getElementById('detailsModal').classList.add('show');
+}
+
+function closeDetailsModal() {
+  document.getElementById('detailsModal').classList.remove('show');
 }
 
 function closeModal() {
