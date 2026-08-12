@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "type": "property_lookup",
+      "address": "4737 Kernan Mill Ln E, Jacksonville, FL 32224",
+      "zpid": "44609108",
+      "facts": {
+        "price": 2910,
+        "beds": 3,
+        "baths": 2,
+        "homeStatus": "FOR_RENT"
+      }
+    },
+    {
+      "type": "zestimate",
+      "url": "mcp_zillapi_get_zestimate:44609108",
+      "facts": {
+        "zestimate": 402500,
+        "rent_zestimate": 3328,
+        "last_sold_price": 415279
+      }
+    },
+    {
+      "type": "nearby_rent_comps",
+      "url": "mcp_zillapi_search_listings bbox -81.5007,30.2244,-81.4406,30.2845",
+      "facts": {
+        "count_filtered": 10
+      }
+    },
+    {
+      "type": "regulation",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0509/Sections/0509.032.html",
+      "facts": {
+        "clause": "A local law, ordinance, or regulation may not prohibit vacation rentals or regulate the duration or frequency of rental of vacation rentals."
+      }
+    },
+    {
+      "type": "tax",
+      "url": "https://taxcollector.coj.net/taxes/convention-tourist-development-tax-(short-term-rentals)",
+      "facts": {
+        "tdt": 6.0,
+        "state_sales_tax": 7.5,
+        "combined_transient_tax": 13.5
+      }
+    },
+    {
+      "type": "business_tax",
+      "url": "https://taxcollector.coj.net/taxes/local-business-tax",
+      "facts": {
+        "lbtr_required": true
+      }
+    },
+    {
+      "type": "airbnb_comp_search",
+      "url": "https://www.airbnb.com/s/Jacksonville--FL/homes?place_id=ChIJi_4xhY5w54gRnjw_1uoGhOM&property_type_id%5B%5D=2&room_types%5B%5D=Entire%20home%2Fapt&adults=6&checkin=2026-09-15&checkout=2026-09-18",
+      "facts": {
+        "captured_visible_3br_comp_totals": [
+          774,
+          847,
+          813,
+          1190
+        ]
+      }
+    }
+  ],
+  "generated_at": "2026-08-01T19:54:03.096572Z"
+}

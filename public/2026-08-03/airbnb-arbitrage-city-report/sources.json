@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "type": "file",
+      "path": "/opt/data/outputs/2026-07-17/str-friendly-high-income-markets/arbitrage-report.md",
+      "note": "Prior Airbnb arbitrage city report used for Nashville and Columbus baseline ADR ranges."
+    },
+    {
+      "type": "listing",
+      "market": "Nashville",
+      "url": "https://www.craigslist.org/view/d/nashville-modern-bed-bath-home-in/1I8B1QaP8RGe-eFy8rx0PQ"
+    },
+    {
+      "type": "listing",
+      "market": "Nashville",
+      "url": "https://www.craigslist.org/view/d/nashville-townhouse-bedrooms-full-bath/uSbF6ycudoBKjB5XVoAVKh"
+    },
+    {
+      "type": "listing",
+      "market": "Nashville",
+      "url": "https://www.craigslist.org/view/d/nashville-middle-of-down-town-fully/QNN2xT2O8RG7h93OWPm3-Q"
+    },
+    {
+      "type": "listing",
+      "market": "Nashville",
+      "url": "https://www.craigslist.org/view/d/nashville-3bed-25bath-for-rent/q2tR68rWvxWmZAdxART3WC"
+    },
+    {
+      "type": "listing",
+      "market": "Columbus",
+      "url": "https://www.craigslist.org/view/d/columbus-furnished-ranch-in-dublin-with/eiCbS7KN8RG3g-B_VNs3Hw"
+    },
+    {
+      "type": "listing",
+      "market": "Columbus",
+      "url": "https://www.craigslist.org/view/d/columbus-beautiful-spacious-townhome/DFIy18-E8RGUJJuFMdKVgg"
+    },
+    {
+      "type": "listing",
+      "market": "Columbus",
+      "url": "https://www.craigslist.org/view/d/columbus-8th-ave-bedroom-full-baths/jRhbaSRpNaqcEFomksATcg"
+    }
+  ]
+}

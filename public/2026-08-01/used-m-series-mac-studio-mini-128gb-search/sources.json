@@ -1,0 +1,57 @@
+{
+  "sources": [
+    {
+      "title": "Swappa Mac Studio 2025 listings",
+      "url": "https://swappa.com/listings/mac-studio-2024",
+      "note": "Accessible live listing page; observed 17 listings with 128GB, 256GB, and higher configurations. Cheapest 128GB+ listing observed at $6,953."
+    },
+    {
+      "title": "Swappa Mac Studio 2023 listings",
+      "url": "https://swappa.com/listings/mac-studio-2023",
+      "note": "Accessible page; memory filter includes 128GB and 192GB but no active live inventory shown during session."
+    },
+    {
+      "title": "Swappa Mac Studio 2022 listings",
+      "url": "https://swappa.com/listings/mac-studio",
+      "note": "Accessible page; memory filter includes 128GB, but live inventory shown during session was 32GB and 64GB only."
+    },
+    {
+      "title": "Apple Refurbished Mac",
+      "url": "https://www.apple.com/shop/refurbished/mac",
+      "note": "Mac Studio filter appears disabled / no refurb Mac Studio inventory visible during session."
+    },
+    {
+      "title": "OWC Used Macs",
+      "url": "https://eshop.macsales.com/shop/Apple_Systems/Used/Macs_and_Tablets",
+      "note": "Mac Studio tile showed sold out during session."
+    },
+    {
+      "title": "Apple Mac mini tech specs",
+      "url": "https://www.apple.com/mac-mini/specs/",
+      "note": "Official current-generation context; Mac mini not part of the 128GB+ cheapest Mac Studio sweep, but previously checked for capability."
+    },
+    {
+      "title": "Apple Mac Studio tech specs",
+      "url": "https://www.apple.com/mac-studio/specs/",
+      "note": "Official current-generation context for current Mac Studio lineup."
+    }
+  ],
+  "blocked_sources": [
+    {
+      "title": "eBay",
+      "note": "Interruption / anti-bot challenge during session; unable to verify live listings directly."
+    },
+    {
+      "title": "B&H Photo",
+      "note": "Cloudflare security verification during session; unable to verify live listings directly."
+    },
+    {
+      "title": "Back Market",
+      "note": "Returned empty / unusable page in browser during session."
+    },
+    {
+      "title": "Generic Bing and DuckDuckGo search",
+      "note": "Search quality degraded by irrelevant Mac cosmetics/Apple results and occasional anti-bot challenges, so results were not used as verification."
+    }
+  ]
+}

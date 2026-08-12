@@ -1,0 +1,104 @@
+{
+  "sources": [
+    {
+      "name": "ServerMonkey homepage (Bing result snippet)",
+      "url": "https://www.servermonkey.com/",
+      "note": "Snippet says used/refurbished Dell and HPE servers."
+    },
+    {
+      "name": "ServerMonkey servers page (Bing result snippet)",
+      "url": "https://www.servermonkey.com/servers.html",
+      "note": "Snippet says new and refurbished servers."
+    },
+    {
+      "name": "ServerMonkey eBay store snippet",
+      "url": "https://www.ebay.com/str/servermonkey",
+      "note": "Snippet says Houston area and specializes in new/refurbished servers and networking equipment."
+    },
+    {
+      "name": "TechMikeNY homepage",
+      "url": "https://techmikeny.com/",
+      "note": "Direct fetch: title/meta explicitly mention refurbished and used servers."
+    },
+    {
+      "name": "TechMikeNY about page",
+      "url": "https://techmikeny.com/about-us",
+      "note": "Direct fetch: Brooklyn garage in 2004."
+    },
+    {
+      "name": "TechMikeNY support/contact page",
+      "url": "https://techmikeny.com/support-center?getConnected=true",
+      "note": "Direct fetch: email and phone."
+    },
+    {
+      "name": "The Server Store homepage",
+      "url": "https://www.theserverstore.com/",
+      "note": "Direct fetch: used & refurbished servers title/meta."
+    },
+    {
+      "name": "The Server Store about page",
+      "url": "https://www.theserverstore.com/about-us/",
+      "note": "Direct fetch: Texas warehouse / DFW metroplex."
+    },
+    {
+      "name": "UNIXSurplus homepage",
+      "url": "https://unixsurplus.com/",
+      "note": "Direct fetch: refurbished server and storage solutions."
+    },
+    {
+      "name": "UNIXSurplus about page",
+      "url": "https://unixsurplus.com/about-us",
+      "note": "Direct fetch: Sunnyvale address and B2B positioning."
+    },
+    {
+      "name": "UNIXSurplus contact page",
+      "url": "https://unixsurplus.com/contact-us/",
+      "note": "Direct fetch: email, phone, address."
+    },
+    {
+      "name": "IT Creations homepage",
+      "url": "https://www.itcreations.com/",
+      "note": "Direct fetch: enterprise server/workstation distributor; refurbished options referenced."
+    },
+    {
+      "name": "IT Creations about page",
+      "url": "https://www.itcreations.com/about",
+      "note": "Direct fetch: mission-critical infrastructure solutions and catalog depth."
+    },
+    {
+      "name": "IT Creations contact page",
+      "url": "https://www.itcreations.com/contact",
+      "note": "Direct fetch: Chatsworth, CA address and phone."
+    },
+    {
+      "name": "SaveMyServer homepage snippet",
+      "url": "https://savemyserver.com/",
+      "note": "Bing snippet says seller of refurbished servers."
+    },
+    {
+      "name": "SaveMyServer about snippet",
+      "url": "https://savemyserver.com/pages/about-savemyserver",
+      "note": "Bing snippet says trusted source for Dell & HPE servers."
+    },
+    {
+      "name": "XByte homepage snippet",
+      "url": "https://www.xbyte.com/",
+      "note": "Bing snippet says solutions from design to hardware delivery."
+    },
+    {
+      "name": "XByte about snippet",
+      "url": "https://www.xbyte.com/about-us/",
+      "note": "Bing snippet says Dell Technologies Authorized Reseller and stocking vendor of servers/storage/networking/parts."
+    },
+    {
+      "name": "CXtec about page",
+      "url": "https://www.cxtec.com/about/",
+      "note": "Direct fetch: Syracuse NY address and broader infrastructure positioning."
+    },
+    {
+      "name": "CXtec contact page",
+      "url": "https://www.cxtec.com/contact/",
+      "note": "Direct fetch: address and phone."
+    }
+  ]
+}

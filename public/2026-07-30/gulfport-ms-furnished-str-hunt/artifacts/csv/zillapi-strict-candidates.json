@@ -1,0 +1,47 @@
+[
+  {
+    "address": "10404 Willow Leaf Dr, Gulfport, MS 39503",
+    "source": "zillapi/zillow",
+    "property_type": "single_family",
+    "rent": 2300,
+    "days_on_zillow": 178,
+    "furnished_verified": false,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "rent_zestimate": 2279,
+    "spread_estimate_moderate": null,
+    "qualifies": false,
+    "failure_reason": "Zillapi detail shows furnished=false",
+    "url": "https://www.zillow.com/homedetails/10404-Willow-Leaf-Dr-Gulfport-MS-39503/337861958_zpid/"
+  },
+  {
+    "address": "17431 South Blvd, Gulfport, MS 39503",
+    "source": "zillapi/zillow",
+    "property_type": "single_family",
+    "rent": 1600,
+    "days_on_zillow": 82,
+    "furnished_verified": false,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "rent_zestimate": 1440,
+    "spread_estimate_moderate": null,
+    "qualifies": false,
+    "failure_reason": "Zillapi detail shows furnished=false",
+    "url": "https://www.zillow.com/homedetails/17431-South-Blvd-Gulfport-MS-39503/249506189_zpid/"
+  },
+  {
+    "address": "615 Tennessee St, Gulfport, MS 39501",
+    "source": "zillapi/zillow",
+    "property_type": "single_family",
+    "rent": 1600,
+    "days_on_zillow": 66,
+    "furnished_verified": false,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "rent_zestimate": 1347,
+    "spread_estimate_moderate": null,
+    "qualifies": false,
+    "failure_reason": "Zillapi detail shows furnished=false",
+    "url": "https://www.zillow.com/homedetails/615-Tennessee-St-Gulfport-MS-39501/77996754_zpid/"
+  }
+]

@@ -1,0 +1,12 @@
+marketplace,model_year,price_usd,condition,memory,storage,processor,seller,location,title,url,status
+Swappa,2025,6953,Mint,128GB,1TB,Apple M4 Max 16-core,Jon K.,San Francisco CA,Sealed - Mac Studio M4 Max 128GB RAM 1TB SSD,https://swappa.com/listing/view/LAHO21079,live
+Swappa,2025,10810,Mint,256GB,1TB,Apple M3 Ultra 28-core,Scott,Columbia MD,Mac Studio M3 Ultra | 256GB Memory | 1TB SSD | 28c CPU | 60c GPU | Apple Certified RFB | AppleCare+,https://swappa.com/listing/view/LAHJ95238,live
+Swappa,2025,11330,New,256GB,1TB,Apple M3 Ultra 28-core,Ben B.,El Dorado Hills CA,NEW SEALED Retail Mac Studio M3 Ultra 28C/60C • 256GB RAM • 1TB SSD • 2 Day Air,https://swappa.com/listing/view/LAHV99930,live
+Swappa,2025,12360,Good,256GB,1TB,Apple M3 Ultra 32-core,Adison,Pasadena CA,Mac Studio 32C 256GB RAM,https://swappa.com/listing/view/LAHZ43149,live
+Swappa,2025,12875,Mint,256GB,1TB,Apple M3 Ultra 32-core,Scott,Columbia MD,Mac Studio M3 Ultra | 256GB Memory | 1TB SSD | 32c CPU | 80c GPU | Apple Certified RFB | AppleCare+,https://swappa.com/listing/view/LAHK05574,live
+Swappa,2025,15350,Mint,256GB,4TB,Apple M3 Ultra 32-core,Zee W.,Los Angeles CA,Mac Studio M3 Ultra | 256GB RAM | 4TB SSD | 32c CPU | 80c GPU | Apple Certified Refurbished,https://swappa.com/listing/view/LAID48009,live
+Swappa,2025,20600,Mint,256GB,16TB,Apple M3 Ultra 32-core,Scott R.,Columbia MD,Mac Studio M3 Ultra | 256GB Memory | 16TB SSD | 32c CPU | 80c GPU | Apple Certified RFB | AppleCare+,https://swappa.com/listing/view/LAHJ10000,live
+Swappa,2023,,,128GB,,Apple M2 Ultra,,,Mac Studio 2023 supports 128GB and 192GB filters but no active listings,https://swappa.com/listings/mac-studio-2023,no_live_inventory_observed
+Swappa,2022,,,128GB,,Apple M1 Ultra,,,Mac Studio 2022 supports 128GB filter but current live listings observed were only 32GB/64GB,https://swappa.com/listings/mac-studio,no_live_128gb_inventory_observed
+Apple Refurbished,,,,,,,,,Mac Studio model filter disabled/no refurb Mac Studio inventory visible during session,https://www.apple.com/shop/refurbished/mac,no_inventory_visible
+OWC/MacSales,,,,,,,,,Mac Studio marked sold out on used Mac lineup page during session,https://eshop.macsales.com/shop/Apple_Systems/Used/Macs_and_Tablets,sold_out

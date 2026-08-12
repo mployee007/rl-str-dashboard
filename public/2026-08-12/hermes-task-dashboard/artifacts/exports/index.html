@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hermes Task Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2333;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d29922;
+    --purple: #bc8cff;
+    --red: #f85149;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+  .layout { display: grid; grid-template-columns: 380px 1fr; min-height: 100vh; }
+  .sidebar { border-right: 1px solid var(--border); background: var(--surface); padding: 18px; overflow: auto; }
+  .main { padding: 22px; overflow: auto; }
+  h1, h2, h3 { margin: 0; }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .topbar { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
+  .stats { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 18px; }
+  .stat { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; min-width: 110px; }
+  .stat .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .6px; }
+  .stat .value { font-size: 18px; font-weight: 700; margin-top: 4px; }
+  input[type="search"] { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: #0b1220; color: var(--text); }
+  .session-list { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .session-card { border: 1px solid var(--border); background: #111827; border-radius: 12px; padding: 14px; cursor: pointer; }
+  .session-card:hover, .session-card.active { border-color: var(--accent); background: #172033; }
+  .session-title { font-size: 14px; font-weight: 700; line-height: 1.3; }
+  .session-meta { color: var(--muted); font-size: 12px; margin-top: 6px; display: flex; justify-content: space-between; gap: 8px; }
+  .session-summary { color: #c7d2e0; font-size: 12px; margin-top: 8px; line-height: 1.45; }
+  .pillbar { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .pill { font-size: 10px; border-radius: 999px; padding: 3px 8px; border: 1px solid var(--border); color: var(--muted); }
+  .hero { background: linear-gradient(180deg, #141d2d, #0f1724); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+  .hero-title { font-size: 26px; font-weight: 800; line-height: 1.15; }
+  .hero-sub { margin-top: 8px; color: var(--muted); }
+  .section { margin-top: 18px; }
+  .section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+  .panel h3 { font-size: 14px; margin-bottom: 10px; }
+  .file-list { display: flex; flex-direction: column; gap: 8px; }
+  .file-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #111827; }
+  .file-item .name { font-size: 13px; font-weight: 600; }
+  .file-item .meta { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .btnrow { display: flex; gap: 8px; flex-wrap: wrap; }
+  button, .alink { background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; cursor: pointer; text-decoration: none; font-size: 12px; }
+  button:hover, .alink:hover { border-color: var(--accent); color: white; }
+  .preview { white-space: pre-wrap; background: #0b1220; border: 1px solid var(--border); border-radius: 12px; padding: 14px; max-height: 420px; overflow: auto; font-size: 12px; line-height: 1.5; }
+  .empty { color: var(--muted); padding: 20px 0; }
+  .kpi { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+  .kpi .box { background: #111827; border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
+  .kpi .box .v { font-size: 20px; font-weight: 800; }
+  .kpi .box .l { color: var(--muted); font-size: 11px; margin-top: 4px; text-transform: uppercase; }
+  .badge { display: inline-block; background: rgba(88,166,255,.12); color: var(--accent); border: 1px solid rgba(88,166,255,.25); border-radius: 999px; padding: 4px 8px; font-size: 11px; }
+  .toast { position: fixed; bottom: 18px; right: 18px; background: #162235; border: 1px solid var(--accent); color: var(--text); padding: 10px 12px; border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 980px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { border-right: none; border-bottom: 1px solid var(--border); max-height: 42vh; }
+    .grid, .kpi { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Hermes Task Dashboard</h2>
+    <div class="sub">Browse completed work, summaries, and deliverables from your saved outputs archive.</div>
+    <div class="stats" id="stats"></div>
+    <input id="search" type="search" placeholder="Search sessions, summaries, notes..." />
+    <div class="session-list" id="sessionList"></div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="badge">live archive index</div>
+      </div>
+      <div class="btnrow">
+        <button onclick="refreshSessions()">Refresh</button>
+      </div>
+    </div>
+    <div id="content"></div>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+let sessions = [];
+let activeId = null;
+
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 1800);
+}
+
+async function api(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+  return await res.json();
+}
+
+function fmtDate(s) {
+  if (!s) return '';
+  try { return new Date(s).toLocaleString(); } catch { return s; }
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function renderStats() {
+  const stats = document.getElementById('stats');
+  const total = sessions.length;
+  const exportsCount = sessions.reduce((a, s) => a + (s.export_count || 0), 0);
+  const csvCount = sessions.reduce((a, s) => a + (s.csv_count || 0), 0);
+  const files = sessions.reduce((a, s) => a + (s.file_count || 0), 0);
+  stats.innerHTML = `
+    <div class="stat"><div class="label">sessions</div><div class="value">${total}</div></div>
+    <div class="stat"><div class="label">exports</div><div class="value">${exportsCount}</div></div>
+    <div class="stat"><div class="label">csv/filesets</div><div class="value">${csvCount}</div></div>
+    <div class="stat"><div class="label">files</div><div class="value">${files}</div></div>
+  `;
+}
+
+function renderSessionList(items) {
+  const list = document.getElementById('sessionList');
+  if (!items.length) {
+    list.innerHTML = '<div class="empty">No sessions found.</div>';
+    return;
+  }
+  list.innerHTML = items.map(s => `
+    <div class="session-card ${s.id === activeId ? 'active' : ''}" onclick="openSession('${encodeURIComponent(s.id)}')">
+      <div class="session-title">${esc(s.title)}</div>
+      <div class="session-meta"><span>${esc(s.date)}</span><span>${s.export_count || 0} exports</span></div>
+      <div class="session-summary">${esc(s.summary || 'No summary available yet.')}</div>
+      <div class="pillbar">
+        <span class="pill">${s.file_count || 0} files</span>
+        <span class="pill">${s.csv_count || 0} csv</span>
+        <span class="pill">updated ${esc(fmtDate(s.updated_at))}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function fileGroup(title, files, sessionId) {
+  if (!files || !files.length) return `<div class="panel"><h3>${title}</h3><div class="empty">None</div></div>`;
+  return `
+    <div class="panel">
+      <h3>${title}</h3>
+      <div class="file-list">
+        ${files.map(f => `
+          <div class="file-item">
+            <div>
+              <div class="name">${esc(f.name)}</div>
+              <div class="meta">${esc(f.rel_path)} • ${Math.max(1, Math.round((f.size||0)/1024))} KB • ${esc(fmtDate(f.updated_at))}</div>
+            </div>
+            <div class="btnrow">
+              ${f.previewable ? `<button onclick="previewFile('${encodeURIComponent(sessionId)}','${encodeURIComponent(f.rel_path)}')">Preview</button>` : ''}
+              <a class="alink" href="/api/file/${encodeURIComponent(sessionId + '/' + f.rel_path)}?download=1" target="_blank">Download</a>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderContent(s) {
+  const standard = s.standard_previews || {};
+  const c = document.getElementById('content');
+  c.innerHTML = `
+    <div class="hero">
+      <div class="hero-title">${esc(s.title)}</div>
+      <div class="hero-sub">${esc(s.date)} • saved at ${esc(s.path)}</div>
+      <div class="kpi">
+        <div class="box"><div class="v">${s.file_count || 0}</div><div class="l">Files</div></div>
+        <div class="box"><div class="v">${s.export_count || 0}</div><div class="l">Exports</div></div>
+        <div class="box"><div class="v">${s.csv_count || 0}</div><div class="l">CSV</div></div>
+        <div class="box"><div class="v">${s.image_count || 0}</div><div class="l">Images/Charts</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>Core session documents</h2></div>
+      <div class="grid">
+        <div class="panel"><h3>summary.md</h3><div class="preview">${esc(standard['summary.md'] || 'Missing')}</div></div>
+        <div class="panel"><h3>notes.md</h3><div class="preview">${esc(standard['notes.md'] || 'Missing')}</div></div>
+        <div class="panel"><h3>decisions.md</h3><div class="preview">${esc(standard['decisions.md'] || 'Missing')}</div></div>
+        <div class="panel"><h3>run-log.md</h3><div class="preview">${esc(standard['run-log.md'] || 'Missing')}</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>Artifacts and deliverables</h2></div>
+      <div class="grid">
+        ${fileGroup('Exports', s.files.export, s.id)}
+        ${fileGroup('CSV data', s.files.csv, s.id)}
+        ${fileGroup('Images / charts', s.files.image, s.id)}
+        ${fileGroup('Other files', s.files.other, s.id)}
+      </div>
+    </div>
+  `;
+}
+
+async function previewFile(sessionId, relPath) {
+  try {
+    const payload = await api(`/api/file/${encodeURIComponent(decodeURIComponent(sessionId) + '/' + decodeURIComponent(relPath))}?text=1`);
+    const c = document.getElementById('content');
+    const top = c.innerHTML;
+    c.innerHTML = top + `
+      <div class="section">
+        <div class="section-head"><h2>Preview: ${esc(payload.name)}</h2><div class="btnrow"><button onclick="openSession('${encodeURIComponent(decodeURIComponent(sessionId))}')">Back to session</button></div></div>
+        <div class="panel"><div class="preview">${esc(payload.content)}</div></div>
+      </div>
+    `;
+    window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+  } catch (err) {
+    toast(err.message);
+  }
+}
+
+async function openSession(id) {
+  activeId = decodeURIComponent(id);
+  renderSessionList(filteredSessions());
+  try {
+    const details = await api(`/api/session/${encodeURIComponent(activeId)}`);
+    renderContent(details);
+  } catch (err) {
+    document.getElementById('content').innerHTML = `<div class="empty">Failed to load session: ${esc(err.message)}</div>`;
+  }
+}
+
+function filteredSessions() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  if (!q) return sessions;
+  return sessions.filter(s => [s.title, s.date, s.summary].join(' ').toLowerCase().includes(q));
+}
+
+function refreshListOnly() {
+  const items = filteredSessions();
+  renderSessionList(items);
+}
+
+async function refreshSessions() {
+  try {
+    sessions = await api('/api/sessions');
+    renderStats();
+    refreshListOnly();
+    if (!activeId && sessions.length) {
+      openSession(encodeURIComponent(sessions[0].id));
+    } else if (activeId) {
+      const found = sessions.find(s => s.id === activeId);
+      if (found) openSession(encodeURIComponent(activeId));
+    }
+    toast('Dashboard refreshed');
+  } catch (err) {
+    document.getElementById('content').innerHTML = `<div class="empty">Failed to load dashboard: ${esc(err.message)}</div>`;
+  }
+}
+
+document.getElementById('search').addEventListener('input', refreshListOnly);
+window.onload = function() { setTimeout(refreshSessions, 120); };
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "source": "Zillapi MCP — Zestimate API",
+    "type": "API data",
+    "endpoint": "mcp_zillapi_get_zestimate",
+    "properties_queried": ["72764144", "87629901", "67855335", "7531703", "46190779"],
+    "data_retrieved": ["zestimate", "rent_zestimate", "last_sold_price"],
+    "notes": "Rent Zestimate reflects long-term rental. STR income is typically 2-3x higher."
+  },
+  {
+    "source": "Zillapi MCP — Search Listings",
+    "type": "API data",
+    "endpoint": "mcp_zillapi_search_listings",
+    "markets_searched": [
+      "Gulf Shores, AL (bbox: -87.70,30.24,-87.58,30.30)",
+      "Panama City Beach, FL (bbox: -85.91,30.16,-85.80,30.23)",
+      "Destin/Miramar Beach, FL (bbox: -86.50,30.38,-86.30,30.44)",
+      "Phoenix, AZ (bbox: -112.10,33.40,-112.00,33.50)",
+      "Orlando, FL (bbox: -81.38,28.42,-81.28,28.52)",
+      "Orangeburg, SC (bbox: -81.10,33.45,-81.00,33.55)"
+    ],
+    "status": "for_sale + for_rent",
+    "notes": "Bounding box searches with beds_min=2, price_max=450000 for for_sale"
+  },
+  {
+    "source": "Industry Knowledge (Training Data)",
+    "type": "Knowledge base",
+    "topics": [
+      "STR regulation landscape by state",
+      "City-level STR ordinances",
+      "State preemption laws (AZ, TN, FL, TX)",
+      "AirDNA/Mashvisor market performance data",
+      "Vacation rental income benchmarks"
+    ],
+    "notes": "Supplemented API data with established knowledge of regulatory landscape and market conditions"
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "type": "uploaded_reference",
+      "path": "/opt/data/inputs/raw/cities_list.md",
+      "description": "Uploaded city/hospital/ZIP list used for ZIP filtering"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/virginia-beach-bedroom-available/wrbjPkAECU2K9yjPHPGhe5",
+      "city": "Virginia Beach, VA",
+      "property": "5 bedroom available 2 minutes from the beach !!"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/virginia-beach-short-term-rental/ddmek9Mmxc8xZmhBePUSyx",
+      "city": "Virginia Beach, VA",
+      "property": "Short term rental available till December"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/phoenix-house-for-lease/phEYUjAu7L7EK6XGiB9Tib",
+      "city": "Phoenix, AZ",
+      "property": "House for Lease (Biltmore/Camel Back)"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/tempe-comfortable-family-house/sMDg9Z3RRZhz9ujR2SG6rn",
+      "city": "Tempe, AZ",
+      "property": "Comfortable Family House / Centrally Located"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/phoenix-historic-furnished-home-2bed/6YJGYjo4QHneySmyiYmLbf",
+      "city": "Phoenix, AZ",
+      "property": "Historic Furnished Home \u2013 2bed/1 bath \u2013 Midtown Phoenix"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/phoenix-smart-modern-townhome/7AdJsruO8RGdOZI0fAUsWQ",
+      "city": "Phoenix, AZ",
+      "property": "Smart & Modern Townhome"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/henderson-furnished-henderson-nv-home/c1wxHAjoW6bcVi6x3fQsBA",
+      "city": "Henderson, NV",
+      "property": "Furnished Henderson, Nv home for rent $2500"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/scottsdale-stylish-and-spacious-3br-2ba/ihl8njh_8RGOCr3M6rCRQw",
+      "city": "Scottsdale, AZ",
+      "property": "Stylish and spacious 3BR/2BA townhome near Old Town Scottsdale"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/tempe-would-live-here-great-tempe/0jw5ejOU8RGFypc66B7Oew",
+      "city": "Tempe, AZ",
+      "property": "I would live here. Great Tempe location"
+    },
+    {
+      "type": "listing",
+      "url": "https://www.craigslist.org/view/d/saint-petersburg-furnished-bedrooms-25/CATZJ-6O8RGDm7QrAimHNQ",
+      "city": "Saint Petersburg, FL",
+      "property": "Furnished 3 BEDROOMS 2.5 BATH with a garage townhouse! Welcome home"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Virginia Beach, VA",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/virginia/virginia-beach/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Phoenix, AZ",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/arizona/phoenix/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Tempe, AZ",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/arizona/tempe/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Scottsdale, AZ",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/arizona/scottsdale/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Saint Petersburg, FL",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/florida/saint-petersburg/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Jacksonville, FL",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/florida/jacksonville/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Henderson, NV",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/nevada/henderson/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Memphis, TN",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/tennessee/memphis/overview"
+    },
+    {
+      "type": "market_data",
+      "provider": "AirDNA",
+      "city": "Portland, OR",
+      "url": "https://www.airdna.co/vacation-rental-data/app/us/oregon/portland/overview"
+    }
+  ],
+  "_note": "Craigslist URLs collected during live browser research; underwriting uses first-pass scenario assumptions from the loaded STR skill."
+}

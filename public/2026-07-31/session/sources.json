@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "title": "HUD 203(k) Rehabilitation Mortgage Insurance Program Types",
+      "url": "https://www.hud.gov/program_offices/housing/sfh/203k",
+      "notes": "Verified Limited 203(k) up to $75,000 and Standard 203(k) minimum rehab / FHA limit language via browser snapshot."
+    },
+    {
+      "title": "HUD FHA Mortgage Limits Lookup \u2014 Cook County, IL (CY2026)",
+      "url": "https://entp.hud.gov/idapp/html/hicostlook.cfm",
+      "notes": "Verified FHA Forward and Fannie/Freddie 1\u20134 unit limits for Cook County via browser form submission."
+    },
+    {
+      "title": "Homebuyer.com \u2014 HomeStyle Renovation guide",
+      "url": "https://homebuyer.com/conventional-mortgage/homestyle-renovation",
+      "notes": "Used for HomeStyle occupancy/property-type/down payment/credit/completion/DIY comparison details and side-by-side comparison with FHA 203(k)."
+    },
+    {
+      "title": "Realtor.com 60616 result snippet via Bing RSS",
+      "url": "https://www.realtor.com/realestateandhomes-search/60616",
+      "notes": "Snippet reported median listing price of $350,000."
+    },
+    {
+      "title": "Realtor.com 60637 result snippet via Bing RSS",
+      "url": "https://www.realtor.com/realestateandhomes-search/60637",
+      "notes": "Snippet reported median listing price of $290,000."
+    },
+    {
+      "title": "Zillow 60653 result snippet via Bing RSS",
+      "url": "https://www.zillow.com/chicago-il-60653/",
+      "notes": "Snippet reported 80 homes for sale; direct site/browser access was bot-blocked."
+    },
+    {
+      "title": "Zillapi for-sale listing search for 60653 bbox",
+      "url": "mcp_zillapi_search_listings",
+      "notes": "Queried bbox around 60653 and filtered returned results by addressZipcode=60653 and price band $350K-$500K; no confirmed MULTI_FAMILY listings in-band."
+    }
+  ],
+  "_note": "Source list for 203(k) and HomeStyle feasibility analysis"
+}

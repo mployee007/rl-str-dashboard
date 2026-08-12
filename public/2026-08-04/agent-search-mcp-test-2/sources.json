@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "type": "craigslist",
+      "url": "https://www.craigslist.org/view/d/saint-petersburg-st-pete-crescent-lake/8tq2ViuouHUeKZcCdGiXmF"
+    },
+    {
+      "type": "craigslist",
+      "url": "https://www.craigslist.org/view/d/state-park-bedroom-25-baths-house-for/fXFaqc8HhowdjgJDfoHikG"
+    },
+    {
+      "type": "craigslist",
+      "url": "https://www.craigslist.org/view/d/baton-rouge-furnished-home-for-rent/5YtXjMCkUdZbeSqGSeHeET"
+    },
+    {
+      "type": "zillow",
+      "url": "https://www.zillow.com/homedetails/63365-Cobalt-Rd-Joshua-Tree-CA-92252/17500884_zpid/",
+      "note": "Joshua Tree listing; direct furnished evidence corroborated by subagent using Homes.com/ApartmentHomeLiving"
+    }
+  ]
+}

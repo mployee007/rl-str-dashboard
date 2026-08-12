@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&L Collective Holdings LLC - Airbnb Arbitrage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #242424;
+  line-height: 1.6;
+}
+
+/* ===== HERO / BACKGROUND SECTION ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center center / cover no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TAGLINE ===== */
+.tagline {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 60px 20px 0;
+}
+
+/* ===== CARDS ROW ===== */
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 260px;
+  min-height: 300px;
+  padding: 25px 20px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card * {
+  position: relative;
+  z-index: 2;
+}
+
+.card1 { background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+.card2 { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+.card3 { background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+.card4 { background-image: url('https://images.unsplash.com/photo-1600573472550-8090b5e0745e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+
+.card h3 {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.card .price {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.card-details i {
+  font-size: 18px;
+  width: 22px;
+  color: #ffffff;
+}
+
+.card-details .num {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card-details .label {
+  font-size: 14px;
+  color: #dddddd;
+}
+
+/* ===== SUBSCRIBE SECTION ===== */
+.subscribe-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: transparent;
+}
+
+.subscribe-section .envelope {
+  margin: 0 0 15px;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.subscribe-section h5 {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.subscribe-section p {
+  color: #f0f0f0;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  color: #555;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-left: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.subscribe-form button:hover {
+  background: #f0f0f0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #ffffff;
+  padding: 40px 20px 20px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-contact {
+  font-size: 14px;
+  color: #242424;
+  line-height: 2;
+}
+
+.footer-contact a {
+  color: #242424;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-address {
+  font-size: 14px;
+  color: #242424;
+  line-height: 1.8;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.footer-nav li a {
+  font-size: 14px;
+  color: #242424;
+  text-decoration: none;
+}
+
+.footer-nav li a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.8;
+  border-top: 1px solid #eee;
+  padding-top: 25px;
+}
+
+.footer-legal p {
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .card {
+    width: 220px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tagline {
+    font-size: 18px;
+    padding: 30px 15px 0;
+  }
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+  .subscribe-form input[type="email"] {
+    border-right: 1px solid #ccc;
+    border-bottom: none;
+  }
+  .subscribe-form button {
+    border-left: 1px solid #ccc;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <!-- TAGLINE -->
+  <div class="tagline">
+    At R&L Collective Holdings LLC we provide short-term rental solutions in major cities across the nation and are actively acquiring assets to grow our portfolio.
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards-row">
+    <!-- Card 1: Short-Term Rentals -->
+    <div class="card card1">
+      <h3>SHORT-TERM RENTALS</h3>
+      <div class="price">Furnished Homes</div>
+      <div class="card-details">
+        <i class="fas fa-home"></i>
+        <span class="label">Executive &amp; Vacation</span>
+      </div>
+      <div class="card-details">
+        <i class="fas fa-calendar-check"></i>
+        <span class="label">Nightly &amp; Monthly Stays</span>
+      </div>
+    </div>
+
+    <!-- Card 2: Acquisition -->
+    <div class="card card2">
+      <h3>ACQUISITIONS</h3>
+      <div class="price">Seeking Assets</div>
+      <div class="card-details">
+        <i class="fas fa-search"></i>
+        <span class="label">Single-Family Homes</span>
+      </div>
+      <div class="card-details">
+        <i class="fas fa-building"></i>
+        <span class="label">Condos &amp; Townhomes</span>
+      </div>
+    </div>
+
+    <!-- Card 3: Target Markets -->
+    <div class="card card3">
+      <h3>TARGET MARKETS</h3>
+      <div class="price">High-Demand Cities</div>
+      <div class="card-details">
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="label">Nationwide Search</span>
+      </div>
+      <div class="card-details">
+        <i class="fas fa-chart-line"></i>
+        <span class="label">Strong RevPAR</span>
+      </div>
+    </div>
+
+    <!-- Card 4: Portfolio -->
+    <div class="card card4">
+      <h3>PORTFOLIO</h3>
+      <div class="price">Growing</div>
+      <div class="card-details">
+        <i class="fas fa-layer-group"></i>
+        <span class="label">Building Holdings</span>
+      </div>
+      <div class="card-details">
+        <i class="fas fa-handshake"></i>
+        <span class="label">Partnering with Owners</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBSCRIBE SECTION -->
+  <div class="subscribe-section">
+    <div class="envelope">
+      <i class="far fa-envelope"></i>
+    </div>
+    <h5>Subscribe</h5>
+    <p>Stay updated on our portfolio growth and new short-term rental properties in major cities across the nation.</p>
+    <form class="subscribe-form" action="#" method="post">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-contact">
+      <strong>Phone:</strong><br>
+      <a href="tel:+17736644372">773-664-4372</a><br><br>
+      <strong>E-Mail:</strong><br>
+      <a href="mailto:solomon@rl-collective-holdings.com">solomon@rl-collective-holdings.com</a>
+    </div>
+    <div class="footer-address">
+      421 East 41st Street<br>
+      Chicago, IL<br>
+      60653
+    </div>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="disclosure.html">Disclosure</a></li>
+      <li><a href="terms-and-conditions.html">Terms And Conditions</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright &copy; 2025 R&L Collective Holdings LLC - All rights reserved.</p>
+    <p>R&L Collective Holdings LLC is not affiliated, associated, authorized, endorsed by, or in any way with Airbnb&trade; or Airbnb.com, their respective affiliates, or subsidiaries. The name "Airbnb" as well as related names, marks, emblems and images are registered trademarks of Airbnb, Inc.</p>
+    <p>This site is not part of, or endorsed by, Facebook&trade;, Google&trade;, Snapchat&trade;, Twitter&trade; or any social media platform in any way.</p>
+    <p>All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</p>
+    <p>Results shared are not typical and are not a guarantee of your success. The average person who buys any "how to" information gets little to no results. Your results will vary depending on education, work experience, effort, and background. R&L Collective Holdings LLC is an operating company engaged in the short-term rental business. All material is intellectual property and protected by copyright. Any duplication, reproduction, or distribution is strictly prohibited. Please see our full <a href="disclosure.html" style="color:#666;text-decoration:underline;">Disclosure</a> for important details.</p>
+  </div>
+</div>
+
+</body>
+</html>

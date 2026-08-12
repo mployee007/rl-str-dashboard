@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&L Collective — STR Arbitrage Deal Flow</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1c2333;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d29922;
+    --red: #f85149;
+    --purple: #bc8cff;
+    --cyan: #39d2c0;
+    --radius: 8px;
+    --col-research: #8b949e;
+    --col-contacted: #58a6ff;
+    --col-review: #39d2c0;
+    --col-negotiation: #d29922;
+    --col-licensing: #bc8cff;
+    --col-active: #3fb950;
+    --col-hold: #f85149;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  .subtitle, .hint {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .header-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .mode-banner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .mode-pill {
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .mode-live { background: rgba(63,185,80,0.14); color: var(--green); border: 1px solid rgba(63,185,80,0.3); }
+  .mode-static { background: rgba(210,153,34,0.14); color: var(--orange); border: 1px solid rgba(210,153,34,0.3); }
+  .stats-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  .stat-value { font-size: 18px; font-weight: 700; }
+  .board {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    min-height: 70vh;
+  }
+  .column {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 205px);
+  }
+  .column-header {
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .col-research .column-header { border-top: 3px solid var(--col-research); }
+  .col-contacted .column-header { border-top: 3px solid var(--col-contacted); }
+  .col-review .column-header { border-top: 3px solid var(--col-review); }
+  .col-negotiation .column-header { border-top: 3px solid var(--col-negotiation); }
+  .col-licensing .column-header { border-top: 3px solid var(--col-licensing); }
+  .col-active .column-header { border-top: 3px solid var(--col-active); }
+  .col-hold .column-header { border-top: 3px solid var(--col-hold); }
+  .count {
+    background: var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .column-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    min-height: 120px;
+    transition: background 0.15s ease;
+  }
+  .column-body.drop-highlight { background: var(--surface-hover); }
+  .empty-state {
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 12px 6px;
+    text-align: center;
+  }
+  .card {
+    background: #1a1f2e;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: grab;
+  }
+  .card.dragging { opacity: 0.5; transform: rotate(2deg); }
+  .card:hover { border-color: var(--accent); background: var(--surface-hover); }
+  .card-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .card-meta, .card-submeta { color: var(--text-muted); font-size: 11px; margin-bottom: 4px; }
+  .card-notes {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .tag {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+  }
+  .tag-rent { background: rgba(188,140,255,0.12); color: var(--purple); border-color: rgba(188,140,255,0.2); }
+  .tag-spread { background: rgba(63,185,80,0.12); color: var(--green); border-color: rgba(63,185,80,0.2); }
+  .tag-revenue { background: rgba(210,153,34,0.12); color: var(--orange); border-color: rgba(210,153,34,0.2); }
+  .tag-nightly { background: rgba(88,166,255,0.12); color: var(--accent); border-color: rgba(88,166,255,0.2); }
+  .card-actions {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .btn, .card-actions button {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .card-actions button { padding: 3px 8px; font-size: 10px; color: var(--text-muted); }
+  .btn:hover, .card-actions button:hover { border-color: var(--accent); background: var(--surface-hover); color: var(--text); }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: white; font-weight: 600; }
+  .btn-primary:hover { background: #4a96e5; }
+  .btn-danger, .btn-delete:hover { border-color: var(--red) !important; color: var(--red) !important; }
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    width: min(920px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+  .modal h2 { margin-top: 0; margin-bottom: 18px; }
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .form-group { margin-bottom: 12px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .form-group textarea { min-height: 110px; resize: vertical; }
+  .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--surface-hover);
+    border: 1px solid var(--accent);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .toast.show { opacity: 1; }
+  .hidden { display: none !important; }
+  @media (max-width: 860px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .column { min-width: 85vw; max-width: 85vw; }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>R&L Collective — STR Arbitrage Deal Flow</h1>
+      <div class="subtitle">Dynamic board with SQLite persistence when served through the local API.</div>
+      <div class="hint">GitHub Pages fallback still works in read-only mode via <code>properties.json</code>.</div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-primary" id="addBtn" onclick="openAddModal()">➕ Add property</button>
+      <button class="btn" onclick="exportData()">⬇️ Export JSON</button>
+      <button class="btn" id="refreshBtn" onclick="refreshData()">↻ Refresh</button>
+    </div>
+  </div>
+
+  <div class="mode-banner">
+    <div>
+      <strong>Mode:</strong> <span id="modePill" class="mode-pill mode-static">Checking…</span>
+      <div id="modeText" class="hint">Probing for the local SQLite API.</div>
+    </div>
+    <div class="hint" id="modeActionsHint">Edit controls stay enabled only when the API is live.</div>
+  </div>
+
+  <div class="stats-bar" id="statsBar"></div>
+  <div class="board" id="board"></div>
+
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <h2 id="modalTitle">Add property</h2>
+      <input type="hidden" id="editId">
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>Property name</label>
+          <input id="fName" placeholder="e.g. 6262 Emberwood Rd">
+        </div>
+        <div class="form-group full">
+          <label>Address</label>
+          <input id="fAddress" placeholder="Street address">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input id="fCity" placeholder="Dublin">
+        </div>
+        <div class="form-group">
+          <label>State</label>
+          <input id="fState" placeholder="OH">
+        </div>
+        <div class="form-group">
+          <label>ZIP</label>
+          <input id="fZip" placeholder="43017">
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select id="fStatus">
+            <option value="research">Research</option>
+            <option value="contacted">Contacted</option>
+            <option value="review">Review</option>
+            <option value="negotiation">Negotiation</option>
+            <option value="licensing">Licensing</option>
+            <option value="active">Active</option>
+            <option value="hold">Hold</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Rent</label>
+          <input id="fRent" type="number" step="0.01" placeholder="2000">
+        </div>
+        <div class="form-group">
+          <label>Revenue</label>
+          <input id="fRevenue" type="number" step="0.01" placeholder="3420">
+        </div>
+        <div class="form-group">
+          <label>Spread</label>
+          <input id="fSpread" type="number" step="0.01" placeholder="1420">
+        </div>
+        <div class="form-group">
+          <label>Estimated nightly rate</label>
+          <input id="fEstNightly" type="number" step="0.01" placeholder="190">
+        </div>
+        <div class="form-group">
+          <label>Beds</label>
+          <input id="fBeds" type="number" step="0.5" placeholder="3">
+        </div>
+        <div class="form-group">
+          <label>Baths</label>
+          <input id="fBaths" type="number" step="0.5" placeholder="1">
+        </div>
+        <div class="form-group">
+          <label>Sqft</label>
+          <input id="fSqft" type="number" step="1" placeholder="1198">
+        </div>
+        <div class="form-group">
+          <label>ZPID</label>
+          <input id="fZpid" placeholder="Optional Zillow property id">
+        </div>
+        <div class="form-group full">
+          <label>Listing URL</label>
+          <input id="fUrl" placeholder="https://...">
+        </div>
+        <div class="form-group full">
+          <label>Notes</label>
+          <textarea id="fNotes" placeholder="Lease terms, landlord contact, license status, next steps..."></textarea>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveProperty()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+const COLUMNS = [
+  { id: 'research', label: '📋 Research' },
+  { id: 'contacted', label: '📞 Contacted' },
+  { id: 'review', label: '🔍 Under Review' },
+  { id: 'negotiation', label: '🤝 Negotiation' },
+  { id: 'licensing', label: '📄 Licensing' },
+  { id: 'active', label: '🟢 Active' },
+  { id: 'hold', label: '⏸️ On Hold' },
+];
+
+let properties = [];
+let apiAvailable = false;
+let dragId = null;
+
+function fmtMoney(value, suffix = '') {
+  const num = Number(value || 0);
+  if (!num) return '';
+  return `$${num.toLocaleString()}${suffix}`;
+}
+
+async function request(url, options = {}) {
+  const res = await fetch(url, {
+    headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+    ...options,
+  });
+  if (!res.ok) {
+    let message = `${res.status} ${res.statusText}`;
+    try {
+      const data = await res.json();
+      if (data.error) message = data.error;
+    } catch (_) {}
+    throw new Error(message);
+  }
+  const contentType = res.headers.get('content-type') || '';
+  return contentType.includes('application/json') ? res.json() : res.text();
+}
+
+async function detectMode() {
+  try {
+    const health = await request('/api/health');
+    apiAvailable = !!health.ok;
+  } catch (_) {
+    apiAvailable = false;
+  }
+  updateModeBanner();
+  updateControls();
+}
+
+function updateModeBanner() {
+  const pill = document.getElementById('modePill');
+  const text = document.getElementById('modeText');
+  if (apiAvailable) {
+    pill.textContent = 'Live SQLite mode';
+    pill.className = 'mode-pill mode-live';
+    text.textContent = 'Changes save to properties.db through the local Python API.';
+  } else {
+    pill.textContent = 'Static fallback';
+    pill.className = 'mode-pill mode-static';
+    text.textContent = 'API not detected. Showing read-only data from properties.json.';
+  }
+}
+
+function updateControls() {
+  document.getElementById('addBtn').disabled = !apiAvailable;
+  document.getElementById('addBtn').title = apiAvailable ? '' : 'Start server.py to enable editing';
+  document.getElementById('modeActionsHint').textContent = apiAvailable
+    ? 'Add, edit, delete, and drag-drop changes write to SQLite immediately.'
+    : 'Start python3 server.py locally to enable saving and management.';
+}
+
+async function loadData() {
+  if (apiAvailable) {
+    properties = await request('/api/properties');
+    return;
+  }
+  const res = await fetch('properties.json', { cache: 'no-store' });
+  const data = await res.json();
+  properties = Array.isArray(data) ? data : [];
+}
+
+async function refreshData(showMessage = false) {
+  await detectMode();
+  await loadData();
+  render();
+  if (showMessage) showToast(apiAvailable ? 'Data refreshed from SQLite API' : 'Static data refreshed');
+}
+
+function render() {
+  renderStats();
+  renderBoard();
+}
+
+function renderStats() {
+  const total = properties.length;
+  const active = properties.filter(p => p.status === 'active').length;
+  const inProgress = properties.filter(p => ['review','licensing','negotiation'].includes(p.status)).length;
+  const research = properties.filter(p => ['research','contacted'].includes(p.status)).length;
+  const totalRevenue = properties.reduce((sum, p) => sum + Number(p.revenue || 0), 0);
+  const totalSpread = properties.reduce((sum, p) => sum + Number(p.spread || 0), 0);
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat"><span class="stat-value">${total}</span> Total properties</div>
+    <div class="stat"><span class="stat-value" style="color:var(--green)">${active}</span> Active</div>
+    <div class="stat"><span class="stat-value" style="color:var(--cyan)">${inProgress}</span> In progress</div>
+    <div class="stat"><span class="stat-value" style="color:var(--text-muted)">${research}</span> Researching</div>
+    <div class="stat"><span class="stat-value" style="color:var(--orange)">${fmtMoney(totalRevenue)}</span> Revenue</div>
+    <div class="stat"><span class="stat-value" style="color:var(--green)">${fmtMoney(totalSpread)}</span> Spread</div>
+  `;
+}
+
+function renderBoard() {
+  const board = document.getElementById('board');
+  board.innerHTML = COLUMNS.map(col => {
+    const items = properties.filter(p => p.status === col.id);
+    return `
+      <div class="column col-${col.id}">
+        <div class="column-header"><span>${col.label}</span><span class="count">${items.length}</span></div>
+        <div class="column-body" data-col="${col.id}" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+          ${items.length ? items.map(renderCard).join('') : '<div class="empty-state">Drop a property here</div>'}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderCard(p) {
+  const address = [p.address, p.zip].filter(Boolean).join(' · ');
+  const canEdit = apiAvailable;
+  return `
+    <div class="card" draggable="${canEdit}" data-id="${p.id}" ondragstart="onDragStart(event)" ondragend="onDragEnd(event)">
+      <div class="card-title">${escapeHtml(p.name || 'Unnamed')}</div>
+      <div class="card-meta">${escapeHtml([p.city, p.state].filter(Boolean).join(', '))}</div>
+      ${address ? `<div class="card-submeta">${escapeHtml(address)}</div>` : ''}
+      <div class="card-tags">
+        ${p.rent ? `<span class="tag tag-rent">${fmtMoney(p.rent, '/mo')}</span>` : ''}
+        ${p.revenue ? `<span class="tag tag-revenue">Rev ${fmtMoney(p.revenue)}</span>` : ''}
+        ${p.spread ? `<span class="tag tag-spread">Spread ${fmtMoney(p.spread)}</span>` : ''}
+        ${p.estNightly ? `<span class="tag tag-nightly">Nightly ${fmtMoney(p.estNightly)}</span>` : ''}
+      </div>
+      ${p.notes ? `<div class="card-notes">${escapeHtml(p.notes)}</div>` : ''}
+      <div class="card-actions">
+        ${p.url ? `<button onclick="window.open(${JSON.stringify(p.url)}, '_blank')">🔗 View</button>` : ''}
+        <button ${canEdit ? '' : 'disabled'} onclick="openEditModal(${JSON.stringify(p.id)})">✏️ Edit</button>
+        <button class="btn-delete" ${canEdit ? '' : 'disabled'} onclick="deleteProperty(${JSON.stringify(p.id)})">🗑️</button>
+      </div>
+    </div>
+  `;
+}
+
+function escapeHtml(value) {
+  return String(value || '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function onDragStart(e) {
+  if (!apiAvailable) return;
+  dragId = e.target.closest('.card')?.dataset?.id;
+  if (dragId) e.target.classList.add('dragging');
+}
+
+function onDragEnd(e) {
+  e.target.classList.remove('dragging');
+  document.querySelectorAll('.drop-highlight').forEach(el => el.classList.remove('drop-highlight'));
+}
+
+function onDragOver(e) {
+  if (!apiAvailable) return;
+  const body = e.target.closest('.column-body');
+  if (body) { e.preventDefault(); body.classList.add('drop-highlight'); }
+}
+
+async function onDrop(e) {
+  if (!apiAvailable) return;
+  e.preventDefault();
+  document.querySelectorAll('.drop-highlight').forEach(el => el.classList.remove('drop-highlight'));
+  const body = e.target.closest('.column-body');
+  if (!body || !dragId) return;
+  const prop = properties.find(p => p.id === dragId);
+  const newStatus = body.dataset.col;
+  if (!prop || prop.status === newStatus) return;
+  await request(`/api/properties/${encodeURIComponent(dragId)}`, {
+    method: 'PUT',
+    body: JSON.stringify({ ...prop, status: newStatus })
+  });
+  await refreshData();
+  showToast(`Moved to ${COLUMNS.find(c => c.id === newStatus)?.label || newStatus}`);
+  dragId = null;
+}
+
+function openAddModal() {
+  if (!apiAvailable) return showToast('Start server.py to enable editing');
+  document.getElementById('modalTitle').textContent = 'Add property';
+  document.getElementById('editId').value = '';
+  ['fName','fAddress','fCity','fState','fZip','fRent','fRevenue','fSpread','fNotes','fUrl','fZpid','fBeds','fBaths','fSqft','fEstNightly'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('fStatus').value = 'research';
+  document.getElementById('modal').classList.add('show');
+}
+
+function openEditModal(id) {
+  if (!apiAvailable) return showToast('Start server.py to enable editing');
+  const p = properties.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modalTitle').textContent = 'Edit property';
+  document.getElementById('editId').value = p.id || '';
+  document.getElementById('fName').value = p.name || '';
+  document.getElementById('fAddress').value = p.address || '';
+  document.getElementById('fCity').value = p.city || '';
+  document.getElementById('fState').value = p.state || '';
+  document.getElementById('fZip').value = p.zip || '';
+  document.getElementById('fRent').value = p.rent || '';
+  document.getElementById('fRevenue').value = p.revenue || '';
+  document.getElementById('fSpread').value = p.spread || '';
+  document.getElementById('fStatus').value = p.status || 'research';
+  document.getElementById('fNotes').value = p.notes || '';
+  document.getElementById('fUrl').value = p.url || '';
+  document.getElementById('fZpid').value = p.zpid || '';
+  document.getElementById('fBeds').value = p.beds || '';
+  document.getElementById('fBaths').value = p.baths || '';
+  document.getElementById('fSqft').value = p.sqft || '';
+  document.getElementById('fEstNightly').value = p.estNightly || '';
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('show');
+}
+
+async function saveProperty() {
+  if (!apiAvailable) return showToast('Start server.py to enable editing');
+  const id = document.getElementById('editId').value;
+  const payload = {
+    name: document.getElementById('fName').value.trim(),
+    address: document.getElementById('fAddress').value.trim(),
+    city: document.getElementById('fCity').value.trim(),
+    state: document.getElementById('fState').value.trim(),
+    zip: document.getElementById('fZip').value.trim(),
+    rent: Number(document.getElementById('fRent').value || 0),
+    revenue: Number(document.getElementById('fRevenue').value || 0),
+    spread: Number(document.getElementById('fSpread').value || 0),
+    estNightly: Number(document.getElementById('fEstNightly').value || 0),
+    status: document.getElementById('fStatus').value,
+    notes: document.getElementById('fNotes').value.trim(),
+    url: document.getElementById('fUrl').value.trim(),
+    zpid: document.getElementById('fZpid').value.trim(),
+    beds: Number(document.getElementById('fBeds').value || 0),
+    baths: Number(document.getElementById('fBaths').value || 0),
+    sqft: Number(document.getElementById('fSqft').value || 0),
+  };
+  if (!payload.name) return showToast('Property name is required');
+  if (id) {
+    await request(`/api/properties/${encodeURIComponent(id)}`, { method: 'PUT', body: JSON.stringify({ id, ...payload }) });
+  } else {
+    await request('/api/properties', { method: 'POST', body: JSON.stringify(payload) });
+  }
+  closeModal();
+  await refreshData();
+  showToast('Property saved');
+}
+
+async function deleteProperty(id) {
+  if (!apiAvailable) return showToast('Start server.py to enable editing');
+  if (!confirm('Delete this property?')) return;
+  await request(`/api/properties/${encodeURIComponent(id)}`, { method: 'DELETE' });
+  await refreshData();
+  showToast('Property deleted');
+}
+
+async function exportData() {
+  if (apiAvailable) {
+    window.open('/api/export', '_blank');
+    showToast('Export opened');
+    return;
+  }
+  const blob = new Blob([JSON.stringify(properties, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `rl-str-deal-flow-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Static JSON exported');
+}
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2000);
+}
+
+window.onload = function() {
+  setTimeout(async () => {
+    try {
+      await refreshData();
+    } catch (err) {
+      showToast(`Load failed: ${err.message}`);
+    }
+  }, 100);
+};
+</script>
+</body>
+</html>

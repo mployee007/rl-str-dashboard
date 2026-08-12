@@ -1,0 +1,38 @@
+{
+  "city": "Columbus, OH",
+  "target_zips": ["43214", "43210", "43801", "43215"],
+  "hospital_reference": "Ohio State University Wexner Medical Center",
+  "sources": [
+    {
+      "type": "reference_file",
+      "path": "/opt/data/outputs/incoming/Top_Cities_List.md"
+    },
+    {
+      "type": "zillapi_search_result",
+      "path": "/tmp/hermes-results/call_q34NdoCJjDXxyJxQ4c6Tkca3.txt",
+      "bbox": "-83.20,39.86,-82.80,40.12"
+    },
+    {
+      "type": "zillapi_search_result",
+      "path": "/tmp/hermes-results/call_8NAPIqhkCUUNyqgTbBaimUEO.txt",
+      "bbox": "-83.03,39.95,-82.97,40.02"
+    },
+    {
+      "type": "zillapi_search_result",
+      "path": "/tmp/hermes-results/call_mfxJSSzamI5YCmGdimg7JBiU.txt",
+      "bbox": "-83.06,40.02,-82.97,40.09"
+    },
+    {
+      "type": "craigslist_search",
+      "url": "https://www.craigslist.org/search/city/columbus-oh?availabilityMode=2&cat=apa&housing_type=6&housing_type=9&is_furnished=1&max_price=3000&min_price=1500&postal=43215&radius=15#search=2~gallery~0"
+    },
+    {
+      "type": "artifact",
+      "path": "/opt/data/outputs/2026-07-30/columbus-oh-furnished-str-hunt/artifacts/csv/zillapi-target-zip-raw.csv"
+    },
+    {
+      "type": "artifact",
+      "path": "/opt/data/outputs/2026-07-30/columbus-oh-furnished-str-hunt/artifacts/csv/qualifying-properties.json"
+    }
+  ]
+}

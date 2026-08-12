@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "type": "skill",
+      "name": "str-arbitrage-analysis",
+      "path": "/opt/data/skills/research/str-arbitrage-analysis/SKILL.md"
+    },
+    {
+      "type": "skill",
+      "name": "output-organization",
+      "path": "/opt/data/skills/productivity/output-organization/SKILL.md"
+    }
+  ],
+  "_note": "Session generated from internal skill guidance and user context."
+}

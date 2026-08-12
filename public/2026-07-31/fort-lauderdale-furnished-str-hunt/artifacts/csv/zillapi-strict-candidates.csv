@@ -1,0 +1,2 @@
+address,source,property_type,rent,days_on_zillow,furnished_verified,bedrooms,bathrooms,rent_zestimate,qualifies,failure_reason,url
+"2244 NW 52nd Ave, Fort Lauderdale, FL 33313",zillapi/zillow,townhouse,1750,12,False,2,2,1877,False,Days on Zillow 12 (<60) and furnished=false,https://www.zillow.com/homedetails/2244-NW-52nd-Ave-Fort-Lauderdale-FL-33313/2062530579_zpid/

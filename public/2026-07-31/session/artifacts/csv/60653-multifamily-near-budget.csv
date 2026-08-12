@@ -1,0 +1,4 @@
+address,price,beds,baths,homeType,status,url,note
+"4016 S Indiana Ave, Chicago, IL 60653",594990,8,3,MULTI_FAMILY,Active,https://www.zillow.com/homedetails/4016-S-Indiana-Ave-Chicago-IL-60653/2134708590_zpid/,Closest confirmed multifamily above your max budget
+"441 E 42nd St, Chicago, IL 60653",650000,7,3,MULTI_FAMILY,Active,https://www.zillow.com/homedetails/441-E-42nd-St-Chicago-IL-60653/80858195_zpid/,"Confirmed multifamily, above budget"
+"432 E 45th Pl, Chicago, IL 60653",859000,12,4,MULTI_FAMILY,New,https://www.zillow.com/homedetails/432-E-45th-Pl-Chicago-IL-60653/441094988_zpid/,"Confirmed multifamily, well above budget"

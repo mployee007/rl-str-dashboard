@@ -1,0 +1,56 @@
+{
+  "sources": [
+    {
+      "title": "Uber Vehicle Marketplace",
+      "url": "https://www.uber.com/us/en/drive/vehicle-solutions/",
+      "type": "official",
+      "key_points": [
+        "Uber says drivers can rent or buy a car for rideshare through vehicle partners.",
+        "Supports the core premise that Uber accepts rental-based entry."
+      ]
+    },
+    {
+      "title": "Uber Driver Requirements",
+      "url": "https://www.uber.com/us/en/drive/requirements/",
+      "type": "official",
+      "key_points": [
+        "Minimum age, driving experience, eligible 4-door vehicle, required documents, screening.",
+        "Uber also points drivers to rent or lease options."
+      ]
+    },
+    {
+      "title": "The Rideshare Guy — HyreCar Review 2026",
+      "url": "https://therideshareguy.com/hyrecar-review/",
+      "type": "third_party",
+      "key_points": [
+        "Example pricing: 2020 Toyota Corolla in Los Angeles at about $375/week all-in.",
+        "Useful for rental economics, insurance framing, and practical renter workflow.",
+        "Also states HyreCar had shut down by 2026; used as market signal, not sole authority."
+      ]
+    },
+    {
+      "title": "Drive Whip — The Shutdown of HyreCar and Getaround",
+      "url": "https://www.drivewhip.com/the-shutdown-of-hyrecar-and-getaround/",
+      "type": "third_party",
+      "key_points": [
+        "Used only as directional signal that peer-to-peer rideshare rental infrastructure has tightened.",
+        "Not treated as an authoritative source for policy or legal guidance."
+      ]
+    },
+    {
+      "title": "last30days raw export",
+      "url": "local:/opt/data/outputs/2026-08-05/uber-vehicle-arbitrage-deep-dive/artifacts/exports/last30days/uber-vehicle-rental-arbitrage-raw-v3.md",
+      "type": "local_research_artifact",
+      "key_points": [
+        "Community evidence included examples of peer fleet pricing around $350/week.",
+        "Captured Reddit/social sentiment that many drivers feel Uber margins are tight.",
+        "Included anecdotal creator claims about scaling fleet-style rideshare rentals."
+      ]
+    }
+  ],
+  "notes": [
+    "Official Uber pages were treated as the highest-confidence sources for requirements and platform-sanctioned rental entry.",
+    "Profitability tables in summary.md are modeled scenario analyses built from researched rent points plus explicit operating assumptions.",
+    "Third-party shutdown commentary around HyreCar/Getaround was treated as contextual market signal only."
+  ]
+}

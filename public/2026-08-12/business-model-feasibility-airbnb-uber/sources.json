@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "title": "Airbnb 2024 Winter Release / Co-Host Network",
+      "url": "https://news.airbnb.com/airbnb-2024-winter-release/",
+      "type": "first_party"
+    },
+    {
+      "title": "Airbnb Short Term Rental Regulations",
+      "url": "https://www.airbnb.com/help/article/3305",
+      "type": "first_party"
+    },
+    {
+      "title": "Airbnb Identity Verification",
+      "url": "https://www.airbnb.com/help/article/2356",
+      "type": "first_party"
+    },
+    {
+      "title": "Airbnb US Tax Information Validation",
+      "url": "https://www.airbnb.com/help/article/3178",
+      "type": "first_party"
+    },
+    {
+      "title": "AirCover for Hosts",
+      "url": "https://www.airbnb.com/resources/hosting-homes/a/how-aircover-for-hosts-works-469",
+      "type": "first_party"
+    },
+    {
+      "title": "Hospitable Co-Host Guide",
+      "url": "https://hospitable.com/airbnb-co-host/",
+      "type": "secondary"
+    },
+    {
+      "title": "Hospitable Property Manager Fees",
+      "url": "https://hospitable.com/how-much-property-managers-charge",
+      "type": "secondary"
+    },
+    {
+      "title": "SBA Choose a Business Structure",
+      "url": "https://www.sba.gov/counseling/launch-your-business/",
+      "type": "secondary"
+    }
+  ]
+}

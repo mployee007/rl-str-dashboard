@@ -1,0 +1,116 @@
+{
+  "sources": [
+    {
+      "name": "intel/auto-round",
+      "url": "https://github.com/intel/auto-round",
+      "type": "github",
+      "stars": 1519,
+      "last_updated": "2026-07-15",
+      "description": "SOTA quantization algorithm for high-accuracy low-bit LLM inference"
+    },
+    {
+      "name": "intel/neural-compressor",
+      "url": "https://github.com/intel/neural-compressor",
+      "type": "github",
+      "stars": 2700,
+      "last_updated": "2026-07-15",
+      "description": "SOTA low-bit LLM quantization (INT8/FP8/MXFP8/INT4/MXFP4/NVFP4)"
+    },
+    {
+      "name": "bitsandbytes-foundation/bitsandbytes",
+      "url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+      "type": "github",
+      "stars": 8300,
+      "last_updated": "2026-07-15",
+      "description": "Accessible large language models via k-bit quantization for PyTorch"
+    },
+    {
+      "name": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "type": "github",
+      "stars": 120000,
+      "last_updated": "2026-07-15",
+      "description": "LLM inference in C/C++ with GGUF quantization"
+    },
+    {
+      "name": "AutoGPTQ/AutoGPTQ",
+      "url": "https://github.com/AutoGPTQ/AutoGPTQ",
+      "type": "github",
+      "stars": 5100,
+      "status": "archived",
+      "description": "GPTQ quantization package (archived Apr 2025)"
+    },
+    {
+      "name": "mit-han-lab/llm-awq",
+      "url": "https://github.com/mit-han-lab/llm-awq",
+      "type": "github",
+      "stars": 3589,
+      "description": "AWQ: Activation-aware Weight Quantization (MLSys 2024 Best Paper)"
+    },
+    {
+      "name": "vllm-project/llm-compressor",
+      "url": "https://github.com/vllm-project/llm-compressor",
+      "type": "github",
+      "description": "Transformers-compatible compression for vLLM deployment"
+    },
+    {
+      "name": "dan098/hy3",
+      "url": "https://github.com/dan098/hy3",
+      "type": "github",
+      "description": "Run Tencent Hy3 295B MoE on consumer hardware with NVMe streaming"
+    },
+    {
+      "name": "Hugging Face Blog - Quantization tag",
+      "url": "https://huggingface.co/blog?tag=quantization",
+      "type": "blog",
+      "description": "HF community blog posts on quantization"
+    },
+    {
+      "name": "Hugging Face Papers - Quantization",
+      "url": "https://huggingface.co/papers?q=quantization",
+      "type": "papers",
+      "description": "Trending quantization papers on HF"
+    },
+    {
+      "name": "Scaling Law for Quantization-Aware Training",
+      "url": "https://huggingface.co/papers?q=quantization",
+      "type": "paper",
+      "date": "2025-05-20",
+      "description": "Unified scaling law for QAT at W4A4 precision"
+    },
+    {
+      "name": "PrefixQuant",
+      "url": "https://github.com/ChenMnZ/PrefixQuant",
+      "type": "paper",
+      "date": "2024-10-07",
+      "description": "Static quantization that beats dynamic through prefixed outliers"
+    },
+    {
+      "name": "Quantization Hurts Reasoning?",
+      "url": "https://huggingface.co/papers?q=quantization",
+      "type": "paper",
+      "description": "Empirical study on quantized reasoning models"
+    },
+    {
+      "name": "Diffusers welcomes FLUX-2",
+      "url": "https://huggingface.co/blog?tag=quantization",
+      "type": "blog",
+      "date": "2025-11-25",
+      "description": "Diffusion model quantization with FLUX-2"
+    },
+    {
+      "name": "Exploring Quantization Backends in Diffusers",
+      "url": "https://huggingface.co/blog?tag=quantization",
+      "type": "blog",
+      "date": "2025-05-21",
+      "description": "TorchAO, Quanto, bitsandbytes backends"
+    },
+    {
+      "name": "Introducing AutoRound",
+      "url": "https://huggingface.co/blog?tag=quantization",
+      "type": "blog",
+      "date": "2025-04-29",
+      "description": "Intel's advanced quantization for LLMs and VLMs"
+    }
+  ]
+}

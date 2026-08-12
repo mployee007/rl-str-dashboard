@@ -1,0 +1,4 @@
+address,source,property_type,rent,days_on_zillow,furnished_verified,bedrooms,bathrooms,rent_zestimate,spread_estimate_moderate,qualifies,failure_reason,url
+"10404 Willow Leaf Dr, Gulfport, MS 39503",zillapi/zillow,single_family,2300,178,False,4,2,2279,,False,Zillapi detail shows furnished=false,https://www.zillow.com/homedetails/10404-Willow-Leaf-Dr-Gulfport-MS-39503/337861958_zpid/
+"17431 South Blvd, Gulfport, MS 39503",zillapi/zillow,single_family,1600,82,False,3,2,1440,,False,Zillapi detail shows furnished=false,https://www.zillow.com/homedetails/17431-South-Blvd-Gulfport-MS-39503/249506189_zpid/
+"615 Tennessee St, Gulfport, MS 39501",zillapi/zillow,single_family,1600,66,False,3,2,1347,,False,Zillapi detail shows furnished=false,https://www.zillow.com/homedetails/615-Tennessee-St-Gulfport-MS-39501/77996754_zpid/

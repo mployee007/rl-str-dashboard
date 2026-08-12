@@ -1,0 +1,70 @@
+{
+  "sources": [
+    {
+      "type": "discovery",
+      "url": "https://www.mordorintelligence.com/industry-reports/united-states-power-epc-market/companies",
+      "note": "Top U.S. Power EPC companies / market framing"
+    },
+    {
+      "type": "discovery",
+      "url": "https://www.expertmarketresearch.com/blogs/top-epc-companies",
+      "note": "Global EPC leaders incl. Quanta / Fluor / Bechtel / others"
+    },
+    {
+      "type": "financials",
+      "url": "https://stockanalysis.com/stocks/pwr/financials/",
+      "note": "Quanta 5Y revenue / profit data"
+    },
+    {
+      "type": "financials",
+      "url": "https://stockanalysis.com/stocks/mtz/financials/",
+      "note": "MasTec 5Y revenue / profit data"
+    },
+    {
+      "type": "financials",
+      "url": "https://stockanalysis.com/stocks/prim/financials/",
+      "note": "Primoris 5Y revenue / profit data"
+    },
+    {
+      "type": "financials",
+      "url": "https://stockanalysis.com/stocks/flr/financials/",
+      "note": "Fluor 5Y revenue / profit data"
+    },
+    {
+      "type": "financials",
+      "url": "https://stockanalysis.com/stocks/bw/financials/",
+      "note": "Babcock & Wilcox 5Y revenue / profit data"
+    },
+    {
+      "type": "stats",
+      "url": "https://stockanalysis.com/stocks/pwr/statistics/",
+      "note": "Quanta valuation / leverage snapshot"
+    },
+    {
+      "type": "stats",
+      "url": "https://stockanalysis.com/stocks/mtz/statistics/",
+      "note": "MasTec valuation / leverage snapshot"
+    },
+    {
+      "type": "stats",
+      "url": "https://stockanalysis.com/stocks/prim/statistics/",
+      "note": "Primoris valuation / leverage snapshot"
+    },
+    {
+      "type": "stats",
+      "url": "https://stockanalysis.com/stocks/flr/statistics/",
+      "note": "Fluor valuation / leverage snapshot"
+    },
+    {
+      "type": "stats",
+      "url": "https://stockanalysis.com/stocks/bw/statistics/",
+      "note": "Babcock & Wilcox valuation / leverage snapshot"
+    },
+    {
+      "type": "company",
+      "url": "https://www.kiewit.com/our-markets/power/",
+      "note": "Private-market comparator / why Kiewit excluded from stock table"
+    }
+  ],
+  "_note": "Core research sources used for this session"
+}

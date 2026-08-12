@@ -1,0 +1,43 @@
+{
+  "city": "Fort Lauderdale, FL",
+  "target_zips": ["33316", "33308", "33313"],
+  "sources": [
+    {
+      "type": "reference_file",
+      "path": "/opt/data/outputs/incoming/Top_Cities_List.md",
+      "evidence": "Ft.Lauderdale | 33316,33308,33313 | Broward Health Medical Center (Level I Trauma)"
+    },
+    {
+      "type": "geocoding",
+      "method": "Open-Meteo geocoding API via urllib",
+      "evidence": "Fort Lauderdale, FL center ~ lat 26.12231, lon -80.14338"
+    },
+    {
+      "type": "zillapi_search",
+      "bbox": "-80.24338,26.02231,-80.04338,26.22231",
+      "status": "for_rent",
+      "beds_min": 2,
+      "price_max": 3000,
+      "saved_result": "/tmp/hermes-results/call_mONWXwGGU2EgLitODGn7ixg9.txt"
+    },
+    {
+      "type": "zillapi_search",
+      "bbox": "-80.22338,26.04231,-80.06338,26.20231",
+      "status": "for_rent",
+      "beds_min": 2,
+      "price_max": 3000,
+      "saved_result": "/tmp/hermes-results/call_xZd4OfN4DMlcJugJ0GTSLrr3.txt"
+    },
+    {
+      "type": "zillapi_lookup",
+      "address": "2244 NW 52nd Ave, Fort Lauderdale, FL 33313",
+      "saved_result": "/tmp/hermes-results/call_JXt0fXVAIVrx8ESsrKh2Sftx.txt",
+      "notes": "Townhouse, rent 1750, daysOnZillow 12, furnished false"
+    },
+    {
+      "type": "craigslist",
+      "url": "https://www.craigslist.org/search/area/miami?cat=apa&max_price=3000&min_bedrooms=2&min_price=1500&query=furnished&sort=dateoldest#search=2~gallery~0",
+      "notes": "South Florida housing feed searched for furnished listings; oldest visible row on page was dated 6/15/2026, with reviewed Fort Lauderdale house-like rows on 7/14, 7/29, and 7/30."
+    }
+  ]
+}

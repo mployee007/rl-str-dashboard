@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "type": "local",
+      "path": "/opt/data/rl-str-dashboard/server.py"
+    },
+    {
+      "type": "local",
+      "path": "/opt/data/rl-str-dashboard/Dockerfile"
+    },
+    {
+      "type": "web",
+      "url": "https://docs.railway.com/guides/flask",
+      "note": "Railway deploy flow and PORT/start command expectations"
+    },
+    {
+      "type": "web",
+      "url": "https://docs.railway.com/builds/dockerfiles",
+      "note": "Railway auto-detects Dockerfile at repo root"
+    }
+  ]
+}

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Planner — June 28 – July 4, 2026</title>
+<style>
+  :root {
+    --bg: #f8f6f3;
+    --card: #ffffff;
+    --accent: #2d6a4f;
+    --accent-light: #d8f3dc;
+    --accent2: #e07a5f;
+    --accent2-light: #fce4d6;
+    --accent3: #4a6fa5;
+    --accent3-light: #d6e4f0;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --priority-bar: #f59e0b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--accent) 0%, #40916c 100%);
+    color: white;
+    padding: 32px 28px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-top: 2px;
+  }
+
+  .header .week-label {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  /* Priority Bar */
+  .priority-section {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-left: 5px solid var(--priority-bar);
+  }
+
+  .priority-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .priority-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+  }
+
+  .priority-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  .priority-item .num {
+    background: var(--accent);
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .priority-item .num.due-sat {
+    background: var(--accent2);
+  }
+  .priority-item .num.due-sun {
+    background: var(--accent3);
+  }
+
+  .priority-item .label {
+    font-weight: 500;
+  }
+
+  .priority-item .deadline {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .priority-item .deadline .badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 4px;
+  }
+
+  .badge-sat {
+    background: var(--accent2-light);
+    color: #c0392b;
+  }
+  .badge-sun {
+    background: var(--accent3-light);
+    color: #2c5282;
+  }
+  .badge-flex {
+    background: #e8f5e9;
+    color: #2d6a4f;
+  }
+
+  /* Day Grid */
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .day-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .day-card.weekend {
+    border-top-color: var(--accent2);
+    background: #fffaf5;
+  }
+  .day-card.today {
+    border-top-color: var(--accent);
+    background: #f6fef9;
+    box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.15), 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .day-header .day-name {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .day-header .day-date {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .day-header .day-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 10px;
+  }
+
+  .day-badge.today-badge {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .day-badge.weekend-badge {
+    background: var(--accent2-light);
+    color: var(--accent2);
+  }
+
+  .day-tasks {
+    list-style: none;
+    flex: 1;
+    min-height: 120px;
+  }
+
+  .day-tasks li {
+    font-size: 13.5px;
+    padding: 7px 0 7px 22px;
+    position: relative;
+    line-height: 1.5;
+    border-bottom: 1px dashed #f0f0f0;
+  }
+  .day-tasks li:last-child {
+    border-bottom: none;
+  }
+
+  .day-tasks li::before {
+    content: '○';
+    position: absolute;
+    left: 0;
+    color: #bbb;
+    font-size: 16px;
+  }
+
+  .day-tasks li .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 6px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .tag-deadline { background: #fee2e2; color: #dc2626; }
+  .tag-reunion  { background: #fef3c7; color: #d97706; }
+  .tag-finance  { background: #dbeafe; color: #2563eb; }
+  .tag-coding   { background: #e0e7ff; color: #4f46e5; }
+  .tag-music    { background: #f3e8ff; color: #7c3aed; }
+  .tag-food     { background: #fce7f3; color: #db2777; }
+  .tag-website  { background: #d1fae5; color: #059669; }
+
+  .day-tasks .empty-note {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  .day-notes {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .day-notes textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    color: var(--text);
+    background: #fafafa;
+    resize: vertical;
+    min-height: 44px;
+    transition: border-color 0.15s;
+  }
+
+  .day-notes textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: white;
+  }
+
+  .day-notes textarea::placeholder {
+    color: #bbb;
+  }
+
+  /* Notes section */
+  .notes-section {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+  }
+
+  .notes-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+
+  .note-card {
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .note-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .note-card p {
+    font-size: 12.5px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .day-card { break-inside: avoid; }
+    .priority-item { break-inside: avoid; }
+    .day-notes textarea { border: 1px solid #ccc; background: white; }
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 12px 10px; }
+    .header { padding: 20px; flex-direction: column; align-items: flex-start; }
+    .header h1 { font-size: 22px; }
+    .day-grid { grid-template-columns: 1fr; }
+    .priority-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Print button */
+  .print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-bottom: 16px;
+  }
+  .print-btn:hover {
+    background: var(--accent-light);
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 20px 0 10px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Print Button (hidden in print) -->
+  <button class="print-btn" onclick="window.print()">
+    🖨️ Print / Save PDF
+  </button>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>📋 Weekly Planner</h1>
+      <div class="subtitle">Plan the week. Own the day.</div>
+    </div>
+    <div class="week-label">WEEK 27 · JUN 28 – JUL 4, 2026</div>
+  </div>
+
+  <!-- Top Priorities -->
+  <div class="priority-section">
+    <h2>⭐ This Week's Priorities</h2>
+    <div class="priority-grid">
+      <div class="priority-item">
+        <div class="num due-sat">1</div>
+        <div>
+          <div class="label">Finish coding homework</div>
+          <div class="deadline">📅 Due <span class="badge badge-sat">Saturday</span></div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="num">2</div>
+        <div>
+          <div class="label">Generate songs for trivia playlist</div>
+          <div class="deadline">🎵 Reunion prep <span class="badge badge-flex">Flexible</span></div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="num">3</div>
+        <div>
+          <div class="label">Complete HELOC application</div>
+          <div class="deadline">🏦 Financial <span class="badge badge-flex">This week</span></div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="num">4</div>
+        <div>
+          <div class="label">Start planning peach cobbler</div>
+          <div class="deadline">🥧 Reunion prep <span class="badge badge-flex">Flexible</span></div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="num">5</div>
+        <div>
+          <div class="label">Clean out cooler</div>
+          <div class="deadline">🧊 Reunion prep <span class="badge badge-flex">Flexible</span></div>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="num due-sun">6</div>
+        <div>
+          <div class="label">Website running &amp; complete</div>
+          <div class="deadline">📅 Due <span class="badge badge-sun">Next Sunday</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day Cards -->
+  <div class="day-grid">
+
+    <!-- Sunday -->
+    <div class="day-card today">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Sunday</div>
+          <div class="day-date">June 28</div>
+        </div>
+        <span class="day-badge today-badge">Today</span>
+      </div>
+      <ul class="day-tasks">
+        <li>Set up week: review all deadlines, block calendar time <span class="tag tag-deadline">Plan</span></li>
+        <li>Dedicate 2-3 hrs to coding homework — get a solid start <span class="tag tag-coding">Homework</span></li>
+        <li>Gather HELOC documents (W2s, tax returns, pay stubs) <span class="tag tag-finance">HELOC</span></li>
+        <li>Check website status — is it live? what's missing? <span class="tag tag-website">Website</span></li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for today…"></textarea>
+      </div>
+    </div>
+
+    <!-- Monday -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Monday</div>
+          <div class="day-date">June 29</div>
+        </div>
+        <span class="day-badge"></span>
+      </div>
+      <ul class="day-tasks">
+        <li>Continue coding homework — aim for 50% done <span class="tag tag-coding">Homework</span></li>
+        <li>Draft peach cobbler: recipe research &amp; ingredient list <span class="tag tag-food">Cobbler</span></li>
+        <li>HELOC: call lender or start online application <span class="tag tag-finance">HELOC</span></li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for Monday…"></textarea>
+      </div>
+    </div>
+
+    <!-- Tuesday -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Tuesday</div>
+          <div class="day-date">June 30</div>
+        </div>
+        <span class="day-badge"></span>
+      </div>
+      <ul class="day-tasks">
+        <li>Coding homework push — aim for 75% complete <span class="tag tag-coding">Homework</span></li>
+        <li>Brainstorm trivia playlist: decades, genres, must-include bangers <span class="tag tag-music">Trivia</span></li>
+        <li>Clean out cooler: empty, scrub, dry, check for mildew <span class="tag tag-reunion">Cooler</span></li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for Tuesday…"></textarea>
+      </div>
+    </div>
+
+    <!-- Wednesday -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Wednesday</div>
+          <div class="day-date">July 1</div>
+        </div>
+        <span class="day-badge"></span>
+      </div>
+      <ul class="day-tasks">
+        <li>Finish coding homework — test everything, polish <span class="tag tag-coding">Homework</span></li>
+        <li>Actually generate / curate songs for trivia playlist <span class="tag tag-music">Trivia</span></li>
+        <li>Draft grocery list for peach cobbler ingredients <span class="tag tag-food">Cobbler</span></li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for Wednesday…"></textarea>
+      </div>
+    </div>
+
+    <!-- Thursday -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Thursday</div>
+          <div class="day-date">July 2</div>
+        </div>
+        <span class="day-badge"></span>
+      </div>
+      <ul class="day-tasks">
+        <li>HELOC: submit application or follow up on pending docs <span class="tag tag-finance">HELOC</span></li>
+        <li>Website work: content, deployment, checklist review <span class="tag tag-website">Website</span></li>
+        <li>Double-check cooler is clean and ready <span class="tag tag-reunion">Cooler</span></li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for Thursday…"></textarea>
+      </div>
+    </div>
+
+    <!-- Friday -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Friday</div>
+          <div class="day-date">July 3</div>
+        </div>
+        <span class="day-badge"></span>
+      </div>
+      <ul class="day-tasks">
+        <li>Final review &amp; submission of coding homework <span class="tag tag-deadline">Due Sat</span></li>
+        <li>Finalize trivia playlist — export / share <span class="tag tag-music">Trivia</span></li>
+        <li>Confirm peach cobbler plan: recipe, shopping, baking timeline <span class="tag tag-food">Cobbler</span></li>
+        <li>Website: push any remaining changes <span class="tag tag-website">Website</span></li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for Friday…"></textarea>
+      </div>
+    </div>
+
+    <!-- Saturday -->
+    <div class="day-card weekend">
+      <div class="day-header">
+        <div>
+          <div class="day-name">Saturday</div>
+          <div class="day-date">July 4</div>
+        </div>
+        <span class="day-badge weekend-badge">🇺🇸 4th of July</span>
+      </div>
+      <ul class="day-tasks">
+        <li><strong>Homework due today</strong> — submit before deadline <span class="tag tag-deadline">🚨</span></li>
+        <li>Prep anything remaining for reunion <span class="tag tag-reunion">Reunion</span></li>
+        <li>Light day — enjoy the 4th!</li>
+      </ul>
+      <div class="day-notes">
+        <textarea placeholder="Notes for Saturday…"></textarea>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Quick Notes -->
+  <div class="notes-section">
+    <h3>📝 Notes &amp; Reminders</h3>
+    <div class="notes-grid">
+      <div class="note-card">
+        <h4>🎯 Reunion Checklist</h4>
+        <p>☐ Trivia playlist generated<br>☐ Peach cobbler planned<br>☐ Cooler cleaned out<br>☐ Any other reunion prep?</p>
+      </div>
+      <div class="note-card">
+        <h4>💻 Website (due Jul 5)</h4>
+        <p>Running &amp; complete by next Sunday. Dedicate time Thurs–Fri to push final changes.</p>
+      </div>
+      <div class="note-card">
+        <h4>🏦 HELOC Application</h4>
+        <p>Gather: W2s, tax returns, pay stubs, ID. Complete &amp; submit by Thursday.</p>
+      </div>
+      <div class="note-card">
+        <h4>📚 Coding Homework (due Sat)</h4>
+        <p>Front-load early in the week — Sunday through Wednesday. Leave Friday as buffer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Weekly Planner · Generated June 28, 2026 · Hermes Agent
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "url": "https://ir.prim.com/news-and-events/news-releases/2026/06-22-2026-210520328",
+      "type": "primary",
+      "note": "Primoris June 22, 2026 business update: additional renewables cost overruns/delays, six projects, guidance cut, COO departure"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1361538/000136153826000017/prim-20260622x8k.htm",
+      "type": "primary",
+      "note": "SEC 8-K tied to June 22 update and COO departure"
+    },
+    {
+      "url": "https://ir.prim.com/news-and-events/news-releases/2026/05-05-2026-211613921",
+      "type": "primary",
+      "note": "Q1 2026 earnings release: cost pressures on a limited number of renewables projects"
+    },
+    {
+      "url": "https://www.investmentnews.com/regulation-legal-compliance/pension-funds-sue-primoris-allege-it-hid-solar-cost-overruns-from-investors/267513",
+      "type": "secondary",
+      "note": "Reported plaintiffs, venue, class period, and lawsuit theory"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/primoris-services-prim-faces-securities-class-action-after-second-major-selloff-on-persistent-ineffective-project-management-coo-departure--hbss-302840223.html",
+      "type": "secondary",
+      "note": "Law-firm summary of class period and alleged misstatements"
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/prim/history/",
+      "type": "market-data",
+      "note": "Recent price history used to anchor event-date reactions"
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/prim/statistics/",
+      "type": "market-data",
+      "note": "Current market cap, leverage, and valuation snapshot"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001361538.json",
+      "type": "primary",
+      "note": "SEC submissions index confirming filing dates for 8-K and 10-Q"
+    }
+  ]
+}

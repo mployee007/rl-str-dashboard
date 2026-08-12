@@ -1,0 +1,53 @@
+{
+  "qualifying": [],
+  "near_misses": [
+    {
+      "address": "501 W Broad St, Columbus, OH",
+      "zip": "43215",
+      "price": null,
+      "daysOnZillow": null,
+      "detailUrl": "https://www.zillow.com/apartments/columbus-oh/green-house-columbus/CqXrZp/",
+      "homeType": null,
+      "isBuilding": true,
+      "statusText": "Green House Columbus",
+      "moderateRevenue": null,
+      "moderateSpread": null
+    },
+    {
+      "address": "605 Oak St, Columbus, OH 43215",
+      "zip": "43215",
+      "price": 1850,
+      "daysOnZillow": 14,
+      "detailUrl": "https://www.zillow.com/homedetails/605-Oak-St-Columbus-OH-43215/440047301_zpid/",
+      "homeType": "APARTMENT",
+      "isBuilding": null,
+      "statusText": "Apartment for rent",
+      "moderateRevenue": 2925.0,
+      "moderateSpread": 1075.0
+    },
+    {
+      "address": "5001 Olentangy River Rd, Columbus, OH",
+      "zip": "43214",
+      "price": null,
+      "daysOnZillow": null,
+      "detailUrl": "https://www.zillow.com/apartments/columbus-oh/taylor-house/5wqPWF/",
+      "homeType": null,
+      "isBuilding": true,
+      "statusText": "Taylor House",
+      "moderateRevenue": null,
+      "moderateSpread": null
+    },
+    {
+      "address": "39 Sunnyside Ln, Columbus, OH 43214",
+      "zip": "43214",
+      "price": 1600,
+      "daysOnZillow": 17,
+      "detailUrl": "https://www.zillow.com/homedetails/39-Sunnyside-Ln-Columbus-OH-43214/2118508831_zpid/",
+      "homeType": "SINGLE_FAMILY",
+      "isBuilding": null,
+      "statusText": "House for rent",
+      "moderateRevenue": 2925.0,
+      "moderateSpread": 1325.0
+    }
+  ]
+}

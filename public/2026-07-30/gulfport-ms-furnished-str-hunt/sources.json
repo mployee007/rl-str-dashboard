@@ -1,0 +1,21 @@
+{
+  "city": "Gulfport, MS",
+  "target_zips": ["39501", "39503", "39505", "39507"],
+  "sources": [
+    {
+      "type": "geocoding",
+      "method": "open-meteo via curl",
+      "evidence": "Gulfport postcodes include 39501, 39502, 39503, 39505, 39506, 39507"
+    },
+    {
+      "type": "zillapi",
+      "method": "search_listings + lookup_property_by_address",
+      "notes": "Strict Zillapi candidates were 10404 Willow Leaf Dr, 17431 South Blvd, and 615 Tennessee St; all had furnished=false in property details."
+    },
+    {
+      "type": "craigslist",
+      "url": "https://www.craigslist.org/search/area/gulfport?cat=apa&max_price=3000&min_price=1500&query=furnished#search=2~gallery~0",
+      "notes": "Result set existed, but visible posting dates on surfaced listings were in June-July 2026, so none were verifiable as older than 60 days."
+    }
+  ]
+}

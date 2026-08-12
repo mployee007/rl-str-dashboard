@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "type": "property_lookup",
+      "name": "Zillapi lookup by address",
+      "address": "3353 Chapel Ct, Jacksonville, FL 32226",
+      "zpid": "67410708",
+      "url": "https://www.zillow.com/homedetails/3353-Chapel-Ct-Jacksonville-FL-32226/67410708_zpid/"
+    },
+    {
+      "type": "rental_comp_search",
+      "name": "Zillapi bbox for-rent search",
+      "bbox": "-81.62201,30.43557,-81.52201,30.53557",
+      "notes": "Filtered for true single-family and townhouse comps using homeType/status/url heuristics"
+    },
+    {
+      "type": "airbnb_search",
+      "name": "Airbnb Jacksonville / 32226 visible results",
+      "url": "https://www.airbnb.com/s/32226/homes?checkin=2026-09-18&checkout=2026-09-21&adults=4&room_types%5B%5D=Entire%20home%2Fapt"
+    },
+    {
+      "type": "regulatory_reference",
+      "name": "Jacksonville, FL STR regulatory notes",
+      "source": "skill reference: research/str-arbitrage-analysis/references/jacksonville-fl-regulatory-notes.md"
+    },
+    {
+      "type": "destination_demand",
+      "name": "Visit Jacksonville",
+      "url": "https://www.visitjacksonville.com/"
+    },
+    {
+      "type": "city_reference",
+      "name": "Jacksonville.gov",
+      "url": "https://www.jacksonville.gov/"
+    }
+  ],
+  "_note": "Sources consulted during this session"
+}
