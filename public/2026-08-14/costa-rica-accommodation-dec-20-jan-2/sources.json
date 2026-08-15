@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "title": "Sendero Hotel & Villas",
+      "url": "https://senderonosara.com/",
+      "note": "Official site; luxury surf hotel in Nosara, jungle-meets-ocean positioning."
+    },
+    {
+      "title": "Hotel Nantipa",
+      "url": "https://www.nantipa.com/",
+      "note": "Official site; barefoot luxury beachfront boutique hotel in Santa Teresa."
+    },
+    {
+      "title": "Andaz Costa Rica Resort at Peninsula Papagayo",
+      "url": "https://www.andazpuravida.com/",
+      "note": "Official site; private peninsula resort, strong wellness and beach-club luxury profile."
+    },
+    {
+      "title": "Four Seasons Resort Costa Rica at Peninsula Papagayo",
+      "url": "https://www.fourseasons.com/costarica/",
+      "note": "Official site; highest-end luxury option in the set."
+    },
+    {
+      "title": "Lonely Planet — A first-time guide to Nosara, Costa Rica",
+      "url": "https://www.lonelyplanet.com/articles/guide-to-nosara-costa-rica",
+      "note": "Used for destination fit: relaxed surf-and-yoga escape, mentions Harmony Hotel and Gilded Iguana."
+    },
+    {
+      "title": "Costa Rica Experts — Papagayo Peninsula: Best Things To Do & Where To Stay",
+      "url": "https://costaricaexperts.com/destinations/papagayo/",
+      "note": "Used for destination fit: luxury gated community, secluded beaches, Four Seasons + Andaz context."
+    },
+    {
+      "title": "Florblanca",
+      "url": "https://www.florblanca.com/",
+      "note": "Official site states the resort is no longer open."
+    }
+  ],
+  "_note": "Sources consulted during this session"
+}

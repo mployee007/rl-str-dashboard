@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "title": "iShares Core S&P 500 ETF latest holdings CSV",
+      "url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf/latest-holdings.csv",
+      "type": "official holdings csv"
+    },
+    {
+      "title": "iShares Russell 1000 ETF latest holdings CSV",
+      "url": "https://www.ishares.com/us/products/239707/ishares-russell-1000-etf/latest-holdings.csv",
+      "type": "official holdings csv"
+    },
+    {
+      "title": "Yahoo Finance BLK quote page",
+      "url": "https://finance.yahoo.com/quote/BLK/",
+      "type": "market data summary"
+    },
+    {
+      "title": "BlackRock Aladdin overview",
+      "url": "https://www.blackrock.com/aladdin",
+      "type": "official product overview"
+    },
+    {
+      "title": "BlackRock Q2 2026 10-Q filing index",
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526337177/0001193125-26-337177-index.html",
+      "type": "official SEC filing index"
+    },
+    {
+      "title": "BlackRock Q2 2026 10-Q document",
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526337177/blk-20260630.htm",
+      "type": "official SEC filing"
+    },
+    {
+      "title": "BlackRock Q1 2026 10-Q filing index",
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526208766/0001193125-26-208766-index.html",
+      "type": "official SEC filing index"
+    }
+  ],
+  "_note": "Sources consulted during this BlackRock session."
+}
