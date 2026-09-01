@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T08:04:28.109205+00:00",
+  "generated_at": "2026-09-01T08:20:18.089551+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 41,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-09-01",
       "title": "peter-thiel-13f-last-3-quarters",
       "summary": "**Source:** SEC EDGAR \u2014 Thiel Macro LLC (CIK: 0001562087) **Date of report:** 2026-09-01 **Filer:** Thiel Macro LLC, 2121 Avenue of the Stars, Suite 3350, Los Angeles, CA 90067 --- Thiel Macro LLC filed **empty 13Fs** for Q4 2025 and Q1 2026 (zero public equity holdings), then ag",
-      "updated_at": "2026-09-01T07:34:06.660491",
-      "file_count": 1,
+      "updated_at": "2026-09-01T08:05:18.325162",
+      "file_count": 2,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -22,7 +22,16 @@
         "export": [],
         "csv": [],
         "image": [],
-        "other": []
+        "other": [
+          {
+            "name": "vistra-financial-analysis.md",
+            "rel_path": "vistra-financial-analysis.md",
+            "size": 16404,
+            "updated_at": "2026-09-01T08:05:18.325162",
+            "previewable": true,
+            "public_href": "public/2026-09-01/peter-thiel-13f-last-3-quarters/vistra-financial-analysis.md"
+          }
+        ]
       }
     },
     {
