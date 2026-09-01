@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Ultra Modern Investments property page",
+    "url": "https://ultramoderninvestments.com/property/8702-detroit-ave-44102",
+    "notes": "Seller price, ARV, repairs, rent roll, improvements, expense summary"
+  },
+  {
+    "title": "Zillow property lookup by address",
+    "url": "https://www.zillow.com/",
+    "notes": "Geocode, rent listing context, nearby homes, property metadata via Zillapi"
+  },
+  {
+    "title": "Zillow sold listings search around 8702 Detroit Ave",
+    "url": "https://www.zillow.com/",
+    "notes": "Nearby sold multifamily comp set in 44102 via Zillapi search_listings"
+  },
+  {
+    "title": "OpenStreetMap geocode / reverse geocode",
+    "url": "https://www.openstreetmap.org/",
+    "notes": "Address labeling and neighborhood tags: West Eighties, Cudell, Edgewater"
+  },
+  {
+    "title": "Cleveland Metroparks - Edgewater Park",
+    "url": "https://www.clevelandmetroparks.com/parks/visit/parks/lakefront-reservation/edgewater-park",
+    "notes": "Lakefront amenity anchor near the property"
+  },
+  {
+    "title": "Gordon Square Arts District",
+    "url": "https://www.gordonsquare.org/",
+    "notes": "Arts district / theater anchors supporting corridor desirability"
+  }
+]

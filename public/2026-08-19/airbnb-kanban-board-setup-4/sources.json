@@ -1,0 +1,80 @@
+{
+  "sources": [
+    {
+      "title": "PwC / ULI — U.S. real estate markets to watch 2026",
+      "url": "https://www.pwc.com/us/en/industries/financial-services/asset-wealth-management/real-estate/emerging-trends-in-real-estate-pwc-uli/markets-to-watch.html",
+      "use": "Overall metro rankings, regional job/income-growth commentary"
+    },
+    {
+      "title": "CBRE — U.S. Real Estate Market Outlook 2026",
+      "url": "https://www.cbre.com/insights/books/us-real-estate-market-outlook-2026",
+      "use": "Macro CRE and multifamily outlook, supply overhang context"
+    },
+    {
+      "title": "CBRE — U.S. Real Estate Market Outlook 2026: Multifamily",
+      "url": "https://www.cbre.com/insights/books/us-real-estate-market-outlook-2026/multifamily",
+      "use": "Buy-vs-rent premium, supply and rent-growth pressures"
+    },
+    {
+      "title": "NAHB — 2026 Housing Outlook",
+      "url": "https://www.nahb.org/news-and-economics/press-releases/2026/02/2026-housing-outlook-ongoing-challenges-cautious-optimism-and-incremental-gains",
+      "use": "Mortgage-rate and inventory outlook, single-family/multifamily starts"
+    },
+    {
+      "title": "J.P. Morgan — US Housing Market Outlook",
+      "url": "https://www.jpmorgan.com/insights/global-research/real-estate/us-housing-market-outlook",
+      "use": "National home-price / affordability backdrop"
+    },
+    {
+      "title": "Arbor — Top U.S. Multifamily Rent Growth Markets (May 2026)",
+      "url": "https://arbor.com/blog/top-u-s-multifamily-rent-growth-markets-may-2026/",
+      "use": "2026 metro rent-growth leaders"
+    },
+    {
+      "title": "Forbes — Why Single-Family Rentals Outperformed in 98 of the 100 Largest U.S. Markets",
+      "url": "https://www.forbes.com/sites/tonyjulianelle/2026/07/28/why-single-family-rentals-outperformed-in-98-of-the-100-largest-us-markets/",
+      "use": "SFR breadth and strongest rent-growth corridor markets"
+    },
+    {
+      "title": "Steadily — Top 5 markets for multifamily rental investing in 2026",
+      "url": "https://www.steadily.com/blog/top-multifamily-rental-markets",
+      "use": "Chicago / Columbus / Charlotte market color and cited metrics"
+    },
+    {
+      "title": "Buildium — 60 Up-and-Coming Real Estate Markets for 2026",
+      "url": "https://www.buildium.com/blog/up-and-coming-real-estate-markets-2026/",
+      "use": "Small-market cash-flow shortlist and Rockford-specific rent / vacancy / cap-rate / value metrics"
+    },
+    {
+      "title": "U.S. Census QuickFacts — Rockford city, Illinois",
+      "url": "https://www.census.gov/quickfacts/fact/table/rockfordcityillinois/PST045225",
+      "use": "Rockford city population, rent, home value, income, poverty, labor-force, and housing stats"
+    },
+    {
+      "title": "City of Rockford — Official Website",
+      "url": "https://rockfordil.gov/",
+      "use": "Official 2026 signal that the city released an Infill Planning & Development Guide to support housing investment"
+    },
+    {
+      "title": "Zillapi / Zillow listing search — Rockford bbox under $500K",
+      "url": "https://www.zillow.com/",
+      "use": "Live active-listing counts, ZIP-level median asks, and representative listing screens for Rockford submarket ranking"
+    },
+    {
+      "title": "Zillow listing — 417 N Longwood St, Rockford, IL 61107",
+      "url": "https://www.zillow.com/homedetails/417-N-Longwood-St-Rockford-IL-61107/5555334_zpid/",
+      "use": "Representative east-side SFR value-add listing for Rockford live screen"
+    },
+    {
+      "title": "Zillow listing — 1645 7th Ave, Rockford, IL 61104",
+      "url": "https://www.zillow.com/homedetails/1645-7th-Ave-Rockford-IL-61104/5557501_zpid/",
+      "use": "Representative duplex listing for Rockford live screen"
+    },
+    {
+      "title": "Zillow listing — 735 N Court St, Rockford, IL 61103",
+      "url": "https://www.zillow.com/homedetails/735-N-Court-St-Rockford-IL-61103/5554118_zpid/",
+      "use": "Representative fourplex listing for Rockford live screen"
+    }
+  ],
+  "_note": "Compiled from Search MCP research, direct page extraction, and Zillapi-backed live listing screens. Some web-search results were degraded or noisy, so the Rockford deliverables prioritized official pages, readable direct extraction, and property-level lookup data."
+}

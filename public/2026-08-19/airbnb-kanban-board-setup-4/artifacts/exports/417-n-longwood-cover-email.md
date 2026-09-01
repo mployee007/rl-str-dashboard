@@ -1,0 +1,34 @@
+# Cover Email — 417 N Longwood St LOI
+
+**To:** Olga Kampmeier  
+**Brokerage:** Keller Williams Realty Signature  
+**Office:** 815-315-1111  
+**Subject:** LOI / Offer – 417 N Longwood St, Rockford, IL 61107
+
+## Email Body
+
+Hi Olga,
+
+Attached please find **Sugalock LLC’s** Letter of Intent for **417 N Longwood St, Rockford, IL 61107**.
+
+Key terms are as follows:
+- Purchase price: **$58,000**
+- Earnest money deposit: **$1,500**
+- Inspection / due diligence period: **10 days**
+- Closing: **21–30 days**
+- Purchase on an **as-is** basis
+
+We are prepared to move quickly if the property condition and tenancy documentation align with expectations. Please confirm receipt and let us know the preferred contract form and delivery instructions for the next step.
+
+Thank you,
+
+**Solomon Tompkins**  
+Sugalock LLC  
+708-600-5714  
+solomon@suga-lock.com
+
+## Attachments
+- `417-n-longwood-loi.pdf`
+
+## Attachment Path
+- `/opt/data/outputs/2026-08-19/airbnb-kanban-board-setup-4/artifacts/exports/417-n-longwood-loi.pdf`

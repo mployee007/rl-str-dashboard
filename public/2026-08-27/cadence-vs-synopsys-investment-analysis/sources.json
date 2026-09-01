@@ -1,0 +1,44 @@
+[
+  {
+    "company": "Cadence",
+    "type": "market-data",
+    "url": "https://finance.yahoo.com/quote/CDNS/",
+    "notes": "Price, market cap, TTM revenue, TTM EPS, analyst target, recent performance snapshot."
+  },
+  {
+    "company": "Cadence",
+    "type": "market-data",
+    "url": "https://www.google.com/finance/quote/CDNS:NASDAQ",
+    "notes": "Price, market cap, analyst target distribution, recent quarterly revenue and EPS data."
+  },
+  {
+    "company": "Cadence",
+    "type": "company-positioning",
+    "url": "https://www.cadence.com/",
+    "notes": "Company product scope across EDA, IP, systems, AI, packaging, and multiphysics."
+  },
+  {
+    "company": "Synopsys",
+    "type": "market-data",
+    "url": "https://finance.yahoo.com/quote/SNPS/",
+    "notes": "Price, market cap, TTM revenue, TTM EPS, analyst target, recent performance snapshot."
+  },
+  {
+    "company": "Synopsys",
+    "type": "market-data",
+    "url": "https://www.google.com/finance/quote/SNPS:NASDAQ",
+    "notes": "Price, market cap, analyst target distribution, recent quarterly revenue and EPS data."
+  },
+  {
+    "company": "Synopsys",
+    "type": "official-earnings",
+    "url": "https://www.prnewswire.com/news-releases/synopsys-posts-financial-results-for-third-quarter-fiscal-year-2026-302860810.html",
+    "notes": "Q3 FY26 revenue, EPS, FY26 guidance, margin, and management commentary."
+  },
+  {
+    "company": "Synopsys",
+    "type": "company-positioning",
+    "url": "https://www.synopsys.com/company.html",
+    "notes": "Company platform positioning, revenue scale, R&D intensity, and leadership claims."
+  }
+]

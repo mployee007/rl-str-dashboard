@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "name": "Kingston HP Z4 G4 Xeon compatibility page",
+      "url": "https://www.kingston.com/en/memory/search/model/97125/hp-hpe-workstation-z4-g4-xeon?status=active",
+      "note": "Snippet states Xeon W-2100 up to 256GB using 8/16/32GB modules in groups of four; Xeon W-2200 up to 512GB using 8/16/32/64GB modules in groups of four."
+    },
+    {
+      "name": "Kingston KSM26ED8/32ME datasheet",
+      "url": "https://www.kingston.com/dataSheets/KSM26ED8_32ME.pdf",
+      "note": "32GB 2Rx8 PC4-2666 CL19 288-pin ECC DIMM datasheet."
+    },
+    {
+      "name": "Newegg Kingston KSM26ED8/32ME",
+      "url": "https://www.newegg.com/kingston-32gb/p/0RN-001J-00TV5",
+      "note": "Accessible page; extracted price $50.00."
+    },
+    {
+      "name": "Newegg A-Tech compatible 32GB ECC UDIMM",
+      "url": "https://www.newegg.com/a-tech-32gb/p/1X5-006W-00334",
+      "note": "Accessible page; extracted price $50.00."
+    },
+    {
+      "name": "HardDiskDirect Kingston KSM26ED8/32ME",
+      "url": "https://harddiskdirect.com/ksm26ed8-32me-kingston-32gb-pc4-21300-ddr4-2666mhz-ecc-unbuffered-cl19-udimm-1-2v-dual-rank-memory-modules.html",
+      "note": "Accessible page; extracted price $100.00."
+    },
+    {
+      "name": "HardDiskDirect Samsung M391A4G43MB1-CTD",
+      "url": "https://harddiskdirect.com/m391a4g43mb1-ctd-567428.html",
+      "note": "Accessible page; extracted price $280.00."
+    },
+    {
+      "name": "eBay product page Samsung M391A4G43MB1-CTD",
+      "url": "https://www.ebay.com/p/26034403790",
+      "note": "Browser-visible used listing at $240.00 with free shipping."
+    },
+    {
+      "name": "Newegg 64GB ECC UDIMM search",
+      "url": "https://www.newegg.com/p/pl?d=64GB+DDR4+ECC+UDIMM",
+      "note": "Used to compare larger-module route; visible kits were materially more expensive than 8x32GB."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "title": "Troubleshoot microphone issues on AI glasses",
+      "url": "https://www.meta.com/help/ai-glasses/355715316882924/",
+      "note": "Official Meta troubleshooting for glasses not responding to 'Hey Meta'."
+    },
+    {
+      "title": "Contact Meta Store and device support",
+      "url": "https://www.meta.com/help/support/",
+      "note": "Official Meta support intake for AI glasses software/app and device issues."
+    },
+    {
+      "title": "Find authorized retailers",
+      "url": "https://www.meta.com/retailers/",
+      "note": "Official Meta retailer list; US includes Best Buy, AT&T, B&H, Microcenter, Target, T-Mobile, Verizon, Walmart."
+    }
+  ],
+  "_note": "Sources consulted during this session"
+}

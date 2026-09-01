@@ -1,0 +1,68 @@
+[
+  {
+    "source": "zillapi_property_lookup",
+    "address": "1211 Starr Ave, Toledo, OH 43605",
+    "zpid": "2091473764",
+    "key_fields": {
+      "yearBuilt": 1907,
+      "livingArea": 6636,
+      "lotSize": 5248,
+      "zestimate": 175400,
+      "rentZestimate": 953
+    }
+  },
+  {
+    "source": "zillapi_sold_comp",
+    "address": "428 Platt St, Toledo, OH 43605",
+    "price": 235000,
+    "beds": 8,
+    "baths": 4,
+    "area": 4808,
+    "url": "https://www.zillow.com/homedetails/428-Platt-St-Toledo-OH-43605/2064888591_zpid/"
+  },
+  {
+    "source": "zillapi_sold_comp",
+    "address": "1418 & 1420 Liberty St, Toledo, OH 43605",
+    "price": 176000,
+    "beds": 8,
+    "baths": 4,
+    "area": 3608,
+    "url": "https://www.zillow.com/homedetails/1418-1420-Liberty-St-Toledo-OH-43605/341649170_zpid/"
+  },
+  {
+    "source": "zillapi_sold_comp",
+    "address": "1701 Tracy St, Toledo, OH 43605",
+    "price": 120000,
+    "beds": 8,
+    "baths": 3,
+    "area": 3520,
+    "url": "https://www.zillow.com/homedetails/1701-Tracy-St-Toledo-OH-43605/444486620_zpid/"
+  },
+  {
+    "source": "zillapi_sold_comp",
+    "address": "1202 Idaho St, Toledo, OH 43605",
+    "price": 95000,
+    "beds": 9,
+    "baths": 4,
+    "area": 3454,
+    "url": "https://www.zillow.com/homedetails/1202-Idaho-St-Toledo-OH-43605/2074765112_zpid/"
+  },
+  {
+    "source": "zillapi_sold_comp",
+    "address": "455 Saint Louis St, Toledo, OH 43605",
+    "price": 125000,
+    "beds": 8,
+    "baths": 4,
+    "area": 2574,
+    "url": "https://www.zillow.com/homedetails/455-Saint-Louis-St-Toledo-OH-43605/34671541_zpid/"
+  },
+  {
+    "source": "zillapi_sold_comp",
+    "address": "462 3rd St, Toledo, OH 43605",
+    "price": 164000,
+    "beds": 12,
+    "baths": 4,
+    "area": 4872,
+    "url": "https://www.zillow.com/homedetails/462-3rd-St-Toledo-OH-43605/2112730253_zpid/"
+  }
+]

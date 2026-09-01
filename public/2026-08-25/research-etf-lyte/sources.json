@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "name": "Roundhill LYTE ETF page",
+      "url": "https://www.roundhillinvestments.com/etf/lyte/",
+      "type": "issuer_page"
+    },
+    {
+      "name": "Roundhill LYTE Prospectus",
+      "url": "https://www.roundhillinvestments.com/assets/pdfs/LYTE_Prospectus.pdf",
+      "type": "prospectus"
+    },
+    {
+      "name": "Roundhill LYTE Factsheet",
+      "url": "https://www.roundhillinvestments.com/assets/pdfs/LYTE_Factsheet.pdf",
+      "type": "factsheet"
+    },
+    {
+      "name": "Roundhill holdings CSV",
+      "url": "https://www.roundhillinvestments.com/assets/data/FilepointRoundhill.40RU.RU_Holdings_08242026.csv",
+      "type": "holdings_csv"
+    },
+    {
+      "name": "Yahoo Finance LYTE quote",
+      "url": "https://finance.yahoo.com/quote/LYTE/",
+      "type": "quote_page"
+    }
+  ]
+}

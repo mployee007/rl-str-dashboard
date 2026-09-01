@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "title": "Bull Put Spread (Credit Put Spread)",
+      "url": "https://www.optionseducation.org/strategies/all-strategies/bull-put-spread-credit-put-spread",
+      "type": "educational"
+    },
+    {
+      "title": "Bear Call Spread (Credit Call Spread)",
+      "url": "https://www.optionseducation.org/strategies/all-strategies/bear-call-spread-credit-call-spread",
+      "type": "educational"
+    },
+    {
+      "title": "Short Put Spread | Bull Put Spread - The Options Playbook",
+      "url": "https://www.optionsplaybook.com/option-strategies/short-put-spread",
+      "type": "educational"
+    },
+    {
+      "title": "Short Call Spread | Bear Call Spread - The Options Playbook",
+      "url": "https://www.optionsplaybook.com/option-strategies/short-call-spread",
+      "type": "educational"
+    },
+    {
+      "title": "State Street SPDR S&P 500 ETF Trust (SPY) Options Chain - Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPY/options/",
+      "type": "market-data",
+      "captured_at": "2026-08-31T13:25:34-04:00"
+    }
+  ],
+  "notes": [
+    "Fidelity strategy pages returned HTTP 403 during this session and were not used as primary sources.",
+    "web_search and web_extract were unavailable because the Firecrawl dependency was not installed in this environment."
+  ]
+}
