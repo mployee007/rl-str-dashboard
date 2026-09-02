@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T12:45:21.640165+00:00",
+  "generated_at": "2026-09-02T13:00:31.464730+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 43,
   "sessions": [
@@ -8,10 +8,10 @@
       "date": "2026-09-02",
       "title": "cclba-grant-search",
       "summary": "**Date:** September 2, 2026 **Request:** Search for properties qualifying for the Cook County Land Bank grant --- The **Purchase Assistance Program** (funded by the CCLBA Equity Fund). It's the only CCLBA program that delivers cash to buyers. The media and public call it a \"grant",
-      "updated_at": "2026-09-02T07:22:15.587767",
-      "file_count": 4,
+      "updated_at": "2026-09-02T12:55:48.096559",
+      "file_count": 7,
       "export_count": 0,
-      "csv_count": 1,
+      "csv_count": 3,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-09-02/cclba-grant-search",
       "status": "completed",
@@ -29,10 +29,34 @@
             "updated_at": "2026-09-02T06:42:10.399577",
             "previewable": true,
             "public_href": "public/2026-09-02/cclba-grant-search/artifacts/csv/cclba_published_properties.csv"
+          },
+          {
+            "name": "tax_certificate_2_4_unit_chicago.csv",
+            "rel_path": "artifacts/csv/tax_certificate_2_4_unit_chicago.csv",
+            "size": 45140,
+            "updated_at": "2026-09-02T12:54:59.337625",
+            "previewable": true,
+            "public_href": "public/2026-09-02/cclba-grant-search/artifacts/csv/tax_certificate_2_4_unit_chicago.csv"
+          },
+          {
+            "name": "tax_certificate_2_4_unit_parcels.csv",
+            "rel_path": "artifacts/csv/tax_certificate_2_4_unit_parcels.csv",
+            "size": 72593,
+            "updated_at": "2026-09-02T12:54:59.336625",
+            "previewable": true,
+            "public_href": "public/2026-09-02/cclba-grant-search/artifacts/csv/tax_certificate_2_4_unit_parcels.csv"
           }
         ],
         "image": [],
         "other": [
+          {
+            "name": "tax-certificate-2-4-unit.md",
+            "rel_path": "tax-certificate-2-4-unit.md",
+            "size": 5227,
+            "updated_at": "2026-09-02T12:55:48.096559",
+            "previewable": true,
+            "public_href": "public/2026-09-02/cclba-grant-search/tax-certificate-2-4-unit.md"
+          },
           {
             "name": "tax-certificate-deep-dive.md",
             "rel_path": "tax-certificate-deep-dive.md",
