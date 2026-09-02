@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T07:19:30.815774+00:00",
+  "generated_at": "2026-09-02T07:35:20.992101+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 43,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-09-02",
       "title": "cclba-grant-search",
       "summary": "**Date:** September 2, 2026 **Request:** Search for properties qualifying for the Cook County Land Bank grant --- The **Purchase Assistance Program** (funded by the CCLBA Equity Fund). It's the only CCLBA program that delivers cash to buyers. The media and public call it a \"grant",
-      "updated_at": "2026-09-02T06:42:10.401577",
-      "file_count": 3,
+      "updated_at": "2026-09-02T07:22:15.587767",
+      "file_count": 4,
       "export_count": 0,
       "csv_count": 1,
       "image_count": 0,
@@ -32,7 +32,16 @@
           }
         ],
         "image": [],
-        "other": []
+        "other": [
+          {
+            "name": "tax-certificate-deep-dive.md",
+            "rel_path": "tax-certificate-deep-dive.md",
+            "size": 11036,
+            "updated_at": "2026-09-02T07:22:15.587767",
+            "previewable": true,
+            "public_href": "public/2026-09-02/cclba-grant-search/tax-certificate-deep-dive.md"
+          }
+        ]
       }
     },
     {
