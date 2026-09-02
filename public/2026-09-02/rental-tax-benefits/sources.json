@@ -1,0 +1,115 @@
+{
+  "report_date": "2026-09-02",
+  "tax_year": 2026,
+  "sources": [
+    {
+      "id": "irs-pub-527",
+      "title": "Publication 527 — Residential Rental Property (2025)",
+      "url": "https://www.irs.gov/publications/p527",
+      "type": "primary",
+      "retrieved": "2026-09-02",
+      "notes": "Primary IRS source for rental income, expenses, and depreciation rules. 2025 edition (latest available)."
+    },
+    {
+      "id": "irs-topic-415",
+      "title": "IRS Topic No. 415 — Renting Residential and Vacation Property",
+      "url": "https://www.irs.gov/taxtopics/tc415",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-topic-425",
+      "title": "IRS Topic No. 425 — Passive Activities — Losses and Credits",
+      "url": "https://www.irs.gov/taxtopics/tc425",
+      "type": "primary",
+      "retrieved": "2026-09-02",
+      "notes": "Updated April 28, 2026. Active source confirming passive activity rules."
+    },
+    {
+      "id": "irs-topic-503",
+      "title": "IRS Topic No. 503 — Deductible Taxes",
+      "url": "https://www.irs.gov/taxtopics/tc503",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-topic-509",
+      "title": "IRS Topic No. 509 — Business Use of Home",
+      "url": "https://www.irs.gov/taxtopics/tc509",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-qbi-199a",
+      "title": "IRS — Qualified Business Income Deduction",
+      "url": "https://www.irs.gov/newsroom/qualified-business-income-deduction",
+      "type": "primary",
+      "retrieved": "2026-09-02",
+      "notes": "Updated May 12, 2026. States deduction applies through December 31, 2025."
+    },
+    {
+      "id": "irs-pub-925",
+      "title": "Publication 925 — Passive Activity and At-Risk Rules",
+      "url": "https://www.irs.gov/publications/p925",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-pub-946",
+      "title": "Publication 946 — How to Depreciate Property",
+      "url": "https://www.irs.gov/publications/p946",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-tangible-prop-regs",
+      "title": "IRS — Tangible Property Final Regulations",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/tangible-property-final-regulations",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-niit",
+      "title": "IRS — Net Investment Income Tax",
+      "url": "https://www.irs.gov/individuals/net-investment-income-tax",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-1031",
+      "title": "IRS — Like-Kind Exchanges",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-notice-2019-07",
+      "title": "IRS Notice 2019-07 — Section 199A Rental Real Estate Safe Harbor",
+      "url": "https://www.irs.gov/pub/irs-drop/n-19-07.pdf",
+      "type": "primary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "irs-2025-inflation",
+      "title": "IRS — 2025 Inflation Adjustments (IR-2024-273)",
+      "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2025",
+      "type": "primary",
+      "retrieved": "2026-09-02",
+      "notes": "2026 adjustments not yet published. Used as reference baseline."
+    },
+    {
+      "id": "biggerpockets-deductions",
+      "title": "BiggerPockets — Rental Property Tax Deductions",
+      "url": "https://www.biggerpockets.com/blog/rental-property-tax-deductions",
+      "type": "secondary",
+      "retrieved": "2026-09-02"
+    },
+    {
+      "id": "biggerpockets-1031",
+      "title": "BiggerPockets — 1031 Exchange Rules",
+      "url": "https://www.biggerpockets.com/blog/1031-exchange-rules",
+      "type": "secondary",
+      "retrieved": "2026-09-02"
+    }
+  ]
+}
