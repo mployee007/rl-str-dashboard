@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental Property Tax Dashboard — 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+/* ===== RESET & VARIABLES ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-primary:#0f172a;
+  --bg-secondary:#1e293b;
+  --bg-card:#1e293b;
+  --bg-input:#0f172a;
+  --bg-hover:#334155;
+  --bg-sidebar:#0c1322;
+  --border:#334155;
+  --border-light:#475569;
+  --text-primary:#f1f5f9;
+  --text-secondary:#94a3b8;
+  --text-muted:#64748b;
+  --accent:#3b82f6;
+  --accent-hover:#2563eb;
+  --accent-glow:rgba(59,130,246,0.25);
+  --green:#10b981;
+  --green-bg:rgba(16,185,129,0.15);
+  --red:#ef4444;
+  --red-bg:rgba(239,68,68,0.15);
+  --orange:#f59e0b;
+  --orange-bg:rgba(245,158,11,0.15);
+  --purple:#8b5cf6;
+  --cyan:#06b6d4;
+  --sidebar-w:260px;
+  --header-h:64px;
+  --radius:12px;
+  --radius-sm:8px;
+  --radius-xs:6px;
+  --shadow:0 4px 24px rgba(0,0,0,0.3);
+  --transition:0.2s ease;
+}
+html,body{height:100%;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg-primary);color:var(--text-primary);overflow:hidden}
+#app{display:flex;height:100vh}
+/* ===== SIDEBAR ===== */
+#sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);background:var(--bg-sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:10;transition:transform var(--transition)}
+#sidebar .logo{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+#sidebar .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--purple));border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:20px}
+#sidebar .logo-text{font-size:16px;font-weight:700;letter-spacing:-0.3px}
+#sidebar .logo-text span{display:block;font-size:11px;color:var(--text-muted);font-weight:400;margin-top:2px}
+#sidebar nav{flex:1;overflow-y:auto;padding:12px 0}
+#sidebar nav .section-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);padding:16px 24px 8px;font-weight:600}
+#sidebar nav a{display:flex;align-items:center;gap:12px;padding:10px 24px;color:var(--text-secondary);text-decoration:none;font-size:14px;font-weight:500;transition:all var(--transition);border-left:3px solid transparent;cursor:pointer}
+#sidebar nav a:hover{background:var(--bg-hover);color:var(--text-primary)}
+#sidebar nav a.active{background:rgba(59,130,246,0.1);color:var(--accent);border-left-color:var(--accent)}
+#sidebar nav a .nav-icon{width:20px;text-align:center;font-size:16px}
+#sidebar .sidebar-footer{padding:16px 24px;border-top:1px solid var(--border);font-size:12px;color:var(--text-muted)}
+/* ===== MAIN ===== */
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#header{height:var(--header-h);min-height:var(--header-h);background:var(--bg-secondary);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+#header h1{font-size:20px;font-weight:700;letter-spacing:-0.3px}
+#header .tax-year{font-size:13px;color:var(--accent);background:rgba(59,130,246,0.15);padding:6px 14px;border-radius:20px;font-weight:600}
+#content{flex:1;overflow-y:auto;padding:32px}
+/* ===== CARDS ===== */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:24px}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.card-header h2{font-size:18px;font-weight:700;letter-spacing:-0.3px}
+.card-header h3{font-size:15px;font-weight:600;letter-spacing:-0.2px}
+/* ===== STAT CARDS ===== */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:24px}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;position:relative;overflow:hidden}
+.stat-card .stat-icon{font-size:24px;margin-bottom:8px}
+.stat-card .stat-label{font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-muted);margin-bottom:4px}
+.stat-card .stat-value{font-size:28px;font-weight:800;letter-spacing:-1px}
+.stat-card .stat-sub{font-size:12px;color:var(--text-muted);margin-top:4px}
+.stat-card.income .stat-value{color:var(--green)}
+.stat-card.expense .stat-value{color:var(--red)}
+.stat-card.net .stat-value{color:var(--accent)}
+.stat-card.tax .stat-value{color:var(--orange)}
+.stat-card.mileage .stat-value{color:var(--purple)}
+.stat-card::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;border-radius:0 0 0 100%;opacity:0.05}
+.stat-card.income::after{background:var(--green)}
+.stat-card.expense::after{background:var(--red)}
+.stat-card.net::after{background:var(--accent)}
+.stat-card.tax::after{background:var(--orange)}
+.stat-card.mileage::after{background:var(--purple)}
+/* ===== CHARTS ===== */
+.chart-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:24px;margin-bottom:24px}
+.chart-container{position:relative;width:100%;aspect-ratio:16/10;max-height:380px}
+.chart-container canvas{width:100%!important;height:100%!important}
+.chart-container.wide{grid-column:1/-1;aspect-ratio:16/7;max-height:320px}
+/* ===== TABLES ===== */
+.table-wrap{overflow-x:auto;margin:0 -24px;padding:0 24px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:10px 14px;font-size:11px;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-muted);border-bottom:2px solid var(--border);white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:hover td{background:rgba(59,130,246,0.04)}
+.amount{font-weight:600;font-variant-numeric:tabular-nums}
+.amount.positive{color:var(--green)}
+.amount.negative{color:var(--red)}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.badge-schedule-e{background:rgba(59,130,246,0.2);color:var(--accent)}
+.badge-4562{background:rgba(139,92,246,0.2);color:var(--purple)}
+/* ===== FORMS ===== */
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.form-grid.col2{grid-template-columns:1fr 1fr}
+.form-grid.col3{grid-template-columns:1fr 1fr 1fr}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.5px}
+.form-group input,.form-group select,.form-group textarea{background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;color:var(--text-primary);font-size:14px;font-family:inherit;transition:border-color var(--transition);outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.form-group input[type="file"]{padding:8px}
+.form-group textarea{resize:vertical;min-height:70px}
+::placeholder{color:var(--text-muted)}
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all var(--transition);font-family:inherit}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);box-shadow:0 4px 16px var(--accent-glow)}
+.btn-secondary{background:var(--bg-hover);color:var(--text-primary);border:1px solid var(--border)}
+.btn-secondary:hover{background:var(--border)}
+.btn-danger{background:var(--red-bg);color:var(--red);border:1px solid rgba(239,68,68,0.3)}
+.btn-danger:hover{background:var(--red);color:#fff}
+.btn-sm{padding:6px 14px;font-size:12px}
+.btn-xs{padding:3px 10px;font-size:11px}
+.btn-icon{width:32px;height:32px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--radius-xs)}
+.btn-group{display:flex;gap:8px;flex-wrap:wrap}
+/* ===== MODAL ===== */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:100;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;width:90%;max-width:640px;max-height:85vh;overflow-y:auto;box-shadow:var(--shadow)}
+.modal h2{margin-bottom:20px;font-size:20px}
+.modal .form-grid{margin-bottom:20px}
+.modal .btn-group{justify-content:flex-end}
+/* ===== TABS ===== */
+.tabs{display:flex;gap:4px;margin-bottom:20px;background:var(--bg-input);border-radius:var(--radius-sm);padding:4px;overflow-x:auto}
+.tab-btn{padding:8px 18px;border:none;background:transparent;color:var(--text-secondary);font-size:13px;font-weight:600;cursor:pointer;border-radius:var(--radius-xs);white-space:nowrap;transition:all var(--transition);font-family:inherit}
+.tab-btn.active{background:var(--accent);color:#fff}
+.tab-btn:hover:not(.active){color:var(--text-primary)}
+/* ===== EMPTY STATE ===== */
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-muted)}
+.empty-state .empty-icon{font-size:56px;margin-bottom:16px;opacity:0.5}
+.empty-state h3{font-size:18px;color:var(--text-secondary);margin-bottom:8px}
+.empty-state p{max-width:400px;margin:0 auto 20px;font-size:14px;line-height:1.6}
+/* ===== PILL ===== */
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.pill-income{background:var(--green-bg);color:var(--green)}
+.pill-expense{background:var(--red-bg);color:var(--red)}
+.pill-mileage{background:rgba(139,92,246,0.2);color:var(--purple)}
+/* ===== FILTER ROW ===== */
+.filter-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.filter-row select,.filter-row input{background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 14px;color:var(--text-primary);font-size:13px;font-family:inherit;outline:none}
+.filter-row select:focus,.filter-row input:focus{border-color:var(--accent)}
+/* ===== UTILITY ===== */
+.hidden{display:none!important}
+.flex-between{display:flex;align-items:center;justify-content:space-between}
+.gap-sm{gap:8px}
+.mt-sm{margin-top:12px}
+.mt-md{margin-top:20px}
+.mb-sm{margin-bottom:12px}
+.mb-md{margin-bottom:20px}
+.text-muted{color:var(--text-muted);font-size:13px}
+.text-sm{font-size:13px}
+.text-center{text-align:center}
+.w-full{width:100%}
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  #sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%)}
+  #sidebar.open{transform:translateX(0)}
+  #header{padding:0 16px}
+  #content{padding:16px}
+  .chart-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .form-grid.col2,.form-grid.col3{grid-template-columns:1fr}
+  .mobile-menu-btn{display:flex!important}
+}
+.mobile-menu-btn{display:none;background:none;border:none;color:var(--text-primary);font-size:24px;cursor:pointer;padding:4px}
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--border-light)}
+/* ===== PAGINATION ===== */
+.pagination{display:flex;gap:4px;justify-content:center;margin-top:16px}
+.pagination button{padding:6px 12px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text-secondary);cursor:pointer;font-size:12px;font-family:inherit}
+.pagination button.active{background:var(--accent);border-color:var(--accent);color:#fff}
+/* ===== PRINT ===== */
+@media print{
+  #sidebar,#header,.btn,.tabs,.filter-row,.modal-overlay{display:none!important}
+  #main{overflow:visible}
+  #content{padding:0}
+  body{background:#fff;color:#000}
+  .card{border:1px solid #ccc;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div id="app">
+<!-- ===== SIDEBAR ===== -->
+<aside id="sidebar">
+  <div class="logo">
+    <div class="logo-icon">🏠</div>
+    <div class="logo-text">RentalTracker<span>Tax Year 2026</span></div>
+  </div>
+  <nav>
+    <div class="section-label">Overview</div>
+    <a data-page="dashboard" class="active" onclick="navigate('dashboard')">
+      <span class="nav-icon">📊</span> Dashboard
+    </a>
+    <div class="section-label">Data Entry</div>
+    <a data-page="properties" onclick="navigate('properties')">
+      <span class="nav-icon">🏘️</span> Properties
+    </a>
+    <a data-page="income" onclick="navigate('income')">
+      <span class="nav-icon">💰</span> Income
+    </a>
+    <a data-page="expenses" onclick="navigate('expenses')">
+      <span class="nav-icon">🧾</span> Expenses
+    </a>
+    <a data-page="mileage" onclick="navigate('mileage')">
+      <span class="nav-icon">🚗</span> Mileage Log
+    </a>
+    <a data-page="assets" onclick="navigate('assets')">
+      <span class="nav-icon">🏗️</span> Assets &amp; Depreciation
+    </a>
+    <div class="section-label">Reports</div>
+    <a data-page="reports" onclick="navigate('reports')">
+      <span class="nav-icon">📋</span> Tax Reports
+    </a>
+    <a data-page="export" onclick="navigate('export')">
+      <span class="nav-icon">📥</span> Import / Export
+    </a>
+  </nav>
+  <div class="sidebar-footer">2026 Standard Mileage: $0.70/mi</div>
+</aside>
+<!-- ===== MAIN ===== -->
+<main id="main">
+  <header id="header">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+      <h1 id="page-title">Dashboard</h1>
+    </div>
+    <div class="tax-year">📅 Tax Year 2026</div>
+  </header>
+  <div id="content"></div>
+</main>
+</div>
+<!-- ===== MODAL CONTAINER ===== -->
+<div id="modal-container"></div>
+
+<script>
+// ===== DATA LAYER =====
+const STORAGE_KEYS = {
+  properties: 'rtd_properties',
+  income: 'rtd_income',
+  expenses: 'rtd_expenses',
+  mileage: 'rtd_mileage',
+  assets: 'rtd_assets'
+};
+
+const MILEAGE_RATE = 0.70;
+
+const EXPENSE_CATEGORIES = [
+  {id:'mortgage_interest',label:'Mortgage Interest',irs:'Schedule E - Line 12'},
+  {id:'property_tax',label:'Property Tax',irs:'Schedule E - Line 16'},
+  {id:'insurance',label:'Insurance',irs:'Schedule E - Line 15'},
+  {id:'repairs_maintenance',label:'Repairs & Maintenance',irs:'Schedule E - Line 14'},
+  {id:'utilities',label:'Utilities',irs:'Schedule E - Line 17'},
+  {id:'management_fees',label:'Property Management Fees',irs:'Schedule E - Line 10'},
+  {id:'advertising',label:'Advertising',irs:'Schedule E - Line 8'},
+  {id:'travel',label:'Travel',irs:'Schedule E - Line 9'},
+  {id:'legal_professional',label:'Legal & Professional',irs:'Schedule E - Line 11'},
+  {id:'depreciation',label:'Depreciation',irs:'Form 4562'},
+  {id:'hoa_fees',label:'HOA Fees',irs:'Schedule E - Line 18'},
+  {id:'supplies',label:'Supplies',irs:'Schedule E - Line 19'},
+  {id:'other',label:'Other',irs:'Schedule E - Line 19'}
+];
+
+const INCOME_TYPES = ['Rent', 'Security Deposit', 'Late Fee', 'Pet Fee', 'Parking Fee', 'Laundry Income', 'Other Income'];
+
+function loadData(key){try{const d=localStorage.getItem(key);return d?JSON.parse(d):[]}catch(e){return[]}}
+function saveData(key,data){localStorage.setItem(key,JSON.stringify(data))}
+
+let currentPage = 'dashboard';
+let chartInstances = {};
+
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
+
+// ===== NAVIGATION =====
+function navigate(page){
+  currentPage = page;
+  document.querySelectorAll('#sidebar nav a').forEach(a=>a.classList.remove('active'));
+  const link = document.querySelector(`#sidebar nav a[data-page="${page}"]`);
+  if(link) link.classList.add('active');
+  document.getElementById('page-title').textContent = link?link.textContent.trim():page.charAt(0).toUpperCase()+page.slice(1);
+  document.getElementById('content').scrollTop = 0;
+  destroyCharts();
+  renderPage(page);
+  if(window.innerWidth<768) document.getElementById('sidebar').classList.remove('open');
+}
+
+function destroyCharts(){
+  Object.values(chartInstances).forEach(c=>{try{c.destroy()}catch(e){}});
+  chartInstances={};
+}
+
+// ===== RENDER ENGINE =====
+function renderPage(page){
+  const c = document.getElementById('content');
+  switch(page){
+    case 'dashboard':
+      const dashData = getDashboardData();
+      c.innerHTML = renderDashboard(dashData);
+      window._dashboardData = dashData;
+      initDashboardCharts();
+      break;
+    case 'properties': c.innerHTML = renderProperties(); break;
+    case 'income': c.innerHTML = renderIncome(); initIncomeHandlers(); break;
+    case 'expenses': c.innerHTML = renderExpenses(); initExpenseHandlers(); break;
+    case 'mileage': c.innerHTML = renderMileage(); initMileageHandlers(); break;
+    case 'assets': c.innerHTML = renderAssets(); initAssetHandlers(); break;
+    case 'reports': c.innerHTML = renderReports(); break;
+    case 'export': c.innerHTML = renderExport(); break;
+  }
+}
+
+// ===== DASHBOARD =====
+function getDashboardData(){
+  const props = loadData(STORAGE_KEYS.properties);
+  const income = loadData(STORAGE_KEYS.income);
+  const expenses = loadData(STORAGE_KEYS.expenses);
+  const mileage = loadData(STORAGE_KEYS.mileage);
+
+  const year = 2026;
+  const yearIncome = income.filter(i=>new Date(i.date).getFullYear()===year);
+  const yearExpenses = expenses.filter(e=>new Date(e.date).getFullYear()===year);
+  const yearMileage = mileage.filter(m=>new Date(m.date).getFullYear()===year);
+
+  const totalIncome = yearIncome.reduce((s,i)=>s+(parseFloat(i.amount)||0),0);
+  const totalExpenses = yearExpenses.reduce((s,e)=>s+(parseFloat(e.amount)||0),0);
+  const totalMileage = yearMileage.reduce((s,m)=>s+(parseFloat(m.miles)||0),0);
+  const mileageDeduction = totalMileage * MILEAGE_RATE;
+  const netIncome = totalIncome - totalExpenses - mileageDeduction;
+  const estTax = Math.max(0, netIncome * 0.30);
+
+  const expByCat = {};
+  yearExpenses.forEach(e=>{
+    const cat = (e.category||'other');
+    expByCat[cat] = (expByCat[cat]||0)+(parseFloat(e.amount)||0);
+  });
+  const catLabels = Object.keys(expByCat).map(k=>{
+    const ec = EXPENSE_CATEGORIES.find(c=>c.id===k);
+    return ec?ec.label:k;
+  });
+  const catValues = Object.values(expByCat);
+
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const monthlyIncome = new Array(12).fill(0);
+  const monthlyExpenses = new Array(12).fill(0);
+  yearIncome.forEach(i=>{const m=new Date(i.date).getMonth();if(m>=0&&m<12)monthlyIncome[m]+=(parseFloat(i.amount)||0)});
+  yearExpenses.forEach(e=>{const m=new Date(e.date).getMonth();if(m>=0&&m<12)monthlyExpenses[m]+=(parseFloat(e.amount)||0)});
+
+  return {
+    totalIncome, totalExpenses, totalMileage, mileageDeduction, netIncome, estTax,
+    yearIncome, yearExpenses, yearMileage,
+    expByCat, catLabels, catValues,
+    months, monthlyIncome, monthlyExpenses,
+    income: income, expenses: expenses, mileage: mileage
+  };
+}
+
+function renderDashboard(d){
+  const fmt = n=>'$'+Math.round(n).toLocaleString();
+
+  return `
+  <div class="stat-grid">
+    <div class="stat-card income">
+      <div class="stat-icon">💰</div>
+      <div class="stat-label">Gross Rental Income</div>
+      <div class="stat-value">${fmt(d.totalIncome)}</div>
+      <div class="stat-sub">${d.yearIncome.length} entries</div>
+    </div>
+    <div class="stat-card expense">
+      <div class="stat-icon">🧾</div>
+      <div class="stat-label">Total Expenses</div>
+      <div class="stat-value">${fmt(d.totalExpenses)}</div>
+      <div class="stat-sub">${d.yearExpenses.length} entries</div>
+    </div>
+    <div class="stat-card mileage">
+      <div class="stat-icon">🚗</div>
+      <div class="stat-label">Mileage Deduction</div>
+      <div class="stat-value">${fmt(d.mileageDeduction)}</div>
+      <div class="stat-sub">${d.totalMileage.toLocaleString()} miles @ $${MILEAGE_RATE.toFixed(2)}/mi</div>
+    </div>
+    <div class="stat-card net">
+      <div class="stat-icon">📈</div>
+      <div class="stat-label">Net Income (YTD)</div>
+      <div class="stat-value">${fmt(d.netIncome)}</div>
+      <div class="stat-sub">${d.netIncome>=0?'Positive cash flow':'Negative cash flow'}</div>
+    </div>
+    <div class="stat-card tax">
+      <div class="stat-icon">🏛️</div>
+      <div class="stat-label">Est. Tax Liability</div>
+      <div class="stat-value">${fmt(d.estTax)}</div>
+      <div class="stat-sub">~30% effective rate estimate</div>
+    </div>
+  </div>
+  <div class="chart-grid">
+    <div class="card">
+      <div class="card-header"><h3>📊 Income vs Expenses (Monthly)</h3></div>
+      <div class="chart-container"><canvas id="chart-monthly"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>🥧 Expenses by Category</h3></div>
+      <div class="chart-container"><canvas id="chart-pie"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><h3>📋 Recent Activity</h3></div>
+    ${renderRecentActivity(d.income,d.expenses,d.mileage)}
+  </div>`;
+}
+      <div class="stat-icon">🚗</div>
+      <div class="stat-label">Mileage Deduction</div>
+      <div class="stat-value">${fmt(mileageDeduction)}</div>
+      <div class="stat-sub">${totalMileage.toLocaleString()} miles @ $${MILEAGE_RATE.toFixed(2)}/mi</div>
+    </div>
+    <div class="stat-card net">
+      <div class="stat-icon">📈</div>
+      <div class="stat-label">Net Income (YTD)</div>
+      <div class="stat-value">${fmt(netIncome)}</div>
+      <div class="stat-sub">${netIncome>=0?'Positive cash flow':'Negative cash flow'}</div>
+    function renderRecentActivity(income,expenses,mileage){
+  const all = [
+    ...income.map(i=>({...i,type:'income',label:'Income: '+(i.type||'Rent')})),
+    ...expenses.map(e=>({...e,type:'expense',label:'Expense: '+(EXPENSE_CATEGORIES.find(c=>c.id===e.category)?.label||e.category||'Other')})),
+    ...mileage.map(m=>({...m,type:'mileage',label:'Mileage: '+(m.miles||0)+' mi'})),
+  ];
+  all.sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const recent = all.slice(0,15);
+  if(!recent.length) return '<div class="empty-state"><div class="empty-icon">📭</div><h3>No activity yet</h3><p>Start adding income, expenses, and mileage to see your activity here.</p></div>';
+
+  return `<div class="table-wrap"><table><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Property</th><th>Amount</th></tr></thead><tbody>
+    ${recent.map(r=>{
+      const amt = r.type==='mileage'?((parseFloat(r.miles)||0)*MILEAGE_RATE).toFixed(2):(parseFloat(r.amount)||0).toFixed(2);
+      const cls = r.type==='income'?'positive':r.type==='expense'?'negative':'';
+      const pillCls = r.type==='income'?'pill-income':r.type==='expense'?'pill-expense':'pill-mileage';
+      return `<tr>
+        <td>${new Date(r.date).toLocaleDateString()}</td>
+        <td><span class="pill ${pillCls}">${r.type}</span></td>
+        <td>${esc(r.description||r.label||'')}</td>
+        <td class="text-muted">${esc(r.propertyName||r.propertyId||'—')}</td>
+        <td class="amount ${cls}">${r.type==='mileage'?'':'$'}${amt}</td>
+      </tr>`;
+    }).join('')}
+  </tbody></table></div>`;
+}
+
+function initDashboardCharts(){
+  const d = window._dashboardData;
+  if(!d) return;
+
+  // Monthly bar chart
+  const ctx1 = document.getElementById('chart-monthly');
+  if(ctx1){
+    chartInstances.monthly = new Chart(ctx1,{
+      type:'bar',
+      data:{
+        labels:d.months,
+        datasets:[
+          {label:'Income',data:d.monthlyIncome,backgroundColor:'rgba(16,185,129,0.7)',borderColor:'#10b981',borderWidth:1,borderRadius:6},
+          {label:'Expenses',data:d.monthlyExpenses,backgroundColor:'rgba(239,68,68,0.7)',borderColor:'#ef4444',borderWidth:1,borderRadius:6}
+        ]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{labels:{color:'#94a3b8',padding:16,usePointStyle:true}}},
+        scales:{
+          x:{grid:{color:'rgba(51,65,85,0.4)'},ticks:{color:'#94a3b8',font:{size:11}}},
+          y:{grid:{color:'rgba(51,65,85,0.4)'},ticks:{color:'#94a3b8',callback:v=>'$'+v.toLocaleString(),font:{size:11}}}
+        }
+      }
+    });
+  }
+
+  // Pie chart
+  const ctx2 = document.getElementById('chart-pie');
+  if(ctx2){
+    const colors = ['#3b82f6','#ef4444','#10b981','#f59e0b','#8b5cf6','#06b6d4','#ec4899','#f97316','#84cc16','#6366f1','#14b8a6','#e11d48','#a855f7'];
+    chartInstances.pie = new Chart(ctx2,{
+      type:'doughnut',
+      data:{
+        labels:d.catLabels,
+        datasets:[{data:d.catValues,backgroundColor:colors.slice(0,d.catLabels.length),borderColor:'#1e293b',borderWidth:2}]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'right',labels:{color:'#94a3b8',padding:12,usePointStyle:true,font:{size:11}}}}
+      }
+    });
+  }
+}
+
+// ===== PROPERTIES =====
+function renderProperties(){
+  const props = loadData(STORAGE_KEYS.properties);
+  const income = loadData(STORAGE_KEYS.income);
+  const expenses = loadData(STORAGE_KEYS.expenses);
+
+  const propStats = props.map(p=>{
+    const pIncome = income.filter(i=>i.propertyId===p.id).reduce((s,i)=>s+(parseFloat(i.amount)||0),0);
+    const pExpenses = expenses.filter(e=>e.propertyId===p.id).reduce((s,e)=>s+(parseFloat(e.amount)||0),0);
+    return {...p,income:pIncome,expenses:pExpenses,net:pIncome-pExpenses};
+  });
+
+  return `
+  <div class="flex-between mb-md">
+    <div class="text-muted">${props.length} propert${props.length===1?'y':'ies'}</div>
+    <button class="btn btn-primary" onclick="showPropertyModal()">+ Add Property</button>
+  </div>
+  ${props.length===0?`<div class="card empty-state"><div class="empty-icon">🏘️</div><h3>No properties yet</h3><p>Add your first rental property to start tracking income and expenses.</p><button class="btn btn-primary" onclick="showPropertyModal()">+ Add Property</button></div>`:''}
+  ${propStats.map(p=>`
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h3>🏠 ${esc(p.address||'Unnamed Property')}</h3>
+          <div class="text-muted text-sm">${esc(p.propertyType||'Residential')} · Purchased ${p.purchaseDate||'N/A'} · $${(parseFloat(p.purchasePrice)||0).toLocaleString()}</div>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-sm" onclick="showPropertyModal('${p.id}')">Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteProperty('${p.id}')">Delete</button>
+        </div>
+      </div>
+      <div class="stat-grid" style="margin-bottom:0">
+        <div class="stat-card income"><div class="stat-label">Income YTD</div><div class="stat-value">$${Math.round(p.income).toLocaleString()}</div></div>
+        <div class="stat-card expense"><div class="stat-label">Expenses YTD</div><div class="stat-value">$${Math.round(p.expenses).toLocaleString()}</div></div>
+        <div class="stat-card net"><div class="stat-label">Net YTD</div><div class="stat-value">$${Math.round(p.net).toLocaleString()}</div></div>
+      </div>
+    </div>
+  `).join('')}`;
+}
+
+function showPropertyModal(id=null){
+  const props = loadData(STORAGE_KEYS.properties);
+  const prop = id?props.find(p=>p.id===id):null;
+  const title = prop?'Edit Property':'Add Property';
+  const modal = document.getElementById('modal-container');
+  modal.innerHTML = `
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <h2>${title}</h2>
+      <div class="form-grid">
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Property Address *</label>
+          <input id="prop-address" placeholder="123 Main St, City, State ZIP" value="${escAttr(prop?.address||'')}">
+        </div>
+        <div class="form-group">
+          <label>Property Type</label>
+          <select id="prop-type">
+            <option ${prop?.propertyType==='Single Family'?'selected':''}>Single Family</option>
+            <option ${prop?.propertyType==='Multi-Family'?'selected':''}>Multi-Family</option>
+            <option ${prop?.propertyType==='Condo'?'selected':''}>Condo</option>
+            <option ${prop?.propertyType==='Townhouse'?'selected':''}>Townhouse</option>
+            <option ${prop?.propertyType==='Commercial'?'selected':''}>Commercial</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Purchase Date</label>
+          <input type="date" id="prop-date" value="${prop?.purchaseDate||''}">
+        </div>
+        <div class="form-group">
+          <label>Purchase Price ($)</label>
+          <input type="number" id="prop-price" placeholder="250000" value="${prop?.purchasePrice||''}" step="0.01" min="0">
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveProperty('${prop?.id||''}')">Save Property</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function saveProperty(id){
+  const address = document.getElementById('prop-address').value.trim();
+  if(!address){alert('Please enter a property address.');return}
+  const props = loadData(STORAGE_KEYS.properties);
+  const data = {
+    id: id||uid(),
+    address,
+    propertyType: document.getElementById('prop-type').value,
+    purchaseDate: document.getElementById('prop-date').value,
+    purchasePrice: document.getElementById('prop-price').value
+  };
+  if(id){
+    const idx = props.findIndex(p=>p.id===id);
+    if(idx>=0){props[idx]=data}
+  }else{
+    props.push(data);
+  }
+  saveData(STORAGE_KEYS.properties,props);
+  closeModal();
+  renderPage('properties');
+}
+
+function deleteProperty(id){
+  if(!confirm('Delete this property and all associated income, expenses, and assets? This cannot be undone.')) return;
+  let props = loadData(STORAGE_KEYS.properties);
+  props = props.filter(p=>p.id!==id);
+  saveData(STORAGE_KEYS.properties,props);
+  // Also remove related records
+  ['income','expenses','assets'].forEach(k=>{
+    let data = loadData(STORAGE_KEYS[k]);
+    if(k==='assets'){
+      data = data.filter(d=>d.propertyId!==id);
+    }else{
+      data = data.filter(d=>d.propertyId!==id);
+    }
+    saveData(STORAGE_KEYS[k],data);
+  });
+  renderPage('properties');
+}
+
+// ===== INCOME =====
+function renderIncome(){
+  const income = loadData(STORAGE_KEYS.income);
+  const props = loadData(STORAGE_KEYS.properties);
+  const propMap = Object.fromEntries(props.map(p=>[p.id,p.address]));
+
+  const sorted = [...income].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const yearData = sorted.filter(i=>new Date(i.date).getFullYear()===2026);
+  const total = yearData.reduce((s,i)=>s+(parseFloat(i.amount)||0),0);
+
+  return `
+  <div class="flex-between mb-md">
+    <div>
+      <div style="font-size:24px;font-weight:800;color:var(--green)">$${Math.round(total).toLocaleString()}</div>
+      <div class="text-muted">${yearData.length} income entr${yearData.length===1?'y':'ies'} in 2026</div>
+    </div>
+    <button class="btn btn-primary" onclick="showIncomeModal()">+ Add Income</button>
+  </div>
+  <div class="filter-row mb-md">
+    <select id="income-filter-prop" onchange="filterIncome()">
+      <option value="">All Properties</option>
+      ${props.map(p=>`<option value="${p.id}">${escAttr(p.address)}</option>`).join('')}
+    </select>
+    <select id="income-filter-type" onchange="filterIncome()">
+      <option value="">All Types</option>
+      ${INCOME_TYPES.map(t=>`<option value="${t}">${t}</option>`).join('')}
+    </select>
+  </div>
+  ${yearData.length===0?`<div class="card empty-state"><div class="empty-icon">💰</div><h3>No income recorded</h3><p>Start tracking your rental income for 2026.</p><button class="btn btn-primary" onclick="showIncomeModal()">+ Add Income</button></div>`:`
+  <div class="card"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Property</th><th>Type</th><th>Description</th><th class="text-right">Amount</th><th>Actions</th></tr></thead><tbody>
+    ${yearData.map(i=>`
+      <tr data-prop="${i.propertyId||''}" data-type="${i.type||''}">
+        <td>${new Date(i.date).toLocaleDateString()}</td>
+        <td class="text-muted">${esc(propMap[i.propertyId]||i.propertyId||'—')}</td>
+        <td><span class="pill pill-income">${esc(i.type||'Rent')}</span></td>
+        <td>${esc(i.description||'')}</td>
+        <td class="amount positive">$${(parseFloat(i.amount)||0).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
+        <td>
+          <button class="btn btn-secondary btn-xs" onclick="showIncomeModal('${i.id}')">Edit</button>
+          <button class="btn btn-danger btn-xs" onclick="deleteIncome('${i.id}')">Del</button>
+        </td>
+      </tr>
+    `).join('')}
+  </tbody></table></div></div>`}`;
+}
+
+function initIncomeHandlers(){
+  window._incomeFilterProp = document.getElementById('income-filter-prop');
+  window._incomeFilterType = document.getElementById('income-filter-type');
+}
+
+function filterIncome(){
+  const prop = window._incomeFilterProp?.value||'';
+  const type = window._incomeFilterType?.value||'';
+  document.querySelectorAll('#content table tbody tr').forEach(tr=>{
+    const p = tr.dataset.prop||'';
+    const t = tr.dataset.type||'';
+    tr.classList.toggle('hidden',(prop&&p!==prop)||(type&&t!==type));
+  });
+}
+
+function showIncomeModal(id=null){
+  const income = loadData(STORAGE_KEYS.income);
+  const props = loadData(STORAGE_KEYS.properties);
+  const inc = id?income.find(i=>i.id===id):null;
+  const modal = document.getElementById('modal-container');
+  modal.innerHTML = `
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <h2>${inc?'Edit Income':'Add Income'}</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Property *</label>
+          <select id="inc-property">
+            <option value="">Select property...</option>
+            ${props.map(p=>`<option value="${p.id}" ${inc?.propertyId===p.id?'selected':''}>${escAttr(p.address)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" id="inc-date" value="${inc?.date||new Date().toISOString().slice(0,10)}">
+        </div>
+        <div class="form-group">
+          <label>Income Type</label>
+          <select id="inc-type">${INCOME_TYPES.map(t=>`<option ${inc?.type===t?'selected':''}>${t}</option>`).join('')}</select>
+        </div>
+        <div class="form-group">
+          <label>Amount ($) *</label>
+          <input type="number" id="inc-amount" placeholder="0.00" value="${inc?.amount||''}" step="0.01" min="0">
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Description</label>
+          <input id="inc-desc" placeholder="Monthly rent for January 2026" value="${escAttr(inc?.description||'')}">
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveIncome('${inc?.id||''}')">Save Income</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function saveIncome(id){
+  const propId = document.getElementById('inc-property').value;
+  const date = document.getElementById('inc-date').value;
+  const amount = document.getElementById('inc-amount').value;
+  if(!propId||!date||!amount){alert('Please fill in all required fields.');return}
+  const income = loadData(STORAGE_KEYS.income);
+  const props = loadData(STORAGE_KEYS.properties);
+  const prop = props.find(p=>p.id===propId);
+  const data = {
+    id: id||uid(),
+    propertyId:propId,
+    propertyName:prop?.address||'',
+    date, amount,
+    type: document.getElementById('inc-type').value,
+    description: document.getElementById('inc-desc').value
+  };
+  if(id){
+    const idx = income.findIndex(i=>i.id===id);
+    if(idx>=0) income[idx]=data;
+  }else{
+    income.push(data);
+  }
+  saveData(STORAGE_KEYS.income,income);
+  closeModal();
+  renderPage('income');
+}
+
+function deleteIncome(id){
+  if(!confirm('Delete this income entry?')) return;
+  let income = loadData(STORAGE_KEYS.income);
+  income = income.filter(i=>i.id!==id);
+  saveData(STORAGE_KEYS.income,income);
+  renderPage('income');
+}
+
+// ===== EXPENSES =====
+function renderExpenses(){
+  const expenses = loadData(STORAGE_KEYS.expenses);
+  const props = loadData(STORAGE_KEYS.properties);
+  const propMap = Object.fromEntries(props.map(p=>[p.id,p.address]));
+
+  const sorted = [...expenses].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const yearData = sorted.filter(e=>new Date(e.date).getFullYear()===2026);
+  const total = yearData.reduce((s,e)=>s+(parseFloat(e.amount)||0),0);
+
+  return `
+  <div class="flex-between mb-md">
+    <div>
+      <div style="font-size:24px;font-weight:800;color:var(--red)">$${Math.round(total).toLocaleString()}</div>
+      <div class="text-muted">${yearData.length} expense${yearData.length===1?'':'s'} in 2026</div>
+    </div>
+    <button class="btn btn-primary" onclick="showExpenseModal()">+ Add Expense</button>
+  </div>
+  <div class="filter-row mb-md">
+    <select id="exp-filter-prop" onchange="filterExpenses()">
+      <option value="">All Properties</option>
+      ${props.map(p=>`<option value="${p.id}">${escAttr(p.address)}</option>`).join('')}
+    </select>
+    <select id="exp-filter-cat" onchange="filterExpenses()">
+      <option value="">All Categories</option>
+      ${EXPENSE_CATEGORIES.map(c=>`<option value="${c.id}">${c.label}</option>`).join('')}
+    </select>
+  </div>
+  ${yearData.length===0?`<div class="card empty-state"><div class="empty-icon">🧾</div><h3>No expenses recorded</h3><p>Start tracking your rental expenses for 2026.</p><button class="btn btn-primary" onclick="showExpenseModal()">+ Add Expense</button></div>`:`
+  <div class="card"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Property</th><th>Category</th><th>Description</th><th class="text-right">Amount</th><th>Receipt</th><th>Actions</th></tr></thead><tbody>
+    ${yearData.map(e=>`
+      <tr data-prop="${e.propertyId||''}" data-cat="${e.category||''}">
+        <td>${new Date(e.date).toLocaleDateString()}</td>
+        <td class="text-muted">${esc(propMap[e.propertyId]||e.propertyId||'—')}</td>
+        <td>${esc(EXPENSE_CATEGORIES.find(c=>c.id===e.category)?.label||e.category||'Other')}</td>
+        <td>${esc(e.description||'')}</td>
+        <td class="amount negative">$${(parseFloat(e.amount)||0).toLocaleString(undefined,{minimumFractionDigits:2})}</td>
+        <td>${e.receipt?`<a href="${e.receipt}" download="receipt" class="btn btn-secondary btn-xs">📎 View</a>`:'—'}</td>
+        <td>
+          <button class="btn btn-secondary btn-xs" onclick="showExpenseModal('${e.id}')">Edit</button>
+          <button class="btn btn-danger btn-xs" onclick="deleteExpense('${e.id}')">Del</button>
+        </td>
+      </tr>
+    `).join('')}
+  </tbody></table></div></div>`}`;
+}
+
+function initExpenseHandlers(){
+  window._expFilterProp = document.getElementById('exp-filter-prop');
+  window._expFilterCat = document.getElementById('exp-filter-cat');
+}
+
+function filterExpenses(){
+  const prop = window._expFilterProp?.value||'';
+  const cat = window._expFilterCat?.value||'';
+  document.querySelectorAll('#content table tbody tr').forEach(tr=>{
+    const p = tr.dataset.prop||'';
+    const c = tr.dataset.cat||'';
+    tr.classList.toggle('hidden',(prop&&p!==prop)||(cat&&c!==cat));
+  });
+}
+
+function showExpenseModal(id=null){
+  const expenses = loadData(STORAGE_KEYS.expenses);
+  const props = loadData(STORAGE_KEYS.properties);
+  const exp = id?expenses.find(e=>e.id===id):null;
+  const modal = document.getElementById('modal-container');
+  modal.innerHTML = `
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <h2>${exp?'Edit Expense':'Add Expense'}</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Property *</label>
+          <select id="exp-property">
+            <option value="">Select property...</option>
+            ${props.map(p=>`<option value="${p.id}" ${exp?.propertyId===p.id?'selected':''}>${escAttr(p.address)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" id="exp-date" value="${exp?.date||new Date().toISOString().slice(0,10)}">
+        </div>
+        <div class="form-group">
+          <label>Category *</label>
+          <select id="exp-category">${EXPENSE_CATEGORIES.map(c=>`<option value="${c.id}" ${exp?.category===c.id?'selected':''}>${c.label}</option>`).join('')}</select>
+        </div>
+        <div class="form-group">
+          <label>Amount ($) *</label>
+          <input type="number" id="exp-amount" placeholder="0.00" value="${exp?.amount||''}" step="0.01" min="0">
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Description</label>
+          <input id="exp-desc" placeholder="Plumber repair for kitchen sink" value="${escAttr(exp?.description||'')}">
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Receipt (optional — image file)</label>
+          <input type="file" id="exp-receipt" accept="image/*,.pdf" onchange="handleReceiptUpload(this)">
+          <input type="hidden" id="exp-receipt-data" value="${escAttr(exp?.receipt||'')}">
+          ${exp?.receipt?`<div class="text-sm text-muted">Current receipt attached ✓</div>`:''}
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveExpense('${exp?.id||''}')">Save Expense</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function handleReceiptUpload(input){
+  const file = input.files[0];
+  if(!file){document.getElementById('exp-receipt-data').value='';return}
+  if(file.size > 5*1024*1024){alert('File too large. Maximum 5MB.');input.value='';return}
+  const reader = new FileReader();
+  reader.onload = function(e){
+    document.getElementById('exp-receipt-data').value = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function saveExpense(id){
+  const propId = document.getElementById('exp-property').value;
+  const date = document.getElementById('exp-date').value;
+  const amount = document.getElementById('exp-amount').value;
+  const category = document.getElementById('exp-category').value;
+  if(!propId||!date||!amount||!category){alert('Please fill in all required fields.');return}
+  const expenses = loadData(STORAGE_KEYS.expenses);
+  const props = loadData(STORAGE_KEYS.properties);
+  const prop = props.find(p=>p.id===propId);
+  const data = {
+    id: id||uid(),
+    propertyId:propId,
+    propertyName:prop?.address||'',
+    date, amount, category,
+    description: document.getElementById('exp-desc').value,
+    receipt: document.getElementById('exp-receipt-data').value||null
+  };
+  if(id){
+    const idx = expenses.findIndex(e=>e.id===id);
+    if(idx>=0) expenses[idx]=data;
+  }else{
+    expenses.push(data);
+  }
+  saveData(STORAGE_KEYS.expenses,expenses);
+  closeModal();
+  renderPage('expenses');
+}
+
+function deleteExpense(id){
+  if(!confirm('Delete this expense entry?')) return;
+  let expenses = loadData(STORAGE_KEYS.expenses);
+  expenses = expenses.filter(e=>e.id!==id);
+  saveData(STORAGE_KEYS.expenses,expenses);
+  renderPage('expenses');
+}
+
+// ===== MILEAGE =====
+function renderMileage(){
+  const mileage = loadData(STORAGE_KEYS.mileage);
+  const sorted = [...mileage].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const yearData = sorted.filter(m=>new Date(m.date).getFullYear()===2026);
+  const totalMiles = yearData.reduce((s,m)=>s+(parseFloat(m.miles)||0),0);
+  const totalDeduction = totalMiles * MILEAGE_RATE;
+
+  return `
+  <div class="stat-grid mb-md">
+    <div class="stat-card mileage"><div class="stat-label">Total Miles (2026)</div><div class="stat-value">${totalMiles.toLocaleString()}</div><div class="stat-sub">${yearData.length} trip${yearData.length===1?'':'s'}</div></div>
+    <div class="stat-card net"><div class="stat-label">Mileage Deduction</div><div class="stat-value">$${Math.round(totalDeduction).toLocaleString()}</div><div class="stat-sub">@ $${MILEAGE_RATE.toFixed(2)}/mile (2026 rate)</div></div>
+  </div>
+  <div class="flex-between mb-md">
+    <div class="text-muted">IRS standard mileage rate for 2026: <strong>$0.70/mile</strong> (estimated; actual rate TBD by IRS)</div>
+    <button class="btn btn-primary" onclick="showMileageModal()">+ Log Trip</button>
+  </div>
+  ${yearData.length===0?`<div class="card empty-state"><div class="empty-icon">🚗</div><h3>No mileage logged</h3><p>Track your business miles for rental property activities.</p><button class="btn btn-primary" onclick="showMileageModal()">+ Log Trip</button></div>`:`
+  <div class="card"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Purpose</th><th>Start Odo</th><th>End Odo</th><th>Miles</th><th>Rate</th><th>Deduction</th><th>Actions</th></tr></thead><tbody>
+    ${yearData.map(m=>{
+      const deduction = (parseFloat(m.miles)||0)*MILEAGE_RATE;
+      return `<tr>
+        <td>${new Date(m.date).toLocaleDateString()}</td>
+        <td>${esc(m.purpose||'')}</td>
+        <td>${(m.startOdo||0).toLocaleString()}</td>
+        <td>${(m.endOdo||0).toLocaleString()}</td>
+        <td class="amount">${(parseFloat(m.miles)||0).toLocaleString()}</td>
+        <td>$${MILEAGE_RATE.toFixed(2)}</td>
+        <td class="amount positive">$${deduction.toFixed(2)}</td>
+        <td>
+          <button class="btn btn-secondary btn-xs" onclick="showMileageModal('${m.id}')">Edit</button>
+          <button class="btn btn-danger btn-xs" onclick="deleteMileage('${m.id}')">Del</button>
+        </td>
+      </tr>`;
+    }).join('')}
+  </tbody></table></div></div>`}`;
+}
+
+function initMileageHandlers(){}
+
+function showMileageModal(id=null){
+  const mileage = loadData(STORAGE_KEYS.mileage);
+  const m = id?mileage.find(x=>x.id===id):null;
+  const modal = document.getElementById('modal-container');
+  modal.innerHTML = `
+  <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <h2>${m?'Edit Trip':'Log Trip'}</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" id="ml-date" value="${m?.date||new Date().toISOString().slice(0,10)}">
+        </div>
+        <div class="form-group">
+          <label>Purpose *</label>
+          <input id="ml-purpose" placeholder="Visit property for inspection" value="${escAttr(m?.purpose||'')}">
+        </div>
+        <div class="form-group">
+          <label>Starting Odometer</label>
+          <input type="number" id="ml-start" placeholder="50000" value="${m?.startOdo||''}" min="0">
+        </div>
+        <div class="form-group">
+          <label>Ending Odometer</label>
+          <input type="number" id="ml-end" placeholder="50025" value="${m?.endOdo||''}" min="0" onchange="autoCalcMiles()">
+        </div>
+        <div class="form-group">
+          <label>Miles Driven *</label>
+          <input type="number" id="ml-miles" placeholder="25" value="${m?.miles||''}" step="0.1" min="0">
+          <div class="text-sm text-muted">Auto-calculated from odometer if provided</div>
+        </div>
+        <div class="form-group">
+          <label>Rate</label>
+          <input type="text" value="$${MILEAGE_RATE.toFixed(2)}/mile (2026)" disabled style="opacity:0.7">
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveMileage('${m?.id||''}')">Save Trip</button>
+      </div>
+    </div>
+  </div>`;
+  window._autoCalcMiles = function(){
+    const s = parseFloat(document.getElementById('ml-start').value)||0;
+    const e = parseFloat(document.getElementById('ml-end').value)||0;
+    if(s>0&&e>s) document.getElementById('ml-miles').value = (e-s).toFixed(1);
+  };
+}
+
+function autoCalcMiles(){if(window._autoCalcMiles)window._autoCalcMiles()}
+
+function saveMileage(id){
+  const date = document.getElementById('ml-date').value;
+  const purpose = document.getElementById('ml-purpose').value.trim();
+  const miles = document.getElementById('ml-miles').value;
+  if(!date||!purpose||!miles){alert('Please fill in all required fields.');return}
+  const mileage = loadData(STORAGE_KEYS.mileage);
+  const data = {
+    id: id||uid(),
+    date, purpose,
+    startOdo: document.getElementById('ml-start').value||'',
+    endOdo: document.getElementById('ml-end').value||'',
+    miles: parseFloat(miles),
+    rate: MILEAGE_RATE
+  };
+  if(id){
+    const idx = mileage.findIndex(m=>m.id===id);
+    if(idx>=0) mileage[idx]=data;
+  }else{
+    mileage.push(data);
+  }
+  saveData(STORAGE_KEYS.mileage,mileage);
+  closeModal();
+  renderPage('mileage');
+}
+
+function deleteMileage(id){
+  if(!confirm('Delete this mileage entry?')) return;
+  let mileage = loadData(STORAGE_KEYS.mileage);
+  mileage = mileage.filter(m=>m.id!==id);
+  saveData(STORAGE_KEYS.mileage,mileage);
+  renderPage('mileage');
+}
+
+// ===== ASSETS & DEPRECIATION =====
+function renderAssets(){
+  const assets = loadData(STORAGE_KEYS.assets);
+  const props = loadData(STORAGE_KEYS.properties);
+  const propMap = Object.fromEntries(props.map(p=>[p.id,p.address]));
+
+  let totalAnnualDepreciation = 0;
+
+  return `
+  <div class="flex-between mb-md">
+    <div class="text-muted">${assets.length} asset${assets.length===1?'':'s'} tracked</div>
+    <button class="btn btn-primary" onclick="showAssetModal()">+ Add Asset</button>
+  </div>
+  ${assets.length===0?`<div class="card empty-state"><div class="empty-icon">🏗️</div><h3>No assets tracked</h3><p>Add capital assets to track depreciation for Form 4562.</p><button class="btn btn-primary" onclick="showAssetModal()">+ Add Asset</button></div>`:`
+  ${assets.map(a=>{
+    const cost = parseFloat(a.cost)||0;
+    const placedDat
+
+[truncated]

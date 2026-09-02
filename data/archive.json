@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T03:27:20.463814+00:00",
+  "generated_at": "2026-09-02T03:42:30.398686+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 42,
   "sessions": [
@@ -8,17 +8,35 @@
       "date": "2026-09-02",
       "title": "rental-tax-benefits",
       "summary": "",
-      "updated_at": "2026-09-02T03:01:30.858851",
-      "file_count": 0,
-      "export_count": 0,
-      "csv_count": 0,
+      "updated_at": "2026-09-02T03:38:13.688327",
+      "file_count": 2,
+      "export_count": 1,
+      "csv_count": 1,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-09-02/rental-tax-benefits",
       "status": "completed",
       "standard_previews": {},
       "files": {
-        "export": [],
-        "csv": [],
+        "export": [
+          {
+            "name": "rental-tax-dashboard.html",
+            "rel_path": "artifacts/exports/rental-tax-dashboard.html",
+            "size": 69663,
+            "updated_at": "2026-09-02T03:38:13.688327",
+            "previewable": true,
+            "public_href": "public/2026-09-02/rental-tax-benefits/artifacts/exports/rental-tax-dashboard.html"
+          }
+        ],
+        "csv": [
+          {
+            "name": "tax-benefits-research.md",
+            "rel_path": "artifacts/csv/tax-benefits-research.md",
+            "size": 49777,
+            "updated_at": "2026-09-02T03:28:33.620683",
+            "previewable": true,
+            "public_href": "public/2026-09-02/rental-tax-benefits/artifacts/csv/tax-benefits-research.md"
+          }
+        ],
         "image": [],
         "other": []
       }
