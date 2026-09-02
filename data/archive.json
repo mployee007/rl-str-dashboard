@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-09-02T02:56:20.408898+00:00",
+  "generated_at": "2026-09-02T03:11:30.330466+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 41,
+  "session_count": 42,
   "sessions": [
+    {
+      "id": "2026-09-02/rental-tax-benefits",
+      "date": "2026-09-02",
+      "title": "rental-tax-benefits",
+      "summary": "",
+      "updated_at": "2026-09-02T03:01:30.858851",
+      "file_count": 0,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-02/rental-tax-benefits",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-01/peter-thiel-13f-last-3-quarters",
       "date": "2026-09-01",
