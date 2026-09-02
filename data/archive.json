@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-02T17:24:22.306755+00:00",
+  "generated_at": "2026-09-02T17:39:31.984366+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 43,
+  "session_count": 44,
   "sessions": [
+    {
+      "id": "2026-09-02/toledo-cleveland-detroit-zips",
+      "date": "2026-09-02",
+      "title": "toledo-cleveland-detroit-zips",
+      "summary": "",
+      "updated_at": "2026-09-02T17:39:24.585154",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-02/toledo-cleveland-detroit-zips",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "rental-investment-zips-consolidated.md",
+            "rel_path": "rental-investment-zips-consolidated.md",
+            "size": 8395,
+            "updated_at": "2026-09-02T17:39:24.585154",
+            "previewable": true,
+            "public_href": "public/2026-09-02/toledo-cleveland-detroit-zips/rental-investment-zips-consolidated.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-02/cclba-grant-search",
       "date": "2026-09-02",
