@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T20:17:38.426995+00:00",
+  "generated_at": "2026-09-04T20:33:32.731606+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 45,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-09-04",
       "title": "parma-listings-under-190k",
       "summary": "",
-      "updated_at": "2026-09-04T17:20:55.660671",
-      "file_count": 0,
+      "updated_at": "2026-09-04T20:23:46.003822",
+      "file_count": 1,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -20,7 +20,16 @@
         "export": [],
         "csv": [],
         "image": [],
-        "other": []
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 2238,
+            "updated_at": "2026-09-04T20:23:46.003822",
+            "previewable": true,
+            "public_href": "public/2026-09-04/parma-listings-under-190k/parma-listings.md"
+          }
+        ]
       }
     },
     {
