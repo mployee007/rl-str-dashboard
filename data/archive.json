@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-09-04T17:11:38.080700+00:00",
+  "generated_at": "2026-09-04T17:27:32.327502+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 44,
+  "session_count": 45,
   "sessions": [
+    {
+      "id": "2026-09-04/parma-listings-under-190k",
+      "date": "2026-09-04",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-04T17:20:55.660671",
+      "file_count": 0,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-04/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-02/toledo-cleveland-detroit-zips",
       "date": "2026-09-02",
