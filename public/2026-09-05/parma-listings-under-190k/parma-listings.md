@@ -1,33 +1,56 @@
-# Parma Listings Under $190K — Pull Failed
+# Parma, OH — Listings Under $190K
 
-**Date:** 2026-09-05  
-**Status:** ❌ Zillapi credits exhausted
+**Pull Date:** 2026-09-05  
+**Status:** ❌ FAILED — Zillapi credits exhausted  
+**ZIPs Targeted:** 44129 (Parma West), 44134 (Parma), 44130 (Parma South)  
+**Price Cap:** $190,000  
 
 ---
 
-## Blocker
+## ⚠️ Zillapi Out of Credits
 
-Zillapi returned **"Out of credits for this cycle"** on the first call (ZIP 44129), and the MCP server became unreachable on subsequent calls. No live listing data could be retrieved.
+All three Zillapi search calls failed:
 
-## Sources Tried
+| ZIP | Bounding Box | Error |
+|-----|-------------|-------|
+| 44129 | -81.78,41.37,-81.68,41.42 | Out of credits for this cycle |
+| 44134 | -81.72,41.35,-81.65,41.40 | MCP server unreachable (16 consecutive failures) |
+| 44130 | -81.80,41.35,-81.73,41.41 | MCP server unreachable (16 consecutive failures) |
 
-| Source | Result |
-|--------|--------|
-| Zillapi MCP (`mcp_zillapi_search_listings`) — ZIP 44129 | ❌ Out of credits |
-| Zillapi MCP (`mcp_zillapi_search_listings`) — ZIP 44134 | ❌ Server unreachable (cascade) |
-| Zillapi MCP (`mcp_zillapi_search_listings`) — ZIP 44130 | ❌ Server unreachable (cascade) |
-| Zillow.com direct browser | 🔒 PerimeterX/Cloudflare blocked |
-| Redfin.com direct browser | 🔒 Captcha blocked |
-| web_search / web_extract | 🔒 All major listing sites block automated access |
+---
 
-## Direct Zillow Search URLs (open in your own browser)
+## Manual Workaround: Direct Zillow Search Links
 
-- **[44129 — Parma West, under $190K](https://www.zillow.com/parma-oh-44129/houses/under-190000_sort/)**  
-- **[44134 — Parma Central, under $190K](https://www.zillow.com/parma-oh-44134/houses/under-190000_sort/)**  
-- **[44130 — Parma South, under $190K](https://www.zillow.com/parma-oh-44130/houses/under-190000_sort/)**
+Open these in your own browser to view active listings under $190K:
 
-## Next Step
+| ZIP | Direct Zillow Search |
+|-----|----------------------|
+| **44129** | https://www.zillow.com/homes/for_sale/44129_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44129","mapBounds":{"west":-81.80,"east":-81.66,"south":41.36,"north":41.44},"filterState":{"price":{"max":190000},"sort":{"value":"globalrelevanceex"},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"mf":{"value":false},"con":{"value":false},"tow":{"value":false},"manu":{"value":false},"apco":{"value":false},"land":{"value":false}},"isListVisible":true} |
+| **44134** | https://www.zillow.com/homes/for_sale/44134_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44134","mapBounds":{"west":-81.74,"east":-81.63,"south":41.34,"north":41.42},"filterState":{"price":{"max":190000},"sort":{"value":"globalrelevanceex"},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"mf":{"value":false},"con":{"value":false},"tow":{"value":false},"manu":{"value":false},"apco":{"value":false},"land":{"value":false}},"isListVisible":true} |
+| **44130** | https://www.zillow.com/homes/for_sale/44130_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44130","mapBounds":{"west":-81.82,"east":-81.71,"south":41.34,"north":41.43},"filterState":{"price":{"max":190000},"sort":{"value":"globalrelevanceex"},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"mf":{"value":false},"con":{"value":false},"tow":{"value":false},"manu":{"value":false},"apco":{"value":false},"land":{"value":false}},"isListVisible":true} |
 
-Re-run this pull when Zillapi credits are restored. Top up at: https://zillapi.com/app/billing
+---
 
-The bounding boxes are saved in `/opt/data/parma-pull-status.txt` for re-use.
+## Parma Market Context (from prior research anchors)
+
+For reference when listings do load:
+
+- **44129 (Parma West):** Dense post-war bungalow stock, strong rental demand, median SFR ~$170-190K. Best for stabilized SFR holds and value-add bungalows.
+- **44134 (Central Parma):** Mix of bungalows and capes, slightly lower medians. Good duplex/duplex-conversion hunting ground.
+- **44130 (Parma South):** Similar to 44129 but slightly wider price band. Watch for blocks near Brookpark Rd for noise discount.
+
+**Rough buy-box guardrails for Parma (from Cleveland metro anchors):**
+- Target all-in basis: $140-175K (SFR)
+- Target rent: $1,300-1,600/mo (SFR)
+- Target gross yield: 8-10%+
+- GRM target: sub-12
+
+---
+
+## Next Steps
+
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing
+2. **Re-run this cron job** — it will pick up where it left off
+3. Or **open the direct Zillow links above** for immediate manual review
+
+Status file saved at: `/opt/data/parma-pull-status.txt`
