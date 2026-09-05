@@ -1,43 +1,56 @@
-# Parma Listings Under $190K — Pull Failed
-
+# Parma West Sub-$190K Listings Screen
 **Date:** 2026-09-05  
-**Time:** ~UTC (cron execution)  
-**Status:** BLOCKED — Zillapi out of credits
+**Status:** ❌ BLOCKED — Zillapi out of credits
 
-## Error Details
+---
 
-| Source | ZIP | Call | Result |
-|--------|-----|------|--------|
-| Zillapi MCP | 44129 | `search_listings(bbox=-81.78,41.37,-81.68,41.42, status=for_sale, price_max=190000)` | ❌ Out of credits |
-| Zillapi MCP | 44134 | `search_listings(bbox=-81.72,41.35,-81.65,41.40, status=for_sale, price_max=190000)` | ❌ MCP server unreachable (9 consecutive failures) |
-| Zillapi MCP | 44130 | `search_listings(bbox=-81.80,41.35,-81.73,41.41, status=for_sale, price_max=190000)` | ❌ MCP server unreachable (9 consecutive failures) |
+## Search Parameters
 
-All three pulls failed. No listings were fabricated.
+| Parameter | Value |
+|-----------|-------|
+| ZIPs | 44129 (Parma West), 44134 (Parma South), 44130 (Parma East/Middleburg) |
+| Max Price | $190,000 |
+| Status | For Sale |
+| Property Type | Houses (1-4 units) |
 
-## Direct Zillow Search URLs (open in browser)
+## Bounding Boxes Used
 
-| ZIP | Neighborhood | Direct Zillow Link |
-|-----|-------------|-------------------|
-| **44129** | Parma West | https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/0-1000000_mp/ |
-| **44134** | Parma / Seven Hills | https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/0-1000000_mp/ |
-| **44130** | Middleburg Heights / Parma Hts | https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/0-1000000_mp/ |
+| ZIP | West | South | East | North |
+|-----|------|-------|------|-------|
+| 44129 | -81.78 | 41.37 | -81.68 | 41.42 |
+| 44134 | -81.72 | 41.35 | -81.65 | 41.40 |
+| 44130 | -81.80 | 41.35 | -81.73 | 41.41 |
+
+---
+
+## Zillapi Results
+
+| Attempt | ZIP | Status |
+|---------|-----|--------|
+| 1 | 44129 | ❌ Out of credits |
+| 2 | 44134 | ❌ MCP server unreachable |
+| 3 | 44130 | ❌ MCP server unreachable |
+
+**Credit top-up:** https://zillapi.com/app/billing
+
+---
+
+## Direct Zillow Search URLs (manual browser fallback)
+
+Open these in a browser to view current listings:
+
+- [44129 under $190K](https://www.zillow.com/homes/for_sale/44129_houses/0-190000_price/0-899_mp/?searchQueryState={%22pagination%22:{},%22usersSearchTerm%22:%2244129%22,%22mapBounds%22:{%22west%22:-81.78,%22east%22:-81.68,%22south%22:41.37,%22north%22:41.42},%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:190000},%22homeType%22:{%22value%22:false}},%22isListVisible%22:true})
+- [44134 under $190K](https://www.zillow.com/homes/for_sale/44134_houses/0-190000_price/0-899_mp/?searchQueryState={%22pagination%22:{},%22usersSearchTerm%22:%2244134%22,%22mapBounds%22:{%22west%22:-81.72,%22east%22:-81.65,%22south%22:41.35,%22north%22:41.40},%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:190000},%22homeType%22:{%22value%22:false}},%22isListVisible%22:true})
+- [44130 under $190K](https://www.zillow.com/homes/for_sale/44130_houses/0-190000_price/0-899_mp/?searchQueryState={%22pagination%22:{},%22usersSearchTerm%22:%2244130%22,%22mapBounds%22:{%22west%22:-81.80,%22east%22:-81.73,%22south%22:41.35,%22north%22:41.41},%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:190000},%22homeType%22:{%22value%22:false}},%22isListVisible%22:true})
+
+---
 
 ## Next Steps
 
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run this cron job** after credits refresh
-3. This status file will be overwritten on next successful pull
+1. Top up Zillapi credits at https://zillapi.com/app/billing
+2. Re-run this cron job or manually trigger the pull
+3. Check saved JSON files from prior pulls (if any exist) as a stopgap
 
-## Sources Tried
+---
 
-| Source | Method | Result |
-|--------|--------|--------|
-| Zillapi MCP | `mcp_zillapi_search_listings` | Out of credits / unreachable |
-| Zillow.com | Not attempted (known PerimeterX/Cloudflare captcha block) | N/A |
-| Redfin | Not attempted (known captcha block) | N/A |
-| Realtor.com | Not attempted (known captcha block) | N/A |
-| Trulia | Not attempted (known captcha block) | N/A |
-| web_search | Not attempted (known failure per skill) | N/A |
-| web_extract | Not attempted (known failure per skill) | N/A |
-
-*Per real-estate-submarket-screening skill: "Do not waste turns trying Zillow.com, Redfin, Trulia, Realtor.com, or other listing sites — they all block with captchas. Use Zillapi MCP exclusively."*
+*No listings were retrieved. No data was fabricated.*
