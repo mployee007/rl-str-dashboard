@@ -1,8 +1,41 @@
 {
-  "generated_at": "2026-09-06T02:31:36.610812+00:00",
+  "generated_at": "2026-09-06T02:46:42.090569+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 46,
+  "session_count": 47,
   "sessions": [
+    {
+      "id": "2026-09-06/parma-listings-under-190k",
+      "date": "2026-09-06",
+      "title": "parma-listings-under-190k",
+      "summary": "**Session:** parma-listings-under-190k **Date:** 2026-09-06 **Source:** Hermes cron job \u2014 Discord #loki channel - Attempted Zillapi pulls for ZIPs 44129, 44134, 44130 (all failed \u2014 out of credits) - Saved status file at `/opt/data/parma-pull-status.txt` - Saved blocker report at",
+      "updated_at": "2026-09-06T02:40:30.512256",
+      "file_count": 4,
+      "export_count": 1,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-06/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {
+        "run-log.md": "# Run Log \u2014 Parma Listings Under $190K\n\n## 2026-09-06\n\n### ~UTC \u2014 Zillapi pull attempt\n- Called `mcp_zillapi_search_listings` for 44129: \"Out of credits for this cycle\"\n- Called `mcp_zillapi_search_listings` for 44134: \"MCP server unreachable\"\n- Called `mcp_zillapi_search_listings` for 44130: \"MCP server unreachable\"\n- Saved status file, report, and manual Zillow URLs\n- No listing data retrieved \u2014 job blocked on credits",
+        "sources.json": "{\n  \"sources\": [\n    {\n      \"name\": \"Zillapi MCP \u2014 44129 for-sale\",\n      \"url\": \"mcp_zillapi_search_listings\",\n      \"result\": \"Out of credits for this cycle\",\n      \"date\": \"2026-09-06\"\n    },\n    {\n      \"name\": \"Zillapi MCP \u2014 44134 for-sale\",\n      \"url\": \"mcp_zillapi_search_listings\",\n      \"result\": \"MCP server unreachable (downstream of credit exhaustion)\",\n      \"date\": \"2026-09-06\"\n    },\n    {\n      \"name\": \"Zillapi MCP \u2014 44130 for-sale\",\n      \"url\": \"mcp_zillapi_search_listings\",\n      \"result\": \"MCP server unreachable (downstream of credit exhaustion)\",\n      \"date\": \"2026-09-06\"\n    }\n  ],\n  \"manual_links\": {\n    \"44129\": \"https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/\",\n    \"44134\": \"https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/\",\n    \"44130\": \"https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/\"\n  },\n  \"_note\": \"All sources blocked. Retry after Zillapi credit top-up.\"\n}",
+        "summary.md": "# Parma Listings Under $190K \u2014 Summary\n\n**Session:** parma-listings-under-190k\n**Date:** 2026-09-06\n**Source:** Hermes cron job \u2014 Discord #loki channel\n\n## What was accomplished\n- Attempted Zillapi pulls for ZIPs 44129, 44134, 44130 (all failed \u2014 out of credits)\n- Saved status file at `/opt/data/parma-pull-status.txt`\n- Saved blocker report at `artifacts/exports/parma-listings.md`\n- Generated manual Zillow search URLs for each ZIP\n- Updated quick-reference file at `/opt/data/parma-latest-listings.md`\n\n## What's pending\n- Top up Zillapi credits at https://zillapi.com/app/billing\n- Re-run the pull once credits are available\n- Generate full listing tables with investor verdicts"
+      },
+      "files": {
+        "export": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "artifacts/exports/parma-listings.md",
+            "size": 1294,
+            "updated_at": "2026-09-06T02:40:13.477270",
+            "previewable": true,
+            "public_href": "public/2026-09-06/parma-listings-under-190k/artifacts/exports/parma-listings.md"
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-05/parma-listings-under-190k",
       "date": "2026-09-05",

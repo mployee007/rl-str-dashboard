@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "name": "Zillapi MCP — 44129 for-sale",
+      "url": "mcp_zillapi_search_listings",
+      "result": "Out of credits for this cycle",
+      "date": "2026-09-06"
+    },
+    {
+      "name": "Zillapi MCP — 44134 for-sale",
+      "url": "mcp_zillapi_search_listings",
+      "result": "MCP server unreachable (downstream of credit exhaustion)",
+      "date": "2026-09-06"
+    },
+    {
+      "name": "Zillapi MCP — 44130 for-sale",
+      "url": "mcp_zillapi_search_listings",
+      "result": "MCP server unreachable (downstream of credit exhaustion)",
+      "date": "2026-09-06"
+    }
+  ],
+  "manual_links": {
+    "44129": "https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/",
+    "44134": "https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/",
+    "44130": "https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/"
+  },
+  "_note": "All sources blocked. Retry after Zillapi credit top-up."
+}
