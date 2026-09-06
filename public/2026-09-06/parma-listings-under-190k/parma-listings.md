@@ -1,36 +1,47 @@
-# Parma Listings Under $190K — Report
+# Parma Listings Under $190K — Pull Report
 
-**Generated:** 2026-09-06T20:49:27Z  
-**Status:** ❌ BLOCKED — No data retrieved  
-**ZIPs targeted:** 44129, 44134, 44130  
-**Max price:** $190,000
+**Date:** 2026-09-06  
+**Status:** ❌ BLOCKED — Zillapi credits exhausted
 
 ---
 
-## ⚠️ Data Pull Failed
+## Target ZIP Codes
 
-All three data sources attempted returned errors:
-
-| Source | Error |
-|--------|-------|
-| Zillapi MCP (search) | Out of credits |
-| Web search (Firecrawl) | Backend not installed |
-| Web extract (Zillow) | Firecrawl dependency missing |
-
-No property listings were retrieved. **No data has been fabricated.**
-
-## Direct Browser Links
-
-Open these in your own browser to view current listings:
-
-- [44129 (Parma West) — under $190K](https://www.zillow.com/homes/for_sale/44129_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22east%22%3A-81.68%2C%22south%22%3A41.37%2C%22north%22%3A41.42%7D%2C%22filterState%22%3A%7B%22maxPrice%22%3A%7B%22value%22%3A190000%7D%7D%2C%22isListVisible%22%3Atrue%7D)
-- [44134 (Parma SE) — under $190K](https://www.zillow.com/homes/for_sale/44134_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22east%22%3A-81.65%2C%22south%22%3A41.35%2C%22north%22%3A41.40%7D%2C%22filterState%22%3A%7B%22maxPrice%22%3A%7B%22value%22%3A190000%7D%7D%2C%22isListVisible%22%3Atrue%7D)
-- [44130 (Parma SW) — under $190K](https://www.zillow.com/homes/for_sale/44130_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22east%22%3A-81.73%2C%22south%22%3A41.35%2C%22north%22%3A41.41%7D%2C%22filterState%22%3A%7B%22maxPrice%22%3A%7B%22value%22%3A190000%7D%7D%2C%22isListVisible%22%3Atrue%7D)
-
-## Next Cron Run
-
-This job will retry on the next scheduled cron execution. To force an immediate retry, top up Zillapi credits at https://zillapi.com/app/billing and re-trigger the job.
+| ZIP | Area | Bounding Box | Price Cap |
+|-----|------|--------------|-----------|
+| 44129 | Parma West, OH | `-81.78,41.37,-81.68,41.42` | $190,000 |
+| 44134 | Parma, OH | `-81.72,41.35,-81.65,41.40` | $190,000 |
+| 44130 | Parma / Middleburg Heights, OH | `-81.80,41.35,-81.73,41.41` | $190,000 |
 
 ---
 
-*No listings fabricated. All errors documented. See /opt/data/parma-pull-status.txt for machine-readable status.*
+## Source Results
+
+| Source | Result |
+|--------|--------|
+| **Zillapi MCP** (`mcp_zillapi_search_listings`, 3 calls) | ❌ "Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing." |
+| Zillow.com | ⛔ Skipped — known PerimeterX/Cloudflare captcha block (per skill instructions) |
+| Redfin | ⛔ Skipped — known captcha block |
+| Realtor.com | ⛔ Skipped — known captcha block |
+| Trulia | ⛔ Skipped — known captcha block |
+| web_search | ⛔ Not attempted — skill instructs not to waste turns on blocked sources |
+
+---
+
+## Direct Zillow Search URLs
+
+Open these in your browser to view listings directly:
+
+- **44129:** https://www.zillow.com/homes/for_sale/44129_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44129","mapBounds":{"west":-81.78,"east":-81.68,"south":41.37,"north":41.42},"filterState":{"max":{"value":190000},"sort":{"value":"globalrelevanceex"}},"isListVisible":true}
+- **44134:** https://www.zillow.com/homes/for_sale/44134_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44134","mapBounds":{"west":-81.72,"east":-81.65,"south":41.35,"north":41.40},"filterState":{"max":{"value":190000},"sort":{"value":"globalrelevanceex"}},"isListVisible":true}
+- **44130:** https://www.zillow.com/homes/for_sale/44130_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44130","mapBounds":{"west":-81.80,"east":-81.73,"south":41.35,"north":41.41},"filterState":{"max":{"value":190000},"sort":{"value":"globalrelevanceex"}},"isListVisible":true}
+
+---
+
+## Next Steps
+
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing  
+2. Re-run this cron job or manually trigger the pull  
+3. The `parma-pull-status.txt` file at `/opt/data/parma-pull-status.txt` will be overwritten with fresh data on next successful run
+
+**No fabricated listings. No data was invented.**
