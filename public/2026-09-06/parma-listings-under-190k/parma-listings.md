@@ -1,67 +1,48 @@
-# Parma Listings Under $190K — Pull Report
+# Parma ZIP Listings Under $190K — Pull Report
 
-**Date:** 2026-09-06 (Sunday)  
-**Status:** ❌ ZILLAPI OUT OF CREDITS — NO DATA PULLED  
-**Target ZIPs:** 44129 (Parma West), 44134 (Parma South), 44130 (Parma East/Middleburg Hts)  
-**Criteria:** Active for-sale, 1+ beds, max $190,000
+**Date:** 2026-09-06
+**Status:** BLOCKED — Zillapi credits exhausted
 
 ---
 
-## Why This Is Empty
+## Diagnostic Summary
 
-Zillapi credits are exhausted. All three bounding-box queries returned errors:
-
-| ZIP | Bounding Box | Error |
-|-----|-------------|-------|
-| 44129 | `-81.78,41.37,-81.68,41.42` | Out of credits for this cycle |
-| 44134 | `-81.72,41.35,-81.65,41.40` | MCP server unreachable |
-| 44130 | `-81.80,41.35,-81.73,41.41` | MCP server unreachable |
-
-Per the `real-estate-submarket-screening` skill, I did **not** waste turns on web sources (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) — all are known to block automated access with PerimeterX/Cloudflare captchas and `web_extract`/`web_search` fail there consistently.
+| Source | Target | Result |
+|--------|--------|--------|
+| Zillapi `search_listings` (bbox) | 44129 | Out of credits |
+| Zillapi `search_listings` (bbox) | 44134 | MCP server unreachable |
+| Zillapi `search_listings` (bbox) | 44130 | MCP server unreachable |
+| `web_search` (firecrawl) | 44129 | firecrawl-py not installed |
+| `web_search` (firecrawl) | 44134 | firecrawl-py not installed |
 
 ---
 
-## Sources Not Attempted (Blocked by Design)
+## Bounding Boxes Used
 
-| Source | Reason Skipped |
-|--------|---------------|
-| Zillow.com | PerimeterX captcha — confirmed blocked |
-| Redfin.com | Cloudflare — confirmed blocked |
-| Trulia.com | PerimeterX — confirmed blocked |
-| Realtor.com | Bot detection — confirmed blocked |
-| Homes.com | Captcha — confirmed blocked |
-| Movoto.com | Blocked |
-| `web_search` / `web_extract` | Fail repeatedly on listing sites |
+| ZIP | Area | Bounding Box |
+|-----|------|-------------|
+| 44129 | Parma West | `-81.78,41.37,-81.68,41.42` |
+| 44134 | Parma South | `-81.72,41.35,-81.65,41.40` |
+| 44130 | Parma SE / Middleburg Hts | `-81.80,41.35,-81.73,41.41` |
 
 ---
 
-## Manual Search URLs (Open in Your Own Browser)
+## Direct Zillow Search URLs
 
-These are direct Zillow searches for each ZIP with the $190K cap:
+Open these in a browser to view current listings:
 
-- **44129:** https://www.zillow.com/parma-oh-44129/houses/1-_beds/?searchQueryState={%22pagination%22:{},%22mapBounds%22:{%22west%22:-81.78,%22east%22:-81.68,%22south%22:41.37,%22north%22:41.42},%22usersSearchTerm%22:%2244129%22,%22regionSelection%22:[{%22regionId%22:88258}],%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:190000},%22beds%22:{%22min%22:1},%22ah%22:{%22value%22:true}},%22isListVisible%22:true}
-
-- **44134:** https://www.zillow.com/parma-oh-44134/houses/1-_beds/?searchQueryState={%22pagination%22:{},%22mapBounds%22:{%22west%22:-81.72,%22east%22:-81.65,%22south%22:41.35,%22north%22:41.40},%22usersSearchTerm%22:%2244134%22,%22regionSelection%22:[{%22regionId%22:88261}],%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:190000},%22beds%22:{%22min%22:1},%22ah%22:{%22value%22:true}},%22isListVisible%22:true}
-
-- **44130:** https://www.zillow.com/parma-oh-44130/houses/1-_beds/?searchQueryState={%22pagination%22:{},%22mapBounds%22:{%22west%22:-81.80,%22east%22:-81.73,%22south%22:41.35,%22north%22:41.41},%22usersSearchTerm%22:%2244130%22,%22regionSelection%22:[{%22regionId%22:88260}],%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:190000},%22beds%22:{%22min%22:1},%22ah%22:{%22value%22:true}},%22isListVisible%22:true}
+- **44129:** [zillow.com/parma-oh-44129/houses/under-190000](https://www.zillow.com/parma-oh-44129/houses/under-190000_sort/)
+- **44134:** [zillow.com/parma-oh-44134/houses/under-190000](https://www.zillow.com/parma-oh-44134/houses/under-190000_sort/)
+- **44130:** [zillow.com/parma-oh-44130/houses/under-190000](https://www.zillow.com/parma-oh-44130/houses/under-190000_sort/)
 
 ---
 
-## What Happens Next
+## Resolution Path
 
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run this job** — the cron schedule or manual re-trigger will pick up where we left off
-3. **Saved JSON files** will be created on first successful pull at:
-   - `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/44129_raw.json`
-   - `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/44134_raw.json`
-   - `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/44130_raw.json`
+1. Top up Zillapi credits: https://zillapi.com/app/billing
+2. Re-run this cron job — it will write the full markdown report with investor verdicts to this directory
+3. No listings were fabricated; status files are at `/opt/data/parma-pull-status.txt` and `/opt/data/parma-latest-listings.md`
 
 ---
 
-## Status File
-
-A short status file was also written to: `/opt/data/parma-pull-status.txt`
-
----
-
-*Report generated by Hermes (Loki) — 2026-09-06. No listings were fabricated.*
+*Report auto-generated by Hermes cron. Skill: real-estate-submarket-screening.*

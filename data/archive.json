@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T14:39:43.517882+00:00",
+  "generated_at": "2026-09-06T14:55:38.174021+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 47,
   "sessions": [
@@ -8,7 +8,7 @@
       "date": "2026-09-06",
       "title": "parma-listings-under-190k",
       "summary": "**Session:** parma-listings-under-190k **Date:** 2026-09-06 **Source:** Hermes cron job \u2014 Discord #loki channel - Attempted Zillapi pulls for ZIPs 44129, 44134, 44130 (all failed \u2014 out of credits) - Saved status file at `/opt/data/parma-pull-status.txt` - Saved blocker report at",
-      "updated_at": "2026-09-06T08:43:55.710930",
+      "updated_at": "2026-09-06T14:46:54.582213",
       "file_count": 5,
       "export_count": 1,
       "csv_count": 0,
@@ -37,8 +37,8 @@
           {
             "name": "parma-listings.md",
             "rel_path": "parma-listings.md",
-            "size": 3490,
-            "updated_at": "2026-09-06T08:43:55.710930",
+            "size": 1676,
+            "updated_at": "2026-09-06T14:46:54.582213",
             "previewable": true,
             "public_href": "public/2026-09-06/parma-listings-under-190k/parma-listings.md"
           }
