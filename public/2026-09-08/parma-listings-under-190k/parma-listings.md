@@ -1,41 +1,36 @@
-# Parma West / 44129 + 44134 + 44130 — For-Sale Listings ≤ $190K
+# Parma West Listings Under $190K — Pull Failed (2026-09-08)
 
-**Run date:** 2026-09-08 06:11 UTC
-**Status:** ❌ PULL FAILED — no data returned
+**Status:** ❌ ZILLAPI UNAVAILABLE — No live data retrieved.
 
-## Result
+## Blocker Summary
 
-Zillapi MCP returned an out-of-credits error for this cycle:
+| Attempt | Tool | Target ZIP | Result |
+|---------|------|-----------|--------|
+| 1 | `mcp_zillapi_search_listings` | 44129 | **Out of credits** — needs top-up at https://zillapi.com/app/billing |
+| 2 | `mcp_zillapi_search_listings` | 44134 | MCP server unreachable (33 failures) |
+| 3 | `mcp_zillapi_search_listings` | 44130 | MCP server unreachable (33 failures) |
 
-> `Error: Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing.`
+## What Went Wrong
 
-Two of the three parallel calls also surfaced an MCP transport error:
+1. **Primary cause:** The Zillapi account is out of credits for this billing cycle.
+2. **Secondary cause:** The MCP server connection appears to have dropped (calls 2 and 3), which may be related to the credit exhaustion or an independent infrastructure issue.
 
-> `MCP server 'zillapi' is unreachable after 32 consecutive failures.`
+## Manual Fallback URLs
 
-## Targets attempted
+Open these in your browser to view current listings manually:
 
-| ZIP | Bounding box | Status filter | Price cap |
-|-----|--------------|---------------|-----------|
-| 44129 | -81.78, 41.37, -81.68, 41.42 | for_sale | $190,000 |
-| 44134 | -81.72, 41.35, -81.65, 41.40 | for_sale | $190,000 |
-| 44130 | -81.80, 41.35, -81.73, 41.41 | for_sale | $190,000 |
+- **ZIP 44129 (Parma West):** https://www.zillow.com/homes/for_sale/44129_zip/0-190000_price/0-488_mp/
+- **ZIP 44134 (Parma South/Southeast):** https://www.zillow.com/homes/for_sale/44134_zip/0-190000_price/0-488_mp/
+- **ZIP 44130 (Middleburg Heights area):** https://www.zillow.com/homes/for_sale/44130_zip/0-190000_price/0-488_mp/
 
-## Data source status
+## Next Steps
 
-| Source | Result |
-|--------|--------|
-| Zillapi `search_listings` (44129) | ❌ Out of credits |
-| Zillapi `search_listings` (44134) | ❌ MCP server unreachable |
-| Zillapi `search_listings` (44130) | ❌ MCP server unreachable |
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing
+2. **Wait for MCP server recovery** (auto-retry window ~60 seconds, but credits must be restored first)
+3. **Re-run** this cron job or trigger manually once credits are live
+4. The output files are pre-staged at:
+   - `/opt/data/outputs/2026-09-08/parma-listings-under-190k/parma-listings.md`
+   - `/opt/data/parma-latest-listings.md`
+   - `/opt/data/parma-pull-status.txt`
 
-**No listings were fabricated.** This report intentionally contains zero property rows.
-
-## Next actions
-
-1. Top up Zillapi credits at https://zillapi.com/app/billing (or wait for cycle reset).
-2. Re-run this pull — the three bounding boxes above are ready to go.
-3. Direct Zillow search links the user can open manually in the meantime:
-   - 44129: https://www.zillow.com/homes/for_sale/44129_rb/
-   - 44134: https://www.zillow.com/homes/for_sale/44134_rb/
-   - 44130: https://www.zillow.com/homes/for_sale/44130_rb/
+No data was fabricated. Every listing field below is empty because no API calls succeeded.
