@@ -1,29 +1,29 @@
 # Parma Listings Under $190K — 2026-09-08
-**Status:** ❌ BLOCKED — Zillapi credits exhausted
 
-No live listings could be retrieved. The Zillapi account is out of credits for this billing cycle and the MCP server was also unreachable for two of the three ZIP code queries.
+**Status:** ❌ **BLOCKED — Zillapi out of credits**
 
-## ZIP Codes Targeted
-| ZIP | Area | Price Cap | Status |
-|-----|------|-----------|--------|
-| 44129 | Parma West | ≤$190K | Out of credits |
-| 44134 | Parma South | ≤$190K | Server unreachable |
-| 44130 | Parma/Middleburg | ≤$190K | Server unreachable |
+## What was attempted
 
-## What Was Attempted
-- Three parallel `mcp_zillapi_search_listings` calls, one per ZIP bounding box, all with `price_max=190000`, `beds_min=1`, `status=for_sale`
-- Zillapi returned "Out of credits for this cycle" for 44129, and the MCP server was unreachable for 44134 and 44130 after multiple attempts
+Three bounding-box queries via `mcp_zillapi_search_listings` targeting:
 
-## Fallback Sources Considered & Rejected
-Per the `real-estate-submarket-screening` skill, all web-based listing sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) are blocked by PerimeterX/Cloudflare captchas in this environment. `web_search` and `web_extract` are known to fail on these domains. Per the skill, I am not wasting turns attempting them.
+| ZIP | Bounding Box | Price Cap | Result |
+|-----|-------------|-----------|--------|
+| 44129 | -81.78,41.37,-81.68,41.42 | $190,000 | Out of credits |
+| 44134 | -81.72,41.35,-81.65,41.40 | $190,000 | MCP server unreachable |
+| 44130 | -81.80,41.35,-81.73,41.41 | $190,000 | MCP server unreachable |
 
-## Manual Browser Fallback URLs
-The user can open these in their own browser:
-- **[44129](https://www.zillow.com/homes/for_sale/Parma-OH-44129/house_type/190000-_max/1-_beds/)**
-- **[44134](https://www.zillow.com/homes/for_sale/Parma-OH-44134/house_type/190000-_max/1-_beds/)**
-- **[44130](https://www.zillow.com/homes/for_sale/Parma-OH-44130/house_type/190000-_max/1-_beds/)**
+## Blocked sources per skill protocol
 
-## Resolution
-- Top up credits at https://zillapi.com/app/billing and re-run
-- OR use the Zillow manual links above to screen listings in a browser
-- Status file saved at `/opt/data/parma-pull-status.txt`
+Per the `real-estate-submarket-screening` skill, Zillapi is the only reliable path. All web-based real estate sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) block with captchas. No alternate sources were attempted per the skill's explicit instruction to not waste turns on blocked sites.
+
+## Manual fallback
+
+Open these direct Zillow searches in a browser:
+
+- **[44129 under $190K](https://www.zillow.com/homes/for_sale/44129_rb/pricea_sort/41.42,-81.68,41.37,-81.78_rect/11_zm/0-190000_price/)**
+- **[44134 under $190K](https://www.zillow.com/homes/for_sale/44134_rb/pricea_sort/41.40,-81.65,41.35,-81.72_rect/11_zm/0-190000_price/)**
+- **[44130 under $190K](https://www.zillow.com/homes/for_sale/44130_rb/pricea_sort/41.41,-81.73,41.35,-81.80_rect/11_zm/0-190000_price/)**
+
+## Resume
+
+Top up Zillapi credits at https://zillapi.com/app/billing and this job will pick up on the next cron cycle. No listings were fabricated.
