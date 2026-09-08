@@ -1,55 +1,29 @@
-# Parma West Area — Listings Under $190K
-**Generated:** 2026-09-08  
-**Status:** ❌ BLOCKED — Zillapi out of credits  
-**Target ZIPs:** 44129 (Parma West), 44134 (Parma South), 44130 (Middleburg Heights)
+# Parma Listings Under $190K — 2026-09-08
+**Status:** ❌ BLOCKED — Zillapi credits exhausted
 
----
+No live listings could be retrieved. The Zillapi account is out of credits for this billing cycle and the MCP server was also unreachable for two of the three ZIP code queries.
 
-## Blocked: Zillapi Credits Exhausted
+## ZIP Codes Targeted
+| ZIP | Area | Price Cap | Status |
+|-----|------|-----------|--------|
+| 44129 | Parma West | ≤$190K | Out of credits |
+| 44134 | Parma South | ≤$190K | Server unreachable |
+| 44130 | Parma/Middleburg | ≤$190K | Server unreachable |
 
-All three Zillapi bounding-box queries failed with credit exhaustion. No live listing data was retrieved.
+## What Was Attempted
+- Three parallel `mcp_zillapi_search_listings` calls, one per ZIP bounding box, all with `price_max=190000`, `beds_min=1`, `status=for_sale`
+- Zillapi returned "Out of credits for this cycle" for 44129, and the MCP server was unreachable for 44134 and 44130 after multiple attempts
 
-### Sources Attempted
+## Fallback Sources Considered & Rejected
+Per the `real-estate-submarket-screening` skill, all web-based listing sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) are blocked by PerimeterX/Cloudflare captchas in this environment. `web_search` and `web_extract` are known to fail on these domains. Per the skill, I am not wasting turns attempting them.
 
-| # | Source | Method | Result |
-|---|---|---|---|
-| 1 | Zillapi MCP | `mcp_zillapi_search_listings` (44129 bbox) | ❌ Out of credits for this cycle |
-| 2 | Zillapi MCP | `mcp_zillapi_search_listings` (44134 bbox) | ❌ MCP server unreachable (retry cooldown) |
-| 3 | Zillapi MCP | `mcp_zillapi_search_listings` (44130 bbox) | ❌ MCP server unreachable (retry cooldown) |
+## Manual Browser Fallback URLs
+The user can open these in their own browser:
+- **[44129](https://www.zillow.com/homes/for_sale/Parma-OH-44129/house_type/190000-_max/1-_beds/)**
+- **[44134](https://www.zillow.com/homes/for_sale/Parma-OH-44134/house_type/190000-_max/1-_beds/)**
+- **[44130](https://www.zillow.com/homes/for_sale/Parma-OH-44130/house_type/190000-_max/1-_beds/)**
 
-No alternative web sources were attempted because Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, and Movoto all block automated access with PerimeterX/Cloudflare captchas (per the `real-estate-submarket-screening` skill protocol).
-
----
-
-## Direct Zillow Search URLs (Manual Fallback)
-
-Open these in your browser to view active for-sale listings under $190K:
-
-### 44129 — Parma West
-🔗 [Zillow: 44129, For Sale, Max $190K](https://www.zillow.com/parma-oh-44129/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244129%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22east%22%3A-81.68%2C%22south%22%3A41.37%2C%22north%22%3A41.42%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A%22postal_code%22%2C%22regionIndex%22%3A0%7D%5D%2C%22filterState%22%3A%7B%22maxPrice%22%3A%7B%22value%22%3A190000%7D%2C%22isAllHomes%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isMapVisible%22%3Atrue%2C%22isListVisible%22%3Atrue%7D)
-
-### 44134 — Parma South
-🔗 [Zillow: 44134, For Sale, Max $190K](https://www.zillow.com/parma-oh-44134/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244134%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22east%22%3A-81.65%2C%22south%22%3A41.35%2C%22north%22%3A41.40%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A%22postal_code%22%2C%22regionIndex%22%3A0%7D%5D%2C%22filterState%22%3A%7B%22maxPrice%22%3A%7B%22value%22%3A190000%7D%2C%22isAllHomes%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isMapVisible%22%3Atrue%2C%22isListVisible%22%3Atrue%7D)
-
-### 44130 — Middleburg Heights
-🔗 [Zillow: 44130, For Sale, Max $190K](https://www.zillow.com/middleburg-heights-oh-44130/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244130%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22east%22%3A-81.73%2C%22south%22%3A41.35%2C%22north%22%3A41.41%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A%22postal_code%22%2C%22regionIndex%22%3A0%7D%5D%2C%22filterState%22%3A%7B%22maxPrice%22%3A%7B%22value%22%3A190000%7D%2C%22isAllHomes%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isMapVisible%22%3Atrue%2C%22isListVisible%22%3Atrue%7D)
-
----
-
-## Next Steps
-
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run this cron job** — it will pick up from the saved status file and produce the full listing table
-3. **Or manually review** the direct Zillow URLs above to spot-check current inventory
-
-The report structure (sorted-price tables with take/negotiate/pass verdicts, price-to-rent analysis, and buy-box thresholds) will populate automatically when credits are available.
-
----
-
-## No Fabricated Listings
-
-Per protocol: no listing data, rent estimates, or property details were fabricated. This report reflects only what the tools returned. When credits refresh, the automated pipeline will produce:
-- Full markdown listing tables for each ZIP
-- Investor verdict columns
-- Price-to-rent ratio analysis
-- `/opt/data/parma-latest-listings.md` quick-reference file
+## Resolution
+- Top up credits at https://zillapi.com/app/billing and re-run
+- OR use the Zillow manual links above to screen listings in a browser
+- Status file saved at `/opt/data/parma-pull-status.txt`
