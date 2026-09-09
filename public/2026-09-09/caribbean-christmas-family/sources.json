@@ -1,0 +1,63 @@
+{
+  "research_date": "2026-09-09",
+  "trip_context": {
+    "destination_type": "Caribbean",
+    "timing": "Christmas 2025 (late December)",
+    "departure_city": "Chicago (ORD)",
+    "priorities": ["affordable airfare", "affordable lodging", "luxurious vibe", "family-friendly"],
+    "travelers": "Family"
+  },
+  "sources": [
+    {
+      "publication": "Travel + Leisure",
+      "title": "11 Affordable Caribbean Vacations for Budget-conscious Travelers",
+      "url": "https://www.travelandleisure.com/cheap-caribbean-vacations-6833246",
+      "date": "2024-07-17",
+      "author": "Patricia Doherty",
+      "retrieval_method": "Wayback Machine (live site JS-blocked)"
+    },
+    {
+      "publication": "The Points Guy",
+      "title": "10 Best Affordable All-Inclusive Resorts for Every Type of Traveler",
+      "url": "https://thepointsguy.com/hotel/15-best-affordable-all-inclusive-resorts-for-every-type-of-traveler/",
+      "date": "2025-05-08",
+      "author": "Becca Blond & Alesandra Dubin",
+      "retrieval_method": "Curl with browser User-Agent"
+    },
+    {
+      "publication": "The Points Guy",
+      "title": "Cheapest Places to Travel for the Holidays in 2025",
+      "url": "https://thepointsguy.com/travel/cheapest-places-travel-holidays/",
+      "date": "2025-10-22",
+      "retrieval_method": "Curl with browser User-Agent"
+    },
+    {
+      "publication": "The Points Guy",
+      "title": "Round-trip Flights to the Caribbean This Winter for Under $400",
+      "url": "https://thepointsguy.com/deals/caribbean-winter/",
+      "date": "2023-09-12",
+      "retrieval_method": "Curl with browser User-Agent"
+    },
+    {
+      "publication": "Going.com (formerly Scott's Cheap Flights)",
+      "title": "12 Cheapest Caribbean Islands to Visit",
+      "url": "https://www.going.com/guides/cheap-caribbean-vacations",
+      "retrieval_method": "Curl with browser User-Agent"
+    },
+    {
+      "publication": "Traveling Lifestyle",
+      "title": "These Are The 4 Cheapest Caribbean Islands To Visit In 2024",
+      "url": "https://www.travelinglifestyle.net/these-are-the-4-cheapest-caribbean-islands-to-visit-in-2024/",
+      "date": "2024-02-01",
+      "retrieval_method": "Curl with browser User-Agent"
+    },
+    {
+      "publication": "U.S. News Travel",
+      "title": "Best Cheap Caribbean Vacations for 2026",
+      "url": "https://travel.usnews.com/rankings/best-affordable-caribbean-destinations/",
+      "date": "2025-12-15",
+      "retrieval_method": "Yahoo Search snippets"
+    }
+  ],
+  "notes": "Firecrawl search tools inoperative in this environment. All data gathered via Wayback Machine, curl with browser UA, and browser-based search. Pricing is indicative/approximate — not live rates. Christmas is peak season in Caribbean; all prices reflect holiday premium."
+}
