@@ -1,43 +1,38 @@
-# Parma Listings Under $190K — Fallback Report
+# Parma West / Parma Listings Under $190K — Pull Blocked
 
-**Generated:** 2026-09-09T15:32:13Z  
-**Status:** ❌ BLOCKED — Zillapi unavailable  
-**ZIPs attempted:** 44129, 44134, 44130  
-**Price cap:** $190,000
+**Date:** 2026-09-09  
+**Target ZIPs:** 44129 (Parma West), 44134 (Parma), 44130 (Parma)  
+**Price Cap:** $190,000  
+**Status:** ❌ BLOCKED — Zillapi out of credits
 
 ---
 
-## Blocker Details
+## Sources Attempted
 
-| Source | ZIP | Error |
+| Source | Tool | Result |
 |---|---|---|
-| Zillapi MCP (`search_listings`) | 44129 | Out of credits for this cycle |
-| Zillapi MCP (`search_listings`) | 44134 | MCP server unreachable (42 failures) |
-| Zillapi MCP (`search_listings`) | 44130 | MCP server unreachable (42 failures) |
-
-No listings were retrieved. Zillapi is both out of credits and the MCP server is unreachable.
-
-Web-based fallbacks (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) were not attempted because all of these sites block automated access with PerimeterX/Cloudflare captchas — as documented in the `real-estate-submarket-screening` skill.
-
----
-
-## Action Required
-
-1. **Recharge Zillapi credits:** https://zillapi.com/app/billing
-2. **Verify MCP server health:** The `zillapi` MCP server needs to be restarted or checked — it had 42 consecutive failures.
-3. **Re-run this cron job** once both issues are resolved. The job will auto-save to:
-   - Full report: `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/parma-listings.md`
-   - Quick reference: `/opt/data/parma-latest-listings.md`
-   - Status: `/opt/data/parma-pull-status.txt` (this file was also updated)
+| Zillapi | `mcp_zillapi_search_listings` (44129 bbox) | **Out of credits** — "Top up or upgrade at https://zillapi.com/app/billing." |
+| Zillapi | `mcp_zillapi_search_listings` (44134 bbox) | MCP server unreachable (43 consecutive failures) |
+| Zillapi | `mcp_zillapi_search_listings` (44130 bbox) | MCP server unreachable (43 consecutive failures) |
+| Zillow.com | web_search / web_extract / browser | Not attempted — known PerimeterX/Cloudflare block |
+| Redfin | web_search / web_extract / browser | Not attempted — known PerimeterX/Cloudflare block |
+| Trulia | web_search / web_extract / browser | Not attempted — known PerimeterX/Cloudflare block |
+| Realtor.com | web_search / web_extract / browser | Not attempted — known PerimeterX/Cloudflare block |
 
 ---
 
-## Manual Workaround
+## Direct Search URLs (Open in Your Browser)
 
-Open these Zillow searches in your browser:
+- **ZIP 44129 under $190K:** https://www.zillow.com/homes/for_sale/44129/0-190000_price/0-372104_mp/
+- **ZIP 44134 under $190K:** https://www.zillow.com/homes/for_sale/44134/0-190000_price/0-372022_mp/
+- **ZIP 44130 under $190K:** https://www.zillow.com/homes/for_sale/44130/0-190000_price/0-371926_mp/
 
-- **ZIP 44129 (Parma West):** [Zillow search](https://www.zillow.com/homes/for_sale/Parma-OH/pmf,pf_pt/41.37,-81.68,41.42,-81.78_rect/X1-SS1005gadf57mrhn_9ohqk_sse14_menu/)
-- **ZIP 44134 (Parma):** [Zillow search](https://www.zillow.com/homes/for_sale/Parma-OH/pmf,pf_pt/41.35,-81.65,41.40,-81.72_rect/X1-SS1005gadf57mrhn_9ohqk_sse14_menu/)
-- **ZIP 44130 (Middleburg Hts / Parma Hts):** [Zillow search](https://www.zillow.com/homes/for_sale/Middleburg-Heights-OH/pmf,pf_pt/41.35,-81.73,41.41,-81.80_rect/X1-SS1005gadf57mrhn_9ohqk_sse14_menu/)
+---
 
-**No listings were fabricated.** This report reflects the actual tool outcomes.
+## Next Steps
+
+1. Top up Zillapi credits at https://zillapi.com/app/billing
+2. Re-run this cron job once credits are available
+3. The job will save to `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/parma-listings.md`
+
+Status file: `/opt/data/parma-pull-status.txt`
