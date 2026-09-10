@@ -1,39 +1,59 @@
-# Parma Listings Pull — BLOCKED
+# Parma Area Listings Under $190K — Pull Failed (Zillapi Unavailable)
 
-**Timestamp:** 2026-09-10T15:45:20Z  
-**Status:** ❌ Zillapi credits exhausted + MCP server unreachable  
-**Task:** Pull active for-sale house listings in ZIPs 44129, 44134, 44130 (max $190,000)
+**Date:** 2026-09-10
+**Target ZIPs:** 44129 (Parma West), 44134 (Parma South), 44130 (Parma East/Middleburg Hts)
+**Price cap:** $190,000
+**Status:** No data retrieved
 
 ---
 
 ## Blocker Summary
 
-All Zillapi MCP calls failed:
-
-| Source | Endpoint | Result |
-|---|---|---|
-| Zillapi MCP | `search_listings` (44129 bbox) | ❌ "Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app.billing." |
-| Zillapi MCP | `search_listings` (44134 bbox) | ❌ "MCP server 'zillapi' is unreachable after 48 consecutive failures." |
-| Zillapi MCP | `search_listings` (44130 bbox) | ❌ "MCP server 'zillapi' is unreachable after 48 consecutive failures." |
-
-Per the skill's data-source strategy, all web-based real estate sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) are known to block browser/curl access with PerimeterX/Cloudflare captchas, so no fallback web scraping was attempted.
-
----
-
-## Manual Fallback URLs
-
-The user can open these directly in a browser to see live listings:
-
-| ZIP | Direct Zillow Search URL |
+| Source | Result |
 |---|---|
-| 44129 | https://www.zillow.com/homes/for_sale/44129_rid/0-190000_price/0-1318_mp/ |
-| 44134 | https://www.zillow.com/homes/for_sale/44134_rid/0-190000_price/0-1318_mp/ |
-| 44130 | https://www.zillow.com/homes/for_sale/44130_rid/0-190000_price/0-1318_mp/ |
+| Zillapi MCP — 44129 bbox | Out of credits for this cycle |
+| Zillapi MCP — 44134 bbox | MCP server unreachable (49 consecutive failures) |
+| Zillapi MCP — 44130 bbox | MCP server unreachable (49 consecutive failures) |
+
+Root cause: Zillapi credits exhausted + MCP server degraded. No listings were retrieved.
 
 ---
 
-## Resolution
+## Manual Fallback — Direct Zillow Search URLs
 
-- **Top up Zillapi credits** at https://zillapi.com/app/billing
-- **Re-run the cron task** once credits are available
-- The task will auto-save raw JSON to `/opt/data/outputs/<date>/parma-listings-under-190k/` for downstream queries
+| ZIP | Zillow URL |
+|---|---|
+| 44129 (Parma West) | https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/0-1753_mp/ |
+| 44134 (Parma South) | https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/0-1502_mp/ |
+| 44130 (Parma E / Middleburg Hts) | https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/0-1381_mp/ |
+
+---
+
+## Bounding Boxes Used
+
+| ZIP | West | South | East | North |
+|---|---|---|---|---|
+| 44129 | -81.78 | 41.37 | -81.68 | 41.42 |
+| 44134 | -81.72 | 41.35 | -81.65 | 41.40 |
+| 44130 | -81.80 | 41.35 | -81.73 | 41.41 |
+
+---
+
+## Parma Market Context (from prior thesis)
+
+- 44129 (Parma West): Dense bungalow/cape cod stock, 1940s-60s builds, 900-1,400 sqft typical. Entry-level SFR zone. Median home value ~$175K-$195K.
+- 44134 (Parma South) Similar stock, slightly lower price band (~$155K-$180K median). Good value-add SFR hunting ground.
+- 44130 (Middleburg Heights / east Parma): Slightly newer stock (1960s-80s), more ranches and split-levels. Median ~$190K-$210K.
+
+Verdict thresholds when data arrives: GRM < 10 = take, 10-13 = take selectively, 13-16 = negotiate, >16 = pass.
+
+---
+
+## Next Steps
+
+1. Recharge Zillapi credits at https://zillapi.com/app/billing
+2. Waitt for MCP server to recover
+3. Re-run this cron job
+4. When data arrives, listings saved to this directory pluss /opt/data/parma-latest-listings.md
+
+Status file: /opt/data/parma-pull-status.txt

@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-10T18:38:52.616948+00:00",
+  "generated_at": "2026-09-10T18:53:55.588563+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 54,
   "sessions": [
+    {
+      "id": "2026-09-10/parma-listings-under-190k",
+      "date": "2026-09-10",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-10T18:47:48.584499",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-10/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 2079,
+            "updated_at": "2026-09-10T18:47:48.584499",
+            "previewable": true,
+            "public_href": "public/2026-09-10/parma-listings-under-190k/parma-listings.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-10/ihda-chicago-target-zones",
       "date": "2026-09-10",
@@ -30,35 +59,6 @@
             "updated_at": "2026-09-10T18:02:12.305954",
             "previewable": true,
             "public_href": "public/2026-09-10/ihda-chicago-target-zones/artifacts/ihda_chicago_report.json"
-          }
-        ]
-      }
-    },
-    {
-      "id": "2026-09-10/parma-listings-under-190k",
-      "date": "2026-09-10",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-10T15:46:01.162745",
-      "file_count": 1,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-10/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 1630,
-            "updated_at": "2026-09-10T15:46:01.162745",
-            "previewable": true,
-            "public_href": "public/2026-09-10/parma-listings-under-190k/parma-listings.md"
           }
         ]
       }
