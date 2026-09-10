@@ -1,6 +1,6 @@
 # Parma Listings Under $190K — Pull Blocked (Zillapi Out of Credits)
 
-**Date:** 2026-09-10
+**Date:** 2026-09-10 (latest re-attempt)
 **Target ZIPs:** 44129 (Parma West), 44134 (Parma), 44130 (Parma mid)
 **Price Cap:** $190,000
 **Status:** ❌ BLOCKED — Zillapi out of credits. No fresh listings pulled.
@@ -18,9 +18,9 @@ No live listing screen can be produced this cycle — the Zillapi account has no
 | Source | Tool | Result |
 |---|---|---|
 | Zillapi | `mcp_zillapi_search_listings` (44129 bbox) | **Out of credits** — "Top up or upgrade at https://zillapi.com/app/billing." |
-| Zillapi | `mcp_zillapi_search_listings` (44134 bbox) | MCP server unreachable (45 consecutive failures) |
-| Zillapi | `mcp_zillapi_search_listings` (44130 bbox) | MCP server unreachable (45 consecutive failures) |
-| Zillow.com | web / browser | Not attempted — known PerimeterX/Cloudflare block |
+| Zillapi | `mcp_zillapi_search_listings` (44134 bbox) | MCP server unreachable (47 consecutive failures) |
+| Zillapi | `mcp_zillapi_search_listings` (44130 bbox) | MCP server unreachable (47 consecutive failures) |
+| Zillow.com | `web_search` (Firecrawl backend) | Firecrawl disabled (`lazy_installs=false`) |
 | Redfin / Trulia / Realtor.com | web / browser | Not attempted — known PerimeterX/Cloudflare block |
 
 ---
