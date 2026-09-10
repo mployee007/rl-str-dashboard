@@ -1,8 +1,39 @@
 {
-  "generated_at": "2026-09-10T17:51:55.475160+00:00",
+  "generated_at": "2026-09-10T18:07:52.556796+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 53,
+  "session_count": 54,
   "sessions": [
+    {
+      "id": "2026-09-10/ihda-chicago-target-zones",
+      "date": "2026-09-10",
+      "title": "ihda-chicago-target-zones",
+      "summary": "**Source:** IHDA ArcGIS Feature Service \"Federally Targeted & Non-Targeted Areas for Homeownership\" (app id `67a47d39894e4c5ca36dc0c926fbbf7f`), underlain by HUD Qualified Census Tracts (QCT) \u2014 2026 designations. **Map:** https://ihda.maps.arcgis.com/apps/instant/basic/index.html",
+      "updated_at": "2026-09-10T18:02:12.305954",
+      "file_count": 2,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-10/ihda-chicago-target-zones",
+      "status": "completed",
+      "standard_previews": {
+        "summary.md": "# IHDA Targeted Areas \u2014 Chicago, IL\n\n**Source:** IHDA ArcGIS Feature Service \"Federally Targeted & Non-Targeted Areas for Homeownership\" (app id `67a47d39894e4c5ca36dc0c926fbbf7f`), underlain by HUD Qualified Census Tracts (QCT) \u2014 2026 designations.\n**Map:** https://ihda.maps.arcgis.com/apps/instant/basic/index.html?appid=67a47d39894e4c5ca36dc0c926fbbf7f\n**Join methodology:** IHDA-targeted (HO_Target=\"TARGETED\") Cook County (FIPS 17031) tracts \u2a1d City of Chicago 2010 tract boundaries (Chicago Data Portal) \u2a1d US Census Bureau 2010 ZCTA-to-tract relationship file.\n\n## Summary\n\n- **Cook County IHDA-targeted tracts total:** 370\n- **IHDA-targeted tracts inside Chicago city limits:** 197\n- **IHDA-targeted tracts in suburban Cook County:** 173 (not in this report)\n- **Distinct Chicago ZIP codes with at least one targeted tract:** 37\n- **Distinct Chicago community areas (of 77) with at least one targeted tract:** 47\n\n## What \"Targeted\" Means (per IHDA)\n\n> \"The federal government has designated certain areas as 'targeted areas' where more home ownership is desired. **Buyers don't need to be a first-time homebuyer. Income and purchase price limits in targeted areas are also higher**, which could open the door for additional buyers to qualify.\" (ihda.org/lenders-realtors/targeted-areas/)\n\nOn the IHDA map: **blue-shaded tracts = TARGETED**, green-shaded tracts = not targeted.\n\n---\n\n## TABLE 1: ZIP codes with IHDA-targeted Chicago tracts (sorted by tract count)\n\n| ZIP | # Targeted Tracts | Community Areas Covered |\n|-----|-------------------|--------------------------|\n| 60636 | 24 | Chicago Lawn, Englewood, West Englewood |\n| 60624 | 16 | East Garfield Park, Humboldt Park, North Lawndale, West Garfield Park |\n| 60609 | 15 | Armour Square, Brighton Park, Douglas, Gage Park, Grand Boulevard, New City |\n| 60620 | 14 | Auburn Gresham, Englewood, Greater Grand Crossing, Washington Heights |\n| **60637** | **14** | **Greater Grand Crossing, South Shore, Washington Park, Woodlawn** |\n| 60628 | 13 | Morgan Park, Pullman, Roseland, West Pullman |\n| 60651 | 13 | Austin, Humboldt Park |\n| 60623 | 12 | North Lawndale, South Lawndale |\n| 60632 | 12 | Archer Heights, Brighton Park, Gage Park, West Elsdon |\n| 60619 | 10 | Burnside, Calumet Heights, Chatham, Greater Grand Crossing, South Shore |\n| 60617 | 9 | Avalon Park, Calumet Heights, East Side, South Chicago, South Deering |\n| 60621 | 9 | Englewood, Washington Park |\n| 60629 | 9 | Chicago Lawn, Clearing, Gage Park, West Elsdon, West Lawn |\n| 60639 | 9 | Austin, Belmont Cragin, Humboldt Park |\n| 60649 | 9 | South Chicago, South Shore |\n| **60653** | **8** | **Douglas, Grand Boulevard, Kenwood, Oakland** |\n| **60616** | **7** | **Armour Square, Douglas** |\n| 60644 | 7 | Austin |\n| 60612 | 5 | East Garfield Park, Near West Side |\n| 60615 | 4 | Grand Boulevard, Hyde Park, Kenwood |\n| 60626 | 2 | Rogers Park, West Ridge |\n| 60638 | 2 | Clearing, Garfield Ridge |\n| 60641 | 2 | Belmont Cragin, Irving Park |\n| 60643 | 2 | Morgan Park, West Pullman |\n| 60645 | 2 | West Ridge |\n| 60647 | 2 | Humboldt Park |\n| 60406 | 1 | Riverdale |\n| 60607 | 1 | Near West Side |\n| 60608 | 1 | South Lawndale |\n| 60633 | 1 | Pullman |\n| 60640 | 1 | Uptown |\n| 60655 | 1 | Morgan Park |\n| 60659 | 1 | West Ridge |\n| 60660 | 1 | Rogers Park |\n| 60803 | 1 | Morgan Park |\n| 60804 | 1 | Garfield Ridge |\n| 60827 | 1 | Riverdale |\n\n---\n\n## TABLE 2: Community areas with IHDA-targeted Chicago tracts (47 of 77)\n\n| CA # | Name | # Targeted Tracts | ZIPs Covered |\n|------|------|-------------------|--------------|\n| 25 | Austin | 15 | 60639, 60644, 60651 |\n| 67 | West Englewood | 15 | 60636 |\n| 71 | Auburn Gresham | 11 | 60620 |\n| 61 | New City | 10 | 60609 |\n| 26 | West Garfield Park | 9 | 60624 |\n| 30 | South Lawndale | 8 | 60608, 60623 |\n| 42 | Woodlawn | 8 | 60637 |\n| 43 | South Shore | 8 | 60619, 60637, 60649 |\n| 68 | Englewood | 7 | 60620, 60621, 60636 |\n| 27 | East Garfield Park | 6 | 60612, 60624 |\n| 49 | Roseland | 6 | 60628 |\n| 66 | Chicago Lawn | 6 | 60629, 60636 |\n| 69 | Greater Grand Crossing | 6 | 60619, 60620, 60637 |\n| 23 | Humboldt Park | 5 | 60624, 60639, 60647, 60651 |\n| 29 | North Lawndale | 5 | 60623, 60624 |\n| 38 | Grand Boulevard | 5 | 60609, 60615, 60653 |\n| 58 | Brighton Park | 5 | 60609, 60632 |\n| 63 | Gage Park | 5 | 60609, 60629, 60632 |\n| 19 | Belmont Cragin | 4 | 60639, 60641 |\n| 34 | Armour Square | 4 | 60609, 60616 |\n| 35 | Douglas | 4 | 60609, 60616, 60653 |\n| 46 | South Chicago | 4 | 60617, 60649 |\n| 53 | West Pullman | 4 | 60628, 60643 |\n| 28 | Near West Side | 3 | 60607, 60612 |\n| 40 | Washington Park | 3 | 60621, 60637 |\n| 52 | East Side | 3 | 60617 |\n| 2 | West Ridge | 2 | 60626, 60645, 60659 |\n| 39 | Kenwood | 2 | 60615, 60653 |\n| 41 | Hyde Park | 2 | 60615 |\n| 44 | Chatham | 2 | 60619 |\n| 50 | Pullman | 2 | 60628, 60633 |\n| 57 | Archer Heights | 2 | 60632 |\n| 75 | Morgan Park | 2 | 60628, 60643, 60655, 60803 |\n| 1 | Rogers Park | 1 | 60626, 60660 |\n| 3 | Uptown | 1 | 60640 |\n| 16 | Ir\n\n[truncated]"
+      },
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "ihda_chicago_report.json",
+            "rel_path": "artifacts/ihda_chicago_report.json",
+            "size": 43755,
+            "updated_at": "2026-09-10T18:02:12.305954",
+            "previewable": true,
+            "public_href": "public/2026-09-10/ihda-chicago-target-zones/artifacts/ihda_chicago_report.json"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-10/parma-listings-under-190k",
       "date": "2026-09-10",

@@ -1,0 +1,2216 @@
+{
+  "source": "IHDA ArcGIS Feature Service \"Targeted and Non-Targeted Tracts\" layer 2 (HUD QCT 2026 designations)",
+  "method": "Joined IHDA HO_Target=TARGETED tracts in Cook County (FIPS 17031) with City of Chicago 2010 census tract boundaries (Chicago Data Portal), then joined with US Census 2010 ZCTA-to-tract relationship file to get ZIP codes.",
+  "totals": {
+    "ihda_targeted_tracts_in_cook_county": 370,
+    "ihda_targeted_tracts_in_chicago_city": 197,
+    "ihda_targeted_tracts_outside_chicago_cook": 173,
+    "distinct_zips_with_targeted_tracts": 37,
+    "distinct_community_areas_with_targeted_tracts": 47
+  },
+  "chicago_zip_table": [
+    {
+      "zip": "60636",
+      "tract_count": 24,
+      "tracts": [
+        "17031660600",
+        "17031660700",
+        "17031660800",
+        "17031660900",
+        "17031661000",
+        "17031670100",
+        "17031670300",
+        "17031670400",
+        "17031670500",
+        "17031670600",
+        "17031670700",
+        "17031670800",
+        "17031670900",
+        "17031671100",
+        "17031671200",
+        "17031671300",
+        "17031671400",
+        "17031671500",
+        "17031671600",
+        "17031671800",
+        "17031680600",
+        "17031681000",
+        "17031681100",
+        "17031681400"
+      ],
+      "community_areas": [
+        "CHICAGO LAWN",
+        "ENGLEWOOD",
+        "WEST ENGLEWOOD"
+      ]
+    },
+    {
+      "zip": "60624",
+      "tract_count": 16,
+      "tracts": [
+        "17031231500",
+        "17031260100",
+        "17031260200",
+        "17031260300",
+        "17031260400",
+        "17031260500",
+        "17031260600",
+        "17031260800",
+        "17031260900",
+        "17031261000",
+        "17031270500",
+        "17031271300",
+        "17031271400",
+        "17031271500",
+        "17031290900",
+        "17031291200"
+      ],
+      "community_areas": [
+        "EAST GARFIELD PARK",
+        "HUMBOLDT PARK",
+        "NORTH LAWNDALE",
+        "WEST GARFIELD PARK"
+      ]
+    },
+    {
+      "zip": "60609",
+      "tract_count": 15,
+      "tracts": [
+        "17031340600",
+        "17031351400",
+        "17031351500",
+        "17031381400",
+        "17031580700",
+        "17031610300",
+        "17031610400",
+        "17031611200",
+        "17031611300",
+        "17031611400",
+        "17031611500",
+        "17031611800",
+        "17031611900",
+        "17031612000",
+        "17031630500"
+      ],
+      "community_areas": [
+        "ARMOUR SQUARE",
+        "BRIGHTON PARK",
+        "DOUGLAS",
+        "GAGE PARK",
+        "GRAND BOULEVARD",
+        "NEW CITY"
+      ]
+    },
+    {
+      "zip": "60620",
+      "tract_count": 14,
+      "tracts": [
+        "17031681300",
+        "17031691200",
+        "17031710100",
+        "17031710200",
+        "17031710300",
+        "17031710400",
+        "17031710500",
+        "17031710700",
+        "17031710800",
+        "17031710900",
+        "17031711100",
+        "17031711400",
+        "17031711500",
+        "17031730300"
+      ],
+      "community_areas": [
+        "AUBURN GRESHAM",
+        "ENGLEWOOD",
+        "GREATER GRAND CROSSING",
+        "WASHINGTON HEIGHTS"
+      ]
+    },
+    {
+      "zip": "60637",
+      "tract_count": 14,
+      "tracts": [
+        "17031400400",
+        "17031400500",
+        "17031400800",
+        "17031420100",
+        "17031420200",
+        "17031420300",
+        "17031420400",
+        "17031420500",
+        "17031420600",
+        "17031420700",
+        "17031420800",
+        "17031430300",
+        "17031690400",
+        "17031690500"
+      ],
+      "community_areas": [
+        "GREATER GRAND CROSSING",
+        "SOUTH SHORE",
+        "WASHINGTON PARK",
+        "WOODLAWN"
+      ]
+    },
+    {
+      "zip": "60628",
+      "tract_count": 13,
+      "tracts": [
+        "17031490700",
+        "17031490800",
+        "17031491000",
+        "17031491200",
+        "17031491300",
+        "17031491400",
+        "17031500200",
+        "17031500300",
+        "17031530100",
+        "17031530200",
+        "17031530300",
+        "17031530600",
+        "17031750600"
+      ],
+      "community_areas": [
+        "MORGAN PARK",
+        "PULLMAN",
+        "ROSELAND",
+        "WEST PULLMAN"
+      ]
+    },
+    {
+      "zip": "60651",
+      "tract_count": 13,
+      "tracts": [
+        "17031230600",
+        "17031230700",
+        "17031231200",
+        "17031231500",
+        "17031250700",
+        "17031251000",
+        "17031251100",
+        "17031251200",
+        "17031251300",
+        "17031251400",
+        "17031251500",
+        "17031251600",
+        "17031251700"
+      ],
+      "community_areas": [
+        "AUSTIN",
+        "HUMBOLDT PARK"
+      ]
+    },
+    {
+      "zip": "60623",
+      "tract_count": 12,
+      "tracts": [
+        "17031290900",
+        "17031291200",
+        "17031292200",
+        "17031292400",
+        "17031292500",
+        "17031300500",
+        "17031300600",
+        "17031300700",
+        "17031300800",
+        "17031300900",
+        "17031301100",
+        "17031301600"
+      ],
+      "community_areas": [
+        "NORTH LAWNDALE",
+        "SOUTH LAWNDALE"
+      ]
+    },
+    {
+      "zip": "60632",
+      "tract_count": 12,
+      "tracts": [
+        "17031570100",
+        "17031570300",
+        "17031580100",
+        "17031580200",
+        "17031580400",
+        "17031580600",
+        "17031580700",
+        "17031620400",
+        "17031630300",
+        "17031630400",
+        "17031630500",
+        "17031630900"
+      ],
+      "community_areas": [
+        "ARCHER HEIGHTS",
+        "BRIGHTON PARK",
+        "GAGE PARK",
+        "WEST ELSDON"
+      ]
+    },
+    {
+      "zip": "60619",
+      "tract_count": 10,
+      "tracts": [
+        "17031430400",
+        "17031440300",
+        "17031440800",
+        "17031470100",
+        "17031480300",
+        "17031690400",
+        "17031690500",
+        "17031690900",
+        "17031691400",
+        "17031691500"
+      ],
+      "community_areas": [
+        "BURNSIDE",
+        "CALUMET HEIGHTS",
+        "CHATHAM",
+        "GREATER GRAND CROSSING",
+        "SOUTH SHORE"
+      ]
+    },
+    {
+      "zip": "60617",
+      "tract_count": 9,
+      "tracts": [
+        "17031450300",
+        "17031460100",
+        "17031460200",
+        "17031461000",
+        "17031480300",
+        "17031510300",
+        "17031520200",
+        "17031520300",
+        "17031520400"
+      ],
+      "community_areas": [
+        "AVALON PARK",
+        "CALUMET HEIGHTS",
+        "EAST SIDE",
+        "SOUTH CHICAGO",
+        "SOUTH DEERING"
+      ]
+    },
+    {
+      "zip": "60621",
+      "tract_count": 9,
+      "tracts": [
+        "17031400500",
+        "17031400800",
+        "17031680600",
+        "17031680900",
+        "17031681000",
+        "17031681100",
+        "17031681200",
+        "17031681300",
+        "17031681400"
+      ],
+      "community_areas": [
+        "ENGLEWOOD",
+        "WASHINGTON PARK"
+      ]
+    },
+    {
+      "zip": "60629",
+      "tract_count": 9,
+      "tracts": [
+        "17031620400",
+        "17031630900",
+        "17031640800",
+        "17031650100",
+        "17031660400",
+        "17031660600",
+        "17031660800",
+        "17031660900",
+        "17031661000"
+      ],
+      "community_areas": [
+        "CHICAGO LAWN",
+        "CLEARING",
+        "GAGE PARK",
+        "WEST ELSDON",
+        "WEST LAWN"
+      ]
+    },
+    {
+      "zip": "60639",
+      "tract_count": 9,
+      "tracts": [
+        "17031190100",
+        "17031190800",
+        "17031191100",
+        "17031191200",
+        "17031230600",
+        "17031250200",
+        "17031250300",
+        "17031250400",
+        "17031250700"
+      ],
+      "community_areas": [
+        "AUSTIN",
+        "BELMONT CRAGIN",
+        "HUMBOLDT PARK"
+      ]
+    },
+    {
+      "zip": "60649",
+      "tract_count": 9,
+      "tracts": [
+        "17031430200",
+        "17031430300",
+        "17031430400",
+        "17031430500",
+        "17031430700",
+        "17031430800",
+        "17031430900",
+        "17031431400",
+        "17031460100"
+      ],
+      "community_areas": [
+        "SOUTH CHICAGO",
+        "SOUTH SHORE"
+      ]
+    },
+    {
+      "zip": "60653",
+      "tract_count": 8,
+      "tracts": [
+        "17031351100",
+        "17031351400",
+        "17031360200",
+        "17031380100",
+        "17031380200",
+        "17031381400",
+        "17031381500",
+        "17031390300"
+      ],
+      "community_areas": [
+        "DOUGLAS",
+        "GRAND BOULEVARD",
+        "KENWOOD",
+        "OAKLAND"
+      ]
+    },
+    {
+      "zip": "60616",
+      "tract_count": 7,
+      "tracts": [
+        "17031340300",
+        "17031340400",
+        "17031340500",
+        "17031340600",
+        "17031350400",
+        "17031351100",
+        "17031351400"
+      ],
+      "community_areas": [
+        "ARMOUR SQUARE",
+        "DOUGLAS"
+      ]
+    },
+    {
+      "zip": "60644",
+      "tract_count": 7,
+      "tracts": [
+        "17031251400",
+        "17031251500",
+        "17031251600",
+        "17031251700",
+        "17031251800",
+        "17031251900",
+        "17031252000"
+      ],
+      "community_areas": [
+        "AUSTIN"
+      ]
+    },
+    {
+      "zip": "60612",
+      "tract_count": 5,
+      "tracts": [
+        "17031271200",
+        "17031271300",
+        "17031271800",
+        "17031280800",
+        "17031280900"
+      ],
+      "community_areas": [
+        "EAST GARFIELD PARK",
+        "NEAR WEST SIDE"
+      ]
+    },
+    {
+      "zip": "60615",
+      "tract_count": 4,
+      "tracts": [
+        "17031381400",
+        "17031390400",
+        "17031410600",
+        "17031410700"
+      ],
+      "community_areas": [
+        "GRAND BOULEVARD",
+        "HYDE PARK",
+        "KENWOOD"
+      ]
+    },
+    {
+      "zip": "60626",
+      "tract_count": 2,
+      "tracts": [
+        "17031010400",
+        "17031020500"
+      ],
+      "community_areas": [
+        "ROGERS PARK",
+        "WEST RIDGE"
+      ]
+    },
+    {
+      "zip": "60638",
+      "tract_count": 2,
+      "tracts": [
+        "17031560200",
+        "17031640800"
+      ],
+      "community_areas": [
+        "CLEARING",
+        "GARFIELD RIDGE"
+      ]
+    },
+    {
+      "zip": "60641",
+      "tract_count": 2,
+      "tracts": [
+        "17031161300",
+        "17031190100"
+      ],
+      "community_areas": [
+        "BELMONT CRAGIN",
+        "IRVING PARK"
+      ]
+    },
+    {
+      "zip": "60643",
+      "tract_count": 2,
+      "tracts": [
+        "17031530300",
+        "17031750600"
+      ],
+      "community_areas": [
+        "MORGAN PARK",
+        "WEST PULLMAN"
+      ]
+    },
+    {
+      "zip": "60645",
+      "tract_count": 2,
+      "tracts": [
+        "17031020100",
+        "17031020500"
+      ],
+      "community_areas": [
+        "WEST RIDGE"
+      ]
+    },
+    {
+      "zip": "60647",
+      "tract_count": 2,
+      "tracts": [
+        "17031230300",
+        "17031230700"
+      ],
+      "community_areas": [
+        "HUMBOLDT PARK"
+      ]
+    },
+    {
+      "zip": "60406",
+      "tract_count": 1,
+      "tracts": [
+        "17031821500"
+      ],
+      "community_areas": [
+        "RIVERDALE"
+      ]
+    },
+    {
+      "zip": "60607",
+      "tract_count": 1,
+      "tracts": [
+        "17031283100"
+      ],
+      "community_areas": [
+        "NEAR WEST SIDE"
+      ]
+    },
+    {
+      "zip": "60608",
+      "tract_count": 1,
+      "tracts": [
+        "17031301200"
+      ],
+      "community_areas": [
+        "SOUTH LAWNDALE"
+      ]
+    },
+    {
+      "zip": "60633",
+      "tract_count": 1,
+      "tracts": [
+        "17031500200"
+      ],
+      "community_areas": [
+        "PULLMAN"
+      ]
+    },
+    {
+      "zip": "60640",
+      "tract_count": 1,
+      "tracts": [
+        "17031031200"
+      ],
+      "community_areas": [
+        "UPTOWN"
+      ]
+    },
+    {
+      "zip": "60655",
+      "tract_count": 1,
+      "tracts": [
+        "17031823304"
+      ],
+      "community_areas": [
+        "MORGAN PARK"
+      ]
+    },
+    {
+      "zip": "60659",
+      "tract_count": 1,
+      "tracts": [
+        "17031020500"
+      ],
+      "community_areas": [
+        "WEST RIDGE"
+      ]
+    },
+    {
+      "zip": "60660",
+      "tract_count": 1,
+      "tracts": [
+        "17031010400"
+      ],
+      "community_areas": [
+        "ROGERS PARK"
+      ]
+    },
+    {
+      "zip": "60803",
+      "tract_count": 1,
+      "tracts": [
+        "17031823304"
+      ],
+      "community_areas": [
+        "MORGAN PARK"
+      ]
+    },
+    {
+      "zip": "60804",
+      "tract_count": 1,
+      "tracts": [
+        "17031560200"
+      ],
+      "community_areas": [
+        "GARFIELD RIDGE"
+      ]
+    },
+    {
+      "zip": "60827",
+      "tract_count": 1,
+      "tracts": [
+        "17031821500"
+      ],
+      "community_areas": [
+        "RIVERDALE"
+      ]
+    }
+  ],
+  "chicago_community_area_table": [
+    {
+      "community_area_number": "25",
+      "name": "AUSTIN",
+      "tract_count": 15,
+      "tracts": [
+        "17031250200",
+        "17031250300",
+        "17031250400",
+        "17031250700",
+        "17031251000",
+        "17031251100",
+        "17031251200",
+        "17031251300",
+        "17031251400",
+        "17031251500",
+        "17031251600",
+        "17031251700",
+        "17031251800",
+        "17031251900",
+        "17031252000"
+      ],
+      "zips": [
+        "60639",
+        "60644",
+        "60651"
+      ]
+    },
+    {
+      "community_area_number": "67",
+      "name": "WEST ENGLEWOOD",
+      "tract_count": 15,
+      "tracts": [
+        "17031670100",
+        "17031670300",
+        "17031670400",
+        "17031670500",
+        "17031670600",
+        "17031670700",
+        "17031670800",
+        "17031670900",
+        "17031671100",
+        "17031671200",
+        "17031671300",
+        "17031671400",
+        "17031671500",
+        "17031671600",
+        "17031671800"
+      ],
+      "zips": [
+        "60636"
+      ]
+    },
+    {
+      "community_area_number": "71",
+      "name": "AUBURN GRESHAM",
+      "tract_count": 11,
+      "tracts": [
+        "17031710100",
+        "17031710200",
+        "17031710300",
+        "17031710400",
+        "17031710500",
+        "17031710700",
+        "17031710800",
+        "17031710900",
+        "17031711100",
+        "17031711400",
+        "17031711500"
+      ],
+      "zips": [
+        "60620"
+      ]
+    },
+    {
+      "community_area_number": "61",
+      "name": "NEW CITY",
+      "tract_count": 10,
+      "tracts": [
+        "17031610300",
+        "17031610400",
+        "17031611200",
+        "17031611300",
+        "17031611400",
+        "17031611500",
+        "17031611800",
+        "17031611900",
+        "17031612000",
+        "17031612200"
+      ],
+      "zips": [
+        "60609"
+      ]
+    },
+    {
+      "community_area_number": "26",
+      "name": "WEST GARFIELD PARK",
+      "tract_count": 9,
+      "tracts": [
+        "17031260100",
+        "17031260200",
+        "17031260300",
+        "17031260400",
+        "17031260500",
+        "17031260600",
+        "17031260800",
+        "17031260900",
+        "17031261000"
+      ],
+      "zips": [
+        "60624"
+      ]
+    },
+    {
+      "community_area_number": "30",
+      "name": "SOUTH LAWNDALE",
+      "tract_count": 8,
+      "tracts": [
+        "17031300500",
+        "17031300600",
+        "17031300700",
+        "17031300800",
+        "17031300900",
+        "17031301100",
+        "17031301200",
+        "17031301600"
+      ],
+      "zips": [
+        "60608",
+        "60623"
+      ]
+    },
+    {
+      "community_area_number": "42",
+      "name": "WOODLAWN",
+      "tract_count": 8,
+      "tracts": [
+        "17031420100",
+        "17031420200",
+        "17031420300",
+        "17031420400",
+        "17031420500",
+        "17031420600",
+        "17031420700",
+        "17031420800"
+      ],
+      "zips": [
+        "60637"
+      ]
+    },
+    {
+      "community_area_number": "43",
+      "name": "SOUTH SHORE",
+      "tract_count": 8,
+      "tracts": [
+        "17031430200",
+        "17031430300",
+        "17031430400",
+        "17031430500",
+        "17031430700",
+        "17031430800",
+        "17031430900",
+        "17031431400"
+      ],
+      "zips": [
+        "60619",
+        "60637",
+        "60649"
+      ]
+    },
+    {
+      "community_area_number": "68",
+      "name": "ENGLEWOOD",
+      "tract_count": 7,
+      "tracts": [
+        "17031680600",
+        "17031680900",
+        "17031681000",
+        "17031681100",
+        "17031681200",
+        "17031681300",
+        "17031681400"
+      ],
+      "zips": [
+        "60620",
+        "60621",
+        "60636"
+      ]
+    },
+    {
+      "community_area_number": "27",
+      "name": "EAST GARFIELD PARK",
+      "tract_count": 6,
+      "tracts": [
+        "17031270500",
+        "17031271200",
+        "17031271300",
+        "17031271400",
+        "17031271500",
+        "17031271800"
+      ],
+      "zips": [
+        "60612",
+        "60624"
+      ]
+    },
+    {
+      "community_area_number": "49",
+      "name": "ROSELAND",
+      "tract_count": 6,
+      "tracts": [
+        "17031490700",
+        "17031490800",
+        "17031491000",
+        "17031491200",
+        "17031491300",
+        "17031491400"
+      ],
+      "zips": [
+        "60628"
+      ]
+    },
+    {
+      "community_area_number": "66",
+      "name": "CHICAGO LAWN",
+      "tract_count": 6,
+      "tracts": [
+        "17031660400",
+        "17031660600",
+        "17031660700",
+        "17031660800",
+        "17031660900",
+        "17031661000"
+      ],
+      "zips": [
+        "60629",
+        "60636"
+      ]
+    },
+    {
+      "community_area_number": "69",
+      "name": "GREATER GRAND CROSSING",
+      "tract_count": 6,
+      "tracts": [
+        "17031690400",
+        "17031690500",
+        "17031690900",
+        "17031691200",
+        "17031691400",
+        "17031691500"
+      ],
+      "zips": [
+        "60619",
+        "60620",
+        "60637"
+      ]
+    },
+    {
+      "community_area_number": "23",
+      "name": "HUMBOLDT PARK",
+      "tract_count": 5,
+      "tracts": [
+        "17031230300",
+        "17031230600",
+        "17031230700",
+        "17031231200",
+        "17031231500"
+      ],
+      "zips": [
+        "60624",
+        "60639",
+        "60647",
+        "60651"
+      ]
+    },
+    {
+      "community_area_number": "29",
+      "name": "NORTH LAWNDALE",
+      "tract_count": 5,
+      "tracts": [
+        "17031290900",
+        "17031291200",
+        "17031292200",
+        "17031292400",
+        "17031292500"
+      ],
+      "zips": [
+        "60623",
+        "60624"
+      ]
+    },
+    {
+      "community_area_number": "38",
+      "name": "GRAND BOULEVARD",
+      "tract_count": 5,
+      "tracts": [
+        "17031380100",
+        "17031380200",
+        "17031380600",
+        "17031381400",
+        "17031381500"
+      ],
+      "zips": [
+        "60609",
+        "60615",
+        "60653"
+      ]
+    },
+    {
+      "community_area_number": "58",
+      "name": "BRIGHTON PARK",
+      "tract_count": 5,
+      "tracts": [
+        "17031580100",
+        "17031580200",
+        "17031580400",
+        "17031580600",
+        "17031580700"
+      ],
+      "zips": [
+        "60609",
+        "60632"
+      ]
+    },
+    {
+      "community_area_number": "63",
+      "name": "GAGE PARK",
+      "tract_count": 5,
+      "tracts": [
+        "17031630300",
+        "17031630400",
+        "17031630500",
+        "17031630600",
+        "17031630900"
+      ],
+      "zips": [
+        "60609",
+        "60629",
+        "60632"
+      ]
+    },
+    {
+      "community_area_number": "19",
+      "name": "BELMONT CRAGIN",
+      "tract_count": 4,
+      "tracts": [
+        "17031190100",
+        "17031190800",
+        "17031191100",
+        "17031191200"
+      ],
+      "zips": [
+        "60639",
+        "60641"
+      ]
+    },
+    {
+      "community_area_number": "34",
+      "name": "ARMOUR SQUARE",
+      "tract_count": 4,
+      "tracts": [
+        "17031340300",
+        "17031340400",
+        "17031340500",
+        "17031340600"
+      ],
+      "zips": [
+        "60609",
+        "60616"
+      ]
+    },
+    {
+      "community_area_number": "35",
+      "name": "DOUGLAS",
+      "tract_count": 4,
+      "tracts": [
+        "17031350400",
+        "17031351100",
+        "17031351400",
+        "17031351500"
+      ],
+      "zips": [
+        "60609",
+        "60616",
+        "60653"
+      ]
+    },
+    {
+      "community_area_number": "46",
+      "name": "SOUTH CHICAGO",
+      "tract_count": 4,
+      "tracts": [
+        "17031460100",
+        "17031460200",
+        "17031460800",
+        "17031461000"
+      ],
+      "zips": [
+        "60617",
+        "60649"
+      ]
+    },
+    {
+      "community_area_number": "53",
+      "name": "WEST PULLMAN",
+      "tract_count": 4,
+      "tracts": [
+        "17031530100",
+        "17031530200",
+        "17031530300",
+        "17031530600"
+      ],
+      "zips": [
+        "60628",
+        "60643"
+      ]
+    },
+    {
+      "community_area_number": "28",
+      "name": "NEAR WEST SIDE",
+      "tract_count": 3,
+      "tracts": [
+        "17031280800",
+        "17031280900",
+        "17031283100"
+      ],
+      "zips": [
+        "60607",
+        "60612"
+      ]
+    },
+    {
+      "community_area_number": "40",
+      "name": "WASHINGTON PARK",
+      "tract_count": 3,
+      "tracts": [
+        "17031400400",
+        "17031400500",
+        "17031400800"
+      ],
+      "zips": [
+        "60621",
+        "60637"
+      ]
+    },
+    {
+      "community_area_number": "52",
+      "name": "EAST SIDE",
+      "tract_count": 3,
+      "tracts": [
+        "17031520200",
+        "17031520300",
+        "17031520400"
+      ],
+      "zips": [
+        "60617"
+      ]
+    },
+    {
+      "community_area_number": "2",
+      "name": "WEST RIDGE",
+      "tract_count": 2,
+      "tracts": [
+        "17031020100",
+        "17031020500"
+      ],
+      "zips": [
+        "60626",
+        "60645",
+        "60659"
+      ]
+    },
+    {
+      "community_area_number": "39",
+      "name": "KENWOOD",
+      "tract_count": 2,
+      "tracts": [
+        "17031390300",
+        "17031390400"
+      ],
+      "zips": [
+        "60615",
+        "60653"
+      ]
+    },
+    {
+      "community_area_number": "41",
+      "name": "HYDE PARK",
+      "tract_count": 2,
+      "tracts": [
+        "17031410600",
+        "17031410700"
+      ],
+      "zips": [
+        "60615"
+      ]
+    },
+    {
+      "community_area_number": "44",
+      "name": "CHATHAM",
+      "tract_count": 2,
+      "tracts": [
+        "17031440300",
+        "17031440800"
+      ],
+      "zips": [
+        "60619"
+      ]
+    },
+    {
+      "community_area_number": "50",
+      "name": "PULLMAN",
+      "tract_count": 2,
+      "tracts": [
+        "17031500200",
+        "17031500300"
+      ],
+      "zips": [
+        "60628",
+        "60633"
+      ]
+    },
+    {
+      "community_area_number": "57",
+      "name": "ARCHER HEIGHTS",
+      "tract_count": 2,
+      "tracts": [
+        "17031570100",
+        "17031570300"
+      ],
+      "zips": [
+        "60632"
+      ]
+    },
+    {
+      "community_area_number": "75",
+      "name": "MORGAN PARK",
+      "tract_count": 2,
+      "tracts": [
+        "17031750600",
+        "17031823304"
+      ],
+      "zips": [
+        "60628",
+        "60643",
+        "60655",
+        "60803"
+      ]
+    },
+    {
+      "community_area_number": "1",
+      "name": "ROGERS PARK",
+      "tract_count": 1,
+      "tracts": [
+        "17031010400"
+      ],
+      "zips": [
+        "60626",
+        "60660"
+      ]
+    },
+    {
+      "community_area_number": "3",
+      "name": "UPTOWN",
+      "tract_count": 1,
+      "tracts": [
+        "17031031200"
+      ],
+      "zips": [
+        "60640"
+      ]
+    },
+    {
+      "community_area_number": "16",
+      "name": "IRVING PARK",
+      "tract_count": 1,
+      "tracts": [
+        "17031161300"
+      ],
+      "zips": [
+        "60641"
+      ]
+    },
+    {
+      "community_area_number": "36",
+      "name": "OAKLAND",
+      "tract_count": 1,
+      "tracts": [
+        "17031360200"
+      ],
+      "zips": [
+        "60653"
+      ]
+    },
+    {
+      "community_area_number": "45",
+      "name": "AVALON PARK",
+      "tract_count": 1,
+      "tracts": [
+        "17031450300"
+      ],
+      "zips": [
+        "60617"
+      ]
+    },
+    {
+      "community_area_number": "47",
+      "name": "BURNSIDE",
+      "tract_count": 1,
+      "tracts": [
+        "17031470100"
+      ],
+      "zips": [
+        "60619"
+      ]
+    },
+    {
+      "community_area_number": "48",
+      "name": "CALUMET HEIGHTS",
+      "tract_count": 1,
+      "tracts": [
+        "17031480300"
+      ],
+      "zips": [
+        "60617",
+        "60619"
+      ]
+    },
+    {
+      "community_area_number": "51",
+      "name": "SOUTH DEERING",
+      "tract_count": 1,
+      "tracts": [
+        "17031510300"
+      ],
+      "zips": [
+        "60617"
+      ]
+    },
+    {
+      "community_area_number": "54",
+      "name": "RIVERDALE",
+      "tract_count": 1,
+      "tracts": [
+        "17031821500"
+      ],
+      "zips": [
+        "60406",
+        "60827"
+      ]
+    },
+    {
+      "community_area_number": "56",
+      "name": "GARFIELD RIDGE",
+      "tract_count": 1,
+      "tracts": [
+        "17031560200"
+      ],
+      "zips": [
+        "60638",
+        "60804"
+      ]
+    },
+    {
+      "community_area_number": "62",
+      "name": "WEST ELSDON",
+      "tract_count": 1,
+      "tracts": [
+        "17031620400"
+      ],
+      "zips": [
+        "60629",
+        "60632"
+      ]
+    },
+    {
+      "community_area_number": "64",
+      "name": "CLEARING",
+      "tract_count": 1,
+      "tracts": [
+        "17031640800"
+      ],
+      "zips": [
+        "60629",
+        "60638"
+      ]
+    },
+    {
+      "community_area_number": "65",
+      "name": "WEST LAWN",
+      "tract_count": 1,
+      "tracts": [
+        "17031650100"
+      ],
+      "zips": [
+        "60629"
+      ]
+    },
+    {
+      "community_area_number": "73",
+      "name": "WASHINGTON HEIGHTS",
+      "tract_count": 1,
+      "tracts": [
+        "17031730300"
+      ],
+      "zips": [
+        "60620"
+      ]
+    }
+  ],
+  "outside_chicago_cook_targeted_tracts": [
+    {
+      "geoid": "17031813801",
+      "tract": "8138.01",
+      "name": "Census Tract 8138.01"
+    },
+    {
+      "geoid": "17031834800",
+      "tract": "8348",
+      "name": "Census Tract 8348"
+    },
+    {
+      "geoid": "17031834700",
+      "tract": "8347",
+      "name": "Census Tract 8347"
+    },
+    {
+      "geoid": "17031831700",
+      "tract": "8317",
+      "name": "Census Tract 8317"
+    },
+    {
+      "geoid": "17031835100",
+      "tract": "8351",
+      "name": "Census Tract 8351"
+    },
+    {
+      "geoid": "17031835000",
+      "tract": "8350",
+      "name": "Census Tract 8350"
+    },
+    {
+      "geoid": "17031842100",
+      "tract": "8421",
+      "name": "Census Tract 8421"
+    },
+    {
+      "geoid": "17031843300",
+      "tract": "8433",
+      "name": "Census Tract 8433"
+    },
+    {
+      "geoid": "17031831600",
+      "tract": "8316",
+      "name": "Census Tract 8316"
+    },
+    {
+      "geoid": "17031831200",
+      "tract": "8312",
+      "name": "Census Tract 8312"
+    },
+    {
+      "geoid": "17031843000",
+      "tract": "8430",
+      "name": "Census Tract 8430"
+    },
+    {
+      "geoid": "17031843100",
+      "tract": "8431",
+      "name": "Census Tract 8431"
+    },
+    {
+      "geoid": "17031842900",
+      "tract": "8429",
+      "name": "Census Tract 8429"
+    },
+    {
+      "geoid": "17031832900",
+      "tract": "8329",
+      "name": "Census Tract 8329"
+    },
+    {
+      "geoid": "17031838600",
+      "tract": "8386",
+      "name": "Census Tract 8386"
+    },
+    {
+      "geoid": "17031834900",
+      "tract": "8349",
+      "name": "Census Tract 8349"
+    },
+    {
+      "geoid": "17031842500",
+      "tract": "8425",
+      "name": "Census Tract 8425"
+    },
+    {
+      "geoid": "17031841800",
+      "tract": "8418",
+      "name": "Census Tract 8418"
+    },
+    {
+      "geoid": "17031842800",
+      "tract": "8428",
+      "name": "Census Tract 8428"
+    },
+    {
+      "geoid": "17031843800",
+      "tract": "8438",
+      "name": "Census Tract 8438"
+    },
+    {
+      "geoid": "17031843900",
+      "tract": "8439",
+      "name": "Census Tract 8439"
+    },
+    {
+      "geoid": "17031838000",
+      "tract": "8380",
+      "name": "Census Tract 8380"
+    },
+    {
+      "geoid": "17031010702",
+      "tract": "107.02",
+      "name": "Census Tract 107.02"
+    },
+    {
+      "geoid": "17031010503",
+      "tract": "105.03",
+      "name": "Census Tract 105.03"
+    },
+    {
+      "geoid": "17031020902",
+      "tract": "209.02",
+      "name": "Census Tract 209.02"
+    },
+    {
+      "geoid": "17031020601",
+      "tract": "206.01",
+      "name": "Census Tract 206.01"
+    },
+    {
+      "geoid": "17031530503",
+      "tract": "5305.03",
+      "name": "Census Tract 5305.03"
+    },
+    {
+      "geoid": "17031650301",
+      "tract": "6503.01",
+      "name": "Census Tract 6503.01"
+    },
+    {
+      "geoid": "17031650302",
+      "tract": "6503.02",
+      "name": "Census Tract 6503.02"
+    },
+    {
+      "geoid": "17031831300",
+      "tract": "8313",
+      "name": "Census Tract 8313"
+    },
+    {
+      "geoid": "17031837000",
+      "tract": "8370",
+      "name": "Census Tract 8370"
+    },
+    {
+      "geoid": "17031031501",
+      "tract": "315.01",
+      "name": "Census Tract 315.01"
+    },
+    {
+      "geoid": "17031490901",
+      "tract": "4909.01",
+      "name": "Census Tract 4909.01"
+    },
+    {
+      "geoid": "17031301801",
+      "tract": "3018.01",
+      "name": "Census Tract 3018.01"
+    },
+    {
+      "geoid": "17031837400",
+      "tract": "8374",
+      "name": "Census Tract 8374"
+    },
+    {
+      "geoid": "17031837800",
+      "tract": "8378",
+      "name": "Census Tract 8378"
+    },
+    {
+      "geoid": "17031837300",
+      "tract": "8373",
+      "name": "Census Tract 8373"
+    },
+    {
+      "geoid": "17031841500",
+      "tract": "8415",
+      "name": "Census Tract 8415"
+    },
+    {
+      "geoid": "17031838700",
+      "tract": "8387",
+      "name": "Census Tract 8387"
+    },
+    {
+      "geoid": "17031580501",
+      "tract": "5805.01",
+      "name": "Census Tract 5805.01"
+    },
+    {
+      "geoid": "17031580502",
+      "tract": "5805.02",
+      "name": "Census Tract 5805.02"
+    },
+    {
+      "geoid": "17031301802",
+      "tract": "3018.02",
+      "name": "Census Tract 3018.02"
+    },
+    {
+      "geoid": "17031440101",
+      "tract": "4401.01",
+      "name": "Census Tract 4401.01"
+    },
+    {
+      "geoid": "17031301701",
+      "tract": "3017.01",
+      "name": "Census Tract 3017.01"
+    },
+    {
+      "geoid": "17031838100",
+      "tract": "8381",
+      "name": "Census Tract 8381"
+    },
+    {
+      "geoid": "17031833300",
+      "tract": "8333",
+      "name": "Census Tract 8333"
+    },
+    {
+      "geoid": "17031140602",
+      "tract": "1406.02",
+      "name": "Census Tract 1406.02"
+    },
+    {
+      "geoid": "17031190402",
+      "tract": "1904.02",
+      "name": "Census Tract 1904.02"
+    },
+    {
+      "geoid": "17031431301",
+      "tract": "4313.01",
+      "name": "Census Tract 4313.01"
+    },
+    {
+      "geoid": "17031431302",
+      "tract": "4313.02",
+      "name": "Census Tract 4313.02"
+    },
+    {
+      "geoid": "17031460301",
+      "tract": "4603.01",
+      "name": "Census Tract 4603.01"
+    },
+    {
+      "geoid": "17031813701",
+      "tract": "8137.01",
+      "name": "Census Tract 8137.01"
+    },
+    {
+      "geoid": "17031840200",
+      "tract": "8402",
+      "name": "Census Tract 8402"
+    },
+    {
+      "geoid": "17031190602",
+      "tract": "1906.02",
+      "name": "Census Tract 1906.02"
+    },
+    {
+      "geoid": "17031190702",
+      "tract": "1907.02",
+      "name": "Census Tract 1907.02"
+    },
+    {
+      "geoid": "17031191302",
+      "tract": "1913.02",
+      "name": "Census Tract 1913.02"
+    },
+    {
+      "geoid": "17031191301",
+      "tract": "1913.01",
+      "name": "Census Tract 1913.01"
+    },
+    {
+      "geoid": "17031210501",
+      "tract": "2105.01",
+      "name": "Census Tract 2105.01"
+    },
+    {
+      "geoid": "17031840800",
+      "tract": "8408",
+      "name": "Census Tract 8408"
+    },
+    {
+      "geoid": "17031030703",
+      "tract": "307.03",
+      "name": "Census Tract 307.03"
+    },
+    {
+      "geoid": "17031440102",
+      "tract": "4401.02",
+      "name": "Census Tract 4401.02"
+    },
+    {
+      "geoid": "17031440202",
+      "tract": "4402.02",
+      "name": "Census Tract 4402.02"
+    },
+    {
+      "geoid": "17031830500",
+      "tract": "8305",
+      "name": "Census Tract 8305"
+    },
+    {
+      "geoid": "17031839200",
+      "tract": "8392",
+      "name": "Census Tract 8392"
+    },
+    {
+      "geoid": "17031835500",
+      "tract": "8355",
+      "name": "Census Tract 8355"
+    },
+    {
+      "geoid": "17031030104",
+      "tract": "301.04",
+      "name": "Census Tract 301.04"
+    },
+    {
+      "geoid": "17031430102",
+      "tract": "4301.02",
+      "name": "Census Tract 4301.02"
+    },
+    {
+      "geoid": "17031430101",
+      "tract": "4301.01",
+      "name": "Census Tract 4301.01"
+    },
+    {
+      "geoid": "17031252101",
+      "tract": "2521.01",
+      "name": "Census Tract 2521.01"
+    },
+    {
+      "geoid": "17031010501",
+      "tract": "105.01",
+      "name": "Census Tract 105.01"
+    },
+    {
+      "geoid": "17031010201",
+      "tract": "102.01",
+      "name": "Census Tract 102.01"
+    },
+    {
+      "geoid": "17031440201",
+      "tract": "4402.01",
+      "name": "Census Tract 4402.01"
+    },
+    {
+      "geoid": "17031540101",
+      "tract": "5401.01",
+      "name": "Census Tract 5401.01"
+    },
+    {
+      "geoid": "17031802004",
+      "tract": "8020.04",
+      "name": "Census Tract 8020.04"
+    },
+    {
+      "geoid": "17031834000",
+      "tract": "8340",
+      "name": "Census Tract 8340"
+    },
+    {
+      "geoid": "17031833900",
+      "tract": "8339",
+      "name": "Census Tract 8339"
+    },
+    {
+      "geoid": "17031818000",
+      "tract": "8180",
+      "name": "Census Tract 8180"
+    },
+    {
+      "geoid": "17031803614",
+      "tract": "8036.14",
+      "name": "Census Tract 8036.14"
+    },
+    {
+      "geoid": "17031809402",
+      "tract": "8094.02",
+      "name": "Census Tract 8094.02"
+    },
+    {
+      "geoid": "17031828508",
+      "tract": "8285.08",
+      "name": "Census Tract 8285.08"
+    },
+    {
+      "geoid": "17031844700",
+      "tract": "8447",
+      "name": "Census Tract 8447"
+    },
+    {
+      "geoid": "17031252201",
+      "tract": "2522.01",
+      "name": "Census Tract 2522.01"
+    },
+    {
+      "geoid": "17031660302",
+      "tract": "6603.02",
+      "name": "Census Tract 6603.02"
+    },
+    {
+      "geoid": "17031660301",
+      "tract": "6603.01",
+      "name": "Census Tract 6603.01"
+    },
+    {
+      "geoid": "17031813302",
+      "tract": "8133.02",
+      "name": "Census Tract 8133.02"
+    },
+    {
+      "geoid": "17031813301",
+      "tract": "8133.01",
+      "name": "Census Tract 8133.01"
+    },
+    {
+      "geoid": "17031835600",
+      "tract": "8356",
+      "name": "Census Tract 8356"
+    },
+    {
+      "geoid": "17031836400",
+      "tract": "8364",
+      "name": "Census Tract 8364"
+    },
+    {
+      "geoid": "17031836100",
+      "tract": "8361",
+      "name": "Census Tract 8361"
+    },
+    {
+      "geoid": "17031834600",
+      "tract": "8346",
+      "name": "Census Tract 8346"
+    },
+    {
+      "geoid": "17031030601",
+      "tract": "306.01",
+      "name": "Census Tract 306.01"
+    },
+    {
+      "geoid": "17031252202",
+      "tract": "2522.02",
+      "name": "Census Tract 2522.02"
+    },
+    {
+      "geoid": "17031252102",
+      "tract": "2521.02",
+      "name": "Census Tract 2521.02"
+    },
+    {
+      "geoid": "17031834500",
+      "tract": "8345",
+      "name": "Census Tract 8345"
+    },
+    {
+      "geoid": "17031834300",
+      "tract": "8343",
+      "name": "Census Tract 8343"
+    },
+    {
+      "geoid": "17031825600",
+      "tract": "8256",
+      "name": "Census Tract 8256"
+    },
+    {
+      "geoid": "17031811302",
+      "tract": "8113.02",
+      "name": "Census Tract 8113.02"
+    },
+    {
+      "geoid": "17031829700",
+      "tract": "8297",
+      "name": "Census Tract 8297"
+    },
+    {
+      "geoid": "17031826800",
+      "tract": "8268",
+      "name": "Census Tract 8268"
+    },
+    {
+      "geoid": "17031821200",
+      "tract": "8212",
+      "name": "Census Tract 8212"
+    },
+    {
+      "geoid": "17031824400",
+      "tract": "8244",
+      "name": "Census Tract 8244"
+    },
+    {
+      "geoid": "17031825801",
+      "tract": "8258.01",
+      "name": "Census Tract 8258.01"
+    },
+    {
+      "geoid": "17031826000",
+      "tract": "8260",
+      "name": "Census Tract 8260"
+    },
+    {
+      "geoid": "17031817200",
+      "tract": "8172",
+      "name": "Census Tract 8172"
+    },
+    {
+      "geoid": "17031817600",
+      "tract": "8176",
+      "name": "Census Tract 8176"
+    },
+    {
+      "geoid": "17031826100",
+      "tract": "8261",
+      "name": "Census Tract 8261"
+    },
+    {
+      "geoid": "17031826304",
+      "tract": "8263.04",
+      "name": "Census Tract 8263.04"
+    },
+    {
+      "geoid": "17031810900",
+      "tract": "8109",
+      "name": "Census Tract 8109"
+    },
+    {
+      "geoid": "17031826402",
+      "tract": "8264.02",
+      "name": "Census Tract 8264.02"
+    },
+    {
+      "geoid": "17031826600",
+      "tract": "8266",
+      "name": "Census Tract 8266"
+    },
+    {
+      "geoid": "17031826700",
+      "tract": "8267",
+      "name": "Census Tract 8267"
+    },
+    {
+      "geoid": "17031826901",
+      "tract": "8269.01",
+      "name": "Census Tract 8269.01"
+    },
+    {
+      "geoid": "17031826902",
+      "tract": "8269.02",
+      "name": "Census Tract 8269.02"
+    },
+    {
+      "geoid": "17031827000",
+      "tract": "8270",
+      "name": "Census Tract 8270"
+    },
+    {
+      "geoid": "17031827100",
+      "tract": "8271",
+      "name": "Census Tract 8271"
+    },
+    {
+      "geoid": "17031827200",
+      "tract": "8272",
+      "name": "Census Tract 8272"
+    },
+    {
+      "geoid": "17031827300",
+      "tract": "8273",
+      "name": "Census Tract 8273"
+    },
+    {
+      "geoid": "17031827400",
+      "tract": "8274",
+      "name": "Census Tract 8274"
+    },
+    {
+      "geoid": "17031827600",
+      "tract": "8276",
+      "name": "Census Tract 8276"
+    },
+    {
+      "geoid": "17031827700",
+      "tract": "8277",
+      "name": "Census Tract 8277"
+    },
+    {
+      "geoid": "17031820400",
+      "tract": "8204",
+      "name": "Census Tract 8204"
+    },
+    {
+      "geoid": "17031821001",
+      "tract": "8210.01",
+      "name": "Census Tract 8210.01"
+    },
+    {
+      "geoid": "17031829200",
+      "tract": "8292",
+      "name": "Census Tract 8292"
+    },
+    {
+      "geoid": "17031829302",
+      "tract": "8293.02",
+      "name": "Census Tract 8293.02"
+    },
+    {
+      "geoid": "17031821300",
+      "tract": "8213",
+      "name": "Census Tract 8213"
+    },
+    {
+      "geoid": "17031828402",
+      "tract": "8284.02",
+      "name": "Census Tract 8284.02"
+    },
+    {
+      "geoid": "17031828504",
+      "tract": "8285.04",
+      "name": "Census Tract 8285.04"
+    },
+    {
+      "geoid": "17031830001",
+      "tract": "8300.01",
+      "name": "Census Tract 8300.01"
+    },
+    {
+      "geoid": "17031821401",
+      "tract": "8214.01",
+      "name": "Census Tract 8214.01"
+    },
+    {
+      "geoid": "17031806001",
+      "tract": "8060.01",
+      "name": "Census Tract 8060.01"
+    },
+    {
+      "geoid": "17031807000",
+      "tract": "8070",
+      "name": "Census Tract 8070"
+    },
+    {
+      "geoid": "17031030101",
+      "tract": "301.01",
+      "name": "Census Tract 301.01"
+    },
+    {
+      "geoid": "17031030701",
+      "tract": "307.01",
+      "name": "Census Tract 307.01"
+    },
+    {
+      "geoid": "17031806104",
+      "tract": "8061.04",
+      "name": "Census Tract 8061.04"
+    },
+    {
+      "geoid": "17031820604",
+      "tract": "8206.04",
+      "name": "Census Tract 8206.04"
+    },
+    {
+      "geoid": "17031838800",
+      "tract": "8388",
+      "name": "Census Tract 8388"
+    },
+    {
+      "geoid": "17031843400",
+      "tract": "8434",
+      "name": "Census Tract 8434"
+    },
+    {
+      "geoid": "17031301803",
+      "tract": "3018.03",
+      "name": "Census Tract 3018.03"
+    },
+    {
+      "geoid": "17031809200",
+      "tract": "8092",
+      "name": "Census Tract 8092"
+    },
+    {
+      "geoid": "17031809300",
+      "tract": "8093",
+      "name": "Census Tract 8093"
+    },
+    {
+      "geoid": "17031826500",
+      "tract": "8265",
+      "name": "Census Tract 8265"
+    },
+    {
+      "geoid": "17031822400",
+      "tract": "8224",
+      "name": "Census Tract 8224"
+    },
+    {
+      "geoid": "17031828503",
+      "tract": "8285.03",
+      "name": "Census Tract 8285.03"
+    },
+    {
+      "geoid": "17031826202",
+      "tract": "8262.02",
+      "name": "Census Tract 8262.02"
+    },
+    {
+      "geoid": "17031819100",
+      "tract": "8191",
+      "name": "Census Tract 8191"
+    },
+    {
+      "geoid": "17031824300",
+      "tract": "8243",
+      "name": "Census Tract 8243"
+    },
+    {
+      "geoid": "17031824800",
+      "tract": "8248",
+      "name": "Census Tract 8248"
+    },
+    {
+      "geoid": "17031827500",
+      "tract": "8275",
+      "name": "Census Tract 8275"
+    },
+    {
+      "geoid": "17031826201",
+      "tract": "8262.01",
+      "name": "Census Tract 8262.01"
+    },
+    {
+      "geoid": "17031770500",
+      "tract": "7705",
+      "name": "Census Tract 7705"
+    },
+    {
+      "geoid": "17031828300",
+      "tract": "8283",
+      "name": "Census Tract 8283"
+    },
+    {
+      "geoid": "17031824900",
+      "tract": "8249",
+      "name": "Census Tract 8249"
+    },
+    {
+      "geoid": "17031811701",
+      "tract": "8117.01",
+      "name": "Census Tract 8117.01"
+    },
+    {
+      "geoid": "17031816500",
+      "tract": "8165",
+      "name": "Census Tract 8165"
+    },
+    {
+      "geoid": "17031829500",
+      "tract": "8295",
+      "name": "Census Tract 8295"
+    },
+    {
+      "geoid": "17031829100",
+      "tract": "8291",
+      "name": "Census Tract 8291"
+    },
+    {
+      "geoid": "17031826401",
+      "tract": "8264.01",
+      "name": "Census Tract 8264.01"
+    },
+    {
+      "geoid": "17031020901",
+      "tract": "209.01",
+      "name": "Census Tract 209.01"
+    },
+    {
+      "geoid": "17031010202",
+      "tract": "102.02",
+      "name": "Census Tract 102.02"
+    },
+    {
+      "geoid": "17031030604",
+      "tract": "306.04",
+      "name": "Census Tract 306.04"
+    },
+    {
+      "geoid": "17031031502",
+      "tract": "315.02",
+      "name": "Census Tract 315.02"
+    },
+    {
+      "geoid": "17031540102",
+      "tract": "5401.02",
+      "name": "Census Tract 5401.02"
+    },
+    {
+      "geoid": "17031830300",
+      "tract": "8303",
+      "name": "Census Tract 8303"
+    },
+    {
+      "geoid": "17031828900",
+      "tract": "8289",
+      "name": "Census Tract 8289"
+    },
+    {
+      "geoid": "17031814100",
+      "tract": "8141",
+      "name": "Census Tract 8141"
+    },
+    {
+      "geoid": "17031814300",
+      "tract": "8143",
+      "name": "Census Tract 8143"
+    },
+    {
+      "geoid": "17031823101",
+      "tract": "8231.01",
+      "name": "Census Tract 8231.01"
+    },
+    {
+      "geoid": "17031823302",
+      "tract": "8233.02",
+      "name": "Census Tract 8233.02"
+    },
+    {
+      "geoid": "17031814900",
+      "tract": "8149",
+      "name": "Census Tract 8149"
+    },
+    {
+      "geoid": "17031815200",
+      "tract": "8152",
+      "name": "Census Tract 8152"
+    },
+    {
+      "geoid": "17031824701",
+      "tract": "8247.01",
+      "name": "Census Tract 8247.01"
+    },
+    {
+      "geoid": "17031816402",
+      "tract": "8164.02",
+      "name": "Census Tract 8164.02"
+    },
+    {
+      "geoid": "17031825700",
+      "tract": "8257",
+      "name": "Census Tract 8257"
+    }
+  ]
+}
