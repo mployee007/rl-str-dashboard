@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-11T08:04:54.315565+00:00",
+  "generated_at": "2026-09-11T08:19:57.206742+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 55,
+  "session_count": 56,
   "sessions": [
+    {
+      "id": "2026-09-11/chicago-hml-directory",
+      "date": "2026-09-11",
+      "title": "chicago-hml-directory",
+      "summary": "",
+      "updated_at": "2026-09-11T08:05:43.097410",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-11/chicago-hml-directory",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "chicago-hard-money-lenders-report.md",
+            "rel_path": "chicago-hard-money-lenders-report.md",
+            "size": 10716,
+            "updated_at": "2026-09-11T08:05:43.097410",
+            "previewable": true,
+            "public_href": "public/2026-09-11/chicago-hml-directory/chicago-hard-money-lenders-report.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-11/parma-listings-under-190k",
       "date": "2026-09-11",
