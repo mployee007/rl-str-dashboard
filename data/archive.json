@@ -1,8 +1,40 @@
 {
-  "generated_at": "2026-09-11T12:58:57.761449+00:00",
+  "generated_at": "2026-09-11T13:14:55.429122+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 56,
   "sessions": [
+    {
+      "id": "2026-09-11/parma-listings-under-190k",
+      "date": "2026-09-11",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-11T13:00:13.774795",
+      "file_count": 3,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-11/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {
+        "run-log.md": "# Run Log \u2014 Parma Listings Under $190K\n\n## 2026-09-11T12:59:41Z\n- **Status:** FAILED\n- **3 bbox queries attempted**, all failed due to Zillapi credit exhaustion\n- Output files saved to `/opt/data/outputs/2026-09-11/parma-listings-under-190k/`\n- Quick-ref status at `/opt/data/parma-latest-listings.md`\n- Sync status at `/opt/data/parma-pull-status.txt`\n\n## 2026-09-06 (prior attempt)\n- Same result \u2014 Zillapi out of credits\n- No credits topped up between attempts",
+        "sources.json": "{\n  \"sources\": [\n    {\n      \"name\": \"Zillapi MCP \u2014 44129 for-sale\",\n      \"url\": \"mcp_zillapi_search_listings\",\n      \"result\": \"Out of credits for this cycle\",\n      \"date\": \"2026-09-11\"\n    },\n    {\n      \"name\": \"Zillapi MCP \u2014 44134 for-sale\",\n      \"url\": \"mcp_zillapi_search_listings\",\n      \"result\": \"MCP server unreachable (downstream of credit exhaustion)\",\n      \"date\": \"2026-09-11\"\n    },\n    {\n      \"name\": \"Zillapi MCP \u2014 44130 for-sale\",\n      \"url\": \"mcp_zillapi_search_listings\",\n      \"result\": \"MCP server unreachable (downstream of credit exhaustion)\",\n      \"date\": \"2026-09-11\"\n    }\n  ],\n  \"manual_links\": {\n    \"44129\": \"https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/\",\n    \"44134\": \"https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/\",\n    \"44130\": \"https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/\"\n  },\n  \"_note\": \"All sources blocked. Retry after Zillapi credit top-up. Same result as 2026-09-06 attempt.\"\n}"
+      },
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 1496,
+            "updated_at": "2026-09-11T13:00:13.742795",
+            "previewable": true,
+            "public_href": "public/2026-09-11/parma-listings-under-190k/parma-listings.md"
+          }
+        ]
+      }
+    },
     {
       "id": "$(date +%Y-%m-%d)/parma-listings-under-190k",
       "date": "$(date +%Y-%m-%d)",
@@ -48,35 +80,6 @@
             "updated_at": "2026-09-11T08:05:43.097410",
             "previewable": true,
             "public_href": "public/2026-09-11/chicago-hml-directory/chicago-hard-money-lenders-report.md"
-          }
-        ]
-      }
-    },
-    {
-      "id": "2026-09-11/parma-listings-under-190k",
-      "date": "2026-09-11",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-11T03:53:16.610009",
-      "file_count": 1,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-11/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 1488,
-            "updated_at": "2026-09-11T03:53:16.610009",
-            "previewable": true,
-            "public_href": "public/2026-09-11/parma-listings-under-190k/parma-listings.md"
           }
         ]
       }

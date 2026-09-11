@@ -1,36 +1,35 @@
-# Parma West / Parma / Parma Heights — Listings Under $190K
+# Parma Listings Under $190K — September 11, 2026
 
-**Pull attempt:** 2026-09-11  
-**Status:** ❌ BLOCKED — Zillapi out of credits
+## Status: ❌ ZILLAPI OUT OF CREDITS
+
+No live listing data could be retrieved. All three bounding-box queries failed.
+
+### Source Results
+
+| Source | ZIP | Bounding Box | Result |
+|--------|-----|-------------|--------|
+| Zillapi MCP (search_listings) | 44129 | -81.78,41.37,-81.68,41.42 | ❌ Out of credits |
+| Zillapi MCP (search_listings) | 44134 | -81.72,41.35,-81.65,41.40 | ❌ MCP server unreachable |
+| Zillapi MCP (search_listings) | 44130 | -81.80,41.35,-81.73,41.41 | ❌ MCP server unreachable |
+| Zillow.com (browser) | — | — | Skipped — blocked by captcha |
+| Redfin/Trulia/etc. | — | — | Skipped — blocked by captcha |
+
+### Direct Zillow Search URLs (open in your browser)
+
+- **[44129 (Parma West) — under $190K](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/)**
+- **[44134 (Parma East / Seven Hills) — under $190K](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/)**
+- **[44130 (Middleburg Heights / Parma SW) — under $190K](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/)**
+
+### Next Steps
+
+1. Top up Zillapi credits at https://zillapi.com/app/billing
+2. Re-run this job once credits are available
+3. This task will auto-retry on the next scheduled run
+
+### Historical Note
+
+The same credit-exhaustion issue occurred on 2026-09-06. Credits have not been topped up since that prior attempt.
 
 ---
 
-## Blocker Report
-
-Zillapi returned "Out of credits for this cycle" on the first call (44129), and the MCP server became unreachable on subsequent calls (44134, 44130). Zero listings were retrieved.
-
-| Source | ZIP | Result |
-|---|---|---|
-| Zillapi (search_listings) | 44129 | ❌ Out of credits |
-| Zillapi (search_listings) | 44134 | ❌ MCP server unreachable |
-| Zillapi (search_listings) | 44130 | ❌ MCP server unreachable |
-
-Per the `real-estate-submarket-screening` skill: all web-based listing sites (Zillow.com, Redfin, Trulia, Realtor.com) block automated access with captchas. The only path is Zillapi, which is dry.
-
----
-
-## Direct Zillow Search URLs (open in your browser)
-
-| ZIP | Neighborhood | Direct Zillow Search |
-|---|---|---|
-| 44129 | Parma West | [Zillow: 44129 ≤$190K](https://www.zillow.com/homes/for_sale/44129_rb/max-190000_price/) |
-| 44134 | Parma | [Zillow: 44134 ≤$190K](https://www.zillow.com/homes/for_sale/44134_rb/max-190000_price/) |
-| 44130 | Parma Heights | [Zillow: 44130 ≤$190K](https://www.zillow.com/homes/for_sale/44130_rb/max-190000_price/) |
-
----
-
-## Next Steps
-
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run this cron job** — the script is idempotent and will pick up fresh listings
-3. Status file at `/opt/data/parma-pull-status.txt` for monitoring
+*Report generated: 2026-09-11T12:59:41Z*
