@@ -1,58 +1,39 @@
-# Parma Listings Under $190K — Pull Report
-**Date:** 2026-09-11  
-**Status:** ❌ FAILED — All data sources unavailable
+# Parma (44129, 44134, 44130) — Listings Under $190K
+
+**Pull Date:** 2026-09-11  
+**Status:** ❌ FAILED — Zillapi credits exhausted
 
 ---
 
-## Bottom Line
+## Blocker Summary
 
-No for-sale listings could be retrieved for ZIPs 44129, 44134, or 44130. Zillapi is out of credits, the MCP server is unreachable, and all web-based fallbacks (Zillow.com, Redfin) are blocked by bot detection or missing backend dependencies (`firecrawl-py` not installed and uninstallable due to filesystem permissions).
-
----
-
-## Attempt Log
-
-| # | Source | Method | Target | Result |
-|---|--------|--------|--------|--------|
-| 1 | Zillapi MCP | `mcp_zillapi_search_listings` | 44129 bbox | ❌ Out of credits |
-| 2 | Zillapi MCP | `mcp_zillapi_search_listings` | 44134 bbox | ❌ MCP server unreachable (56 failures) |
-| 3 | Zillapi MCP | `mcp_zillapi_search_listings` | 44130 bbox | ❌ MCP server unreachable (56 failures) |
-| 4 | Zillow.com | `browser_navigate` | 44129 filtered search | ❌ Blocked — captcha wall |
-| 5 | Zillow.com | `web_extract` | 44129 houses page | ❌ firecrawl-py not installed |
-| 6 | Redfin.com | `web_extract` | Parma city page | ❌ firecrawl-py not installed |
-| 7 | Web Search | `web_search` | site:zillow.com 44129 | ❌ firecrawl-py not installed |
-| 8 | Dependency fix | `uv pip install firecrawl-py` | — | ❌ Permission denied |
-| 9 | Dependency fix | `sudo` / `pip` | — | ❌ Not available |
+| Source | Attempted? | Result |
+|--------|-----------|--------|
+| Zillapi (44129) | ✅ | "Out of credits for this cycle" |
+| Zillapi (44134) | ✅ | "MCP server unreachable (57 consecutive failures)" |
+| Zillapi (44130) | ✅ | "MCP server unreachable (57 consecutive failures)" |
+| Zillow.com / Redfin / Trulia | ⛔ Skipped | All block with PerimeterX/Cloudflare captchas per skill playbook |
+| web_search / web_extract | ⛔ Skipped | Known to fail on listing sites per skill playbook |
 
 ---
 
-## Direct Zillow Search URLs (Open in Your Browser)
+## Manual Fallback URLs
 
-These filtered URLs will show active listings in each ZIP under $190K:
+Open these in your own browser to see current listings:
 
-- **44129 (Parma West):**  
-  https://www.zillow.com/parma-oh-44129/houses/?searchQueryState={"filterState":{"price":{"max":190000},"sort":{"value":"globalrelevanceex"},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"tow":{"value":false},"mf":{"value":false},"con":{"value":false},"land":{"value":false},"apa":{"value":false},"manu":{"value":false},"apco":{"value":false}},"isMapVisible":true,"isListVisible":true,"mapBounds":{"west":-81.785,"east":-81.675,"south":41.37,"north":41.42}}
-
-- **44134 (Parma South):**  
-  https://www.zillow.com/parma-oh-44134/houses/?searchQueryState={"filterState":{"price":{"max":190000},"sort":{"value":"globalrelevanceex"},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"tow":{"value":false},"mf":{"value":false},"con":{"value":false},"land":{"value":false},"apa":{"value":false},"manu":{"value":false},"apco":{"value":false}},"isMapVisible":true,"isListVisible":true,"mapBounds":{"west":-81.725,"east":-81.645,"south":41.35,"north":41.40}}
-
-- **44130 (Middleburg Heights / Parma SW):**  
-  https://www.zillow.com/middleburg-heights-oh-44130/houses/?searchQueryState={"filterState":{"price":{"max":190000},"sort":{"value":"globalrelevanceex"},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"tow":{"value":false},"mf":{"value":false},"con":{"value":false},"land":{"value":false},"apa":{"value":false},"manu":{"value":false},"apco":{"value":false}},"isMapVisible":true,"isListVisible":true,"mapBounds":{"west":-81.805,"east":-81.725,"south":41.35,"north":41.41}}
+- **44129 (Parma West):** [Zillow search](https://www.zillow.com/parma-oh-44129/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244129%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22east%22%3A-81.68%2C%22south%22%3A41.37%2C%22north%22%3A41.42%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%7D%2C%22isListVisible%22%3Atrue%7D)
+- **44134 (Parma South):** [Zillow search](https://www.zillow.com/parma-oh-44134/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244134%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22east%22%3A-81.65%2C%22south%22%3A41.35%2C%22north%22%3A41.40%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%7D%2C%22isListVisible%22%3Atrue%7D)
+- **44130 (Parma Heights / Middleburg):** [Zillow search](https://www.zillow.com/parma-oh-44130/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244130%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22east%22%3A-81.73%2C%22south%22%3A41.35%2C%22north%22%3A41.41%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%7D%2C%22isListVisible%22%3Atrue%7D)
 
 ---
 
-## Files Saved
+## Resolution
 
-| File | Content |
-|------|---------|
-| `/opt/data/parma-pull-status.txt` | Full attempt log with timestamps |
-| `/opt/data/parma-latest-listings.md` | Not created (no data) |
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing
+2. **Re-run** this cron job or trigger manually
+3. No listings were fabricated — this report reflects a genuine credit-outage, not a zero-result market condition
 
 ---
 
-## Next Steps
-
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing — the current cycle is exhausted.
-2. **Fix firecrawl:** Install `firecrawl-py==4.17.0` in `/opt/hermes/.venv` with write permissions (the venv is read-only for the agent user).
-3. **Re-run** when either dependency is restored. The cron job or manual re-invocation will pick up where this left off.
-4. **Manual workaround:** Use the direct Zillow URLs above in your own browser — they're pre-filtered to houses under $190K in each ZIP.
+*Status file: `/opt/data/parma-pull-status.txt`*  
+*Report: `/opt/data/outputs/2026-09-11/parma-listings-under-190k/parma-listings.md`*
