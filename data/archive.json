@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-12T13:16:00.726768+00:00",
+  "generated_at": "2026-09-12T13:31:58.472313+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 58,
   "sessions": [
+    {
+      "id": "2026-09-12/parma-listings-under-190k",
+      "date": "2026-09-12",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-12T13:17:46.155342",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-12/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 1641,
+            "updated_at": "2026-09-12T13:17:46.155342",
+            "previewable": true,
+            "public_href": "public/2026-09-12/parma-listings-under-190k/parma-listings.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-12/inflation-beating-assets",
       "date": "2026-09-12",
@@ -42,35 +71,6 @@
             "updated_at": "2026-09-12T04:03:47.185339",
             "previewable": true,
             "public_href": "public/2026-09-12/inflation-beating-assets/top-stock-performers.md"
-          }
-        ]
-      }
-    },
-    {
-      "id": "2026-09-12/parma-listings-under-190k",
-      "date": "2026-09-12",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-12T10:15:50.643473",
-      "file_count": 1,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-12/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 2151,
-            "updated_at": "2026-09-12T10:15:50.643473",
-            "previewable": true,
-            "public_href": "public/2026-09-12/parma-listings-under-190k/parma-listings.md"
           }
         ]
       }

@@ -1,34 +1,47 @@
-# Parma Listings Under $190K — FAILED PULL
+# Parma West Area — Listings Under $190K
 
-**Date:** 2026-09-12
+**Pull date:** 2026-09-12 (cron)
 **Target ZIPs:** 44129, 44134, 44130
-**Price Cap:** $190,000
-**Status:** ❌ Zillapi unavailable — no listings retrieved
+**Price ceiling:** $190,000
 
 ---
 
-## Source Attempts
+## ⛔ Pull Failed — Zillapi Out of Credits
 
-| Source | ZIP(s) | Result |
-|--------|--------|--------|
-| Zillapi `mcp_zillapi_search_listings` | 44129 | **Out of credits** — top up at https://zillapi.com/app/billing |
-| Zillapi `mcp_zillapi_search_listings` | 44134 | **MCP server unreachable** — 61 consecutive failures |
-| Zillapi `mcp_zillapi_search_listings` | 44130 | **MCP server unreachable** — 61 consecutive failures |
+This report could not be generated. Zillapi returned:
 
----
+- **44129:** `Out of credits for this cycle.`
+- **44134:** `MCP server unreachable`
+- **44130:** `MCP server unreachable`
 
-## Direct Zillow Search URLs (Open in Browser)
-
-- **44129 (Parma West):** https://www.zillow.com/parma-oh-44129/houses/?searchQueryState={"pagination":{},"usersSearchTerm":"44129","mapBounds":{"west":-81.78,"south":41.37,"east":-81.68,"north":41.42},"filterState":{"sort":{"value":"globalrelevanceex"},"price":{"max":190000},"fsba":{"value":false},"fsbo":{"value":false},"nc":{"value":false},"fore":{"value":false},"cmsn":{"value":false},"auc":{"value":false},"pmf":{"value":false},"pf":{"value":false},"ah":{"value":true}},"isListVisible":true}
-- **44134:** https://www.zillow.com/parma-oh-44134/houses/?searchQueryState={"pagination":{},"usersSearchTerm":"44134","mapBounds":{"west":-81.72,"south":41.35,"east":-81.65,"north":41.4},"filterState":{"sort":{"value":"globalrelevanceex"},"price":{"max":190000},"ah":{"value":true}},"isListVisible":true}
-- **44130:** https://www.zillow.com/middleburg-heights-oh-44130/houses/?searchQueryState={"pagination":{},"usersSearchTerm":"44130","mapBounds":{"west":-81.8,"south":41.35,"east":-81.73,"north":41.41},"filterState":{"sort":{"value":"globalrelevanceex"},"price":{"max":190000},"ah":{"value":true}},"isListVisible":true}
+No listings were captured. No data was fabricated.
 
 ---
 
-## Next Steps
+## Sources Attempted
 
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Check MCP server health** — if credits are available but the server is unreachable, the Zillapi MCP backend needs attention
-3. **Re-run** this cron job or trigger a manual pull once credits/server are restored
+| Source | Method | Result |
+|---|---|---|
+| Zillapi (44129) | `mcp_zillapi_search_listings` | Out of credits |
+| Zillapi (44134) | `mcp_zillapi_search_listings` | Server unreachable (62 failures) |
+| Zillapi (44130) | `mcp_zillapi_search_listings` | Server unreachable (62 failures) |
+| Zillow.com | Not attempted — blocked by PerimeterX/Cloudflare (per skill guidance) |
+| Redfin.com | Not attempted — blocked by captcha (per skill guidance) |
+| Trulia.com | Not attempted — blocked by captcha (per skill guidance) |
+| Realtor.com | Not attempted — blocked by captcha (per skill guidance) |
 
-*Report automatically saved to `/opt/data/parma-pull-status.txt`*
+---
+
+## Manual Fallback
+
+Open these URLs in your browser to view current listings manually:
+
+- **ZIP 44129 (Parma):** https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/0-10000000_mp/
+- **ZIP 44134 (Parma):** https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/0-10000000_mp/
+- **ZIP 44130 (Parma):** https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/0-10000000_mp/
+
+---
+
+## Next Automatic Attempt
+
+This cron job will retry on the next scheduled run. To force a manual pull once credits are restored, top up at https://zillapi.com/app/billing and re-run.
