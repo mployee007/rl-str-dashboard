@@ -1,47 +1,32 @@
-# Parma West Area — Listings Under $190K
+# Parma Listings Under $190K — BLOCKED
 
-**Pull date:** 2026-09-12 (cron)
-**Target ZIPs:** 44129, 44134, 44130
-**Price ceiling:** $190,000
+**Pull Date:** 2026-09-12
+**Status:** ❌ Zillapi credits exhausted
 
----
+## Why This Report Is Empty
 
-## ⛔ Pull Failed — Zillapi Out of Credits
+All three Zillapi MCP calls failed:
 
-This report could not be generated. Zillapi returned:
+| ZIP | Bounding Box | Error |
+|-----|-------------|-------|
+| 44129 | `-81.78,41.37,-81.68,41.42` | Out of credits |
+| 44134 | `-81.72,41.35,-81.65,41.40` | MCP server unreachable |
+| 44130 | `-81.80,41.35,-81.73,41.41` | MCP server unreachable |
 
-- **44129:** `Out of credits for this cycle.`
-- **44134:** `MCP server unreachable`
-- **44130:** `MCP server unreachable`
+Per the STR skill data-source strategy: Zillapi is the **only reliable path** for live property data. All web-based real estate sites (Zillow.com, Redfin, Trulia, etc.) block browser/curl access. No listings were fabricated.
 
-No listings were captured. No data was fabricated.
+## Resolution
 
----
+Top up Zillapi credits at https://zillapi.com/app/billing and re-run. The pull parameters are saved and ready.
 
-## Sources Attempted
+## Direct Search URLs (Manual Fallback)
 
-| Source | Method | Result |
-|---|---|---|
-| Zillapi (44129) | `mcp_zillapi_search_listings` | Out of credits |
-| Zillapi (44134) | `mcp_zillapi_search_listings` | Server unreachable (62 failures) |
-| Zillapi (44130) | `mcp_zillapi_search_listings` | Server unreachable (62 failures) |
-| Zillow.com | Not attempted — blocked by PerimeterX/Cloudflare (per skill guidance) |
-| Redfin.com | Not attempted — blocked by captcha (per skill guidance) |
-| Trulia.com | Not attempted — blocked by captcha (per skill guidance) |
-| Realtor.com | Not attempted — blocked by captcha (per skill guidance) |
+| ZIP | Link |
+|-----|------|
+| 44129 (Parma West) | https://www.zillow.com/homes/for_sale/44129/0-190000_price/house_type/ |
+| 44134 (Parma East) | https://www.zillow.com/homes/for_sale/44134/0-190000_price/house_type/ |
+| 44130 (Parma South) | https://www.zillow.com/homes/for_sale/44130/0-190000_price/house_type/ |
 
 ---
 
-## Manual Fallback
-
-Open these URLs in your browser to view current listings manually:
-
-- **ZIP 44129 (Parma):** https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/0-10000000_mp/
-- **ZIP 44134 (Parma):** https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/0-10000000_mp/
-- **ZIP 44130 (Parma):** https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/0-10000000_mp/
-
----
-
-## Next Automatic Attempt
-
-This cron job will retry on the next scheduled run. To force a manual pull once credits are restored, top up at https://zillapi.com/app/billing and re-run.
+*Report saved to `/opt/data/outputs/2026-09-12/parma-listings-under-190k/parma-listings.md`*
