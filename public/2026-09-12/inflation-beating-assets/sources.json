@@ -1,0 +1,47 @@
+{
+  "research_date": "2026-09-12",
+  "period": "2016-2025 (calendar years)",
+  "benchmark": "US CPI-U (BLS)",
+  "benchmark_annualized": 3.09,
+  "benchmark_cumulative": 35.6,
+  "sources": [
+    {
+      "name": "US Inflation Calculator",
+      "url": "https://www.usinflationcalculator.com/inflation/current-inflation-rates/",
+      "data": "CPI annual rates 2000-2026"
+    },
+    {
+      "name": "Novel Investor - Annual Asset Class Returns",
+      "url": "https://novelinvestor.com/asset-class-returns/",
+      "data": "Annual returns for US Large Cap, Small Cap, Intl Dev, EM, REITs, HY Bonds, IG Bonds, Cash (2011-2026)"
+    },
+    {
+      "name": "Macrotrends - Historical Gold Prices",
+      "url": "https://www.macrotrends.net/1333/historical-gold-prices-100-year-chart",
+      "data": "Gold spot price year-end values"
+    },
+    {
+      "name": "CoinGecko / Historical Bitcoin Data",
+      "data": "BTC annual returns"
+    },
+    {
+      "name": "Invesco QQQ (Nasdaq 100 ETF)",
+      "data": "Annual total returns"
+    }
+  ],
+  "assets": {
+    "Bitcoin": {"cagr": 78.1, "cumulative": 32085, "years": [124.2, 1337.1, -72.6, 87.2, 305.0, 59.8, -64.3, 155.9, 119.3, 50.2]},
+    "Nasdaq 100": {"cagr": 17.8, "cumulative": 417, "years": [5.9, 31.5, -1.0, 37.9, 47.6, 26.6, -32.9, 53.8, 24.9, 12.8]},
+    "US Large Cap": {"cagr": 14.8, "cumulative": 298, "years": [12.0, 21.8, -4.4, 31.5, 18.4, 28.7, -18.1, 26.3, 25.0, 17.9]},
+    "Gold": {"cagr": 11.9, "cumulative": 209, "years": [8.6, 13.1, -1.9, 18.3, 24.6, -3.5, -0.3, 13.1, 27.2, 25.5]},
+    "US Small Cap": {"cagr": 9.6, "cumulative": 151, "years": [21.3, 14.7, -11.0, 25.5, 20.0, 14.8, -20.4, 16.9, 11.5, 12.8]},
+    "Emerging Markets": {"cagr": 8.9, "cumulative": 134, "years": [11.6, 37.8, -14.3, 18.9, 18.7, -2.2, -19.7, 10.3, 8.1, 34.4]},
+    "Intl Dev Stocks": {"cagr": 8.7, "cumulative": 131, "years": [1.5, 25.6, -13.4, 22.7, 8.3, 11.8, -14.0, 18.9, 4.4, 31.9]},
+    "REITs": {"cagr": 6.8, "cumulative": 92, "years": [8.6, 8.7, -4.0, 28.7, -5.1, 41.3, -25.0, 11.4, 4.9, 12.2]},
+    "High Yield Bonds": {"cagr": 6.6, "cumulative": 89, "years": [17.5, 7.5, -2.3, 14.4, 7.5, 5.4, -11.2, 13.5, 8.2, 8.5]},
+    "Commodities": {"cagr": 5.0, "cumulative": 63, "years": [11.4, 0.7, -12.4, 7.7, -3.1, 40.4, 16.1, -7.9, 0.5, 5.2]},
+    "Cash (T-Bills)": {"cagr": 2.2, "cumulative": 24, "years": [0.3, 0.8, 1.8, 2.2, 0.6, 0.0, 1.6, 5.1, 5.3, 4.3]},
+    "Inv Grade Bonds": {"cagr": 1.9, "cumulative": 20, "years": [2.7, 3.5, 0.0, 8.7, 6.1, -1.5, -13.0, 5.5, 1.3, 7.3]},
+    "US 10Y Treasury": {"cagr": 0.7, "cumulative": 8, "years": [1.0, 2.5, 0.1, 9.6, 10.8, -3.6, -16.9, 3.3, -1.2, 4.5]}
+  }
+}
