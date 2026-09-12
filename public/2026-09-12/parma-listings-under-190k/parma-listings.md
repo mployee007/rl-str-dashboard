@@ -1,32 +1,23 @@
-# Parma Listings Under $190K — BLOCKED
+# Parma Listings Under $190K — Pull Status
 
-**Pull Date:** 2026-09-12
-**Status:** ❌ Zillapi credits exhausted
+**Run:** 2026-09-12T19:21:45Z (Saturday, September 12, 2026)
 
-## Why This Report Is Empty
+## BLOCKED — All data sources unavailable
 
-All three Zillapi MCP calls failed:
+This pull failed. See `/opt/data/parma-pull-status.txt` for full details.
 
-| ZIP | Bounding Box | Error |
-|-----|-------------|-------|
-| 44129 | `-81.78,41.37,-81.68,41.42` | Out of credits |
-| 44134 | `-81.72,41.35,-81.65,41.40` | MCP server unreachable |
-| 44130 | `-81.80,41.35,-81.73,41.41` | MCP server unreachable |
+### Summary of attempts
 
-Per the STR skill data-source strategy: Zillapi is the **only reliable path** for live property data. All web-based real estate sites (Zillow.com, Redfin, Trulia, etc.) block browser/curl access. No listings were fabricated.
+| Source | Status |
+|--------|--------|
+| Zillapi MCP (ZIPs 44129, 44134, 44130) | Out of credits + server unreachable |
+| Web search via Firecrawl | Dependency not installed |
+| Direct Zillow web extract | Blocked by Firecrawl dependency |
 
-## Resolution
+### Manual fallback URLs
 
-Top up Zillapi credits at https://zillapi.com/app/billing and re-run. The pull parameters are saved and ready.
+- [ZIP 44129 — Zillow under $190K](https://www.zillow.com/homes/for_sale/44129_rb/?price_max=190000)
+- [ZIP 44134 — Zillow under $190K](https://www.zillow.com/homes/for_sale/44134_rb/?price_max=190000)
+- [ZIP 44130 — Zillow under $190K](https://www.zillow.com/homes/for_sale/44130_rb/?price_max=190000)
 
-## Direct Search URLs (Manual Fallback)
-
-| ZIP | Link |
-|-----|------|
-| 44129 (Parma West) | https://www.zillow.com/homes/for_sale/44129/0-190000_price/house_type/ |
-| 44134 (Parma East) | https://www.zillow.com/homes/for_sale/44134/0-190000_price/house_type/ |
-| 44130 (Parma South) | https://www.zillow.com/homes/for_sale/44130/0-190000_price/house_type/ |
-
----
-
-*Report saved to `/opt/data/outputs/2026-09-12/parma-listings-under-190k/parma-listings.md`*
+No fabricated listings. Resume when Zillapi credits refresh or firecrawl is installed.
