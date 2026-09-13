@@ -1,33 +1,51 @@
-# Parma Listings Under $190K — Pull Status
+# Parma Listings Under $190K — BLOCKED
 
-**Run:** 2026-09-13T00:00:00Z (Sunday, September 13, 2026)
+**Pull date:** 2026-09-13 00:29 EDT  
+**Target ZIPs:** 44129 (Parma West), 44134 (Parma), 44130 (Parma/Middleburg Hts)  
+**Price ceiling:** $190,000  
+**Result:** **No listings retrieved — all sources blocked**
 
-## BLOCKED — 3rd consecutive day with no data
+---
 
-All data sources remain unavailable. No new listings retrieved.
+## Source-by-Source Failure Log
 
-### Sources attempted
+| # | Source | Method | Error |
+|---|--------|--------|-------|
+| 1 | **Zillapi MCP** (44129) | `search_listings` | Out of credits |
+| 2 | **Zillapi MCP** (44134) | `search_listings` | Server unreachable (67 failures) |
+| 3 | **Zillapi MCP** (44130) | `search_listings` | Server unreachable (67 failures) |
+| 4 | **Zillow.com** | Browser navigate | Captcha wall |
+| 5 | **Realtor.com** | Browser navigate | Blank iframe |
+| 6 | **Redfin.com** | Browser navigate | Bot detection |
+| 7 | **web_search** | Firecrawl backend | Not installed (venv permissions) |
 
-| # | Source | Method | Result |
-|---|--------|--------|--------|
-| 1 | Zillapi MCP — ZIP 44129 | `mcp_zillapi_search_listings(bbox=-81.78,41.37,-81.68,41.42, price_max=190000)` | **Out of credits.** |
-| 2 | Web extract — Zillow 44129 | `web_extract(zillow.com/homes/for_sale/44129_rb/)` | **firecrawl unavailable.** |
-| 3 | Web search | `web_search("Parma OH homes for sale under $190000")` | **firecrawl unavailable.** |
+---
 
-### Manual fallback URLs
+## Manual Fallback: Direct Zillow Links
 
-- [ZIP 44129 — Zillow under $190K](https://www.zillow.com/homes/for_sale/44129_rb/?price_max=190000)
-- [ZIP 44134 — Zillow under $190K](https://www.zillow.com/homes/for_sale/44134_rb/?price_max=190000)
-- [ZIP 44130 — Zillow under $190K](https://www.zillow.com/homes/for_sale/44130_rb/?price_max=190000)
+Open these in your own browser to see current listings:
 
-### ZIP-Level Benchmarks (last known, unchanged since 9/10 pull)
+- **[44129 homes under $190K](https://www.zillow.com/parma-oh-44129/houses/?searchQueryState=%7B%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22pricea%22%7D%7D%7D)**
+- **[44134 homes under $190K](https://www.zillow.com/parma-oh-44134/houses/?searchQueryState=%7B%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22pricea%22%7D%7D%7D)**
+- **[44130 homes under $190K](https://www.zillow.com/middleburg-heights-oh-44130/houses/?searchQueryState=%7B%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22pricea%22%7D%7D%7D)**
 
-| ZIP | Area | Median Sale | Median Rent | P/R Ratio | Gross Yield |
-|-----|------|-------------|-------------|-----------|-------------|
-| 44129 | Parma (W) | $190,000 | $1,950 | 8.1 | 12.3% |
-| 44134 | Parma (E), Brooklyn Hts, Seven Hills | $200,000 | $1,675 | 10.0 | 10.1% |
-| 44130 | Parma (mid) | $199,900 | $1,575 | 10.6 | 9.5% |
+---
 
-### Action required
+## Resolution Path
 
-Top up Zillapi credits at https://zillapi.com/app/billing. This is the **3rd consecutive day** of blocked pulls. No individual property data exists for any of the three target ZIPs.
+1. **Zillapi credits** — top up at https://zillapi.com/app/billing
+2. **Server health** — the MCP server was fully unreachable; may need restart or provider-side fix
+3. **Re-run cron** — once both are green, this job will pull all three ZIPs and produce the full report
+4. **Manual workaround** — forward any listing data and I'll format it to match the standard table layout
+
+---
+
+## Impact Radius
+
+This affects **all** cron jobs using Zillapi:
+- STR deal flow dashboard
+- Multi-city submarket screens
+- Parma/Ohio buy-box pulls
+- Any property lookup by address
+
+No listings = no screening, no verdicts, no buy-box updates.
