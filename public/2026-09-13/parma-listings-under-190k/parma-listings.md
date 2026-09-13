@@ -1,6 +1,6 @@
 # Parma Area Listings Under $190K — Pull Attempt
 
-**Date:** $(date +"%Y-%m-%d %H:%M:%S UTC")
+**Date:** 2026-09-13T10:33:56Z
 **Status:** ❌ BLOCKED — Zillapi credits exhausted
 
 ---
@@ -20,7 +20,7 @@
 | Source | Status | Detail |
 |--------|--------|--------|
 | **Zillapi (MCP)** | ❌ FAILED | "Out of credits for this cycle" |
-| **Zillapi (server)** | ❌ FAILED | MCP server unreachable (68 consecutive failures) |
+| **Zillapi (server)** | ❌ FAILED | MCP server unreachable (69 consecutive failures) |
 | **Zillow.com web** | ⛔ SKIPPED | Skill rule: blocked by PerimeterX/Cloudflare captcha |
 | **Redfin web** | ⛔ SKIPPED | Skill rule: blocked by captcha |
 | **Realtor.com web** | ⛔ SKIPPED | Skill rule: blocked by captcha |
@@ -39,32 +39,10 @@ Zillapi credits must be topped up at https://zillapi.com/app/billing before this
 
 ---
 
-## Investor Context (from prior Cleveland/Parma thesis)
+## Standing Context (from prior Cleveland thesis)
 
-While we wait for fresh data, here's the standing framework for these ZIPs:
-
-| ZIP | Submarket Type | Investor Fit | Notes |
-|-----|---------------|-------------|-------|
-| 44129 | Value-add SFR zone | Take selectively | Older bungalows, stable blocks, strong rental demand |
-| 44134 | Value-add SFR / small MF | Take selectively | Mix of Parma and Seven Hills inventory |
-| 44130 | Stabilized hold / value-add | Negotiate | Middleburg Hts has stronger schools, Parma Hts more affordable |
-
----
-
-## Buy Box Reminder (under $190K Parma cap)
-
-| Property Type | Target Basis | Monthly Rent Target | Gross Yield |
-|--------------|-------------|---------------------|-------------|
-| 2BR SFR | $130K–$170K | $1,200–$1,500 | 8.5%–14% |
-| 3BR SFR | $140K–$190K | $1,400–$1,700 | 8.8%–14.5% |
-| Duplex | $150K–$190K | $1,800–$2,200 total | 11%–18% |
-
-*All-in basis caps assume 10-20% rehab reserve on top of purchase price.*
-
----
-
-## Next Steps
-
-1. Replenish Zillapi credits at https://zillapi.com/app/billing
-2. Re-run cron — the pull will pick up fresh listings automatically
-3. Status file for this attempt saved at: `/opt/data/parma-pull-status.txt`
+| ZIP | Submarket Type | Investor Fit | Prior Median Sale | Prior Median Rent | Gross Yield |
+|-----|---------------|-------------|-------------------|-------------------|-------------|
+| 44129 | Value-add SFR zone | Take selectively | $190,000 | $1,950 | 12.3% |
+| 44134 | Value-add SFR / small MF | Take selectively | — | — | — |
+| 44130 | Stabilized hold / value-add | Negotiate | — | — | — |
