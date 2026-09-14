@@ -1,52 +1,60 @@
-# Parma West Area — Active Listings Under $190K
+# Parma Listings Under $190K — Pull Status
 
-**Pull Date:** 2026-09-14
-**Status:** ❌ BLOCKED — Zillapi credits exhausted
-**ZIPs:** 44129 (Parma West), 44134 (Parma NE), 44130 (Parma SE / Middleburg Hts)
-
----
-
-## Blocker Details
-
-All three Zillapi calls failed:
-
-| ZIP | Bounding Box | Result |
-|-----|-------------|--------|
-| 44129 | -81.78,41.37,-81.68,41.42 | **Out of credits** |
-| 44134 | -81.72,41.35,-81.65,41.40 | MCP server unreachable (76 failures) |
-| 44130 | -81.80,41.35,-81.73,41.41 | MCP server unreachable (76 failures) |
-
-**Root cause:** The Zillapi account has exhausted its credit allocation for the current billing cycle. Top up at: https://zillapi.com/app/billing
+**Date:** 2026-09-14  
+**Status:** ❌ BLOCKED — Zillapi out of credits  
+**Run type:** Scheduled cron job  
 
 ---
 
-## Manual Fallback — Direct Zillow Search Links
+## Target ZIPs
 
-Open these in a browser to manually review listings:
-
-| ZIP | Direct Zillow Search |
-|-----|----------------------|
-| **44129** (Parma West) | [Zillow: 44129 under $190K](https://www.zillow.com/homes/for_sale/44129/0-190000_price/0-427_mp/1-_beds/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22east%22%3A-81.68%2C%22south%22%3A41.37%2C%22north%22%3A41.42%7D%2C%22mapZoom%22%3A13%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A60021%2C%22regionType%22%3A7%7D%5D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22beds%22%3A%7B%22min%22%3A1%7D%2C%22sort%22%3A%7B%22value%22%3A%22priced%22%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
-| **44134** (Parma NE) | [Zillow: 44134 under $190K](https://www.zillow.com/homes/for_sale/44134/0-190000_price/0-427_mp/1-_beds/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22east%22%3A-81.65%2C%22south%22%3A41.35%2C%22north%22%3A41.4%7D%2C%22mapZoom%22%3A13%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A60198%2C%22regionType%22%3A7%7D%5D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22beds%22%3A%7B%22min%22%3A1%7D%2C%22sort%22%3A%7B%22value%22%3A%22priced%22%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
-| **44130** (Parma SE / Middleburg Hts) | [Zillow: 44130 under $190K](https://www.zillow.com/homes/for_sale/44130/0-190000_price/0-427_mp/1-_beds/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.8%2C%22east%22%3A-81.73%2C%22south%22%3A41.35%2C%22north%22%3A41.41%7D%2C%22mapZoom%22%3A13%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A60253%2C%22regionType%22%3A7%7D%5D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22beds%22%3A%7B%22min%22%3A1%7D%2C%22sort%22%3A%7B%22value%22%3A%22priced%22%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
+| ZIP | Area | Bounding Box | Price Cap |
+|-----|------|-------------|-----------|
+| 44129 | Parma West | -81.78, 41.37, -81.68, 41.42 | $190,000 |
+| 44134 | Parma | -81.72, 41.35, -81.65, 41.40 | $190,000 |
+| 44130 | Parma / Middleburg Hts | -81.80, 41.35, -81.73, 41.41 | $190,000 |
 
 ---
 
-## Recovery Plan
+## Errors Encountered
 
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run** this cron job — the pull will resume automatically from the same bounding boxes
-3. **Or manually** open the Zillow links above to review listings in-browser
-4. The report template is ready — data populates directly into the markdown tables once Zillapi responds
+| Call | ZIP | Error |
+|------|-----|-------|
+| 1 | 44129 | `Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing.` |
+| 2 | 44134 | `MCP server 'zillapi' is unreachable after 9 consecutive failures.` |
+| 3 | 44130 | `MCP server 'zillapi' is unreachable after 9 consecutive failures.` |
 
 ---
 
-## Files Saved
+## Fallback Assessment
 
-| File | Path |
-|------|------|
-| This report | `/opt/data/outputs/2026-09-14/parma-listings-under-190k/parma-listings.md` |
-| Status file | `/opt/data/parma-pull-status.txt` |
-| Quick-ref stub | `/opt/data/parma-latest-listings.md` |
+Per `real-estate-submarket-screening` skill instructions, all web-based listing sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) aggressively block automated access with PerimeterX/Cloudflare captchas. No web scraping fallback was attempted — it would fail identically.
 
-*No listings were fabricated. All rows above reflect only real tool output.*
+---
+
+## Manual Browser Links
+
+Open these in a browser to review listings directly:
+
+### 44129 (Parma West)
+```
+https://www.zillow.com/homes/44129_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44129","mapBounds":{"west":-81.78,"east":-81.68,"south":41.37,"north":41.42},"filterState":{"price":{"max":190000}},"isListVisible":true}
+```
+
+### 44134 (Parma)
+```
+https://www.zillow.com/homes/44134_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44134","mapBounds":{"west":-81.72,"east":-81.65,"south":41.35,"north":41.40},"filterState":{"price":{"max":190000}},"isListVisible":true}
+```
+
+### 44130 (Parma / Middleburg Hts)
+```
+https://www.zillow.com/homes/44130_rb/?searchQueryState={"pagination":{},"usersSearchTerm":"44130","mapBounds":{"west":-81.80,"east":-81.73,"south":41.35,"north":41.41},"filterState":{"price":{"max":190000}},"isListVisible":true}
+```
+
+---
+
+## Resolution
+
+- **Status file saved:** `/opt/data/parma-pull-status.txt`
+- **Next action:** Retry when Zillapi credits refresh (billing: https://zillapi.com/app/billing)
+- **No listings were fabricated.** All tables are empty pending a successful pull.
