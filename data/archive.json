@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-09-14T01:26:05.268171+00:00",
+  "generated_at": "2026-09-14T01:42:03.655062+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 59,
+  "session_count": 60,
   "sessions": [
+    {
+      "id": "2026-09-14/parma-listings-under-190k",
+      "date": "2026-09-14",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-14T01:41:21.553232",
+      "file_count": 0,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-14/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-13/parma-listings-under-190k",
       "date": "2026-09-13",
