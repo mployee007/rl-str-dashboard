@@ -1,50 +1,45 @@
-# Parma West Listings Under $190K — Pull Status
+# Parma Listings Under $190K — Blocked (Zillapi Credits Exhausted)
 
-**Run date:** 2026-09-16  
-**Status:** ❌ FAILED — Zillapi credits exhausted / MCP server unreachable
+**Date:** 2026-09-16  
+**Status:** ❌ No data — Zillapi credits exhausted  
+**Target ZIPs:** 44129 (Parma West), 44134 (Parma SE), 44130 (Parma SW)
 
 ---
 
-## Blocker Summary
+## What happened
 
-| Source | Action | Result |
+| Source | ZIP | Result |
 |---|---|---|
-| **Zillapi MCP** (primary) | `search_listings` for 44129, 44134, 44130 | Out of credits + MCP server unreachable (92 consecutive failures) |
-| **Zillow.com** (web) | Not attempted | Per skill: blocked by PerimeterX/Cloudflare captchas — known failure path |
-| **Redfin** (web) | Not attempted | Per skill: blocked by captchas |
-| **Realtor.com / Trulia / Movoto** | Not attempted | Per skill: all blocked by captchas |
+| Zillapi (MCP) | 44129 | **Out of credits** — top up at https://zillapi.com/app/billing |
+| Zillapi (MCP) | 44134 | Server unreachable (rate-limited after prior failure) |
+| Zillapi (MCP) | 44130 | Server unreachable (rate-limited after prior failure) |
+
+All web-based listing sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) block with captchas from this environment and cannot be used as fallbacks.
 
 ---
 
-## Direct Zillow Search URLs (Manual Fallback)
+## Direct links — open in your browser
 
-Open these in your own browser to view current listings:
+These are the Zillow searches you can run manually right now:
 
-- **44129 (Parma West):**  
-  https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/0-611_mp/
-
-- **44134 (Parma South):**  
-  https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/0-611_mp/
-
-- **44130 (Parma Heights / Middleburg Heights area):**  
-  https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/0-611_mp/
+- **[44129 | ≤$190K](https://www.zillow.com/homes/for_sale/44129/0-190000_price/0-10000_mp/)** — Parma West
+- **[44134 | ≤$190K](https://www.zillow.com/homes/for_sale/44134/0-190000_price/0-10000_mp/)** — Parma SE
+- **[44130 | ≤$190K](https://www.zillow.com/homes/for_sale/44130/0-190000_price/0-10000_mp/)** — Parma SW
 
 ---
 
-## Bounding Boxes Used
-
-| ZIP | West | South | East | North |
-|---|---|---|---|---|
-| 44129 | -81.78 | 41.37 | -81.68 | 41.42 |
-| 44134 | -81.72 | 41.35 | -81.65 | 41.40 |
-| 44130 | -81.80 | 41.35 | -81.73 | 41.41 |
-
----
-
-## Next Steps
+## Next steps
 
 1. Top up Zillapi credits at https://zillapi.com/app/billing
-2. Re-run this pull (same bounding boxes, same $190K cap)
-3. Report will auto-generate tables with investor verdicts per the screening framework
+2. Re-run this cron job or manually trigger: `hermes cron run parma-listings`
+3. When credits are available, the job will pull all three ZIPs, produce the full markdown report with investor verdicts, and update `parma-latest-listings.md`
 
-*No listings were fabricated. All fields are empty pending a successful pull.*
+---
+
+## File inventory
+
+| File | Purpose |
+|---|---|
+| `/opt/data/parma-pull-status.txt` | Blocker status + timestamp |
+| `/opt/data/outputs/2026-09-16/parma-listings-under-190k/parma-listings.md` | This report |
+| `/opt/data/parma-latest-listings.md` | Will be updated when data arrives (currently unchanged) |
