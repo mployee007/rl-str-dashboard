@@ -1,25 +1,53 @@
-# Parma Listings Under $190K — BLOCKED (No Credits)
+# Parma Area Listings Under $190K — Pull Attempt
 
-**Pull timestamp:** 2026-09-16T20:24:38Z  
-**Status:** ❌ Zillapi out of credits / MCP server unreachable
+**Date:** 2026-09-16 23:26 UTC  
+**Status:** ❌ FAILED — Zillapi credits exhausted
 
-## Source Attempted
+---
 
-| Source | Result |
-|--------|--------|
-| Zillapi MCP (search_listings × 3) | Out of credits + server unreachable (94 failures) |
-| Web (Zillow/Redfin/Trulia) | Not attempted — known PerimeterX/Cloudflare blocks |
+## Blocker Summary
 
-## No Listings Available
+| Source | Attempted? | Result |
+|--------|-----------|--------|
+| Zillapi MCP (`mcp_zillapi_search_listings`) | ✅ Yes (3 calls) | **Out of credits** (ZIP 44129); MCP server unreachable (44134, 44130) |
+| Zillow.com (browser) | ⛔ Skipped | Per skill: blocked by PerimeterX/Cloudflare captchas |
+| Redfin | ⛔ Skipped | Per skill: blocked by captchas |
+| Realtor.com | ⛔ Skipped | Per skill: blocked by captchas |
+| Web search | ⛔ Skipped | Per skill: unreliable for live listings |
 
-No fabricated or cached data. Zero listings in this report.
+---
 
-## Manual Fallback
+## Target Search Parameters
 
-Open these in your browser:
+| ZIP | Neighborhood | Bounding Box | Max Price |
+|-----|-------------|-------------|-----------|
+| 44129 | Parma West | -81.78, 41.37, -81.68, 41.42 | $190,000 |
+| 44134 | Parma SE | -81.72, 41.35, -81.65, 41.40 | $190,000 |
+| 44130 | Parma SW / Middleburg Hts | -81.80, 41.35, -81.73, 41.41 | $190,000 |
 
-- **[44129 — Parma West, under $190K](https://www.zillow.com/homes/for_sale/44129_zip/0-190000_price/0-526_mpm/41.418,-81.641,41.357,-81.792_rect/13_zm/)**
-- **[44134 — Parma South, under $190K](https://www.zillow.com/homes/for_sale/44134_zip/0-190000_price/0-526_mpm/41.394,-81.646,41.357,-81.721_rect/13_zm/)**
-- **[44130 — Middleburg Heights, under $190K](https://www.zillow.com/homes/for_sale/44130_zip/0-190000_price/0-526_mpm/41.401,-81.727,41.357,-81.794_rect/13_zm/)**
+---
 
-Re-run when Zillapi credits are available: https://zillapi.com/app/billing
+## Direct Zillow Search URLs
+
+Open these in your browser to view current listings manually:
+
+- **[ZIP 44129 — For Sale ≤$190K](https://www.zillow.com/homes/for_sale/44129/0-190000_price/0-500000_mp/41.420494,-81.679813,41.369944,-81.780163_rect/12_zm/)**  
+- **[ZIP 44134 — For Sale ≤$190K](https://www.zillow.com/homes/for_sale/44134/0-190000_price/0-500000_mp/41.399541,-81.649789,41.349628,-81.720312_rect/12_zm/)**  
+- **[ZIP 44130 — For Sale ≤$190K](https://www.zillow.com/homes/for_sale/44130/0-190000_price/0-500000_mp/41.409674,-81.72993,41.350031,-81.80056_rect/12_zm/)**
+
+---
+
+## Next Steps
+
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing
+2. Re-run this cron job or trigger manually: `hermes cron run parma-submarket-screen`
+3. The pipeline will auto-populate listing tables with investor verdicts (take / negotiate / pass)
+4. Results will land in:
+   - `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/parma-listings.md` (full report)
+   - `/opt/data/parma-latest-listings.md` (quick-reference table)
+
+---
+
+## Context: Why This Pull Matters
+
+This screen targets the sub-$190K band across three core Parma ZIPs — the sweet spot for first-time landlord acquisition in Cuyahoga County's most stable working-class suburbs. When credits are restored, the pipeline extracts: address, price, beds, baths, sqft, zpids with direct Zillow URLs, rent Zestimates, and listing condition notes — all sorted lowest-price-first with explicit investor verdicts.
