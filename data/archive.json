@@ -1,8 +1,43 @@
 {
-  "generated_at": "2026-09-17T16:53:16.879139+00:00",
+  "generated_at": "2026-09-17T17:09:15.261603+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 64,
+  "session_count": 65,
   "sessions": [
+    {
+      "id": "2026-09-17/airbnb-consultant-business-plan",
+      "date": "2026-09-17",
+      "title": "airbnb-consultant-business-plan",
+      "summary": "**Session:** airbnb-consultant-business-plan **Date:** 2026-09-17 **Source:** Discord (Andromeda / #loki) - Comprehensive business plan and SOP for a one-man Airbnb consultant business - User review and feedback",
+      "updated_at": "2026-09-17T17:01:39.985371",
+      "file_count": 6,
+      "export_count": 1,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-17/airbnb-consultant-business-plan",
+      "status": "completed",
+      "standard_previews": {
+        "decisions.md": "# Decisions \u2014 Airbnb Consultant Business Plan\n\n## 2026-09-17\n\n### Decision: Business Model Tiers\n- **Context:** One-man consultant business; needed a service structure that scales from low-touch to high-touch\n- **Options considered:** Flat-fee only, percentage-only, or tiered hybrid\n- **Decision:** Three-tier model \u2014 Tier 1 (flat-fee listing development, $497-997), Tier 2 (10-12% revenue optimization), Tier 3 (15-20% full-service management)\n- **Consequence:** Tier 1 serves as low-risk entry point and funnel into recurring tiers; Tier 3 has the highest $/client but lowest capacity ceiling (8-12 solo)\n\n### Decision: Airbnb-First Customer Acquisition\n- **Context:** User specified Airbnb as the primary acquisition channel\n- **Options considered:** Paid ads, content marketing, referrals, direct Airbnb outreach\n- **Decision:** Direct outreach via Airbnb's messaging platform using a soft 3-message sequence (compliment \u2192 value tease \u2192 audit delivery) \u2014 no hard pitch until value is demonstrated\n- **Consequence:** Free acquisition, high-conversion leads, but volume-limited by Airbnb's messaging rules and manual effort required. 100 outreaches \u2192 2-3 clients.\n\n### Decision: Pricing Psychology\n- **Context:** Need to anchor value and overcome \"what if it doesn't work?\" objection\n- **Decision:** 90-day performance guarantee (20% revenue increase or Month 3 free); month-to-month contracts with 30-day cancellation\n- **Consequence:** Higher close rate, but requires confidence in ability to deliver. Risk is limited to 1 month of unprofitable work per bad-fit client.\n\n### Decision: Solo Capacity Ceiling\n- **Context:** One person, finite hours\n- **Decision:** Ceiling set at 8-12 Tier 3 clients or 15-20 Tier 2 clients. Revenue ceiling ~$75-90K/year before needing to hire.\n- **Consequence:** Clear \"when to hire\" trigger. Phase 2 milestone: first VA at Month 7-8 to handle guest messaging.",
+        "notes.md": "# Notes \u2014 Airbnb Consultant Business Plan\n\n## User Context\n- Hermes Tompkins (Solomon), Chicago IL\n- One-man operation\n- Primary customer acquisition channel: Airbnb platform itself\n- Services: listing management and development for Airbnb hosts\n\n## Key Decisions\n- TBD\n\n## Observations\n- TBD",
+        "run-log.md": "# Run Log \u2014 Airbnb Consultant Business Plan\n\n## 2026-09-17\n\n### ~16:55 UTC \u2014 Session started\n- User requested plan and SOP for one-man Airbnb consultant business\n- Main customer acquisition channel: Airbnb platform",
+        "sources.json": "{\n  \"sources\": [\n    {\n      \"type\": \"domain_knowledge\",\n      \"description\": \"Airbnb hosting best practices, pricing models, and platform mechanics \u2014 drawn from industry knowledge of STR management, co-hosting, and listing optimization\"\n    },\n    {\n      \"type\": \"skill_reference\",\n      \"description\": \"str-arbitrage-analysis skill \u2014 provided context on STR market dynamics, pricing tools (PriceLabs, AirDNA), regulatory landscape, and Airbnb search mechanics\"\n    },\n    {\n      \"type\": \"tool_reference\",\n      \"description\": \"Industry tools referenced: PriceLabs (dynamic pricing), Hospitable (guest messaging), Hostfully (channel manager/guidebooks), AirDNA (market intelligence), Turno (cleaner management), Autohost (guest screening)\"\n    },\n    {\n      \"type\": \"platform_reference\",\n      \"description\": \"Airbnb Co-Host program terms, Superhost requirements, photo/review/search ranking mechanics \u2014 from Airbnb's public host documentation\"\n    }\n  ],\n  \"_note\": \"Web search was unavailable (firecrawl dependency blocked). Plan built from comprehensive domain knowledge and existing skill context.\"\n}",
+        "summary.md": "# Airbnb Consultant Business Plan \u2014 Summary\n\n**Session:** airbnb-consultant-business-plan\n**Date:** 2026-09-17\n**Source:** Discord (Andromeda / #loki)\n\n## What was accomplished\n- Comprehensive business plan and SOP for a one-man Airbnb consultant business\n\n## What's pending\n- User review and feedback"
+      },
+      "files": {
+        "export": [
+          {
+            "name": "airbnb-consultant-business-plan.md",
+            "rel_path": "artifacts/exports/airbnb-consultant-business-plan.md",
+            "size": 40377,
+            "updated_at": "2026-09-17T17:01:23.677390",
+            "previewable": true,
+            "public_href": "public/2026-09-17/airbnb-consultant-business-plan/artifacts/exports/airbnb-consultant-business-plan.md"
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-17/parma-listings-under-190k",
       "date": "2026-09-17",

@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "type": "domain_knowledge",
+      "description": "Airbnb hosting best practices, pricing models, and platform mechanics — drawn from industry knowledge of STR management, co-hosting, and listing optimization"
+    },
+    {
+      "type": "skill_reference",
+      "description": "str-arbitrage-analysis skill — provided context on STR market dynamics, pricing tools (PriceLabs, AirDNA), regulatory landscape, and Airbnb search mechanics"
+    },
+    {
+      "type": "tool_reference",
+      "description": "Industry tools referenced: PriceLabs (dynamic pricing), Hospitable (guest messaging), Hostfully (channel manager/guidebooks), AirDNA (market intelligence), Turno (cleaner management), Autohost (guest screening)"
+    },
+    {
+      "type": "platform_reference",
+      "description": "Airbnb Co-Host program terms, Superhost requirements, photo/review/search ranking mechanics — from Airbnb's public host documentation"
+    }
+  ],
+  "_note": "Web search was unavailable (firecrawl dependency blocked). Plan built from comprehensive domain knowledge and existing skill context."
+}
