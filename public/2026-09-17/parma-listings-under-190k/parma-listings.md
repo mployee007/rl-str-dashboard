@@ -1,64 +1,40 @@
-# Parma-Area Listings Under $190K — Status Report
+# Parma West Area — Listings Under $190K
 
-**Date:** 2026-09-17  
-**Status:** ❌ BLOCKED — Zillapi credits exhausted  
+**Pull Date:** 2026-09-17  
+**Status:** ❌ BLOCKED — Zillapi credits exhausted
 
----
+## What Happened
 
-## Blocker Summary
+Three parallel Zillapi `search_listings` calls were dispatched for ZIPs 44129, 44134, and 44130 (max price $190K). All three failed:
 
-Zillapi returned "Out of credits for this cycle" on the first call (ZIP 44129), and the MCP server became unreachable for subsequent calls. No live listing data could be retrieved.
+| ZIP | Bounding Box | Error |
+|-----|-------------|-------|
+| 44129 (Parma West) | -81.78,41.37,-81.68,41.42 | **Out of credits** for this cycle |
+| 44134 (Parma Central) | -81.72,41.35,-81.65,41.40 | MCP server unreachable (cascading from credit exhaustion) |
+| 44130 (Parma Heights) | -81.80,41.35,-81.73,41.41 | MCP server unreachable (cascading from credit exhaustion) |
 
-### Sources Attempted
+**No listings were retrieved. No data was fabricated.** The status file is at `/opt/data/parma-pull-status.txt`.
 
-| Source | ZIP(s) | Result |
-|--------|--------|--------|
-| `mcp_zillapi_search_listings` | 44129 | "Out of credits for this cycle" |
-| `mcp_zillapi_search_listings` | 44134 | MCP server unreachable |
-| `mcp_zillapi_search_listings` | 44130 | MCP server unreachable |
-| `web_search` (Firecrawl) | all | Lazy install disabled |
-| Zillow.com / Redfin / Realtor.com / Homes.com | all | Blocked by captchas (known pattern — not attempted) |
+## Direct Zillow Search Links (Open in Your Browser)
 
----
+These pre-filtered URLs show for-sale single-family homes / condos / townhomes under $190K in each ZIP. Open each in your own browser:
 
-## Direct Zillow Search Links (Open in Browser)
-
-Until Zillapi credits refresh, use these direct Zillow searches to manually review listings:
-
-- **[44129 — Parma West](https://www.zillow.com/homes/for_sale/44129_rb/?price_max=190000)** — houses under $190K
-- **[44134 — Parma South](https://www.zillow.com/homes/for_sale/44134_rb/?price_max=190000)** — houses under $190K
-- **[44130 — Middleburg Heights](https://www.zillow.com/homes/for_sale/44130_rb/?price_max=190000)** — houses under $190K
-
----
-
-## Target Bounding Boxes (for reference)
-
-| ZIP | Bbox (W,S,E,N) | Neighborhood |
-|-----|-----------------|--------------|
-| 44129 | -81.78, 41.37, -81.68, 41.42 | Parma West |
-| 44134 | -81.72, 41.35, -81.65, 41.40 | Parma South |
-| 44130 | -81.80, 41.35, -81.73, 41.41 | Middleburg Heights |
-
----
-
-## Background: Why These ZIPs
-
-These three ZIPs form the Parma/Middleburg Heights corridor — a dense, working-class Cleveland suburb with a high concentration of 1,200–1,600 sqft 3/1 and 3/2 bungalows and Cape Cods built 1940–1965. The $190K price cap targets:
-- **Stabilized SFRs** in 44129/44130 at $150K–$190K
-- **Value-add candidates** in 44134 at $120K–$170K
-- **Potential duplexes** for small multifamily plays
-
-Median rents in these ZIPs typically run $1,100–$1,400/month for a 3-bedroom, yielding 7–9% gross at the right basis.
-
----
+| ZIP | Neighborhood | Direct Zillow Link |
+|-----|-------------|-------------------|
+| **44129** | Parma West | [Zillow: 44129 ≤$190K](https://www.zillow.com/parma-oh-44129/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22south%22%3A41.37%2C%22east%22%3A-81.68%2C%22north%22%3A41.42%7D%2C%22mapZoom%22%3A13%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22max%22%3A%7B%22value%22%3A190000%7D%2C%22mp%22%3A%7B%22min%22%3A0%2C%22max%22%3A190000%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
+| **44134** | Parma Central | [Zillow: 44134 ≤$190K](https://www.zillow.com/parma-oh-44134/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22south%22%3A41.35%2C%22east%22%3A-81.65%2C%22north%22%3A41.40%7D%2C%22mapZoom%22%3A13%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22max%22%3A%7B%22value%22%3A190000%7D%2C%22mp%22%3A%7B%22min%22%3A0%2C%22max%22%3A190000%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
+| **44130** | Parma Heights | [Zillow: 44130 ≤$190K](https://www.zillow.com/parma-oh-44130/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22south%22%3A41.35%2C%22east%22%3A-81.73%2C%22north%22%3A41.41%7D%2C%22mapZoom%22%3A13%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22max%22%3A%7B%22value%22%3A190000%7D%2C%22mp%22%3A%7B%22min%22%3A0%2C%22max%22%3A190000%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
 
 ## Next Steps
 
-1. **Top up Zillapi credits** at [zillapi.com/app/billing](https://zillapi.com/app/billing)
-2. **Re-run this pull** when credits are available
-3. **Check for saved JSON** from prior Cleveland pulls in `/opt/data/outputs/` for cached data
+1. **Now:** Open the direct Zillow links above in a browser — they will show current live listings.
+2. **When credits refresh:** Re-run this cron job (it will auto-pull from Zillapi and build the markdown tables with Zestimates, rent estimates, and investor verdicts).
+3. **Top-up:** Visit https://zillapi.com/app/billing to add credits if you want to pull immediately.
 
----
+## Files Written
 
-*Status file: `/opt/data/parma-pull-status.txt`*  
-*Report: `/opt/data/outputs/2026-09-17/parma-listings-under-190k/parma-listings.md`*
+| File | Content |
+|------|---------|
+| `/opt/data/parma-pull-status.txt` | Error log with timestamps |
+| `/opt/data/outputs/2026-09-17/parma-listings-under-190k/parma-listings.md` | This report |
+| `/opt/data/parma-latest-listings.md` | *Not written* (no data to populate) |
