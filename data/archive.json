@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-17T20:30:17.349945+00:00",
+  "generated_at": "2026-09-17T20:46:15.750843+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 65,
   "sessions": [
+    {
+      "id": "2026-09-17/parma-listings-under-190k",
+      "date": "2026-09-17",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-17T20:39:02.702981",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-17/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 2723,
+            "updated_at": "2026-09-17T20:39:02.702981",
+            "previewable": true,
+            "public_href": "public/2026-09-17/parma-listings-under-190k/parma-listings.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-17/airbnb-consultant-business-plan",
       "date": "2026-09-17",
@@ -36,35 +65,6 @@
         "csv": [],
         "image": [],
         "other": []
-      }
-    },
-    {
-      "id": "2026-09-17/parma-listings-under-190k",
-      "date": "2026-09-17",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-17T14:36:07.116504",
-      "file_count": 1,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-17/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 2459,
-            "updated_at": "2026-09-17T14:36:07.116504",
-            "previewable": true,
-            "public_href": "public/2026-09-17/parma-listings-under-190k/parma-listings.md"
-          }
-        ]
       }
     },
     {
