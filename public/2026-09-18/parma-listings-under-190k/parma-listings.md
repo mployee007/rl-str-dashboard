@@ -1,30 +1,36 @@
-# Parma Area Listings Under $190K — Pull Failed
+# Parma Listings — Under $190K
 
 **Date:** 2026-09-18  
-**Status:** ❌ BLOCKED — Zillapi credits exhausted
+**Status:** ❌ BLOCKED — Zillapi out of credits  
+**ZIPs:** 44129 (Parma West), 44134 (Parma), 44130 (Parma/Middleburg Hts)
 
-## What was attempted
+---
 
-| ZIP | Bounding Box | Status | Error |
-|-----|-------------|--------|-------|
-| 44129 (Parma West) | -81.78,41.37,-81.68,41.42 | ❌ | Out of credits for this cycle |
-| 44134 (Parma South) | -81.72,41.35,-81.65,41.40 | ❌ | MCP server unreachable (107 failures) |
-| 44130 (Parma Heights) | -81.80,41.35,-81.73,41.41 | ❌ | MCP server unreachable (107 failures) |
+## Blocker Summary
 
-## Why no web fallback
+| Source | Attempted | Result |
+|---|---|---|
+| Zillapi MCP (`mcp_zillapi_search_listings`) — 44129 | ✅ Called | Out of credits |
+| Zillapi MCP (`mcp_zillapi_search_listings`) — 44134 | ✅ Called | Server unreachable |
+| Zillapi MCP (`mcp_zillapi_search_listings`) — 44130 | ✅ Called | Server unreachable |
+| Zillow.com / Redfin / Trulia / Realtor.com | ⛔ Skipped | Known captcha blocks (PerimiterX/Cloudflare) — per skill directive |
 
-Per the real-estate-submarket-screening skill: all major listing sites (Zillow.com, Redfin, Trulia, Realtor.com, Homes.com, Movoto) block automated access with PerimeterX/Cloudflare captchas. `web_search` and `web_extract` will not return usable listing data. Attempting them wastes turns without producing results.
+---
 
-## What you can do right now
+## Manual Fallback — Direct Zillow Search URLs
 
-Open these direct Zillow search URLs in your browser:
+While Zillapi credits are exhausted, these direct Zillow URLs can be opened in a browser to view current listings:
 
-- **44129** — [Zillow: 44129 under $190K](https://www.zillow.com/parma-oh-44129/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22south%22%3A41.37%2C%22east%22%3A-81.68%2C%22north%22%3A41.42%7D%2C%22mapZoom%22%3A13%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%7D%2C%22isListVisible%22%3Atrue%7D)
+- **44129 (Parma West):** https://www.zillow.com/homes/for_sale/44129_house_type/0-190000_price/0-189_mp/
+- **44134 (Parma):** https://www.zillow.com/homes/for_sale/44134_house_type/0-190000_price/0-189_mp/
+- **44130 (Parma / Middleburg Hts):** https://www.zillow.com/homes/for_sale/44130_house_type/0-190000_price/0-189_mp/
 
-- **44134** — [Zillow: 44134 under $190K](https://www.zillow.com/parma-oh-44134/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22south%22%3A41.35%2C%22east%22%3A-81.65%2C%22north%22%3A41.40%7D%2C%22mapZoom%22%3A13%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%7D%2C%22isListVisible%22%3Atrue%7D)
+---
 
-- **44130** — [Zillow: 44130 under $190K](https://www.zillow.com/parma-oh-44130/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22south%22%3A41.35%2C%22east%22%3A-81.73%2C%22north%22%3A41.41%7D%2C%22mapZoom%22%3A13%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%7D%2C%22isListVisible%22%3Atrue%7D)
+## Next Steps
 
-## Next step
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing
+2. Pipeline will retry on **next scheduled cron run**
+3. Raw data will be saved as `cleveland_zip_stats.json` and `cleveland_clean.json` when pull succeeds
 
-Resume when Zillapi credits refresh: top up at https://zillapi.com/app/billing, then re-run this job. Raw JSON dumps will be saved alongside this report so follow-up queries (e.g., "show me properties under $190K in ZIP 44129") can be answered from cache.
+Status file: `/opt/data/parma-pull-status.txt`
