@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-18",
+  "sources": [
+    {
+      "bank": "Ally Bank",
+      "url": "https://www.ally.com/bank/online-savings-account/",
+      "rate": "3.00% APY",
+      "verified": true,
+      "method": "curl HTML scrape",
+      "effective_date": "2026-09-16"
+    },
+    {
+      "bank": "Capital One 360 Performance Savings",
+      "url": "https://www.capitalone.com/bank/savings-accounts/online-performance-savings-account/",
+      "rate": "3.00% APY",
+      "verified": true,
+      "method": "browser navigate + snapshot",
+      "effective_date": "2026-09-18",
+      "note": "Discover savings accounts absorbed into Capital One 360"
+    },
+    {
+      "bank": "American Express High Yield Savings",
+      "url": "https://www.americanexpress.com/en-us/banking/online-savings/high-yield-savings-account/",
+      "rate": "3.00% APY",
+      "verified": true,
+      "method": "browser navigate + snapshot"
+    },
+    {
+      "bank": "SoFi Savings",
+      "url": "https://www.sofi.com/banking/savings-account/",
+      "rate": "3.10% APY",
+      "verified": true,
+      "method": "curl HTML scrape"
+    },
+    {
+      "bank": "CIT Bank Platinum Savings",
+      "url": "https://www.cit.com/cit-bank/bank/savings/platinum-savings-account/",
+      "rate": "3.75% APY",
+      "verified": true,
+      "method": "curl HTML scrape"
+    },
+    {
+      "bank": "Betterment Cash Reserve",
+      "url": "https://www.betterment.com/cash-reserve/",
+      "rate": "3.25% APY",
+      "verified": true,
+      "method": "curl HTML scrape"
+    },
+    {
+      "bank": "Wealthfront Cash Account",
+      "url": "https://www.wealthfront.com/cash",
+      "rate": "3.55% APY",
+      "verified": true,
+      "method": "curl HTML scrape"
+    },
+    {
+      "bank": "Marcus by Goldman Sachs",
+      "url": "https://www.marcus.com/us/en/savings/high-yield-savings",
+      "rate": "blocked",
+      "verified": false,
+      "method": "Cloudflare challenge blocked both curl and browser"
+    },
+    {
+      "bank": "Synchrony High Yield Savings",
+      "url": "https://www.synchrony.com/banking/high-yield-savings/",
+      "rate": "blocked",
+      "verified": false,
+      "method": "Access Denied (bot detection) on both curl and browser"
+    }
+  ]
+}
