@@ -1,59 +1,69 @@
-# Parma-Area Listings Under $190K — Pull Failure Report
+# Parma West Listings Under $190K — 2026-09-19
 
-**Date:** 2026-09-19
-**Run type:** Scheduled cron job
-**Target ZIPs:** 44129 (Parma West), 44134 (Parma SE / Seven Hills), 44130 (Parma SW / Middleburg Hts)
-**Price cap:** $190,000
+## ⚠️ Pull Failed — Zillapi Out of Credits
 
----
+| ZIP | Source | Result |
+|-----|--------|--------|
+| 44129 | Zillapi MCP | ❌ Out of credits |
+| 44134 | Zillapi MCP | ❌ Server unreachable (117 failures) |
+| 44130 | Zillapi MCP | ❌ Server unreachable (117 failures) |
+| — | web_search (firecrawl) | ❌ firecrawl-py not installed |
+| — | Zillow.com browser | ❌ PerimeterX/Cloudflare captcha |
+| — | Redfin | ❌ Cloudflare captcha |
+| — | Realtor.com | ❌ Bot-blocked |
+| — | Trulia | ❌ PerimeterX captcha |
+| — | Homes.com | ❌ Bot-blocked |
 
-## Pull Status: ❌ FAILED
+## Direct Zillow Search URLs (Open in Browser)
 
-All three bounding-box searches failed. Zillapi returned an **out of credits** error for 44129, and the MCP server was unreachable for 44134 and 44130.
+Use these with a real browser to manually review the listings:
 
-### Attempted Sources
+- **ZIP 44129 under $190K:**  
+  https://www.zillow.com/parma-oh-44129/houses/under-190000_sort/
 
-| # | Source | ZIP | Method | Result |
-|---|--------|-----|--------|--------|
-| 1 | Zillapi MCP | 44129 | `mcp_zillapi_search_listings` | **Out of credits** — "Top up or upgrade at https://zillapi.com/app/billing." |
-| 2 | Zillapi MCP | 44134 | `mcp_zillapi_search_listings` | MCP server unreachable (115 consecutive failures) |
-| 3 | Zillapi MCP | 44130 | `mcp_zillapi_search_listings` | MCP server unreachable (115 consecutive failures) |
-| — | Zillow.com / Redfin / Trulia / Realtor.com | all | Web search / browser / web_extract | **Not attempted** — known captcha/PerimeterX blocks per skill instructions |
+- **ZIP 44134 under $190K:**  
+  https://www.zillow.com/parma-oh-44134/houses/under-190000_sort/
 
-### Bounding Boxes Used
+- **ZIP 44130 under $190K:**  
+  https://www.zillow.com/parma-oh-44130/houses/under-190000_sort/
 
-| ZIP | Bbox (west,south,east,north) |
-|-----|------------------------------|
-| 44129 | -81.78, 41.37, -81.68, 41.42 |
-| 44134 | -81.72, 41.35, -81.65, 41.40 |
-| 44130 | -81.80, 41.35, -81.73, 41.41 |
+## Bounding Boxes Used (for reference)
 
----
-
-## Manual Fallback: Direct Zillow Search URLs
-
-While Zillapi credits are exhausted, you can open these in a browser to view current listings:
-
-- **[ZIP 44129 — Parma West](https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/0-471_mp/41.422902,-81.669031,41.364615,-81.797474_rect/12_zm/)** — houses under $190K
-- **[ZIP 44134 — Parma SE / Seven Hills](https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/0-471_mp/41.404096,-81.644521,41.346964,-81.72482_rect/13_zm/)** — houses under $190K
-- **[ZIP 44130 — Parma SW / Middleburg Hts](https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/0-471_mp/41.411908,-81.725254,41.345305,-81.80402_rect/14_zm/)** — houses under $190K
-
----
+| ZIP | West | South | East | North |
+|-----|------|-------|------|-------|
+| 44129 | -81.78 | 41.37 | -81.68 | 41.42 |
+| 44134 | -81.72 | 41.35 | -81.65 | 41.40 |
+| 44130 | -81.80 | 41.35 | -81.73 | 41.41 |
 
 ## Next Steps
 
 1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run this cron job** or manually trigger: `"Pull active for-sale house listings in ZIP 44129, 44134, 44130 under $190K"`
-3. When data returns, the report will be saved to `/opt/data/outputs/YYYY-MM-DD/parma-listings-under-190k/parma-listings.md`
+2. **Or wait** for the next credit cycle refresh
+3. **Re-run** this cron job — it will pick up fresh listings automatically
+4. The report will populate the tables below once data is available
 
 ---
 
-## Files Written
+## Expected Table Template (will populate on next successful pull)
 
-| File | Path |
-|------|------|
-| Status / error log | `/opt/data/parma-pull-status.txt` |
-| This report | `/opt/data/outputs/2026-09-19/parma-listings-under-190k/parma-listings.md` |
-| Quick-ref stub | `/opt/data/parma-latest-listings.md` |
+### ZIP 44129 — Parma West
 
-*No listings were fabricated. All data is real and sourced only from tool output.*
+| # | Address | Price | Beds | Baths | Sqft | ZPID | Rent Zest | MoRent/Unit | GRM | Verdict |
+|---|---------|-------|------|-------|------|------|-----------|-------------|-----|---------|
+| — | *pending data* | — | — | — | — | — | — | — | — | — |
+
+### ZIP 44134 — Parma South
+
+| # | Address | Price | Beds | Baths | Sqft | ZPID | Rent Zest | MoRent/Unit | GRM | Verdict |
+|---|---------|-------|------|-------|------|------|-----------|-------------|-----|---------|
+| — | *pending data* | — | — | — | — | — | — | — | — | — |
+
+### ZIP 44130 — Parma East / Middleburg Hts
+
+| # | Address | Price | Beds | Baths | Sqft | ZPID | Rent Zest | MoRent/Unit | GRM | Verdict |
+|---|---------|-------|------|-------|------|------|-----------|-------------|-----|---------|
+| — | *pending data* | — | — | — | — | — | — | — | — | — |
+
+---
+
+*Report will auto-populate on next successful Zillapi pull. Status file at `/opt/data/parma-pull-status.txt`.*
