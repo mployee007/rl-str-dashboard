@@ -1,51 +1,40 @@
 # Parma Listings Under $190K — Pull Report
-**Date:** 2026-09-19  
-**Status:** ❌ FAILED — Zillapi out of credits
+
+**Date:** September 19, 2026  
+**Status:** ❌ BLOCKED — Zillapi out of credits + MCP server unreachable  
+**ZIPs targeted:** 44129, 44134, 44130  
+**Price cap:** $190,000
 
 ---
 
-## Blocker Summary
+## Source Attempts
 
-| Source | Status | Detail |
-|---|---|---|
-| Zillapi MCP (44129) | ❌ Out of credits | "Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing." |
-| Zillapi MCP (44134) | ❌ Server unreachable | MCP server 'zillapi' unreachable after 112 consecutive failures |
-| Zillapi MCP (44130) | ❌ Server unreachable | MCP server 'zillapi' unreachable after 112 consecutive failures |
-| Zillow.com | ⛔ Blocked (captcha) | PerimeterX/Cloudflare — known blocker per skill docs |
-| Redfin.com | ⛔ Blocked (captcha) | Same captcha wall — known blocker |
-| Realtor.com | ⛔ Blocked (captcha) | Same captcha wall — known blocker |
+| # | Source | ZIP(s) | Result |
+|---|--------|--------|--------|
+| 1 | Zillapi MCP `search_listings` | 44129 | **Out of credits** — "Top up or upgrade at https://zillapi.com/app/billing" |
+| 2 | Zillapi MCP `search_listings` | 44134 | **MCP server unreachable** — 114 consecutive failures, retry in ~58s |
+| 3 | Zillapi MCP `search_listings` | 44130 | **MCP server unreachable** — 114 consecutive failures, retry in ~58s |
 
----
-
-## No Listings Retrieved
-
-Zero listings were pulled for any ZIP. **No data was fabricated.**
+No web fallback attempted per skill guidance (Zillow/Redfin/Trulia all block with captchas).
 
 ---
 
-## Direct Zillow Search URLs (open in browser)
+## Manual Fallback — Direct Zillow Links
 
-These are the equivalent searches on Zillow — open manually while Zillapi recovers:
+Open these in a browser to manually screen while credits are down:
 
-- **44129:** `https://www.zillow.com/homes/for_sale/44129_zip/1-_beds/0-190000_price/0-1000000_mp/pricea_sort/`
-- **44134:** `https://www.zillow.com/homes/for_sale/44134_zip/1-_beds/0-190000_price/0-1000000_mp/pricea_sort/`
-- **44130:** `https://www.zillow.com/homes/for_sale/44130_zip/1-_beds/0-190000_price/0-1000000_mp/pricea_sort/`
-
----
-
-## Target Parameters (for reference)
-
-| ZIP | Neighborhood | Bounding Box | Beds Min | Price Cap |
-|---|---|---|---|---|
-| 44129 | Parma West | `-81.78,41.37,-81.68,41.42` | 1+ | $190,000 |
-| 44134 | Parma East | `-81.72,41.35,-81.65,41.40` | 1+ | $190,000 |
-| 44130 | Parma South | `-81.80,41.35,-81.73,41.41` | 1+ | $190,000 |
+| ZIP | Neighborhood | Zillow Search |
+|-----|-------------|---------------|
+| 44129 | Parma West | [Zillow →](https://www.zillow.com/homes/for_sale/44129_house_type/190000-_price/0_singlestory/) |
+| 44134 | Parma South / Seven Hills | [Zillow →](https://www.zillow.com/homes/for_sale/44134_house_type/190000-_price/0_singlestory/) |
+| 44130 | Parma Heights / Middleburg | [Zillow →](https://www.zillow.com/homes/for_sale/44130_house_type/190000-_price/0_singlestory/) |
 
 ---
 
-## Next Steps
+## Required to Resume
 
-1. Wait for Zillapi credit refresh (top up at https://zillapi.com/app/billing)
-2. Verify MCP server is reachable
-3. Re-run this pull — the script is idempotent
-4. Status file at `/opt/data/parma-pull-status.txt` will be updated on next run
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing
+2. **Verify MCP server** — the `zillapi` MCP server has 114+ consecutive failures and may need a restart or reconnection
+3. **Re-run this cron job** once both are green
+
+Status file saved at: `/opt/data/parma-pull-status.txt`
