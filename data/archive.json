@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T14:50:22.596042+00:00",
+  "generated_at": "2026-09-19T15:06:21.254113+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 68,
   "sessions": [
@@ -8,16 +8,27 @@
       "date": "2026-09-19",
       "title": "parma-listings-under-190k",
       "summary": "",
-      "updated_at": "2026-09-19T12:02:23.521848",
-      "file_count": 1,
-      "export_count": 0,
+      "updated_at": "2026-09-19T15:05:22.667601",
+      "file_count": 3,
+      "export_count": 1,
       "csv_count": 0,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-09-19/parma-listings-under-190k",
       "status": "completed",
-      "standard_previews": {},
+      "standard_previews": {
+        "run-log.md": "# Run Log \u2014 Parma Listings Under $190K\n\n## 2026-09-19\n\n### ~00:00 UTC \u2014 Pull initiated\n- Created output directory structure: `outputs/2026-09-19/parma-listings-under-190k/`\n- Called `mcp_zillapi_search_listings` for ZIPs 44129, 44134, 44130 in parallel\n- All three Zillapi calls failed\n\n### ~00:00 UTC \u2014 Fallback attempted\n- Called `web_search` (firecrawl backend) for all three ZIPs\n- All three failed: `firecrawl-py` not installed, lazy installs disabled\n\n### ~00:00 UTC \u2014 Blocker saved\n- Wrote `/opt/data/parma-pull-status.txt` with full error table and direct Zillow links\n- Wrote `/opt/data/parma-latest-listings.md` with status summary\n- Wrote blocker report to `outputs/2026-09-19/parma-listings-under-190k/artifacts/exports/`\n- **Status: BLOCKED \u2014 Zillapi out of credits. Will retry next cycle.**"
+      },
       "files": {
-        "export": [],
+        "export": [
+          {
+            "name": "parma-listings-blocker-report.md",
+            "rel_path": "artifacts/exports/parma-listings-blocker-report.md",
+            "size": 2151,
+            "updated_at": "2026-09-19T15:05:22.667601",
+            "previewable": true,
+            "public_href": "public/2026-09-19/parma-listings-under-190k/artifacts/exports/parma-listings-blocker-report.md"
+          }
+        ],
         "csv": [],
         "image": [],
         "other": [
