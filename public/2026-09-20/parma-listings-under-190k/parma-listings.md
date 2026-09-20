@@ -1,40 +1,37 @@
-# Parma Listings Under $190K — BLOCKED
+# Parma West Area — Active Listings Under $190K
 
-**Pull date:** 2026-09-20 (cron)
-**Status:** ❌ Zillapi credits exhausted. No live listings available.
-
-This report will populate automatically when Zillapi credits refresh.
-
----
-
-## Source Status
-
-| Source | Result |
-|---|---|
-| Zillapi MCP | Out of credits |
-| Firecrawl web search | Not installed |
-| Browser (Zillow/Redfin) | Blocked by captcha |
+**Pull date:** Sunday, September 20, 2026
+**ZIPs:** 44129 (Parma West), 44134, 44130
+**Max Price:** $190,000
 
 ---
 
-## Manual Lookup Links
+## ⛔ STATUS: BLOCKED — Zillapi Out of Credits
 
-| ZIP | Zillow Direct Link |
-|---|---|
-| 44129 (Parma West) | [zillow.com/parma-oh-44129/houses/under-190000_sort/](https://www.zillow.com/parma-oh-44129/houses/under-190000_sort/) |
-| 44134 (Parma Central) | [zillow.com/parma-oh-44134/houses/under-190000_sort/](https://www.zillow.com/parma-oh-44134/houses/under-190000_sort/) |
-| 44130 (Parma South) | [zillow.com/parma-oh-44130/houses/under-190000_sort/](https://www.zillow.com/parma-oh-44130/houses/under-190000_sort/) |
+All three Zillapi `search_listings` calls failed. The account has exhausted its credit cycle.
 
----
+| Source | ZIP | Result |
+|--------|-----|--------|
+| Zillapi MCP | 44129 | ❌ Out of credits |
+| Zillapi MCP | 44134 | ❌ MCP server unreachable (125 failures) |
+| Zillapi MCP | 44130 | ❌ MCP server unreachable (125 failures) |
 
-## Target Boxes (for next automated pull)
-
-- **44129:** `-81.78,41.37,-81.68,41.42`
-- **44134:** `-81.72,41.35,-81.65,41.40`
-- **44130:** `-81.80,41.35,-81.73,41.41`
-
-All with `beds_min=1`, `price_max=190000`, `status=for_sale`.
+**Web fallback assessment:** Not attempted. Zillow.com, Redfin, Trulia, Realtor.com, and Homes.com all block programmatic access with PerimeterX/Cloudflare captchas. `web_search` and `web_extract` fail consistently on listing data for the same reason. Per the `real-estate-submarket-screening` skill, looping on web alternatives only wastes turns.
 
 ---
 
-*Next automated attempt on next cron cycle if credits replenished. Top up at https://zillapi.com/app/billing.*
+## Manual Search Links
+
+The user can open these in a browser to screen directly:
+
+- **[ZIP 44129 — Zillow: Homes Under $190K](https://www.zillow.com/parma-oh-44129/houses/0-190000_att/)**
+- **[ZIP 44134 — Zillow: Homes Under $190K](https://www.zillow.com/parma-oh-44134/houses/0-190000_att/)**
+- **[ZIP 44130 — Zillow: Homes Under $190K](https://www.zillow.com/parma-oh-44130/houses/0-190000_att/)**
+
+---
+
+## Next Steps
+
+1. Top up Zillapi credits at https://zillapi.com/app/billing
+2. Re-run this job (same instruction) — it will pull all three ZIPs, compute medians, save raw JSON, and produce investor verdicts
+3. I'll save `parma_zip_stats.json` and the full listing dump for follow-up queries
