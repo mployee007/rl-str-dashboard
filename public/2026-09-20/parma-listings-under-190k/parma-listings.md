@@ -1,81 +1,42 @@
-# Parma West Submarket: Live Listing Screen (Under $190K)
+# Parma West Listings — Sub-$190K Screen
 
-**Generated:** 2026-09-20 (cron run, attempt #2)  
-**Status:** ❌ Zillapi credits exhausted — no individual listings available  
-**Prior pull:** ZIP-level aggregates from `cleveland_zip_stats.json`  
-**Last successful listing-level pull:** before 2026-09-19
-
----
-
-## Attempt Log (This Run)
-
-| # | Source | Details | Result |
-|---|--------|---------|--------|
-| 1 | Zillapi MCP — 44129 bbox | `-81.78,41.37,-81.68,41.42`, `beds_min=2`, `price_max=190000` | ❌ "Out of credits for this cycle" |
-| 2 | Zillapi MCP — 44134 bbox | `-81.72,41.35,-81.65,41.40`, `beds_min=2`, `price_max=190000` | ❌ MCP server unreachable (122 failures) |
-| 3 | Zillapi MCP — 44130 bbox | `-81.80,41.35,-81.73,41.41`, `beds_min=2`, `price_max=190000` | ❌ MCP server unreachable (122 failures) |
+**Pull date:** 2026-09-20  
+**Status:** ❌ FAILED — Zillapi credits exhausted  
+**Target ZIPs:** 44129 (Parma West), 44134, 44130  
+**Price cap:** $190,000
 
 ---
 
-## ZIP-Level Aggregates (Fallback — from prior successful crawl)
+## Blocker
 
-| ZIP | Area | Active Sales | Median Sale | Median Rent | Gross Yield | P/R Ratio | Verdict |
-|-----|------|-------------|-------------|-------------|-------------|-----------|---------|
-| **44129** | Parma (W) | 16 | $190,000 | $1,950 | 12.32% | 8.1× | **Take selectively** |
-| **44134** | Parma (E) / Brooklyn Hts | 44 | $200,000 | $1,675 | 10.05% | 10.0× | **Negotiate** |
-| **44130** | Parma (mid) | 7 | $199,900 | $1,575 | 9.45% | 10.6× | **Pass** |
+| Source | Result |
+|---|---|
+| Zillapi (`mcp_zillapi_search_listings`) | **Out of credits** — "Top up or upgrade at https://zillapi.com/app/billing" |
+| Zillapi retry 1 (44134) | MCP server unreachable |
+| Zillapi retry 2 (44130) | MCP server unreachable |
 
-⚠️ Median sale prices for 44134 and 44130 sit above the $190K cap, meaning sub-$190K inventory in those ZIPs will be below-median (older, smaller, or rougher condition).
-
----
-
-## Direct Zillow Search URLs (Open in Browser)
-
-| ZIP | Zillow Link |
-|-----|------------|
-| 44129 | https://www.zillow.com/homes/for_sale/44129_rb/0-190000_price/ |
-| 44134 | https://www.zillow.com/homes/for_sale/44134_rb/0-190000_price/ |
-| 44130 | https://www.zillow.com/homes/for_sale/44130_rb/0-190000_price/ |
+No listings were retrieved. No fabricated data follows.
 
 ---
 
-## Buy Box (First Pass — Using 44129 Anchors)
+## Direct Zillow URLs (open in your browser)
 
-| Property Type | Target Basis | Stretch Basis | Target Rent (mo) | Gross Yield | Rehab Tolerance | Avoid |
-|--------------|-------------|---------------|-------------------|-------------|-----------------|-------|
-| 2-BR SFR | ≤ $160K | $175K | $1,500–$1,700 | 11.3%–12.8% | ≤ $20K | Foundation issues, knob & tube |
-| 3-BR SFR | ≤ $175K | $190K | $1,700–$2,000 | 11.7%–13.7% | ≤ $25K | Roof/HVAC/plumbing stack replacement |
-| Duplex | ≤ $170K/unit | $190K/unit | $1,200–$1,400/unit | 8.5%–9.9%/unit | ≤ $15K/unit | Shared utilities, unpermitted 2nd unit |
-
----
-
-## Recommendations (Aggregate-Level)
-
-| Category | Pick | Rationale |
-|----------|------|-----------|
-| **Best yield** | 44129 (Parma West) | 12.3% gross yield at 8.1× P/R — strongest in Parma cluster |
-| **Best volume** | 44134 (Parma East) | 44 active sales = most deal flow, but need sub-$190K to pencil |
-| **Avoid** | 44130 (Parma mid) | Thin pool (7 sales), weakest yield, median above cap |
-| **If buying tomorrow** | Hunt 44129 for a 3-BR SFR below $175K | At $170K all-in and $1,800/mo rent = 12.7% gross yield |
+| ZIP | Direct Search Link |
+|---|---|
+| **44129** (Parma West) | [Zillow →](https://www.zillow.com/homes/for_sale/44129_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244129%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22east%22%3A-81.68%2C%22south%22%3A41.37%2C%22north%22%3A41.42%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
+| **44134** | [Zillow →](https://www.zillow.com/homes/for_sale/44134_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244134%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22east%22%3A-81.65%2C%22south%22%3A41.35%2C%22north%22%3A41.40%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
+| **44130** | [Zillow →](https://www.zillow.com/homes/for_sale/44130_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%2244130%22%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22east%22%3A-81.73%2C%22south%22%3A41.35%2C%22north%22%3A41.41%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22pmf%22%3A%7B%22value%22%3Afalse%7D%2C%22pf%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D) |
 
 ---
 
-## Data Limitations
+## Recovery Plan
 
-| Issue | Impact |
-|-------|--------|
-| No individual listing data | Cannot produce address/zpid/beds/baths/sqft tables or per-property take/negotiate/pass |
-| ZIP medians only | Actual sub-$190K inventory is likely older/smaller/rougher than medians suggest |
-| Rent data is aggregate | No per-property rentZestimate available |
-| Data staleness | `cleveland_zip_stats.json` is from a prior cycle — market may have shifted in 1+ weeks |
+1. **Wait** for Zillapi credit cycle to reset (daily reset at midnight UTC).
+2. **Retry** the same three bounding-box pulls.
+3. **Save** raw JSON + markdown to `outputs/<date>/parma-listings-under-190k/`.
+
+If credits remain unavailable for >48 hours, consider upgrading at https://zillapi.com/app/billing or switching to manual browser-based screening.
 
 ---
 
-## Next Steps
-
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run the cron** — individual listing tables will auto-populate
-3. Post-credits, this report populates with: property addresses, zpids, beds/baths/sqft, rent estimates, and per-property take/negotiate/pass verdicts
-
-*Report: `outputs/2026-09-20/parma-listings-under-190k/parma-listings.md`*  
-*Status: `/opt/data/parma-pull-status.txt`*
+*Status file saved to `/opt/data/parma-pull-status.txt`*
