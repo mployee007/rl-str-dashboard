@@ -1,37 +1,32 @@
-# Parma West Area — Active Listings Under $190K
+# Parma Listings Under $190K — BLOCKED
 
-**Pull date:** Sunday, September 20, 2026
-**ZIPs:** 44129 (Parma West), 44134, 44130
-**Max Price:** $190,000
-
----
-
-## ⛔ STATUS: BLOCKED — Zillapi Out of Credits
-
-All three Zillapi `search_listings` calls failed. The account has exhausted its credit cycle.
-
-| Source | ZIP | Result |
-|--------|-----|--------|
-| Zillapi MCP | 44129 | ❌ Out of credits |
-| Zillapi MCP | 44134 | ❌ MCP server unreachable (125 failures) |
-| Zillapi MCP | 44130 | ❌ MCP server unreachable (125 failures) |
-
-**Web fallback assessment:** Not attempted. Zillow.com, Redfin, Trulia, Realtor.com, and Homes.com all block programmatic access with PerimeterX/Cloudflare captchas. `web_search` and `web_extract` fail consistently on listing data for the same reason. Per the `real-estate-submarket-screening` skill, looping on web alternatives only wastes turns.
+**Generated:** 2026-09-20T21:28:27Z  
+**Status:** ❌ Zillapi credits exhausted
 
 ---
 
-## Manual Search Links
+## Blocker Summary
 
-The user can open these in a browser to screen directly:
+Zillapi returned `"Out of credits for this cycle"` on the first pull attempt for ZIP 44129. The two subsequent parallel calls for 44134 and 44130 failed with `"MCP server unreachable"` (126 consecutive failures). Per the `real-estate-submarket-screening` skill protocol, no alternate sites were attempted — Zillow.com, Redfin, Trulia, and all other listing sites block automated access with captchas.
 
-- **[ZIP 44129 — Zillow: Homes Under $190K](https://www.zillow.com/parma-oh-44129/houses/0-190000_att/)**
-- **[ZIP 44134 — Zillow: Homes Under $190K](https://www.zillow.com/parma-oh-44134/houses/0-190000_att/)**
-- **[ZIP 44130 — Zillow: Homes Under $190K](https://www.zillow.com/parma-oh-44130/houses/0-190000_att/)**
+## Sources Tried
 
----
+| Source | Result |
+|---|---|
+| Zillapi MCP (`search_listings`, bbox for 44129) | ❌ Out of credits |
+| Zillapi MCP (`search_listings`, bbox for 44134) | ❌ MCP server unreachable |
+| Zillapi MCP (`search_listings`, bbox for 44130) | ❌ MCP server unreachable |
 
-## Next Steps
+## Manual Fallback — Direct Zillow Links
+
+Open in your browser to run the same screen manually:
+
+- **ZIP 44129 (Parma West):** [Zillow: Houses under $190K](https://www.zillow.com/parma-west-parma-oh-44129/houses/0-190000/)
+- **ZIP 44134 (Parma East):** [Zillow: Houses under $190K](https://www.zillow.com/parma-oh-44134/houses/0-190000/)
+- **ZIP 44130 (Middleburg Heights / Parma SW):** [Zillow: Houses under $190K](https://www.zillow.com/middleburg-heights-oh-44130/houses/0-190000/)
+
+## Resolution
 
 1. Top up Zillapi credits at https://zillapi.com/app/billing
-2. Re-run this job (same instruction) — it will pull all three ZIPs, compute medians, save raw JSON, and produce investor verdicts
-3. I'll save `parma_zip_stats.json` and the full listing dump for follow-up queries
+2. Re-run this cron job — it will pick up fresh listings automatically
+3. Status file at `/opt/data/parma-pull-status.txt` will be overwritten on success
