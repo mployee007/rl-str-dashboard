@@ -1,26 +1,41 @@
-# Parma Listings Under $190K — Pull Report
+# Parma Area Listings Under $190K — STATUS: ZILLAPI DOWN
 
-**Date:** 2026-09-21
-**Status:** ❌ BLOCKED — Zillapi unavailable
+**Run date:** 2026-09-21
+**Target ZIPs:** 44129, 44134, 44130
+**Price cap:** $190,000
 
-## Summary
+---
 
-The scheduled pull for active for-sale listings under $190K in ZIP codes 44129, 44134, and 44130 failed. Zillapi is out of credits for this cycle and the MCP server was unreachable for the other two calls. No listings were retrieved.
+## ❌ Pull Failed — Zillapi Unavailable
 
-## Error Detail
+| Error | Detail |
+|-------|--------|
+| Zillapi credits | Exhausted — `Out of credits for this cycle` |
+| Zillapi MCP server | Unreachable (131 consecutive failures) |
 
-| ZIP | Error |
-|-----|-------|
-| 44129 | **Out of credits** — needs Zillapi top-up |
-| 44134 | MCP server unreachable (130+ consecutive failures) |
-| 44130 | MCP server unreachable (130+ consecutive failures) |
+---
 
-## No Fabricated Data
+## Direct Zillow Links (Manual Fallback)
 
-Per skill instructions: web-based listing sites (Zillow.com, Redfin, Trulia, Realtor.com) all captcha-block and are not viable fallbacks. No listings are fabricated. The report will populate on the next successful pull.
+| ZIP | Area | Zillow Search |
+|-----|------|--------------|
+| 44129 | Parma West | [View on Zillow](https://www.zillow.com/homes/for_sale/44129_zip/1-_beds/0-190000_price/0-405_mp/) |
+| 44134 | Parma East / Seven Hills | [View on Zillow](https://www.zillow.com/homes/for_sale/44134_zip/1-_beds/0-190000_price/0-405_mp/) |
+| 44130 | Middleburg Heights / Parma Heights | [View on Zillow](https://www.zillow.com/homes/for_sale/44130_zip/1-_beds/0-190000_price/0-405_mp/) |
 
-## Quick Reference: Manual Zillow Searches
+---
 
-- [44129 — Parma West, max $190K](https://www.zillow.com/homes/for_sale/44129/0-190000_price/0-1371_mp/)
-- [44134 — Parma South, max $190K](https://www.zillow.com/homes/for_sale/44134/0-190000_price/0-742_mp/)
-- [44130 — Parma East, max $190K](https://www.zillow.com/homes/for_sale/44130/0-2474_mp/)
+## What Was Requested
+
+- Active for-sale house listings (1+ beds) under $190K in ZIPs 44129, 44134, 44130
+- Property details: address, price, beds, baths, sqft, zpid, rentZestimate, condition/DOM notes
+- Sorted by price (lowest first), with investor verdict column (take/negotiate/pass)
+- Output to `/opt/data/outputs/2026-09-21/parma-listings-under-190k/parma-listings.md`
+
+---
+
+## Resolution
+
+This cron job will re-attempt on the next scheduled run. No listings were fabricated. Status file saved at `/opt/data/parma-pull-status.txt`.
+
+To resume manually when credits are available, re-run this skill with the same parameters.
