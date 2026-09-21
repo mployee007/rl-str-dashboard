@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-21T09:25:27.187998+00:00",
+  "generated_at": "2026-09-21T09:41:27.252600+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 71,
   "sessions": [
+    {
+      "id": "2026-09-21/parma-listings-under-190k",
+      "date": "2026-09-21",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-21T09:35:38.891094",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-21/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 1188,
+            "updated_at": "2026-09-21T09:35:38.891094",
+            "previewable": true,
+            "public_href": "public/2026-09-21/parma-listings-under-190k/parma-listings.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-21/retirement-compare-guyana-mexico-panama-costa-rica",
       "date": "2026-09-21",
@@ -28,35 +57,6 @@
             "updated_at": "2026-09-21T04:16:15.671848",
             "previewable": true,
             "public_href": "public/2026-09-21/retirement-compare-guyana-mexico-panama-costa-rica/comparison-report.md"
-          }
-        ]
-      }
-    },
-    {
-      "id": "2026-09-21/parma-listings-under-190k",
-      "date": "2026-09-21",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-21T03:32:22.697376",
-      "file_count": 1,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-21/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 4102,
-            "updated_at": "2026-09-21T03:32:22.697376",
-            "previewable": true,
-            "public_href": "public/2026-09-21/parma-listings-under-190k/parma-listings.md"
           }
         ]
       }
