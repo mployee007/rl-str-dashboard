@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-21T04:05:26.438116+00:00",
+  "generated_at": "2026-09-21T04:21:26.489168+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 70,
+  "session_count": 71,
   "sessions": [
+    {
+      "id": "2026-09-21/retirement-compare-guyana-mexico-panama-costa-rica",
+      "date": "2026-09-21",
+      "title": "retirement-compare-guyana-mexico-panama-costa-rica",
+      "summary": "",
+      "updated_at": "2026-09-21T04:16:15.671848",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-21/retirement-compare-guyana-mexico-panama-costa-rica",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "comparison-report.md",
+            "rel_path": "comparison-report.md",
+            "size": 18940,
+            "updated_at": "2026-09-21T04:16:15.671848",
+            "previewable": true,
+            "public_href": "public/2026-09-21/retirement-compare-guyana-mexico-panama-costa-rica/comparison-report.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-21/parma-listings-under-190k",
       "date": "2026-09-21",
