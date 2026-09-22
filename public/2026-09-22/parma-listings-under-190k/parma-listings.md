@@ -1,6 +1,7 @@
 # Parma West Listings Under $190K — Pull Blocked
 
 **Date:** 2026-09-22  
+**Time:** 03:43 UTC  
 **Status:** ❌ Zillapi credits exhausted  
 **Top-up:** https://zillapi.com/app/billing
 
@@ -10,7 +11,9 @@
 
 | Source | Result |
 |---|---|
-| **Zillapi MCP** (`mcp_zillapi_search_listings`) | ❌ Out of credits — all 3 ZIP pulls rejected |
+| **Zillapi MCP** (`mcp_zillapi_search_listings`) — ZIP 44129 | ❌ Out of credits for this cycle |
+| **Zillapi MCP** (`mcp_zillapi_search_listings`) — ZIP 44134 | ❌ MCP server unreachable (14 consecutive failures) |
+| **Zillapi MCP** (`mcp_zillapi_search_listings`) — ZIP 44130 | ❌ MCP server unreachable (14 consecutive failures) |
 | Zillow.com (web) | ⛔ Captcha-blocked (PerimeterX) — skipped per skill guidance |
 | Redfin (web) | ⛔ Captcha-blocked — skipped per skill guidance |
 | Trulia/Realtor.com | ⛔ Captcha-blocked — skipped per skill guidance |
@@ -40,9 +43,7 @@
 ## Next Steps
 
 1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run this cron job** — it will auto-detect fresh credits and pull all three ZIPs
-3. **Manual fallback:** Use the direct Zillow links above in your browser for an immediate look
+2. **Re-run the pull** — the cron job will pick up live listings automatically on its next cycle
+3. **Manual fallback:** Use the direct Zillow links above to browse current listings in your own browser
 
----
-
-*No listings were fabricated. This report reflects the actual blocker encountered on 2026-09-22.*
+*No fabricated data. This report will auto-update with real listings when Zillapi credits become available.*
