@@ -1,49 +1,32 @@
-# Parma West Listings Under $190K — Pull Blocked
+# Parma Listings Under $190K — Zillapi Pull Failed
 
-**Date:** 2026-09-22  
-**Time:** 03:43 UTC  
-**Status:** ❌ Zillapi credits exhausted  
-**Top-up:** https://zillapi.com/app/billing
+**Run date:** 2026-09-22
+**Status:** ❌ FAILED — Zillapi credits exhausted
 
----
+## Source Status
 
-## Blocker Summary
+| # | Source | Tool | Result |
+|---|--------|------|--------|
+| 1 | Zillapi (44129) | `mcp_zillapi_search_listings` | **Out of credits** — top up at https://zillapi.com/app/billing |
+| 2 | Zillapi (44134) | `mcp_zillapi_search_listings` | MCP server unreachable (15 consecutive failures) |
+| 3 | Zillapi (44130) | `mcp_zillapi_search_listings` | MCP server unreachable (15 consecutive failures) |
+| 4 | Web search | `web_search` | firecrawl unavailable (lazy installs disabled) |
+| 5 | AgentSearch HTTP | `mcp_agent_search_http_search` | MCP server not connected |
 
-| Source | Result |
-|---|---|
-| **Zillapi MCP** (`mcp_zillapi_search_listings`) — ZIP 44129 | ❌ Out of credits for this cycle |
-| **Zillapi MCP** (`mcp_zillapi_search_listings`) — ZIP 44134 | ❌ MCP server unreachable (14 consecutive failures) |
-| **Zillapi MCP** (`mcp_zillapi_search_listings`) — ZIP 44130 | ❌ MCP server unreachable (14 consecutive failures) |
-| Zillow.com (web) | ⛔ Captcha-blocked (PerimeterX) — skipped per skill guidance |
-| Redfin (web) | ⛔ Captcha-blocked — skipped per skill guidance |
-| Trulia/Realtor.com | ⛔ Captcha-blocked — skipped per skill guidance |
+## Target ZIPs
 
----
+| ZIP | Area | Bounding Box | Price Cap |
+|-----|------|-------------|-----------|
+| 44129 | Parma West | -81.78,41.37,-81.68,41.42 | $190,000 |
+| 44134 | Parma | -81.72,41.35,-81.65,41.40 | $190,000 |
+| 44130 | Parma Heights / Middleburg Hts | -81.80,41.35,-81.73,41.41 | $190,000 |
 
-## Direct Zillow Search URLs (Open in Your Browser)
+## Direct Zillow Links (manual browser check)
 
-| ZIP | Neighborhood | Direct Zillow Link |
-|---|---|---|
-| **44129** | Parma West | [Zillow: 44129 under $190K](https://www.zillow.com/homes/for_sale/44129_zip/0-190000_price/0-1726_mp/41.42,-81.68,41.37,-81.78_rect/12_zm/) |
-| **44134** | Parma Central | [Zillow: 44134 under $190K](https://www.zillow.com/homes/for_sale/44134_zip/0-190000_price/0-1726_mp/41.40,-81.65,41.35,-81.72_rect/12_zm/) |
-| **44130** | Parma Heights | [Zillow: 44130 under $190K](https://www.zillow.com/homes/for_sale/44130_zip/0-190000_price/0-1726_mp/41.41,-81.73,41.35,-81.80_rect/12_zm/) |
+- **44129:** [Zillow search](https://www.zillow.com/parma-oh-44129/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.78%2C%22east%22%3A-81.68%2C%22south%22%3A41.37%2C%22north%22%3A41.42%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22isForSaleByAgent%22%3A%7B%22value%22%3Afalse%7D%2C%22isForSaleByOwner%22%3A%7B%22value%22%3Afalse%7D%2C%22isComingSoon%22%3A%7B%22value%22%3Afalse%7D%2C%22isAuction%22%3A%7B%22value%22%3Afalse%7D%2C%22isForeclosure%22%3A%7B%22value%22%3Afalse%7D%2C%22isNewConstruction%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isMapVisible%22%3Atrue%7D)
+- **44134:** [Zillow search](https://www.zillow.com/parma-oh-44134/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.72%2C%22east%22%3A-81.65%2C%22south%22%3A41.35%2C%22north%22%3A41.40%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22isForSaleByAgent%22%3A%7B%22value%22%3Afalse%7D%2C%22isForSaleByOwner%22%3A%7B%22value%22%3Afalse%7D%2C%22isComingSoon%22%3A%7B%22value%22%3Afalse%7D%2C%22isAuction%22%3A%7B%22value%22%3Afalse%7D%2C%22isForeclosure%22%3A%7B%22value%22%3Afalse%7D%2C%22isNewConstruction%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isMapVisible%22%3Atrue%7D)
+- **44130:** [Zillow search](https://www.zillow.com/middleburg-heights-oh-44130/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.80%2C%22east%22%3A-81.73%2C%22south%22%3A41.35%2C%22north%22%3A41.41%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22isForSaleByAgent%22%3A%7B%22value%22%3Afalse%7D%2C%22isForSaleByOwner%22%3A%7B%22value%22%3Afalse%7D%2C%22isComingSoon%22%3A%7B%22value%22%3Afalse%7D%2C%22isAuction%22%3A%7B%22value%22%3Afalse%7D%2C%22isForeclosure%22%3A%7B%22value%22%3Afalse%7D%2C%22isNewConstruction%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isMapVisible%22%3Atrue%7D)
 
----
+## Action
 
-## Bounding Boxes Used (for reference)
-
-| ZIP | West | South | East | North |
-|---|---|---|---|---|
-| 44129 | -81.78 | 41.37 | -81.68 | 41.42 |
-| 44134 | -81.72 | 41.35 | -81.65 | 41.40 |
-| 44130 | -81.80 | 41.35 | -81.73 | 41.41 |
-
----
-
-## Next Steps
-
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing
-2. **Re-run the pull** — the cron job will pick up live listings automatically on its next cycle
-3. **Manual fallback:** Use the direct Zillow links above to browse current listings in your own browser
-
-*No fabricated data. This report will auto-update with real listings when Zillapi credits become available.*
+Will retry on next cron cycle when Zillapi credits refresh. No fabricated listings included.
