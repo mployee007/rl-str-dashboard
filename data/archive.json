@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T22:02:15.887582+00:00",
+  "generated_at": "2026-09-23T22:17:52.928815+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 73,
   "sessions": [
@@ -7,25 +7,35 @@
       "id": "2026-09-23/parma-listings-under-190k",
       "date": "2026-09-23",
       "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-23T19:07:01.232560",
-      "file_count": 1,
+      "summary": "- **Source:** Zillow.com via Camofox browser (headless Firefox) - **Zillapi:** Unavailable (out of credits; MCP server also went unreachable) - **Search tool (web_search):** Blocked \u2014 firecrawl-py not installed, no permission to install - **SearXNG (agent_search):** Degraded \u2014 on",
+      "updated_at": "2026-09-23T22:16:02.335908",
+      "file_count": 3,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-09-23/parma-listings-under-190k",
       "status": "completed",
-      "standard_previews": {},
+      "standard_previews": {
+        "summary.md": "# Parma Listing Pull Summary \u2014 2026-09-23\n\n- **Source:** Zillow.com via Camofox browser (headless Firefox)\n- **Zillapi:** Unavailable (out of credits; MCP server also went unreachable)\n- **Search tool (web_search):** Blocked \u2014 firecrawl-py not installed, no permission to install\n- **SearXNG (agent_search):** Degraded \u2014 only Bing working, returns Parma Italy not Ohio\n- **Listings found:** 10 houses + 1 vacant lot across 44129, 44134, 44130\n- **Zillow captcha:** Triggered on individual property pages and rental search \u2014 could not get Zestimates\n- **Rent estimates:** Market-derived ($1,350/mo 3br, $1,050/mo 2br) \u2014 NOT property-specific\n\n## Files\n- `parma-listings.md` \u2014 Full report with tables, verdicts, and recommendations\n- `parma-listings-raw.json` \u2014 Structured JSON with all fields\n- `/opt/data/parma-latest-listings.md` \u2014 Quick reference table for one-glance access\n\n## Top 3 Leads\n1. **7611 Newport Ave** \u2014 $174,900, 3/1, GRM 10.8x, fresh 2hr listing \u2192 ACT FAST\n2. **10366 Manorford Dr** \u2014 $119,900, 2/1, GRM 9.5x, possible distress \u2192 verify condition\n3. **7101 Brownfield Dr** \u2014 $189,900, 3/1, 2,186 sqft, best value per sqft \u2192 negotiate down\n\n## Next Run Improvements\n- Wait for Zillapi credit refresh for property-specific Zestimates\n- Try to install firecrawl-py for web_search fallback\n- Consider narrower 44134 bbox to find more inventory"
+      },
       "files": {
         "export": [],
         "csv": [],
         "image": [],
         "other": [
           {
+            "name": "parma-listings-raw.json",
+            "rel_path": "parma-listings-raw.json",
+            "size": 4857,
+            "updated_at": "2026-09-23T22:15:38.989935",
+            "previewable": true,
+            "public_href": "public/2026-09-23/parma-listings-under-190k/parma-listings-raw.json"
+          },
+          {
             "name": "parma-listings.md",
             "rel_path": "parma-listings.md",
-            "size": 1517,
-            "updated_at": "2026-09-23T19:07:01.232560",
+            "size": 7784,
+            "updated_at": "2026-09-23T22:14:49.403992",
             "previewable": true,
             "public_href": "public/2026-09-23/parma-listings-under-190k/parma-listings.md"
           }
