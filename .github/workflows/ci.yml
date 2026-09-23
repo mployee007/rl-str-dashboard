@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Create sample data for build validation
+        run: |
+          mkdir -p /tmp/ci-outputs/2024-01-01/test-session/artifacts
+          echo "# Test session" > /tmp/ci-outputs/2024-01-01/test-session/summary.md
+          echo "- Decision A" > /tmp/ci-outputs/2024-01-01/test-session/decisions.md
+          echo '{"source": "test"}' > /tmp/ci-outputs/2024-01-01/test-session/sources.json
+          echo "Run log" > /tmp/ci-outputs/2024-01-01/test-session/run-log.md
+
+      - name: Run build script
+        run: |
+          # Override OUTPUTS_ROOT to use test data
+          sed -i 's|OUTPUTS_ROOT = .*|OUTPUTS_ROOT = Path("/tmp/ci-outputs")|' build_dashboard.py
+          python3 build_dashboard.py
+          # Verify output was generated
+          test -f index.html && echo "Build OK: index.html exists"
+          test -f data/archive.json && echo "Build OK: archive.json exists"
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t rl-str-dashboard .

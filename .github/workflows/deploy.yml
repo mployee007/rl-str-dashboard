@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify deployable artifacts
+        run: |
+          test -f index.html || { echo "MISSING: index.html"; exit 1; }
+          test -f .nojekyll || { echo "MISSING: .nojekyll"; exit 1; }
+          echo "index.html: $(wc -c < index.html) bytes"
+          echo "Deploy verification passed."
+
+      - name: Check links in index.html (basic)
+        run: |
+          # Verify HTML structure
+          grep -q '<!DOCTYPE html>' index.html && echo "DOCTYPE OK"
+          grep -q '</html>' index.html && echo "HTML structure OK"
