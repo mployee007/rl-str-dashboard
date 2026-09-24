@@ -1,0 +1,110 @@
+{
+  "as_of": "2026-09-24",
+  "ticker": "ETN",
+  "company": "Eaton Corporation plc",
+  "data_sources": [
+    {
+      "name": "Yahoo Finance key statistics",
+      "url": "https://finance.yahoo.com/quote/ETN/key-statistics/",
+      "accessed": "2026-09-24",
+      "data": ["valuation measures", "profitability", "balance sheet", "dividends", "share statistics"]
+    },
+    {
+      "name": "Yahoo Finance analyst estimates",
+      "url": "https://finance.yahoo.com/quote/ETN/analysis/",
+      "accessed": "2026-09-24",
+      "data": ["revenue estimates", "EPS estimates", "earnings history", "EPS revisions", "price targets", "ratings"]
+    },
+    {
+      "name": "Yahoo Finance chart API (v8) — 10yr monthly price history",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?interval=1mo&period1=1474675200&period2=1790208000",
+      "accessed": "2026-09-24",
+      "data": ["adjusted close price history 2016-2026"]
+    },
+    {
+      "name": "SEC EDGAR — company submissions",
+      "url": "https://data.sec.gov/submissions/CIK0001551182.json",
+      "accessed": "2026-09-24",
+      "data": ["CIK 0001551182", "fiscal year end 12/31", "SIC 3590"]
+    },
+    {
+      "name": "SEC EDGAR — XBRL company facts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001551182.json",
+      "accessed": "2026-09-24",
+      "data": ["annual revenue", "net income", "diluted EPS 2010-2025"]
+    },
+    {
+      "name": "SEC EDGAR — FY2025 Form 10-K (filed 2026-02-26)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+      "accessed": "2026-09-24",
+      "data": ["segment net sales", "segment operating profit/margin", "backlog", "book-to-bill", "customer concentration", "re-segmentation note"]
+    },
+    {
+      "name": "Yahoo Finance key-statistics pages for 9 competitor tickers",
+      "urls": [
+        "https://finance.yahoo.com/quote/ABBNY/key-statistics/",
+        "https://finance.yahoo.com/quote/SBGSY/key-statistics/",
+        "https://finance.yahoo.com/quote/EMR/key-statistics/",
+        "https://finance.yahoo.com/quote/ROK/key-statistics/",
+        "https://finance.yahoo.com/quote/HON/key-statistics/",
+        "https://finance.yahoo.com/quote/VRT/key-statistics/",
+        "https://finance.yahoo.com/quote/PH/key-statistics/",
+        "https://finance.yahoo.com/quote/HUBB/key-statistics/",
+        "https://finance.yahoo.com/quote/NVT/key-statistics/"
+      ],
+      "accessed": "2026-09-24",
+      "data": ["competitor valuation and profitability metrics"]
+    }
+  ],
+  "key_figures": {
+    "price": 438.76,
+    "market_cap_b": 171.86,
+    "enterprise_value_b": 192.49,
+    "trailing_pe": 45.06,
+    "forward_pe": 27.86,
+    "peg_5yr": 2.69,
+    "price_sales": 5.74,
+    "price_book": 8.49,
+    "ev_ebitda": 29.85,
+    "profit_margin_pct": 12.75,
+    "operating_margin_ttm_pct": 16.56,
+    "roe_pct": 19.68,
+    "revenue_ttm_b": 30.03,
+    "quarterly_revenue_growth_pct": 21.4,
+    "gross_profit_ttm_b": 10.82,
+    "ebitda_b": 6.64,
+    "net_income_ttm_b": 3.83,
+    "diluted_eps_ttm_gaap": 9.74,
+    "total_debt_b": 21.33,
+    "debt_to_equity_pct": 105.06,
+    "cash_b": 0.695,
+    "operating_cash_flow_ttm_b": 4.95,
+    "levered_fcf_ttm_b": 3.11,
+    "beta_5y": 1.17,
+    "dividend_rate": 4.40,
+    "dividend_yield_pct": 0.99,
+    "payout_ratio_pct": 43.58,
+    "week52_high": 478.00,
+    "week52_low": 311.92,
+    "ma50": 417.68,
+    "ma200": 385.84,
+    "institutional_ownership_pct": 87.9,
+    "analyst_target_avg": 479.57,
+    "analyst_target_low": 333.00,
+    "analyst_target_high": 534.00,
+    "eps_2026_est": 13.55,
+    "eps_2027_est": 16.13,
+    "revenue_2026_est_b": 32.65,
+    "revenue_2027_est_b": 36.57,
+    "cagr_10yr_pct": 23.8,
+    "cagr_5yr_pct": 26.0,
+    "cagr_3yr_pct": 28.8
+  },
+  "segment_data_fy2025": {
+    "Electrical Americas": {"net_sales_m": 13276, "growth_pct": 16, "op_margin_pct": 29.9, "backlog_m": 13246, "backlog_growth_pct": 31, "book_to_bill": 1.2},
+    "Electrical Global": {"net_sales_m": 6815, "growth_pct": 9, "op_margin_pct": 19.4, "backlog_m": 2034, "backlog_growth_pct": 19, "book_to_bill": 1.0},
+    "Aerospace": {"net_sales_m": 4249, "growth_pct": 13, "op_margin_pct": 23.9, "backlog_m": 4316, "backlog_growth_pct": 16, "book_to_bill": 1.1},
+    "Vehicle": {"net_sales_m": 2505, "growth_pct": -10, "op_margin_pct": 16.7},
+    "eMobility": {"net_sales_m": 604, "growth_pct": -9, "op_margin_pct": -2.3}
+  }
+}

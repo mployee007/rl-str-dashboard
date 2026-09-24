@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T04:29:53.697459+00:00",
+  "generated_at": "2026-09-24T04:45:16.701022+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 76,
   "sessions": [
@@ -7,18 +7,49 @@
       "id": "2026-09-24/eaton-corporation-analysis",
       "date": "2026-09-24",
       "title": "eaton-corporation-analysis",
-      "summary": "",
-      "updated_at": "2026-09-24T04:29:24.295716",
-      "file_count": 0,
+      "summary": "**Session:** eaton-corporation-analysis **Date:** 2026-09-24 **Analyst framing:** Aerospace & technology (electrification / power management) coverage *(populated after analysis)* *(populated after data gathering)* *(populated)*",
+      "updated_at": "2026-09-24T04:45:04.554295",
+      "file_count": 8,
       "export_count": 0,
-      "csv_count": 0,
+      "csv_count": 3,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-09-24/eaton-corporation-analysis",
       "status": "completed",
-      "standard_previews": {},
+      "standard_previews": {
+        "decisions.md": "# Decisions Log \u2014 Eaton (ETN) Analysis\n\n*(populated after analysis)*\n",
+        "notes.md": "# Notes & Data Caveats \u2014 Eaton (ETN) Analysis\n\n*(populated after data gathering)*\n",
+        "run-log.md": "# Run Log \u2014 Eaton (ETN) Analysis\n\n## Phase 1: Setup & data gathering (2026-09-24)\n\n- [x] Loaded `financial-analysis` + `financial-data-sourcing` skills\n- [x] Created output structure under outputs/2026-09-24/eaton-corporation-analysis/\n- [x] Fetched ETN max-range chart metadata (price $438.76, 52wk 311.92\u2013478.00)\n\n*(continues)*\n",
+        "sources.json": "{\n  \"sources\": []\n}\n",
+        "summary.md": "# Eaton Corporation (ETN) \u2014 Stock Analysis\n\n**Session:** eaton-corporation-analysis\n**Date:** 2026-09-24\n**Analyst framing:** Aerospace & technology (electrification / power management) coverage\n\n## Key Takeaways\n\n*(populated after analysis)*\n\n## Metrics Snapshot\n\n*(populated after data gathering)*\n\n## Methodology\n\n*(populated)*\n"
+      },
       "files": {
         "export": [],
-        "csv": [],
+        "csv": [
+          {
+            "name": "etn_financials.json",
+            "rel_path": "artifacts/csv/etn_financials.json",
+            "size": 819,
+            "updated_at": "2026-09-24T04:45:04.554295",
+            "previewable": true,
+            "public_href": "public/2026-09-24/eaton-corporation-analysis/artifacts/csv/etn_financials.json"
+          },
+          {
+            "name": "stats_raw.json",
+            "rel_path": "artifacts/csv/stats_raw.json",
+            "size": 42816,
+            "updated_at": "2026-09-24T04:43:04.478356",
+            "previewable": true,
+            "public_href": "public/2026-09-24/eaton-corporation-analysis/artifacts/csv/stats_raw.json"
+          },
+          {
+            "name": "ticker_cagr.json",
+            "rel_path": "artifacts/csv/ticker_cagr.json",
+            "size": 4719,
+            "updated_at": "2026-09-24T04:41:37.071392",
+            "previewable": true,
+            "public_href": "public/2026-09-24/eaton-corporation-analysis/artifacts/csv/ticker_cagr.json"
+          }
+        ],
         "image": [],
         "other": []
       }
@@ -27,18 +58,33 @@
       "id": "2026-09-24/eaton-stock-analysis",
       "date": "2026-09-24",
       "title": "eaton-stock-analysis",
-      "summary": "",
-      "updated_at": "2026-09-24T04:28:59.125745",
-      "file_count": 0,
+      "summary": "**Analyst report date:** September 24, 2026 **Current price:** $438.76 (Sep 23, 2026 close) \u00b7 **Market cap:** $171.9B **Coverage lens:** Aerospace & technology (electrification / AI data-center power) --- Eaton Corporation plc is an intelligent power-management company headquarte",
+      "updated_at": "2026-09-24T04:44:38.736309",
+      "file_count": 6,
       "export_count": 0,
-      "csv_count": 0,
+      "csv_count": 1,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-09-24/eaton-stock-analysis",
       "status": "completed",
-      "standard_previews": {},
+      "standard_previews": {
+        "decisions.md": "# Decisions & Methodology\n\n1. **Scope:** Analyzed Eaton as an aerospace + tech (electrification/AI data-center power) name per user request. Emphasized Electrical (73% of revenue) and Aerospace (15.5%) segments; treated Vehicle/eMobility (\"Mobility\") as drags.\n\n2. **Data sources:** Yahoo Finance (v8 chart API for price history; key-statistics + analysis pages via browser) and SEC EDGAR (submissions + XBRL company facts + FY2025 10-K for segment data). Yahoo v7/v10 quote endpoints returned Unauthorized, so used browser DOM extraction for valuation metrics (per financial-data-sourcing skill).\n\n3. **Competitor set:** Chose 9 peers spanning electrical/power (Schneider, ABB, Emerson, Rockwell, Hubbell, nVent), data-center pure-play (Vertiv), and aerospace/motion (Honeywell, Parker-Hannifin). Delegated peer data collection to a subagent (browser-based scraping).\n\n4. **Price-target framework:** EPS \u00d7 exit-multiple, three scenarios (bull 25% / base 50% / bear 25%), probability-weighted. Anchored 2-yr near consensus (analyst 1-yr mean $479.57).\n\n5. **EPS basis:** Used *adjusted* (non-GAAP) EPS throughout for targets and entry multiples, consistent with sell-side consensus; flagged GAAP figures separately.\n\n6. **Entry prices:** Derived from applying fair-value multiples (24x/22x/20x) to 2027E adjusted EPS $16.13, cross-referenced with technical levels (200-day MA, 52-wk low) and analyst low target ($333).\n",
+        "notes.md": "# Notes & Data Caveats\n\n## Data caveats / anomalies\n1. **Honeywell (HON) trailing P/E (8.1x) and EPS ($26.10 ttm) are distorted.** A 2026 separation/spin (market cap fell from ~$143B to ~$67B) created a one-time gain. Use HON forward P/E (22.2x) for comparison. Flagged for manual review.\n2. **Eaton EPS: GAAP vs. adjusted.** Yahoo \"Diluted EPS ttm\" = $9.74 (GAAP), but analyst estimates ($13.55 / $16.13) and \"Year Ago EPS\" ($12.07) are *adjusted* (non-GAAP). GAAP 2025 EPS per 10-K = $10.45. All price-target math uses adjusted EPS.\n3. **ABBNY and SBGSY are OTC ADRs** with delayed quotes \u2014 prices less current than NYSE listings.\n4. **Re-segmentation:** Eaton combined Vehicle + eMobility into \"Mobility\" effective Q1 2026. FY2025 10-K still reports the five legacy segments; Mobility financials not yet published.\n5. **Analyst 1-yr target $479.57** is the mean of ~25 sell-side targets (low $333, high $534). UBS upgrade 9/8/2026 raised PT $450\u2192$515.\n\n## Assumptions used in price projections\n- Consensus adjusted EPS: 2026E $13.55, 2027E $16.13 (Yahoo Finance, 22\u201325 analysts).\n- 5-yr expected growth ~10\u201317% (PEG 2.69 implies ~16.8% on trailing P/E, ~10.4% on forward P/E). Used ~13% near-term decelerating to ~10% in base case.\n- Exit forward multiples: base 26x (2028) \u2192 22x (2031) \u2192 18x (2036); bull 28/25/21x; bear 20/16/14x.\n- Fair-value anchor for entry prices: ~24x forward = fair; ~20\u201322x = margin of safety.\n\n## What I could not verify\n- Eaton's segment-level FY2026 quarterly detail for the new \"Mobility\" segment (not yet filed).\n- Exact aerospace competitive share vs. Parker/Woodward/Honeywell (not separately disclosed by all peers).\n- Live \"fair value\" model (Morningstar/Argus-style DCF) \u2014 not available without paywall.\n",
+        "run-log.md": "# Run Log\n\n| Phase | Action | Result |\n|---|---|---|\n| 1 | Loaded financial-analysis, financial-data-sourcing, sec-edgar-filings skills | OK |\n| 2 | Initialized output dir `outputs/2026-09-24/eaton-stock-analysis/` | OK |\n| 3 | Pulled ETN 10-yr monthly price history (Yahoo v8 chart API) | OK \u2014 108 points, 2016-10 \u2192 2026-09 |\n| 4 | Pulled ETN key-statistics (browser) | OK \u2014 full valuation/profitability/balance-sheet tables |\n| 5 | Pulled ETN analyst estimates + price targets (browser, closed popup) | OK \u2014 2026E/2027E EPS & revenue, targets $333\u2013$534 |\n| 6 | SEC: CIK 0001551182 lookup (submissions API) | OK |\n| 7 | SEC: XBRL company facts \u2014 revenue/NI/EPS 2010\u20132025 | OK \u2014 dedup'd by fiscal year |\n| 8 | SEC: FY2025 10-K segment data extraction | OK \u2014 5 segments, backlog, book-to-bill, concentration |\n| 9 | Yahoo v7 quote batch for peers | FAILED \u2014 Unauthorized; pivoted to browser |\n| 10 | Delegated 9-peer key-statistics scraping to subagent | OK \u2014 full comparison table returned |\n| 11 | Computed CAGR, segment mix, PEG-implied growth | OK |\n| 12 | Wrote summary.md, sources.json, notes.md, decisions.md, run-log.md, CSV | OK |\n",
+        "sources.json": "{\n  \"as_of\": \"2026-09-24\",\n  \"ticker\": \"ETN\",\n  \"company\": \"Eaton Corporation plc\",\n  \"data_sources\": [\n    {\n      \"name\": \"Yahoo Finance key statistics\",\n      \"url\": \"https://finance.yahoo.com/quote/ETN/key-statistics/\",\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"valuation measures\", \"profitability\", \"balance sheet\", \"dividends\", \"share statistics\"]\n    },\n    {\n      \"name\": \"Yahoo Finance analyst estimates\",\n      \"url\": \"https://finance.yahoo.com/quote/ETN/analysis/\",\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"revenue estimates\", \"EPS estimates\", \"earnings history\", \"EPS revisions\", \"price targets\", \"ratings\"]\n    },\n    {\n      \"name\": \"Yahoo Finance chart API (v8) \u2014 10yr monthly price history\",\n      \"url\": \"https://query1.finance.yahoo.com/v8/finance/chart/ETN?interval=1mo&period1=1474675200&period2=1790208000\",\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"adjusted close price history 2016-2026\"]\n    },\n    {\n      \"name\": \"SEC EDGAR \u2014 company submissions\",\n      \"url\": \"https://data.sec.gov/submissions/CIK0001551182.json\",\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"CIK 0001551182\", \"fiscal year end 12/31\", \"SIC 3590\"]\n    },\n    {\n      \"name\": \"SEC EDGAR \u2014 XBRL company facts\",\n      \"url\": \"https://data.sec.gov/api/xbrl/companyfacts/CIK0001551182.json\",\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"annual revenue\", \"net income\", \"diluted EPS 2010-2025\"]\n    },\n    {\n      \"name\": \"SEC EDGAR \u2014 FY2025 Form 10-K (filed 2026-02-26)\",\n      \"url\": \"https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm\",\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"segment net sales\", \"segment operating profit/margin\", \"backlog\", \"book-to-bill\", \"customer concentration\", \"re-segmentation note\"]\n    },\n    {\n      \"name\": \"Yahoo Finance key-statistics pages for 9 competitor tickers\",\n      \"urls\": [\n        \"https://finance.yahoo.com/quote/ABBNY/key-statistics/\",\n        \"https://finance.yahoo.com/quote/SBGSY/key-statistics/\",\n        \"https://finance.yahoo.com/quote/EMR/key-statistics/\",\n        \"https://finance.yahoo.com/quote/ROK/key-statistics/\",\n        \"https://finance.yahoo.com/quote/HON/key-statistics/\",\n        \"https://finance.yahoo.com/quote/VRT/key-statistics/\",\n        \"https://finance.yahoo.com/quote/PH/key-statistics/\",\n        \"https://finance.yahoo.com/quote/HUBB/key-statistics/\",\n        \"https://finance.yahoo.com/quote/NVT/key-statistics/\"\n      ],\n      \"accessed\": \"2026-09-24\",\n      \"data\": [\"competitor valuation and profitability metrics\"]\n    }\n  ],\n  \"key_figures\": {\n    \"price\": 438.76,\n    \"market_cap_b\": 171.86,\n    \"enterprise_value_b\": 192.49,\n    \"trailing_pe\": 45.06,\n    \"forward_pe\": 27.86,\n    \"peg_5yr\": 2.69,\n    \"price_sales\": 5.74,\n    \"price_book\": 8.49,\n    \"ev_ebitda\": 29.85,\n    \"profit_margin_pct\": 12.75,\n    \"operating_margin_ttm_pct\": 16.56,\n    \"roe_pct\": 19.68,\n    \"revenue_ttm_b\": 30.03,\n    \"quarterly_revenue_growth_pct\": 21.4,\n    \"gross_profit_ttm_b\": 10.82,\n    \"ebitda_b\": 6.64,\n    \"net_income_ttm_b\": 3.83,\n    \"diluted_eps_ttm_gaap\": 9.74,\n    \"total_debt_b\": 21.33,\n    \"debt_to_equity_pct\": 105.06,\n    \"cash_b\": 0.695,\n    \"operating_cash_flow_ttm_b\": 4.95,\n    \"levered_fcf_ttm_b\": 3.11,\n    \"beta_5y\": 1.17,\n    \"dividend_rate\": 4.40,\n    \"dividend_yield_pct\": 0.99,\n    \"payout_ratio_pct\": 43.58,\n    \"week52_high\": 478.00,\n    \"week52_low\": 311.92,\n    \"ma50\": 417.68,\n    \"ma200\": 385.84,\n    \"institutional_ownership_pct\": 87.9,\n    \"analyst_target_avg\": 479.57,\n    \"analyst_target_low\": 333.00,\n    \"analyst_target_high\": 534.00,\n    \"eps_2026_est\": 13.55,\n    \"eps_2027_est\": 16.13,\n    \"revenue_2026_est_b\": 32.65,\n    \"revenue_2027_est_b\": 36.57,\n    \"cagr_10yr_pct\": 23.8,\n    \"cagr_5yr_pct\": 26.0,\n    \"cagr_3yr_pct\": 28.8\n  },\n  \"segment_data_fy2025\": {\n    \"Electrical Americas\": {\"net_sales_m\": 13276, \"growth_pct\": 16, \"op_margin_pct\": 29.9, \"backlog_m\": 13246, \"backlog_growth_pct\": 31, \"book_to_bill\": 1.2},\n    \"Electrical Global\": {\"net_sales_m\": 6815, \"growth_pct\": 9, \"op_margin_pct\": 19.4, \"backlog_m\": 2034, \"backlog_growth_pct\": 19, \"book_to_bill\": 1.0},\n    \"Aerospace\": {\"net_sales_m\": 4249, \"growth_pct\": 13, \"op_margin_pct\": 23.9, \"backlog_m\": 4316, \"backlog_growth_pct\": 16, \"book_to_bill\": 1.1},\n    \"Vehicle\": {\"net_sales_m\": 2505, \"growth_pct\": -10, \"op_margin_pct\": 16.7},\n    \"eMobility\": {\"net_sales_m\": 604, \"growth_pct\": -9, \"op_margin_pct\": -2.3}\n  }\n}\n",
+        "summary.md": "# Eaton Corporation plc (ETN) \u2014 Aerospace & Tech-Industrial Stock Analysis\n\n**Analyst report date:** September 24, 2026\n**Current price:** $438.76 (Sep 23, 2026 close) \u00b7 **Market cap:** $171.9B\n**Coverage lens:** Aerospace & technology (electrification / AI data-center power)\n\n---\n\n## 1. Company Overview & Key Metrics\n\nEaton Corporation plc is an intelligent power-management company headquartered in Dublin, Ireland (US operational roots, founded 1911). It makes electrical systems, power distribution, circuit protection, and power-quality equipment, plus aerospace fuel/hydraulics/actuation systems and vehicle drivetrain components. Eaton re-segmented in Q1 2026: the legacy **Vehicle** and **eMobility** segments now combine into a single **\"Mobility\"** reportable segment.\n\n**FY2025 segment mix (net sales, total $27.45B):**\n\n| Segment | Net sales | Share | YoY growth | Op margin | Backlog | Book-to-bill |\n|---|---:|---:|---:|---:|---:|---:|\n| Electrical Americas | $13.28B | 48.4% | +16% | 29.9% | $13.25B (+31%) | 1.2 |\n| Electrical Global | $6.82B | 24.8% | +9% | 19.4% | $2.03B (+19%) | 1.0 |\n| **Aerospace** | **$4.25B** | **15.5%** | **+13%** | **23.9%** | **$4.32B (+16%)** | **1.1** |\n| Vehicle | $2.51B | 9.1% | \u221210% | 16.7% | \u2014 | \u2014 |\n| eMobility | $0.60B | 2.2% | \u22129% | \u22122.3% | \u2014 | \u2014 |\n\n*Source: FY2025 10-K (SEC EDGAR).* Electrical (Americas + Global) = **73%** of revenue; Aerospace = **15.5%**.\n\n| Metric | Value | | Metric | Value |\n|---|---|---|---|---|\n| Price | $438.76 | | Trailing P/E | 45.1x |\n| Market cap | $171.9B | | Forward P/E | 27.9x |\n| Enterprise value | $192.5B | | PEG (5-yr) | 2.69 |\n| Revenue (ttm) | $30.03B | | P/S \u00b7 P/B | 5.7x \u00b7 8.5x |\n| Qtr revenue growth | +21.4% | | EV/EBITDA | 29.9x |\n| Operating margin (ttm) | 16.6% | | ROE \u00b7 ROA | 19.7% \u00b7 7.1% |\n| Diluted EPS (ttm, GAAP) | $9.74 | | Adjusted EPS 2026E/2027E | $13.55 / $16.13 |\n| Net income (ttm) | $3.83B | | Dividend yield | 0.99% ($4.40/yr) |\n| Total debt / equity | $21.3B / 105% | | Payout ratio | 43.6% |\n| Operating cash flow (ttm) | $4.95B | | Levered FCF (ttm) | $3.11B |\n| Beta (5-yr) | 1.17 | | Institutional ownership | 87.9% |\n\n**Financial track record (GAAP, 10-K):**\n\n| | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |\n|---|---:|---:|---:|---:|---:|---:|\n| Revenue ($B) | 17.86 | 19.63 | 20.75 | 23.20 | 24.88 | 27.45 |\n| Net income ($B) | 1.41 | 2.14 | 2.46 | 3.22 | 3.79 | 4.09 |\n| Diluted EPS | $3.49 | $5.34 | $6.14 | $8.02 | $9.50 | $10.45 |\n\n**Stock performance (total-return basis, adjusted close):**\n- 10-yr CAGR: **23.8%** \u00b7 5-yr CAGR: **26.0%** \u00b7 3-yr CAGR: **28.8%** \u00b7 1-yr: **+18.5%**\n- 52-week range: $311.92 \u2013 $478.00 \u00b7 50-day MA $417.68 \u00b7 200-day MA $385.84\n\n---\n\n## 2. SWOT Analysis\n\n### STRENGTHS\n- **Dominant Electrical Americas franchise (48% of sales, 29.9% margin).** Backlog up **31%** YoY to $13.25B with a **1.2 book-to-bill** \u2014 the strongest demand signal in the electrical sector. AI data-center power demand is the core driver.\n- **Best-in-class margin expansion.** GAAP EPS compounded at **24.5%/yr (2020\u20132025)** while revenue grew only ~9%/yr \u2014 evidence of a deliberate mix-shift toward higher-margin electrical/aerospace and away from lower-margin vehicle businesses.\n- **Aerospace is a compounding profit engine.** $4.2B segment growing 13% with margins up to **23.9%** (+90bp YoY), backlog +16%, book-to-bill 1.1. Broad platform content across commercial, military, and space (fuel, hydraulics, actuation, oxygen, air-to-air refueling).\n- **Fortress balance sheet and capital returns.** $4.95B operating cash flow, 44% dividend payout with 15+ years of consecutive increases, 88% institutional ownership.\n- **Pricing power and switching costs.** Eaton is embedded in building/data-center electrical infrastructure and aircraft platforms \u2014 hard to rip out once specified.\n\n### WEAKNESSES\n- **Rich valuation \u2014 the stock is priced for perfection.** 27.9x forward earnings and 29.9x EV/EBITDA, a premium to Schneider (24.4x) and ABB (25.6x). Little room for multiple expansion; any growth disappointment de-rates the stock hard.\n- **Vehicle & eMobility are structural drags.** Vehicle sales fell \u221210% in 2025; eMobility is still loss-making (\u22122.3% margin). The new \"Mobility\" segment masks a business that has yet to justify its EV investment thesis.\n- **Customer concentration.** Aerospace: 20% of sales to 3 large aircraft OEMs; Vehicle: 37% to 4 OEMs. Electrical: 22% to 6 large customers. A single OEM destocking or program delay moves results.\n- **Below-peer headline margins.** 16.6% operating margin (ttm) trails Emerson (26.9%), Parker (23.5%), and Hubbell (21.7%) \u2014 though this reflects the mix of lower-margin legacy segments, which management is actively pruning.\n\n### OPPORTUNITIES\n- **AI data-center power supercycle.** Electrical Americas backlog (+31%) is the clearest proof. Eaton supplies switchgear, UPS, busway, and power distribution for hyperscaler builds \u2014 a multi-year secular tailwind, not a one-quarter event.\n- **Grid modernization\n\n[truncated]"
+      },
       "files": {
         "export": [],
-        "csv": [],
+        "csv": [
+          {
+            "name": "competitor-comparison.csv",
+            "rel_path": "artifacts/csv/competitor-comparison.csv",
+            "size": 1139,
+            "updated_at": "2026-09-24T04:43:07.196355",
+            "previewable": true,
+            "public_href": "public/2026-09-24/eaton-stock-analysis/artifacts/csv/competitor-comparison.csv"
+          }
+        ],
         "image": [],
         "other": []
       }
