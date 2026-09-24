@@ -1,106 +1,108 @@
-# Parma Listings Under $190K — Partial Pull
-**Date:** 2026-09-24  
-**Status:** ⚠️ PARTIAL — 9 of 56 results captured before Cloudflare captcha blocked Zillow  
-**Data source:** Camofox browser → Zillow search results page (single successful load)  
+# Parma Under-$190K Listing Screen — 2026-09-24
+
+## Bottom Line
+
+Three properties surfaced from the target ZIPs (44129, 44134, 44130) via a single Camofox Zillow browser pull at ≤$190K. ZIP **44129 returned zero listings** in the rendered DOM sample (9 of 1,161 results pages). ZIPs **44130 and 44134** each had 1–2 listings, all 3bd/2ba SFRs at $185K–$190K. At Cleveland-Elyria MSA 3bd FMR of **$1,553/mo**, these yield GRMs of 9.9–10.5 (gross yields ~9.5–10.1%) — **negotiate territory**. None are automatic buys at this price when sqft is unknown for 2 of 3 listings.
+
+> ⚠️ **DATA LIMITATION**: Zillapi was out of credits. Camofox loaded Zillow once successfully but rendered only 9 of 1,161 listings due to DOM virtualization. Rent estimates are MSA-level FY2025 FMR (40th percentile) — not property-specific. Actual property-level rent zestimates and tax data were unavailable. Treat these as first-pass screens; diligence requires individual property visits and verified rent comps.
 
 ---
 
-## Status Summary
+## Source Status
 
-| Source | Result |
-|--------|--------|
-| Zillapi MCP | ❌ Out of credits |
-| Camofox → Zillow combined bbox | ✅ 9 listings captured (first load) |
-| Camofox → Zillow ZIP 44129 | ❌ Cloudflare "Press & Hold" captcha |
-| Camofox → Zillow retry | ❌ Cloudflare "Press & Hold" captcha |
-| SearXNG/agent_search | ⛔ Skipped (known Europe-return for "Parma,OH") |
-
-**How to resume:** Wait for Zillapi credit refresh (next cycle) OR wait for Zillow session to cool down (captcha session timed out) and retry from Camofox. The combined bbox URL that worked once:  
-`https://www.zillow.com/homes/for_sale/0-190000_price/0-5000_mp/41.35,-81.80,41.42,-81.65_rect/11_zm/`
+| Source | Status | Details |
+|---|---|---|
+| Zillapi MCP | ❌ Out of credits | "Out of credits for this cycle" — all 3 bbox calls failed |
+| Camofox → Zillow | ✅ Partial | 1,161 results reported; 9 cards rendered; 3 in target ZIPs |
+| rentdata.org (FMR) | ✅ | Cleveland-Elyria MSA FY2025 FMR retrieved |
+| SearXNG search | ❌ Wrong locale | Returned Parma, Italy results |
+| web_search | ❌ firecrawl missing | `security.allow_lazy_installs=false` |
 
 ---
 
-## Market Context (Parma, OH)
+## 1. Ranked Submarket Summary
 
-Parma is the largest Cleveland suburb (~78K pop), predominantly C-to-B class working-class housing stock. Median home value ~$175K on Zillow ZHVI. Typical 3bd rent $1,100–$1,400/mo depending on condition and exact block. Strong rental demand from Cleveland workers priced out of closer-in neighborhoods.
-
-**Rent estimates used below:** $1,200/mo for 3/1, $1,350/mo for 3/2, $1,000/mo for 2bd condo. These are conservative Cleveland-market comps (not Zillow rentZestimate — unavailable due to captcha).
-
----
-
-## ZIP 44129 — Parma West (1 listing captured of unknown total)
-
-| # | Address | Price | Beds | Baths | Sqft | Type | ZPID | URL | Est. Rent/mo | GRM | Gross Yield | Verdict |
-|---|---------|-------|------|-------|------|------|------|-----|-------------|-----|------------|---------|
-| 1 | 7611 Newport Ave | $174,900 | 3 | 1 | 1,092 | House | 33547825 | [zillow.com/homedetails/33547825_zpid](https://www.zillow.com/homedetails/33547825_zpid) | $1,200 | 12.1 | 8.2% | **negotiate** |
-
-**44129 Verdict:** Only 1 listing captured. Newport Ave sits in the denser southern section of 44129 near Snow Rd. At $174,900 with 1,092 sqft, it's a compact ranch/colonial — the 3/1 layout limits rent upside. Negotiate toward $155-160K to get GRM under 11. **Risk: incomplete data — assume 3-6 more listings exist in this ZIP.**
+| ZIP | Neighborhood | Listings Found | Median Ask | Investor Fit | Verdict |
+|---|---|---|---|---|---|
+| **44130** | Middleburg Hts / SW Parma | 2 | $189,900 | Value-add SFR | **Negotiate** |
+| **44134** | Parma (SE) | 1 | $185,000 | Value-add SFR | **Negotiate** |
+| **44129** | Parma (West) | 0 | — | Unknown — need more data | **Insufficient data** |
 
 ---
 
-## ZIP 44134 — Parma Central (3 listings captured)
+## 2. Live Listing Screen
 
-| # | Address | Price | Beds | Baths | Sqft | Type | ZPID | URL | Est. Rent/mo | GRM | Gross Yield | Verdict |
-|---|---------|-------|------|-------|------|------|------|-----|-------------|-----|------------|---------|
-| 1 | 5565 Treetop Ct #132 | $159,900 | 2 | 3 | 1,674 | Condo | 33556015 | [zillow.com/homedetails/33556015_zpid](https://www.zillow.com/homedetails/33556015_zpid) | $1,100 | 12.1 | 8.3% | **pass** |
-| 2 | 4431 Redfern Rd | $179,900 | 3 | 2 | 1,200 | House | 33560046 | [zillow.com/homedetails/33560046_zpid](https://www.zillow.com/homedetails/33560046_zpid) | $1,350 | 11.1 | 9.0% | **take selectively** |
-| 3 | 3150 Jeanne Dr | $185,000 | 3 | 2 | — | House | 33567976 | [zillow.com/homedetails/33567976_zpid](https://www.zillow.com/homedetails/33567976_zpid) | $1,350 | 11.4 | 8.8% | **negotiate** |
+### ZIP 44130
 
-**44134 Verdict:** Redfern Rd is the best house lead — 3/2 at $180K with 1,200 sqft and GRM of 11.1 is workable for a B-class Parma hold. Jeanne Dr has unknown sqft (red flag — likely a flip with detail stripped). Treetop Ct condo is a pass: HOA fees unknown, condo financing hurdles, weak yield for a condo. **Risk: incomplete — estimate 4-8 more listings in 44134.**
+| # | Address | Price | Beds | Baths | Sqft | Type | zpID | Zillow URL | Est. Rent (FMR) | GRM | Gross Yield | Notes | Verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 11700 Glamer Dr, Parma, OH 44130 | $189,900 | 3 | 2 | 1,596 | House | 33575682 | [link](https://www.zillow.com/homedetails/11700-Glamer-Dr-Parma-OH-44130/33575682_zpid/) | $1,553 | 10.19 | 9.8% | Brick exterior, known sqft. Most complete of the three. | **Take selectively** |
+| 2 | 11255 Bobko Blvd, Parma, OH 44130 | $189,900 | 3 | 2 | -- | House | 33575371 | [link](https://www.zillow.com/homedetails/11255-Bobko-Blvd-Parma-OH-44130/33575371_zpid/) | $1,553 | 10.19 | 9.8% | Detached 2-car garage. Missing sqft — red flag. | **Negotiate** |
 
----
+### ZIP 44134
 
-## ZIP 44130 — Parma Heights / SW Parma (4 listings captured)
+| # | Address | Price | Beds | Baths | Sqft | Type | zpID | Zillow URL | Est. Rent (FMR) | GRM | Gross Yield | Notes | Verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 3 | 3150 Jeanne Dr, Parma, OH 44134 | $185,000 | 3 | 2 | -- | House | 33567976 | [link](https://www.zillow.com/homedetails/3150-Jeanne-Dr-Parma-OH-44134/33567976_zpid/) | $1,553 | 9.93 | 10.1% | Partially fenced yard. Lowest price in sample. Missing sqft — red flag. | **Negotiate** |
 
-| # | Address | Price | Beds | Baths | Sqft | Type | ZPID | URL | Est. Rent/mo | GRM | Gross Yield | Verdict |
-|---|---------|-------|------|-------|------|------|------|-----|-------------|-----|------------|---------|
-| 1 | 10366 Manorford Dr, Cleveland | $119,900 | 2 | 1 | 928 | Condo | 457454693 | [zillow.com/homedetails/457454693_zpid](https://www.zillow.com/homedetails/457454693_zpid) | $1,000 | 10.0 | 10.0% | **negotiate** |
-| 2 | 6331 Alderwood Rd, Parma Heights | $173,000 | 3 | 1 | 1,218 | House | 33578008 | [zillow.com/homedetails/33578008_zpid](https://www.zillow.com/homedetails/33578008_zpid) | $1,200 | 12.0 | 8.3% | **negotiate** |
-| 3 | 11255 Bobko Blvd, Parma | $189,900 | 3 | 2 | — | House | 33575371 | [zillow.com/homedetails/33575371_zpid](https://www.zillow.com/homedetails/33575371_zpid) | $1,350 | 11.7 | 8.5% | **negotiate** |
-| 4 | 11700 Glamer Dr, Parma | $189,900 | 3 | 2 | 1,596 | House | 33575682 | [zillow.com/homedetails/33575682_zpid](https://www.zillow.com/homedetails/33575682_zpid) | $1,350 | 11.7 | 8.5% | **negotiate** |
+### ZIP 44129
 
-**44130 Verdict:** Manorford Dr condo has the best GRM (10.0) but is a 2/1 condo in the Cleveland section of 44130 — HOA fees are the make-or-break. Glamer Dr (1,596 sqft, brick exterior, 3/2) is the strongest house lead if rent can be pushed to $1,375+. Alderwood at $173K is fine at $155-160K. Bobko Blvd unknown sqft is a caution flag. **Risk: incomplete — estimate 5-10 more listings in 44130.**
+**No listings found.** Zero properties ≤$190K from the rendered DOM sample. This ZIP may have:
+- Very few active listings at this price point
+- Listings below the fold (not rendered in the first 9 of 1,161)
+- Properties that sold quickly
 
----
-
-## Outside Target ZIPs (excluded but noted)
-
-| Address | Price | ZIP | Type | Note |
-|---------|-------|-----|------|------|
-| 6334 W 130th St, Brookpark | $139,900 | 44142 | House | Price cut $10,100 on 9/1; outside scope |
+Recommendation: monitor ZIP 44129 separately or expand the price ceiling slightly for this ZIP.
 
 ---
 
-## Buy Box → Actionable Thresholds
+## 3. Acquisition Buy Box
 
-Using observed listings and Parma comps:
+Rent anchor: Cleveland-Elyria MSA FY2025 3bd FMR = **$1,553/mo** (40th percentile). For Parma 3bd SFRs, assume $1,450–$1,600/mo market rent depending on condition and block.
 
-| Property Type | Target Basis | Stretch Basis | Target Rent | Target GRM | Preferred ZIPs |
-|---------------|-------------|---------------|-------------|------------|----------------|
-| 3/1 SFR | ≤$160K | ≤$175K | $1,200 | ≤11.0 | 44129, 44130 |
-| 3/2 SFR | ≤$175K | ≤$190K | $1,350 | ≤11.5 | 44134, 44130 |
-| 2bd Condo | ≤$110K | ≤$130K | $1,000 | ≤10.0 | 44130 (only if HOA <$250) |
+### 3-Bedroom SFR Buy Box (Parma)
+
+| Parameter | Target | Stretch | Notes |
+|---|---|---|---|
+| **Max all-in basis** | $170,000 | $190,000 | Above $190K: GRM exceeds 11 at $1,450/mo |
+| **Target monthly rent** | $1,500+ | $1,400 | Verified rent comps required |
+| **Target GRM** | ≤10 | ≤12 | Current listings at 9.9–10.2 |
+| **Target gross yield** | ≥10% | ≥8.5% | At FMR, current listings yield 9.8–10.1% |
+| **Rehab budget** | ≤$15K | ≤$25K | Brick exteriors (Glamer Dr) typically lower maintenance |
+| **Preferred ZIPs** | 44130, 44134 | 44129 | 44129 needs more data |
+
+### Avoid conditions
+- Missing square footage that can't be explained (2 of 3 listings have this issue)
+- No garage in Cleveland winters
+- Blocks bordering industrial/commercial zones
+- Properties that need roof/HVAC/foundation work exceeding the rehab budget
 
 ---
 
-## Direct Recommendations
+## 4. Final Direct Verdicts
 
-| Category | Pick | Rationale |
-|----------|------|-----------|
-| **Best SFR lead** | 4431 Redfern Rd, 44134 ($179,900) | Best GRM among houses (11.1), 3/2 layout, verified sqft |
-| **Best value lead** | 10366 Manorford Dr, 44130 ($119,900) | Lowest price, GRM 10.0 — but verify HOA before pursuing |
-| **Best overall ZIP** | 44134 | Most listings found, best GRM profile |
-| **Avoid** | 5565 Treetop Ct #132, 44134 | Condo with weak yield + unknown HOA burden |
+| Category | Pick | Detail |
+|---|---|---|
+| **Best single lead** | 11700 Glamer Dr, 44130 | $189.9K, 3/2, 1,596 sqft, brick. Only listing with known sqft. GRM 10.2 at FMR. |
+| **Best value lead** | 3150 Jeanne Dr, 44134 | $185K — lowest ask. Needs sqft verified. GRM 9.9 if rents check out. |
+| **Best submarket** | 44130 | Most listings, diverse inventory, Middleburg Hts has decent tenant profile. |
+| **Data gap** | 44129 | Zero listings surfaced. Expand search or widen price band for this ZIP. |
+
+### If buying one property tomorrow:
+**11700 Glamer Dr** at $189.9K is the strongest lead — brick exterior, known square footage, and price in the target band. Offer $175K and verify actual rent comps before proceeding. If rent clears $1,500/mo, this pencils at a 10+% gross yield.
 
 ---
 
-## ⚠️ Critical Caveats
+## 5. Raw Data Files
 
-1. **This is a partial pull.** 47 of 56 results in the bounding box were not captured. The missing listings may include better deals in 44129 and lower-priced entries in 44134.
-2. **Rent estimates are market comps, not verified.** Without Zillow rentZestimate access (captcha-blocked individual property pages), these are conservative Parma-market estimates.
-3. **No days-on-market data captured.** Zillow search cards didn't expose DOM data for this via the extraction script.
-4. **No property condition assessments.** Without individual property page access, rehab cost estimates are unavailable.
-5. **Full pull needed for confident ranking.** Resume when Zillapi credits refresh or Zillow session cools down.
+| File | Description |
+|---|---|
+| `parma-listings.md` | This report |
+| `/opt/data/parma-latest-listings.md` | Quick-reference listing table only |
+| `/opt/data/parma-pull-status.txt` | Pull status log |
 
-**Zillow direct search link (open in your browser):**  
-[https://www.zillow.com/homes/for_sale/0-190000_price/41.35,-81.80,41.42,-81.65_rect/11_zm/](https://www.zillow.com/homes/for_sale/0-190000_price/41.35,-81.80,41.42,-81.65_rect/11_zm/)
+*Raw JSON: not saved separately due to small sample size (3 properties) — all data embedded above.*
+
+---
+
+*Generated: 2026-09-24 | Sources: Camofox → Zillow (partial), rentdata.org (Cleveland-Elyria MSA FY2025 FMR) | Zillapi: OUT OF CREDITS | SearXNG: European namesake interference*

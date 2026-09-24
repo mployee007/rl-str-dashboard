@@ -1,14 +1,54 @@
 {
-  "generated_at": "2026-09-24T04:14:16.643279+00:00",
+  "generated_at": "2026-09-24T04:29:53.697459+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 74,
+  "session_count": 76,
   "sessions": [
+    {
+      "id": "2026-09-24/eaton-corporation-analysis",
+      "date": "2026-09-24",
+      "title": "eaton-corporation-analysis",
+      "summary": "",
+      "updated_at": "2026-09-24T04:29:24.295716",
+      "file_count": 0,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-24/eaton-corporation-analysis",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
+    {
+      "id": "2026-09-24/eaton-stock-analysis",
+      "date": "2026-09-24",
+      "title": "eaton-stock-analysis",
+      "summary": "",
+      "updated_at": "2026-09-24T04:28:59.125745",
+      "file_count": 0,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-24/eaton-stock-analysis",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-24/parma-listings-under-190k",
       "date": "2026-09-24",
       "title": "parma-listings-under-190k",
       "summary": "",
-      "updated_at": "2026-09-24T01:23:19.243437",
+      "updated_at": "2026-09-24T04:27:39.645836",
       "file_count": 2,
       "export_count": 0,
       "csv_count": 0,
@@ -32,8 +72,8 @@
           {
             "name": "parma-listings.md",
             "rel_path": "parma-listings.md",
-            "size": 7338,
-            "updated_at": "2026-09-24T01:22:48.811463",
+            "size": 5930,
+            "updated_at": "2026-09-24T04:27:39.645836",
             "previewable": true,
             "public_href": "public/2026-09-24/parma-listings-under-190k/parma-listings.md"
           }
