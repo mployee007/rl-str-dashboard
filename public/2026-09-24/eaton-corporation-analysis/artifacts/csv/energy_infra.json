@@ -1,0 +1,123 @@
+{
+  "PWR": {
+    "name": "Quanta Services, Inc.",
+    "price": 641.6,
+    "stats": {
+      "Market Cap": "96.47B",
+      "Revenue": "32.91B",
+      "Net Income": "1.33B",
+      "Operating Margin": "6.12%",
+      "Profit Margin": "4.03%"
+    }
+  },
+  "NEE": {
+    "name": "NextEra Energy, Inc.",
+    "price": 75.92,
+    "stats": {
+      "Market Cap": "158.20B",
+      "Revenue": "28.70B",
+      "Net Income": "9.30B",
+      "Operating Margin": "29.40%",
+      "Profit Margin": "32.40%"
+    }
+  },
+  "FLR": {
+    "name": "Fluor Corporation",
+    "price": 51.305,
+    "stats": {
+      "Market Cap": "6.88B",
+      "Revenue": "15.54B",
+      "Net Income": "-2.00B",
+      "Operating Margin": "-1.92%",
+      "Profit Margin": "-12.85%"
+    }
+  },
+  "MOD": {
+    "name": "Modine Manufacturing Company",
+    "price": 192.99,
+    "stats": {
+      "Market Cap": "10.25B",
+      "Revenue": "3.37B",
+      "Net Income": "144.20M",
+      "Operating Margin": "10.92%",
+      "Profit Margin": "4.28%"
+    }
+  },
+  "POWL": {
+    "name": "Powell Industries, Inc.",
+    "price": 187.6,
+    "stats": {
+      "Market Cap": "6.85B",
+      "Revenue": "1.16B",
+      "Net Income": "190.86M",
+      "Operating Margin": "19.67%",
+      "Profit Margin": "16.49%"
+    }
+  },
+  "CEG": {
+    "name": "Constellation Energy Corporation",
+    "price": 259.49,
+    "stats": {
+      "Market Cap": "91.95B",
+      "Revenue": "31.27B",
+      "Net Income": "3.47B",
+      "Operating Margin": "15.05%",
+      "Profit Margin": "11.08%"
+    }
+  },
+  "SMR": {
+    "name": "NuScale Power Corporation",
+    "price": 8.385,
+    "stats": {
+      "Market Cap": "3.62B",
+      "Revenue": "10.69M",
+      "Net Income": "-415.70M",
+      "Operating Margin": "-2,107.54%",
+      "Profit Margin": "n/a"
+    }
+  },
+  "BWXT": {
+    "name": "BWX Technologies, Inc.",
+    "price": 139.65,
+    "stats": {
+      "Market Cap": "12.80B",
+      "Revenue": "3.51B",
+      "Net Income": "355.18M",
+      "Operating Margin": "10.23%",
+      "Profit Margin": "10.11%"
+    }
+  },
+  "FLNC": {
+    "name": "Fluence Energy, Inc.",
+    "price": 7.255,
+    "stats": {
+      "Market Cap": "1.34B",
+      "Revenue": "2.63B",
+      "Net Income": "-80.87M",
+      "Operating Margin": "-4.21%",
+      "Profit Margin": "-3.07%"
+    }
+  },
+  "PEG": {
+    "name": "Public Service Enterprise Group Incorporated",
+    "price": 66.82,
+    "stats": {
+      "Market Cap": "33.28B",
+      "Revenue": "12.54B",
+      "Net Income": "2.01B",
+      "Operating Margin": "23.72%",
+      "Profit Margin": "16.04%"
+    }
+  },
+  "VST": {
+    "name": "Vistra Corp.",
+    "price": 136.98,
+    "stats": {
+      "Market Cap": "46.00B",
+      "Revenue": "19.21B",
+      "Net Income": "2.03B",
+      "Operating Margin": "19.79%",
+      "Profit Margin": "11.55%"
+    }
+  }
+}
