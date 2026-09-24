@@ -1,0 +1,23 @@
+{
+  "report_date": "2025-09-24",
+  "source": "zillow_camofox",
+  "zillapi_credits": "out",
+  "total_results_header": 56,
+  "rendered_cards": 9,
+  "residential_listings": 2,
+  "lot_listings": 4,
+  "listings": [
+    {"address": "3214 Liggett Dr, Parma, OH 44134", "price": 15000, "price_str": "$15,000", "beds": "", "baths": "", "sqft": "6,752 sqft lot", "zpid": "96368777", "type": "Lot", "zip": "44134", "days": "315", "notes": "Lot/Land. ASSAD & CREA REALTY GROUP. MLS Now.", "url": "https://www.zillow.com/homedetails/3214-Liggett-Dr-Parma-OH-44134/96368777_zpid/"},
+    {"address": "Grantwood Dr, Cleveland, OH 44134", "price": 32000, "price_str": "$32,000", "beds": "", "baths": "", "sqft": "0.33 acres lot", "zpid": "2058287947", "type": "Lot", "zip": "44134", "days": "", "notes": "Lot/Land. RUSSELL REAL ESTATE SERVICES. Price cut $1,000 (9/14).", "url": "https://www.zillow.com/homedetails/Grantwood-Dr-Cleveland-OH-44134/2058287947_zpid/"},
+    {"address": "5807 Luelda Ave, Parma, OH 44129", "price": 45000, "price_str": "$45,000", "beds": "", "baths": "", "sqft": "5,602 sqft lot", "zpid": "33551679", "type": "Lot", "zip": "44129", "days": "", "notes": "Lot/Land. HOWARD HANNA. Price cut $12,000 (9/9).", "url": "https://www.zillow.com/homedetails/5807-Luelda-Ave-Parma-OH-44129/33551679_zpid/"},
+    {"address": "2700 Brookpark Rd Trailer 101, Cleveland, OH 44134", "price": 45000, "price_str": "$45,000", "beds": "3", "baths": "2", "sqft": "--", "zpid": "144421796", "type": "Manufactured", "zip": "44134", "days": "", "notes": "Manufactured home in mobile home park. Lot rent applies — NOT fee simple. KELLER WILLIAMS LIVING. 'Thoughtful floor plan.'", "url": "https://www.zillow.com/homedetails/2700-Brookpark-Rd-TRAILER-101-Cleveland-OH-44134/144421796_zpid/"},
+    {"address": "Laura Lee Ln, Seven Hills, OH 44131", "price": 59000, "price_str": "$59,000", "beds": "", "baths": "", "sqft": "0.33 acres lot", "zpid": "96361508", "type": "Lot", "zip": "44131", "days": "", "notes": "Lot/Land. KELLER WILLIAMS LEGACY GROUP REALTY. Mature neighborhood. Outside target ZIP range.", "url": "https://www.zillow.com/homedetails/Laura-Lee-Ln-Seven-Hills-OH-44131/96361508_zpid/"},
+    {"address": "11800 Brookpark Rd #J078, Cleveland, OH 44130", "price": 62900, "price_str": "$62,900", "beds": "2", "baths": "1", "sqft": "672", "zpid": "464520843", "type": "Condo", "zip": "44130", "days": "", "notes": "Condo/apartment unit. Small floorplan (672 sqft). Unit designation #J078 suggests multi-unit building. HOA fees expected — not verified.", "url": "https://www.zillow.com/homedetails/11800-Brookpark-Rd-J078-Cleveland-OH-44130/464520843_zpid/"}
+  ],
+  "data_gaps": {
+    "rent_estimates": "unavailable",
+    "tax_data": "unavailable",
+    "year_built": "unavailable",
+    "full_results": "47 listings not rendered (DOM virtualization)"
+  }
+}
