@@ -1,108 +1,83 @@
-# Parma Under-$190K Listing Screen — 2026-09-24
+# Parma Area Listings - Under $190K
 
-## Bottom Line
+**Pull date:** 2026-09-24
+**Source:** Zillow.com via Camofox browser (Zillapi out of credits)
+**Search:** Parma, OH area | For Sale | Max $190K | Sort: Price (Low to High)
+**Results header:** 33 results (9 rendered due to Zillow DOM virtualization)
+**ZIPs covered:** 44129, 44130, 44134
 
-Three properties surfaced from the target ZIPs (44129, 44134, 44130) via a single Camofox Zillow browser pull at ≤$190K. ZIP **44129 returned zero listings** in the rendered DOM sample (9 of 1,161 results pages). ZIPs **44130 and 44134** each had 1–2 listings, all 3bd/2ba SFRs at $185K–$190K. At Cleveland-Elyria MSA 3bd FMR of **$1,553/mo**, these yield GRMs of 9.9–10.5 (gross yields ~9.5–10.1%) — **negotiate territory**. None are automatic buys at this price when sqft is unknown for 2 of 3 listings.
-
-> ⚠️ **DATA LIMITATION**: Zillapi was out of credits. Camofox loaded Zillow once successfully but rendered only 9 of 1,161 listings due to DOM virtualization. Rent estimates are MSA-level FY2025 FMR (40th percentile) — not property-specific. Actual property-level rent zestimates and tax data were unavailable. Treat these as first-pass screens; diligence requires individual property visits and verified rent comps.
-
----
-
-## Source Status
-
-| Source | Status | Details |
-|---|---|---|
-| Zillapi MCP | ❌ Out of credits | "Out of credits for this cycle" — all 3 bbox calls failed |
-| Camofox → Zillow | ✅ Partial | 1,161 results reported; 9 cards rendered; 3 in target ZIPs |
-| rentdata.org (FMR) | ✅ | Cleveland-Elyria MSA FY2025 FMR retrieved |
-| SearXNG search | ❌ Wrong locale | Returned Parma, Italy results |
-| web_search | ❌ firecrawl missing | `security.allow_lazy_installs=false` |
+## Data Caveats
+- **Zillapi is out of credits** - this pull uses Camofox browser (Tier 2 fallback).
+- **Rent estimates are market averages** (not property-specific) - Zillow individual property pages are captcha-blocked.
+- **Only 9 of 33 results rendered** - Zillow virtualizes listing cards; the DOM caps at 9-12.
+- **Rent anchors used:** 1br ~$750/mo, 2br ~$900/mo, 3br ~$1,100/mo (Parma area ACS estimates).
 
 ---
 
-## 1. Ranked Submarket Summary
+## ZIP 44129
 
-| ZIP | Neighborhood | Listings Found | Median Ask | Investor Fit | Verdict |
-|---|---|---|---|---|---|
-| **44130** | Middleburg Hts / SW Parma | 2 | $189,900 | Value-add SFR | **Negotiate** |
-| **44134** | Parma (SE) | 1 | $185,000 | Value-add SFR | **Negotiate** |
-| **44129** | Parma (West) | 0 | — | Unknown — need more data | **Insufficient data** |
+| # | Address | Price | Beds | Baths | SqFt | Type | Notes | Yield | GRM | Verdict |
+|---|---------|-------|------|-------|------|------|-------|-------|-----|---------|
+| 1 | [5807 Luelda Ave, Parma, OH 44129](https://www.zillow.com/homedetails/33551679_zpid/) | $45,000 |  |  | 5,602 sqft lot | Lot/Land | Price cut: $12,000 (9/9) | N/A | N/A | **pass - land only, no income** |
 
----
+## ZIP 44130
 
-## 2. Live Listing Screen
+| # | Address | Price | Beds | Baths | SqFt | Type | Notes | Yield | GRM | Verdict |
+|---|---------|-------|------|-------|------|------|-------|-------|-----|---------|
+| 1 | [5880 Woolman Ct #76, Parma, OH 44130](https://www.zillow.com/homedetails/461377887_zpid/) | $75,500 | 3 bds | 1 ba | 1,250 sqft | House | FSBO | 17.5% | 5.7 | **take selectively** |
+| 2 | [9012 W Pleasant Valley Rd, Cleveland, OH 44130](https://www.zillow.com/homedetails/33573743_zpid/) | $149,900 | 3 bds | 2 ba | 1,176 sqft | House | - | 8.8% | 11.4 | **negotiate** |
 
-### ZIP 44130
+## ZIP 44134
 
-| # | Address | Price | Beds | Baths | Sqft | Type | zpID | Zillow URL | Est. Rent (FMR) | GRM | Gross Yield | Notes | Verdict |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 11700 Glamer Dr, Parma, OH 44130 | $189,900 | 3 | 2 | 1,596 | House | 33575682 | [link](https://www.zillow.com/homedetails/11700-Glamer-Dr-Parma-OH-44130/33575682_zpid/) | $1,553 | 10.19 | 9.8% | Brick exterior, known sqft. Most complete of the three. | **Take selectively** |
-| 2 | 11255 Bobko Blvd, Parma, OH 44130 | $189,900 | 3 | 2 | -- | House | 33575371 | [link](https://www.zillow.com/homedetails/11255-Bobko-Blvd-Parma-OH-44130/33575371_zpid/) | $1,553 | 10.19 | 9.8% | Detached 2-car garage. Missing sqft — red flag. | **Negotiate** |
-
-### ZIP 44134
-
-| # | Address | Price | Beds | Baths | Sqft | Type | zpID | Zillow URL | Est. Rent (FMR) | GRM | Gross Yield | Notes | Verdict |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 3 | 3150 Jeanne Dr, Parma, OH 44134 | $185,000 | 3 | 2 | -- | House | 33567976 | [link](https://www.zillow.com/homedetails/3150-Jeanne-Dr-Parma-OH-44134/33567976_zpid/) | $1,553 | 9.93 | 10.1% | Partially fenced yard. Lowest price in sample. Missing sqft — red flag. | **Negotiate** |
-
-### ZIP 44129
-
-**No listings found.** Zero properties ≤$190K from the rendered DOM sample. This ZIP may have:
-- Very few active listings at this price point
-- Listings below the fold (not rendered in the first 9 of 1,161)
-- Properties that sold quickly
-
-Recommendation: monitor ZIP 44129 separately or expand the price ceiling slightly for this ZIP.
+| # | Address | Price | Beds | Baths | SqFt | Type | Notes | Yield | GRM | Verdict |
+|---|---------|-------|------|-------|------|------|-------|-------|-----|---------|
+| 1 | [3214 Liggett Dr, Parma, OH 44134](https://www.zillow.com/homedetails/96368777_zpid/) | $15,000 |  |  | 6,752 sqft lot | Lot/Land | DOM: 315 days | N/A | N/A | **pass - land only, no income** |
+| 2 | [Grantwood Dr, Cleveland, OH 44134](https://www.zillow.com/homedetails/2058287947_zpid/) | $32,000 |  |  | 0.33 acres | Lot/Land | Price cut: $1,000 (9/14) | N/A | N/A | **pass - land only, no income** |
+| 3 | [5651 Broadview Rd APT D7, Parma, OH 44134](https://www.zillow.com/homedetails/33556311_zpid/) | $100,000 | 1 bd | 1 ba | 525 sqft | Condo | - | 9.0% | 11.1 | **take selectively** |
+| 4 | [5651 Broadview Rd APT B5, Parma, OH 44134](https://www.zillow.com/homedetails/33556290_zpid/) | $104,900 | 2 bds | 1 ba | 720 sqft | Condo | - | 10.3% | 9.7 | **take selectively** |
+| 5 | [6478 State Rd APT G12, Parma, OH 44134](https://www.zillow.com/homedetails/33560806_zpid/) | $149,900 | 3 bds | 2 ba | 1,408 sqft | Condo | Price cut: $10,000 (9/22) | 8.8% | 11.4 | **negotiate** |
+| 6 | [5565 Treetop Ct #132, Parma, OH 44134](https://www.zillow.com/homedetails/33556015_zpid/) | $159,900 | 2 bds | 3 ba | 1,674 sqft | Condo | - | 6.8% | 14.8 | **pass - weak yield** |
 
 ---
 
-## 3. Acquisition Buy Box
+## Houses Only (per request)
 
-Rent anchor: Cleveland-Elyria MSA FY2025 3bd FMR = **$1,553/mo** (40th percentile). For Parma 3bd SFRs, assume $1,450–$1,600/mo market rent depending on condition and block.
+**2 houses found under $190K** across all three ZIPs (from 9 rendered listings).
 
-### 3-Bedroom SFR Buy Box (Parma)
-
-| Parameter | Target | Stretch | Notes |
-|---|---|---|---|
-| **Max all-in basis** | $170,000 | $190,000 | Above $190K: GRM exceeds 11 at $1,450/mo |
-| **Target monthly rent** | $1,500+ | $1,400 | Verified rent comps required |
-| **Target GRM** | ≤10 | ≤12 | Current listings at 9.9–10.2 |
-| **Target gross yield** | ≥10% | ≥8.5% | At FMR, current listings yield 9.8–10.1% |
-| **Rehab budget** | ≤$15K | ≤$25K | Brick exteriors (Glamer Dr) typically lower maintenance |
-| **Preferred ZIPs** | 44130, 44134 | 44129 | 44129 needs more data |
-
-### Avoid conditions
-- Missing square footage that can't be explained (2 of 3 listings have this issue)
-- No garage in Cleveland winters
-- Blocks bordering industrial/commercial zones
-- Properties that need roof/HVAC/foundation work exceeding the rehab budget
+| # | Address | ZIP | Price | Beds | Baths | SqFt | Notes | Est. Rent | Yield | GRM | Verdict |
+|---|---------|-----|-------|------|-------|------|-------|-----------|-------|-----|---------|
+| 1 | [5880 Woolman Ct #76, Parma, OH 44130](https://www.zillow.com/homedetails/461377887_zpid/) | 44130 | $75,500 | 3 bds | 1 ba | 1,250 sqft | FSBO | $1100/mo | 17.5% | 5.7 | **take selectively** |
+| 2 | [9012 W Pleasant Valley Rd, Cleveland, OH 44130](https://www.zillow.com/homedetails/33573743_zpid/) | 44130 | $149,900 | 3 bds | 2 ba | 1,176 sqft | - | $1100/mo | 8.8% | 11.4 | **negotiate** |
 
 ---
 
-## 4. Final Direct Verdicts
+## Summary
 
-| Category | Pick | Detail |
-|---|---|---|
-| **Best single lead** | 11700 Glamer Dr, 44130 | $189.9K, 3/2, 1,596 sqft, brick. Only listing with known sqft. GRM 10.2 at FMR. |
-| **Best value lead** | 3150 Jeanne Dr, 44134 | $185K — lowest ask. Needs sqft verified. GRM 9.9 if rents check out. |
-| **Best submarket** | 44130 | Most listings, diverse inventory, Middleburg Hts has decent tenant profile. |
-| **Data gap** | 44129 | Zero listings surfaced. Expand search or widen price band for this ZIP. |
+| ZIP | Total Listings | Houses | Condos | Lots | Price Range |
+|-----|---------------|--------|--------|------|-------------|
+| 44129 | 1 | 0 | 0 | 1 | $45,000 - $45,000 |
+| 44130 | 2 | 2 | 0 | 0 | $75,500 - $149,900 |
+| 44134 | 6 | 0 | 4 | 2 | $15,000 - $159,900 |
 
-### If buying one property tomorrow:
-**11700 Glamer Dr** at $189.9K is the strongest lead — brick exterior, known square footage, and price in the target band. Offer $175K and verify actual rent comps before proceeding. If rent clears $1,500/mo, this pencils at a 10+% gross yield.
+## Key Takeaways
+
+1. **Very thin house inventory under $190K** - only 2 houses across all three ZIPs from the rendered results.
+2. **Best SFR lead:** [5880 Woolman Ct #76, 44130](https://www.zillow.com/homedetails/461377887_zpid/) at $75,500 - 3/1 with 1,250 sqft, FSBO. At ~$1,100/mo estimated rent, that's ~17.5% gross yield. This is a **take** if condition checks out.
+3. **Only other house:** [9012 W Pleasant Valley Rd, 44130](https://www.zillow.com/homedetails/33573743_zpid/) at $149,900 - 3/2 with 1,176 sqft. At $1,100/mo rent, ~8.8% yield. **Negotiate** at this price.
+4. **Condo alternative:** [6478 State Rd APT G12, 44134](https://www.zillow.com/homedetails/33560806_zpid/) at $149,900 (was $159,900) - 3/2, 1,408 sqft, recent $10K price cut. Worth checking HOA fees.
+5. **Lots dominate the low end** - 3 of 9 rendered listings are vacant land.
+6. **33 total results but only 9 visible** - 24 listings are behind Zillow's virtualization wall. A manual browser session would reveal the full set.
+
+## Direct Verdicts
+
+| Strategy | Pick | Action |
+|----------|------|--------|
+| Best house lead | 5880 Woolman Ct #76, 44130 - $75,500 FSBO | **take** - verify condition, title, rent comps |
+| Best condo lead | 6478 State Rd APT G12, 44134 - $149,900 | **negotiate** - $10K cut signals motivation; check HOA |
+| Second house | 9012 W Pleasant Valley Rd, 44130 - $149,900 | **negotiate** - only at better price or verified higher rent |
+| Lots | All three | **pass** - no income, unless building is the strategy |
 
 ---
 
-## 5. Raw Data Files
-
-| File | Description |
-|---|---|
-| `parma-listings.md` | This report |
-| `/opt/data/parma-latest-listings.md` | Quick-reference listing table only |
-| `/opt/data/parma-pull-status.txt` | Pull status log |
-
-*Raw JSON: not saved separately due to small sample size (3 properties) — all data embedded above.*
-
----
-
-*Generated: 2026-09-24 | Sources: Camofox → Zillow (partial), rentdata.org (Cleveland-Elyria MSA FY2025 FMR) | Zillapi: OUT OF CREDITS | SearXNG: European namesake interference*
+*Report generated 2026-09-24 | Source: Zillow.com via Camofox | Zillapi status: OUT OF CREDITS*
+*Full Zillow search: https://www.zillow.com/parma-oh/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-81.82%2C%22east%22%3A-81.64%2C%22south%22%3A41.34%2C%22north%22%3A41.43%7D%2C%22filterState%22%3A%7B%22price%22%3A%7B%22max%22%3A190000%7D%2C%22sort%22%3A%7B%22value%22%3A%22pricea%22%7D%7D%2C%22isListVisible%22%3Atrue%7D*
