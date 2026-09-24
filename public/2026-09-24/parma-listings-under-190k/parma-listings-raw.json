@@ -1,0 +1,18 @@
+{
+  "pull_date": "2026-09-24",
+  "status": "partial",
+  "captured": 9,
+  "total_reported": 56,
+  "data_source": "Camofox browser → Zillow search results (single load)",
+  "listings": [
+    {"address": "3150 Jeanne Dr, Parma, OH 44134", "price": 185000, "beds": 3, "baths": 2, "sqft": null, "type": "House", "zpid": "33567976", "zip": "44134", "url": "https://www.zillow.com/homedetails/33567976_zpid/"},
+    {"address": "11255 Bobko Blvd, Parma, OH 44130", "price": 189900, "beds": 3, "baths": 2, "sqft": null, "type": "House", "zpid": "33575371", "zip": "44130", "url": "https://www.zillow.com/homedetails/33575371_zpid/"},
+    {"address": "11700 Glamer Dr, Parma, OH 44130", "price": 189900, "beds": 3, "baths": 2, "sqft": 1596, "type": "House", "zpid": "33575682", "zip": "44130", "url": "https://www.zillow.com/homedetails/33575682_zpid/"},
+    {"address": "10366 Manorford Dr, Cleveland, OH 44130", "price": 119900, "beds": 2, "baths": 1, "sqft": 928, "type": "Condo", "zpid": "457454693", "zip": "44130", "url": "https://www.zillow.com/homedetails/457454693_zpid/"},
+    {"address": "6334 W 130th St, Brookpark, OH 44142", "price": 139900, "beds": 3, "baths": 2, "sqft": 1496, "type": "House", "zpid": "33517617", "zip": "44142", "url": "https://www.zillow.com/homedetails/33517617_zpid/", "notes": "Price cut $10,100 on 9/1"},
+    {"address": "6331 Alderwood Rd, Parma Heights, OH 44130", "price": 173000, "beds": 3, "baths": 1, "sqft": 1218, "type": "House", "zpid": "33578008", "zip": "44130", "url": "https://www.zillow.com/homedetails/33578008_zpid/"},
+    {"address": "7611 Newport Ave, Parma, OH 44129", "price": 174900, "beds": 3, "baths": 1, "sqft": 1092, "type": "House", "zpid": "33547825", "zip": "44129", "url": "https://www.zillow.com/homedetails/33547825_zpid/"},
+    {"address": "4431 Redfern Rd, Parma, OH 44134", "price": 179900, "beds": 3, "baths": 2, "sqft": 1200, "type": "House", "zpid": "33560046", "zip": "44134", "url": "https://www.zillow.com/homedetails/33560046_zpid/"},
+    {"address": "5565 Treetop Ct #132, Parma, OH 44134", "price": 159900, "beds": 2, "baths": 3, "sqft": 1674, "type": "Condo", "zpid": "33556015", "zip": "44134", "url": "https://www.zillow.com/homedetails/33556015_zpid/"}
+  ]
+}
