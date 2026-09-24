@@ -1,8 +1,46 @@
 {
-  "generated_at": "2026-09-24T07:20:17.056358+00:00",
+  "generated_at": "2026-09-24T07:35:54.100874+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 76,
+  "session_count": 77,
   "sessions": [
+    {
+      "id": "2025-09-24/parma-listings-under-190k",
+      "date": "2025-09-24",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-24T07:34:34.449817",
+      "file_count": 2,
+      "export_count": 1,
+      "csv_count": 1,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2025-09-24/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "artifacts/exports/parma-listings.md",
+            "size": 8112,
+            "updated_at": "2026-09-24T07:34:34.449817",
+            "previewable": true,
+            "public_href": "public/2025-09-24/parma-listings-under-190k/artifacts/exports/parma-listings.md"
+          }
+        ],
+        "csv": [
+          {
+            "name": "parma_camofox_raw.json",
+            "rel_path": "artifacts/csv/parma_camofox_raw.json",
+            "size": 3761,
+            "updated_at": "2026-09-24T07:33:32.093042",
+            "previewable": true,
+            "public_href": "public/2025-09-24/parma-listings-under-190k/artifacts/csv/parma_camofox_raw.json"
+          }
+        ],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-24/eaton-corporation-analysis",
       "date": "2026-09-24",

@@ -1,0 +1,21 @@
+{
+  "extracted_at": "2025-09-24T00:00:00Z",
+  "source": "Camofox browser → Zillow.com search results page",
+  "total_results_header": 44,
+  "captured": 9,
+  "sort": "Price (High to Low) — only top ~20% of range captured",
+  "zillapi_status": "Out of credits. MCP server also unreachable.",
+  "camofox_status": "1st navigation succeeded. 2nd navigation hit Cloudflare Press & Hold captcha.",
+  "note": "Individual property pages inaccessible (captcha). Rent estimates unavailable without Zillapi credits. Lower-priced listings ($85K–$185K range) not captured due to sort direction + DOM virtualization.",
+  "listings": [
+    {"address":"3021 Tuxedo Ave, Parma, OH 44134","price":185000,"beds":3,"baths":1,"sqft":1298,"zpid":"33553539","priceCut":"$14,900 (9/10)","notes":"Largest price cut: $14.9K (7.5%). 1,298 sqft. Motivated seller.","pricePerSqft":142.53,"estMonthlyRent":1050,"annualGrossRent":12600,"grossYield":6.81,"grm":14.7,"verdict":"NEGOTIATE — price cut signals flexibility"},
+    {"address":"4910 Lincoln Ave, Parma, OH 44134","price":189000,"beds":3,"baths":2,"sqft":1629,"zpid":"33552460","priceCut":"","notes":"3bd/2ba, 1,629 sqft. $189K flat.","pricePerSqft":116.02,"estMonthlyRent":1150,"annualGrossRent":13800,"grossYield":7.3,"grm":13.7,"verdict":"TAKE SELECTIVELY — 2ba SFR at solid basis"},
+    {"address":"3114 North Ave, Parma, OH 44134","price":189900,"beds":3,"baths":1,"sqft":1825,"zpid":"33552733","priceCut":"$9,100 (9/23)","notes":"1,825 sqft. Price cut $9.1K on 9/23 — motivated seller signal.","pricePerSqft":104.05,"estMonthlyRent":1050,"annualGrossRent":12600,"grossYield":6.64,"grm":15.1,"verdict":"NEGOTIATE — price cut signals flexibility"},
+    {"address":"5597 W 54th St, Parma, OH 44129","price":189900,"beds":3,"baths":1,"sqft":1636,"zpid":"33553876","priceCut":"","notes":"EXP Realty. 'Beautiful curb appeal.' 1,636 sqft.","pricePerSqft":116.08,"estMonthlyRent":1050,"annualGrossRent":12600,"grossYield":6.64,"grm":15.1,"verdict":"NEGOTIATE — yield below target"},
+    {"address":"4402 Pershing Ave, Parma, OH 44134","price":189900,"beds":3,"baths":1,"sqft":1408,"zpid":"33554280","priceCut":"$4,900 (9/22)","notes":"RE/MAX. Price cut $4.9K on 9/22. 1,408 sqft.","pricePerSqft":134.87,"estMonthlyRent":1050,"annualGrossRent":12600,"grossYield":6.64,"grm":15.1,"verdict":"NEGOTIATE — price cut signals flexibility"},
+    {"address":"1308 Hillsdale Ave, Parma, OH 44134","price":189900,"beds":3,"baths":2,"sqft":1748,"zpid":"33556415","priceCut":"$5,100 (9/17)","notes":"3bd/2ba, 1,748 sqft. Price cut $5.1K on 9/17.","pricePerSqft":108.64,"estMonthlyRent":1150,"annualGrossRent":13800,"grossYield":7.27,"grm":13.8,"verdict":"TAKE SELECTIVELY — verify condition"},
+    {"address":"7101 Brownfield Dr, Parma, OH 44129","price":189900,"beds":3,"baths":1,"sqft":2186,"zpid":"33561440","priceCut":"","notes":"Largest at 2,186 sqft. No price cut — may be new listing.","pricePerSqft":86.87,"estMonthlyRent":1150,"annualGrossRent":13800,"grossYield":7.27,"grm":13.8,"verdict":"TAKE SELECTIVELY — verify condition"},
+    {"address":"6311 Thornton Dr, Parma, OH 44129","price":190000,"beds":3,"baths":2,"sqft":1176,"zpid":"33562283","priceCut":"","notes":"Berkshire Hathaway. 35 days on market.","pricePerSqft":161.56,"estMonthlyRent":1150,"annualGrossRent":13800,"grossYield":7.26,"grm":13.8,"verdict":"TAKE SELECTIVELY — verify condition"},
+    {"address":"9011 Manorford Dr, Parma Heights, OH 44130","price":190000,"beds":3,"baths":1,"sqft":1103,"zpid":"33578706","priceCut":"$4,000 (9/10)","notes":"Opendoor. Price cut $4K on 9/10. 44130.","pricePerSqft":172.26,"estMonthlyRent":1050,"annualGrossRent":12600,"grossYield":6.63,"grm":15.1,"verdict":"NEGOTIATE — price cut signals flexibility"}
+  ]
+}
