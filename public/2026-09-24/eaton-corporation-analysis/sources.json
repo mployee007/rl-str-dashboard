@@ -1,3 +1,45 @@
 {
-  "sources": []
+  "as_of": "2026-09-24",
+  "price_source": "Yahoo Finance v8 Chart API",
+  "fundamentals_source": "stockanalysis.com statistics & financials pages",
+  "company_metadata_source": "Wikipedia",
+  "sources": [
+    {
+      "type": "price_history",
+      "provider": "Yahoo Finance v8 Chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/{SYMBOL}",
+      "notes": "adjclose series used for total-return CAGR (1y/3y/5y/10y); User-Agent header required",
+      "tickers": ["ETN","SBGSY","ABBNY","SIEGY","ROK","EMR","HON","APH","VRT","GEV","PH","HUBB","NVT","SPY"]
+    },
+    {
+      "type": "fundamentals",
+      "provider": "stockanalysis.com",
+      "url": "https://stockanalysis.com/stocks/{ticker}/statistics/",
+      "notes": "Market cap, P/E (ttm & fwd), margins, ROE/ROIC, debt, dividend, analyst price target & consensus, growth forecasts",
+      "tickers": ["ETN","ABBNY","SIEGY","ROK","EMR","HON","APH","VRT","GEV","PH","HUBB","NVT"]
+    },
+    {
+      "type": "financial_history",
+      "provider": "stockanalysis.com",
+      "url": "https://stockanalysis.com/stocks/etn/financials/",
+      "notes": "Eaton annual revenue, net income, EPS FY2021-FY2025 + TTM (Jun 30, 2026)"
+    },
+    {
+      "type": "company_metadata",
+      "provider": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Eaton_Corporation",
+      "notes": "Eaton FY2025 revenue $27.4B (confirmatory)"
+    },
+    {
+      "type": "company_metadata",
+      "provider": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Schneider_Electric",
+      "notes": "Schneider Electric FY2025 revenue €40.15B (confirmatory); Schneider absent from stockanalysis.com so figures are approximate"
+    }
+  ],
+  "raw_data_files": [
+    "artifacts/csv/ticker_cagr.json",
+    "artifacts/csv/stats_raw.json",
+    "artifacts/csv/etn_financials.json"
+  ]
 }
