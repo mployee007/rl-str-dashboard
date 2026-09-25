@@ -1,8 +1,71 @@
 {
-  "generated_at": "2026-09-25T11:14:20.710664+00:00",
+  "generated_at": "2026-09-25T11:29:57.661201+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 80,
   "sessions": [
+    {
+      "id": "2026-09-25/parma-listings-under-190k",
+      "date": "2026-09-25",
+      "title": "parma-listings-under-190k",
+      "summary": "- Source: Zillow.com via Camofox browser (`__NEXT_DATA__` extraction) - Zillapi: Unavailable (out of credits) - 44129: 7 houses extracted - 44134: Captcha-blocked on 2nd navigation - 44130: Captcha-blocked on 3rd navigation - Rent: Market-derived estimates (not property-specific)",
+      "updated_at": "2026-09-25T11:27:23.491480",
+      "file_count": 6,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-25/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {
+        "summary.md": "# Parma Listing Pull Summary \u2014 2026-09-25\n\n- Source: Zillow.com via Camofox browser (`__NEXT_DATA__` extraction)\n- Zillapi: Unavailable (out of credits)\n- 44129: 7 houses extracted\n- 44134: Captcha-blocked on 2nd navigation\n- 44130: Captcha-blocked on 3rd navigation\n- Rent: Market-derived estimates (not property-specific)\n- Best lead: 6006 Snow Rd at $165,000 (GRM 9.5x, listed today)\n"
+      },
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "44129_raw.json",
+            "rel_path": "44129_raw.json",
+            "size": 2804,
+            "updated_at": "2026-09-25T05:20:34.446003",
+            "previewable": true,
+            "public_href": "public/2026-09-25/parma-listings-under-190k/44129_raw.json"
+          },
+          {
+            "name": "parma-listings-raw.json",
+            "rel_path": "parma-listings-raw.json",
+            "size": 3404,
+            "updated_at": "2026-09-25T11:27:23.491480",
+            "previewable": true,
+            "public_href": "public/2026-09-25/parma-listings-under-190k/parma-listings-raw.json"
+          },
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 11555,
+            "updated_at": "2026-09-25T11:27:23.490480",
+            "previewable": true,
+            "public_href": "public/2026-09-25/parma-listings-under-190k/parma-listings.md"
+          },
+          {
+            "name": "parma_all_raw.json",
+            "rel_path": "parma_all_raw.json",
+            "size": 21440,
+            "updated_at": "2026-09-25T02:14:34.678421",
+            "previewable": true,
+            "public_href": "public/2026-09-25/parma-listings-under-190k/parma_all_raw.json"
+          },
+          {
+            "name": "parma_filtered.json",
+            "rel_path": "parma_filtered.json",
+            "size": 18990,
+            "updated_at": "2026-09-25T02:15:40.586522",
+            "previewable": true,
+            "public_href": "public/2026-09-25/parma-listings-under-190k/parma_filtered.json"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-25/south-shore-cash-flow",
       "date": "2026-09-25",
@@ -54,59 +117,6 @@
         "csv": [],
         "image": [],
         "other": []
-      }
-    },
-    {
-      "id": "2026-09-25/parma-listings-under-190k",
-      "date": "2026-09-25",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-25T08:23:15.600245",
-      "file_count": 4,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-25/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "44129_raw.json",
-            "rel_path": "44129_raw.json",
-            "size": 2804,
-            "updated_at": "2026-09-25T05:20:34.446003",
-            "previewable": true,
-            "public_href": "public/2026-09-25/parma-listings-under-190k/44129_raw.json"
-          },
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 4308,
-            "updated_at": "2026-09-25T08:23:15.600245",
-            "previewable": true,
-            "public_href": "public/2026-09-25/parma-listings-under-190k/parma-listings.md"
-          },
-          {
-            "name": "parma_all_raw.json",
-            "rel_path": "parma_all_raw.json",
-            "size": 21440,
-            "updated_at": "2026-09-25T02:14:34.678421",
-            "previewable": true,
-            "public_href": "public/2026-09-25/parma-listings-under-190k/parma_all_raw.json"
-          },
-          {
-            "name": "parma_filtered.json",
-            "rel_path": "parma_filtered.json",
-            "size": 18990,
-            "updated_at": "2026-09-25T02:15:40.586522",
-            "previewable": true,
-            "public_href": "public/2026-09-25/parma-listings-under-190k/parma_filtered.json"
-          }
-        ]
       }
     },
     {
