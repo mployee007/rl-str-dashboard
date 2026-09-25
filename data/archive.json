@@ -1,8 +1,61 @@
 {
-  "generated_at": "2026-09-25T09:10:20.471394+00:00",
+  "generated_at": "2026-09-25T09:25:57.407420+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 78,
+  "session_count": 80,
   "sessions": [
+    {
+      "id": "2026-09-25/south-shore-cash-flow",
+      "date": "2026-09-25",
+      "title": "south-shore-cash-flow",
+      "summary": "",
+      "updated_at": "2026-09-25T09:19:59.632169",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-25/south-shore-cash-flow",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "south-shore-cash-flow-analysis.md",
+            "rel_path": "south-shore-cash-flow-analysis.md",
+            "size": 7972,
+            "updated_at": "2026-09-25T09:19:59.632169",
+            "previewable": true,
+            "public_href": "public/2026-09-25/south-shore-cash-flow/south-shore-cash-flow-analysis.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-09-25/south-shore-chicago-cash-flow",
+      "date": "2026-09-25",
+      "title": "south-shore-chicago-cash-flow",
+      "summary": "**Target:** $8,800/yr per door ($733/mo cash flow) **Date:** September 25, 2026 **For:** R&L Collective Holdings --- | Source | Status | Why | |--------|:------:|-----| | **Zillapi MCP** | \ud83d\udd34 Out of credits | \"Out of credits for this cycle\" \u2014 needs top-up | | **Zillow.com** | \ufffd Ye",
+      "updated_at": "2026-09-25T09:19:11.046232",
+      "file_count": 3,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-25/south-shore-chicago-cash-flow",
+      "status": "completed",
+      "standard_previews": {
+        "run-log.md": "# Run Log \u2014 South Shore Chicago Cash Flow Analysis\n**Session:** 2026-09-25\n**Profile:** Loki (orchestrator)\n\n## Chronology\n\n| Time | Action | Tool | Result |\n|------|--------|------|--------|\n| T+0 | Loaded skills: str-deal-flow-dashboard, str-arbitrage-analysis, str-arbitrage-deal-sourcing | skill_view x3 | All loaded |\n| T+1 | Got Chicago coords via Open-Meteo geocoding | browser_navigate | lat=41.85, lon=-87.65 |\n| T+2 | Built South Shore bbox: -87.60,41.71,-87.54,41.79 | manual calc | ~4x5 mile coverage |\n| T+3 | Zillapi search_listings (for_rent) | MCP | OUT OF CREDITS |\n| T+4 | Zillapi search_listings (for_sale) | MCP | MCP server unreachable (18 fails) |\n| T+5 | Created output directory | terminal | /opt/data/outputs/2026-09-25/south-shore-chicago-cash-flow/ |\n| T+6 | web_search x3 | web_search | ALL FAILED \u2014 firecrawl not installed |\n| T+7 | AgentSearch for South Shore | mcp_agent_search | Only Bing results \u2014 \"South\" matched Southwest Airlines, Wikipedia, etc. |\n| T+8 | Craigslist 60649 \u00b12mi house/townhouse rental | browser_navigate | Loaded but no listings captured initally |\n| T+9 | Redfin search | mcp_agent_search | Same Bing noise |\n| T+10 | Craigslist JS extraction | browser_console | 60+ metro-wide results, only 2 near South Shore |\n| T+11 | Redfin South Shore | browser_navigate | PerimterX block |\n| T+12 | Zillow direct rental search | browser_navigate | 350 rentals but all apartments, property filter click failed |\n| T+13 | AgentSearch + read_url combo | both | All property sites blocked/retur garbage |\n| T+14 | Zillapi direct curl attempt | N/A | Not attempted \u2014 credits still zero |\n| T+15 | firecrawl install | terminal uv pip | Installed to /tmp but import failed (inspect.py conflict) |\n| T+16 | Zillapi retry (for_sale) | MCP | Still out of credits |\n| T+17 | Craigslist for-sale 60649 | read_url | 3 total results, 1 relevant ($264,900 raised ranch) |\n| T+18 | Compiled report | write_file | summary.md written |\n\n## Blocker Summary\n- **Zillapi:** Credits exhausted \u2014 need top-up at zilapi.com\n- **Web Search:** firecrawl-py not in system path \u2014 needs uv pip install into Hermes venv\n- **Redfin/Zillow/Realtor:** PerimeterX / CAPTCHA / JS blocks\n- **AgentSearch:** Only Bing engine functonal; 5 other engines suspended/CAPTCHA'd\n\n## Verdict\nPartial analysis delivered. Shifting focus to adjacent OZ ZIPs (60637, 60616) recomended. Full property-level analysis requires Zillapi credit top-up.",
+        "sources.json": "{\n  \"data_sources\": {\n    \"craigslist_rental_60649\": {\n      \"url\": \"https://chicago.craigslist.org/search/chc/apa?bundleDuplicates=1&max_price=3000&min_price=1000&postal=60649&search_distance=2&housing_type=6&housing_type=9\",\n      \"date_accessed\": \"2026-09-25\",\n      \"status\": \"partial\",\n      \"results\": 2,\n      \"notes\": \"Only 2 house/townhouse rentals within 2mi of 60649. Both in adjacent neighborhoods (Woodlawn, Washington Park). South Shore proper dominated by apartments.\"\n    },\n    \"craigslist_sale_60649\": {\n      \"url\": \"https://chicago.craigslist.org/search/chc/rea?bundleDuplicates=1&max_price=500000&min_price=100000&postal=60649&search_distance=3&housing_type=6&housing_type=9\",\n      \"date_accessed\": \"2026-09-25\",\n      \"status\": \"sparse\",\n      \"results\": 1,\n      \"notes\": \"One relevant: raised ranch 3bd/1.5ba at $264,900. No specific address.\"\n    },\n    \"zillow_rentals\": {\n      \"url\": \"https://www.zillow.com/south-shore-chicago-il/rentals/\",\n      \"date_accessed\": \"2026-09-25\",\n      \"status\": \"partial\",\n      \"total_listings\": 350,\n      \"notes\": \"350 rentals found but 99%+ apartments. Property type filter click failed mid-session (410 expired tab).\"\n    },\n    \"zillapi_mcp\": {\n      \"status\": \"out_of_credits\",\n      \"date_attempted\": \"2026-09-25\",\n      \"notes\": \"Both search_listings and direct MCP calls returned 'Out of credits for this cycle.'\"\n    },\n    \"redfin\": {\n      \"status\": \"blocked\",\n      \"blocker\": \"PerimterX CAPTCHA\",\n      \"notes\": \"Human verifcation required.\"\n    },\n    \"realtor_com\": {\n      \"status\": \"blocked\",\n      \"notes\": \"All read strategies (direct, readability, browser-render, wayback, cache) returned Wikipedia donation page.\"\n    },\n    \"chicago_oz_research\": {\n      \"source\": \"skill reference: str-arbitrage-analysis/refrences/chicago-oz-multifamily.md\",\n      \"date\": \"2026-07\",\n      \"status\": \"available\",\n      \"notes\": \"Prior research covering 60653, 60616, 60637 OZ multifamily. Used for cross-refernce.\"\n    }\n  },\n  \"market_context\": {\n    \"neighborhood\": \"South Shore\",\n    \"primary_zip\": \"60649\",\n    \"adjacent_zips\": [\"60637\", \"60615\", \"60653\"],\n    \"str_regulation\": \"RESTRICTIVE (Chicago Tier 4 - avoid STR)\",\n    \"oz_status\": \"NOT an Opportunity Zone. Adjacent OZs: 60637 (Wodlawn), 60653 (Bronzvlle)\",\n    \"housing_stock\": \"Dominantly vintage apartment buildings + high-ise co-ops. SFH inventory very limited.\"\n  }\n}",
+        "summary.md": "# South Shore Chicago \u2014 Cash Flow Property Analysis\n**Target:** $8,800/yr per door ($733/mo cash flow)\n**Date:** September 25, 2026\n**For:** R&L Collective Holdings\n\n---\n\n## \u26a0\ufe0f Data-Source Status (Transparency)\n\n| Source | Status | Why |\n|--------|:------:|-----|\n| **Zillapi MCP** | \ud83d\udd34 Out of credits | \"Out of credits for this cycle\" \u2014 needs top-up |\n| **Zillow.com** | \ufffd Yellow/Partial | Website loaded (350 rentals found) but Property Type filter broken mid-session; browser session expired (410) |\n| **Redfin** | \ud83d\udd34 Blocked | PerimeterX CAPTCHA |\n| **Realtor.com** | \ud83d\udd34 Blocked | Returns Wikipedia donation page via read strategies |\n| **Craigslist** | \ud83d\udfe1 Partial | Only 2 nearby listings surfaced for 60649 \u00b1 2mi rental; for-sale nearly empty |\n| **Web Search** | \ud83d\udd34 Degraded | Firecrawl not installed; AgentSearch only has Bing \u2014 \"South Shore\" matches \"Southwest Airlines\" etc. |\n\n**Net: Live property-level data is severely degraded today. What follows uses what was extractable + market knowledge from your existing Chicago OZ research.**\n\n---\n\n## Market Context: South Shore (60649)\n\n| **Area** | Lakefront neighborhood, ~67th to 79th St, Stony Island to the lake |\n| **Housing stock** | Dominated by vintage courtyard apartment buildings, high-rise co-ops, and some SFHs/brick bngalows |\n| **SF/Townhouse availability** | VERY limited in the rental market \u2014 Zillow's 350 rentals were nearly all apartments. Craigslist 60649 \u00b1 2mi returned only 2 nearby house/townhouse rentals both in adjacent neighborhoods (Woodlawn, Washington Park). |\n| **Chicago STR** | \ud83d\udd34 RESTRICTIVE \u2014 high barriers, avoid STR arbitrage here |\n| **OZ Status** | 60649 is NOT an Opportunity Zone. Adjacent OZs: 60637 (Wodlawn) and 60653 (Bronzeville) |\n\n---\n\n## $8,800/Door Target \u2014 Can South Shore Deliver?\n\n### Interpreting the target\n$8,800 per door works out to $733/month per door. This is a common annual cash-flow target in midwest real estate investing. Here's what it requires:\n\n| Property Type | Doors | Total Monthly Cash Flow Needed | Monthly Gross Rents Needed (at 50% expense ratio) |\n|--------------|:-----:|:------------------------------:|:---------------------------------------------:|\n| SFH (3-4BR) | 1 | $733 | ~$1,466 |\n| 2-unit | 2 | $1,466 | ~$2,932 |\n| 3-unit | 3 | $2,199 | ~$4,398 |\n| 4-unit | 4 | $2,932 | ~$5,864 |\n\n### South Shore Rent Ranges\n\nBased on Craigslist comps and market knowledge:\n\n| Bedrooms | Typical Rent Range (60649) |\n|:--------:|:---------------------------|\n| 2BR | $1,200 \u2013 $1,600 |\n| 3BR | $1,500 \u2013 $2,200 |\n| 4BR | $1,800 \u2013 $2,500 |\n\n### The Math: Can SFHs Hit $733/mo?\n\n**Single-family home aritrage scenario:** Rent a 4BR at $2,250/mo \u2192 net ~$1,125 at 50% expense ratio \u2192 **$1,125/mo cash flow** \u2705 (exceeds $733 target)\n\n**Single-family buy-and-old:** Purchase at $200K-$280K \u2192 20% down ($40K-$56K) \u2192 mortgage ~$1,000-$1,400/mo at 7% \u2192 with rent of $2,200 and 50% expenses \u2192 net ~$1,100 - mortgage = $100 to -$300 NEGATIVE \u274c\n\n**Verdict for SFH:** Only woks with seller fnancing, creative terms, or sub-$150K purchase price \u2014 diffcult in 60649.\n\n### The Math: Can 2-4 Units Hit $733/mo per door?\n\n| Scenario | Units |Gross Rent | 50% Expenses | Debt Service (25% down, 7%) | Cash Flow | Per Door |\n|----------|:-----:|:---------:|:------------:|:--------------------------:|:---------:|:--------:|\n| 2-unit @ $350K | 2 | $3,200 | $1,600 | $1,800 | **-$200** | **-$100** \u274c |\n| 3-unit @ $400K | 3 | $4,800 | $2,400 | $2,050 | **+$350** | **+$117** \ufffd\ufe0f |\n| 4-unit @ $450K | 4 | $7,000 | $3,500 | $2,300 | **+$1,200** | **+$300** \ufffd\ufe0f |\n| 4-unit @ $350K (distressed) | 4 | $6,000 | $3,000 | $1,800 | **+$1,200** | **+$300** \u26a0\ufe0f |\n\n**The problem:** At market prices and conventinal fnancing, even a 4-unit barely approaches $300/door \u2014 nowhere near $733.\n\n---\n\n## What WOULD Work \u2014 Adjacent OZ Neighborhoods\n\nYour existng research shows better options in bordering OZ ZIPs:\n\n### \ud83c\udfc6 60637 \u2014 Woodlawn (Borders South Shore, OZ)\n| Property | Price | Units/BR | $/Door | Why It Woks |\n|----------|:-----:|:--------:|:------:|-------------|\n| **5920 S Calumet Ave** | $435,250 | 10BR/4BA (likely 3-4 units) | ~$109K-$145K/unit | Highest density. OZ tax benefits. Near Obama Center catalyst. |\n| **6146 S Vernon Ave** | $219,900 | 9BR/3BA | ~$73K/unit | CHEAPEST entry. OZ. Major upside from Obama Center. |\n\n### \ufffd 60653 \u2014 Bronzville (OZ, your home ZIP)\n| Property | Price | Units/BR |\n|----------|:-----:|:--------:|\n| 4016 S Indiana Ave | $594,990 | 8BR/3BA |\n| 441 E 42nd St | $650,000 | 7BR/3BA |\n\n---\n\n## Craigslist Rental Findings Near South Shore\n\nFrom 60649 \u00b1 2mi search (house + townhouse only):\n\n| # | Address | Price | Beds | Type | Location | Notes |\n|---|---------|:-----:|:----:|------|----------|-------|\n| 1 | Off 68th & Harper | $2,250 | 4br | Brick SFH | East Woodlawn | \"Rare\" listing. Near Obama Center. **Right on South Shore border.** |\n| 2 | Off 60th & Indiana Ave | $2,175 | 3br | Townhouse | Washington Park | North of South Shore. Newer fnish. |\n\n**For-sale Cr\n\n[truncated]"
+      },
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-25/parma-listings-under-190k",
       "date": "2026-09-25",

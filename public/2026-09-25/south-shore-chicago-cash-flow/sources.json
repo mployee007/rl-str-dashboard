@@ -1,0 +1,53 @@
+{
+  "data_sources": {
+    "craigslist_rental_60649": {
+      "url": "https://chicago.craigslist.org/search/chc/apa?bundleDuplicates=1&max_price=3000&min_price=1000&postal=60649&search_distance=2&housing_type=6&housing_type=9",
+      "date_accessed": "2026-09-25",
+      "status": "partial",
+      "results": 2,
+      "notes": "Only 2 house/townhouse rentals within 2mi of 60649. Both in adjacent neighborhoods (Woodlawn, Washington Park). South Shore proper dominated by apartments."
+    },
+    "craigslist_sale_60649": {
+      "url": "https://chicago.craigslist.org/search/chc/rea?bundleDuplicates=1&max_price=500000&min_price=100000&postal=60649&search_distance=3&housing_type=6&housing_type=9",
+      "date_accessed": "2026-09-25",
+      "status": "sparse",
+      "results": 1,
+      "notes": "One relevant: raised ranch 3bd/1.5ba at $264,900. No specific address."
+    },
+    "zillow_rentals": {
+      "url": "https://www.zillow.com/south-shore-chicago-il/rentals/",
+      "date_accessed": "2026-09-25",
+      "status": "partial",
+      "total_listings": 350,
+      "notes": "350 rentals found but 99%+ apartments. Property type filter click failed mid-session (410 expired tab)."
+    },
+    "zillapi_mcp": {
+      "status": "out_of_credits",
+      "date_attempted": "2026-09-25",
+      "notes": "Both search_listings and direct MCP calls returned 'Out of credits for this cycle.'"
+    },
+    "redfin": {
+      "status": "blocked",
+      "blocker": "PerimterX CAPTCHA",
+      "notes": "Human verifcation required."
+    },
+    "realtor_com": {
+      "status": "blocked",
+      "notes": "All read strategies (direct, readability, browser-render, wayback, cache) returned Wikipedia donation page."
+    },
+    "chicago_oz_research": {
+      "source": "skill reference: str-arbitrage-analysis/refrences/chicago-oz-multifamily.md",
+      "date": "2026-07",
+      "status": "available",
+      "notes": "Prior research covering 60653, 60616, 60637 OZ multifamily. Used for cross-refernce."
+    }
+  },
+  "market_context": {
+    "neighborhood": "South Shore",
+    "primary_zip": "60649",
+    "adjacent_zips": ["60637", "60615", "60653"],
+    "str_regulation": "RESTRICTIVE (Chicago Tier 4 - avoid STR)",
+    "oz_status": "NOT an Opportunity Zone. Adjacent OZs: 60637 (Wodlawn), 60653 (Bronzvlle)",
+    "housing_stock": "Dominantly vintage apartment buildings + high-ise co-ops. SFH inventory very limited."
+  }
+}
