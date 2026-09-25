@@ -1,0 +1,18 @@
+{
+  "pulled_at": "2026-09-25",
+  "zip": "44129",
+  "source": "Zillow __NEXT_DATA__ via Camofox (Zillapi out of credits)",
+  "filter": {"status": "for_sale", "max_price": 190000, "min_beds": 1},
+  "sort": "price_asc",
+  "results_count": 8,
+  "listings": [
+    {"zpid": "2057037610", "address": "6006 Snow Rd, Cleveland, OH 44129", "price": 165000, "beds": 3, "baths": 2, "area": 1188, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 0, "flexFieldText": "18 hours ago", "brokerName": "Keller Williams Living", "taxAssessedValue": null, "detailUrl": "https://www.zillow.com/homedetails/6006-Snow-Rd-Cleveland-OH-44129/2057037610_zpid/"},
+    {"zpid": "33547825", "address": "7611 Newport Ave, Parma, OH 44129", "price": 174900, "beds": 3, "baths": 1, "area": 1092, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 2, "flexFieldText": "Additional storage", "brokerName": "Keller Williams Greater Metropolitan", "taxAssessedValue": 117500, "detailUrl": "https://www.zillow.com/homedetails/7611-Newport-Ave-Parma-OH-44129/33547825_zpid/"},
+    {"zpid": "33561552", "address": "6211 Dartworth Dr, Parma, OH 44129", "price": 184000, "beds": 2, "baths": 1, "area": 1085, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 15, "flexFieldText": "Open: Sat 12-1:30pm (9/26)", "brokerName": "Russell Real Estate Services", "taxAssessedValue": 151100, "detailUrl": "https://www.zillow.com/homedetails/6211-Dartworth-Dr-Parma-OH-44129/33561552_zpid/"},
+    {"zpid": "33550416", "address": "6507 Forest Ave, Parma, OH 44129", "price": 189900, "beds": 3, "baths": 2, "area": 1026, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 1, "flexFieldText": "Open: Sat 10:30am-12:30pm (9/26)", "brokerName": "RE/MAX Above & Beyond", "taxAssessedValue": 157500, "detailUrl": "https://www.zillow.com/homedetails/6507-Forest-Ave-Parma-OH-44129/33550416_zpid/"},
+    {"zpid": "33551587", "address": "5821 Merkle Ave, Parma, OH 44129", "price": 189900, "beds": 2, "baths": 2, "area": 1235, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 0, "flexFieldText": "6 hours ago", "brokerName": "EXP Realty, LLC.", "taxAssessedValue": 135800, "detailUrl": "https://www.zillow.com/homedetails/5821-Merkle-Ave-Parma-OH-44129/33551587_zpid/"},
+    {"zpid": "33553876", "address": "5597 W 54th St, Parma, OH 44129", "price": 189900, "beds": 3, "baths": 1, "area": 1636, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 22, "flexFieldText": "Beautiful curb appeal", "brokerName": "EXP Realty, LLC.", "taxAssessedValue": 156900, "detailUrl": "https://www.zillow.com/homedetails/5597-W-54th-St-Parma-OH-44129/33553876_zpid/"},
+    {"zpid": "33561440", "address": "7101 Brownfield Dr, Parma, OH 44129", "price": 189900, "beds": 3, "baths": 1, "area": 2186, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 9, "flexFieldText": "Beautiful hardwood floors throughout", "brokerName": "EXP Realty, LLC.", "taxAssessedValue": 156500, "detailUrl": "https://www.zillow.com/homedetails/7101-Brownfield-Dr-Parma-OH-44129/33561440_zpid/"},
+    {"zpid": "33562283", "address": "6311 Thornton Dr, Parma, OH 44129", "price": 190000, "beds": 3, "baths": 2, "area": 1176, "zip": "44129", "homeType": "SINGLE_FAMILY", "daysOnZillow": 37, "flexFieldText": "37 days on Zillow", "brokerName": "Berkshire Hathaway HomeServices Professional Realty", "taxAssessedValue": 174700, "detailUrl": "https://www.zillow.com/homedetails/6311-Thornton-Dr-Parma-OH-44129/33562283_zpid/"}
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T20:32:21.880624+00:00",
+  "generated_at": "2026-09-25T20:47:58.783472+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 80,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-09-25",
       "title": "parma-listings-under-190k",
       "summary": "- Source: Zillow.com via Camofox browser (`__NEXT_DATA__` extraction) - Zillapi: Unavailable (out of credits) - 44129: 7 houses extracted - 44134: Captcha-blocked on 2nd navigation - 44130: Captcha-blocked on 3rd navigation - Rent: Market-derived estimates (not property-specific)",
-      "updated_at": "2026-09-25T14:33:52.429520",
-      "file_count": 6,
+      "updated_at": "2026-09-25T20:42:45.940260",
+      "file_count": 7,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -32,6 +32,14 @@
             "public_href": "public/2026-09-25/parma-listings-under-190k/44129_raw.json"
           },
           {
+            "name": "parma-44129-raw.json",
+            "rel_path": "parma-44129-raw.json",
+            "size": 3498,
+            "updated_at": "2026-09-25T20:41:55.235442",
+            "previewable": true,
+            "public_href": "public/2026-09-25/parma-listings-under-190k/parma-44129-raw.json"
+          },
+          {
             "name": "parma-listings-raw.json",
             "rel_path": "parma-listings-raw.json",
             "size": 3404,
@@ -42,8 +50,8 @@
           {
             "name": "parma-listings.md",
             "rel_path": "parma-listings.md",
-            "size": 8341,
-            "updated_at": "2026-09-25T14:33:52.429520",
+            "size": 5244,
+            "updated_at": "2026-09-25T20:42:45.940260",
             "previewable": true,
             "public_href": "public/2026-09-25/parma-listings-under-190k/parma-listings.md"
           },
