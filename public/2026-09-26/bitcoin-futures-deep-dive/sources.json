@@ -1,0 +1,49 @@
+{
+  "as_of": "2026-09-26",
+  "subject": "Bitcoin futures (CME) — driving factors, near-term slowdown, micro contract",
+  "prices": {
+    "BTC=F (standard, front, CME)": 84500.0,
+    "MBT=F (micro, CME)": 84370.0,
+    "BTC-USD (spot)": 83940.0,
+    "local_high_recent": 87500.0,
+    "all_time_high_1y_approx": 124753.0
+  },
+  "returns": {
+    "1mo": "+6.3% spot / +6.95% futures",
+    "3mo": "+39.9% spot / +42.8% futures",
+    "6mo": "+22.1% spot / +19.3% futures",
+    "1yr": "-23.5% spot / -22.8% futures"
+  },
+  "macro_drivers": {
+    "fed_funds_rate": "3.75% - 4.00% (hiked 25bp this month)",
+    "fed_path_market_pricing": "4.75% - 5.00% by June 2027 (~4 more hikes, CME FedWatch)",
+    "us_10y_yield": ">5.1% (highest since 2007)",
+    "us_20y_yield": "~5.5%",
+    "dxy": ">101, +3% YTD",
+    "sp_global_composite_pmi": 58.4,
+    "usd_jpy": "~159"
+  },
+  "etf_flows": {
+    "2026_net_ytd": "+~$800M (turned positive)",
+    "july_13_deficit": "-$5.8B",
+    "inflows_since_august": "~$4.0B",
+    "6_day_streak": "$2.84B",
+    "comparison_2024": "$35.2B",
+    "comparison_2025": "$21.4B"
+  },
+  "contract_specs": {
+    "standard": {"ticker": "BTC", "size": "5 BTC", "notional_at_84k": "~$420k", "launched": "Dec 2017"},
+    "micro": {"ticker": "MBT", "size": "0.1 BTC", "notional_at_84k": "~$8.4k", "launched": "May 2021", "vs_standard": "1/50th"},
+    "micro_ether": {"ticker": "MET", "size": "0.1 ETH"}
+  },
+  "sources": [
+    "https://www.coindesk.com/markets/2026/09/24/traders-are-pricing-in-4-fed-rate-hikes-as-bitcoin-slides-below-usd83-000",
+    "https://www.coindesk.com/markets/2026/09/25/bitcoin-etfs-have-erased-a-usd5-8-billion-hole",
+    "https://query1.finance.yahoo.com/v8/finance/chart/ (BTC=F, MBT=F, BTC-USD)"
+  ],
+  "caveats": [
+    "CME Group contract-spec pages bot-blocked (IP scrape block + HTTP/2 reset); sizes are standard CME published terms cross-confirmed via MBT=F ticker",
+    "BTC=F front-month (Sep 26) showed near-zero volume (7 contracts) due to expiry roll; liquid contract is next month",
+    "BTC=F (futures) vs BTC-USD (spot) differ; futures shows ~$500-1000 premium (contango)"
+  ]
+}

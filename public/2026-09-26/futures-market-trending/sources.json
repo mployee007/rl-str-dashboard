@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-09-26",
+  "data_sources": [
+    {
+      "name": "Yahoo Finance v8 Chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/{SYMBOL}?range={range}&interval=1d",
+      "purpose": "Multi-timeframe price performance (1mo/3mo/6mo)",
+      "symbols_used": ["CL=F", "SB=F", "BTC=F", "ZS=F", "NG=F", "NQ=F", "ES=F", "GC=F", "SI=F", "KC=F", "YM=F", "HG=F", "ZW=F", "CT=F", "6E=F", "6J=F"],
+      "last_data_point": "2026-09-25 04:00 UTC (session close)"
+    },
+    {
+      "name": "Yahoo Finance Commodities Futures page",
+      "url": "https://finance.yahoo.com/markets/commodities/",
+      "purpose": "Live futures prices, daily change, volume, and open interest",
+      "captured": "2026-09-26",
+      "fields": ["symbol", "name/contract", "price", "change", "change_pct", "volume", "open_interest"]
+    },
+    {
+      "name": "Yahoo Finance News feed",
+      "url": "https://finance.yahoo.com/news/",
+      "purpose": "Market context (oil rally easing, bond sell-off)",
+      "key_headline": "Stock market today: Dow, S&P 500, Nasdaq notch weekly wins as market shrugs off bond sell-off, oil prices ease"
+    }
+  ],
+  "notes": [
+    "Barchart.com returned 403 (CloudFront). Finviz.com and stockanalysis.com returned Cloudflare 'Just a moment' — bot-blocked.",
+    "Yahoo Finance v8 chart API requires User-Agent header; worked reliably via curl.",
+    "BTC=F volume/open interest not present on the commodities page (listed under crypto); performance from chart API only."
+  ]
+}
