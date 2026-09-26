@@ -1,8 +1,45 @@
 {
-  "generated_at": "2026-09-26T02:44:22.704329+00:00",
+  "generated_at": "2026-09-26T02:59:59.534908+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 82,
+  "session_count": 83,
   "sessions": [
+    {
+      "id": "2026-09-26/parma-listings-under-190k",
+      "date": "2026-09-26",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-26T02:50:48.496316",
+      "file_count": 2,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-26/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 6594,
+            "updated_at": "2026-09-26T02:50:17.817330",
+            "previewable": true,
+            "public_href": "public/2026-09-26/parma-listings-under-190k/parma-listings.md"
+          },
+          {
+            "name": "raw-listings-44129.json",
+            "rel_path": "raw-listings-44129.json",
+            "size": 3078,
+            "updated_at": "2026-09-26T02:50:48.496316",
+            "previewable": true,
+            "public_href": "public/2026-09-26/parma-listings-under-190k/raw-listings-44129.json"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-26/bitcoin-futures-deep-dive",
       "date": "2026-09-26",
