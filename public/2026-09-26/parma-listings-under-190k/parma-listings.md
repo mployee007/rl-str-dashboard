@@ -1,98 +1,122 @@
-# Parma West Listings Under $190K — Live Screen
-**Date:** 2026-09-26
-**Source:** Zillow.com via Camofox browser (`__NEXT_DATA__` extraction); Zillapi out of credits
-**Bounding box:** 41.35–41.42°N, -81.80–-81.65°W (covers ZIPs 44129, 44134, 44130)
-**Total results in box:** 52 (header) / 43 captured (JSON payload)
-**Filtered:** Excluding manufactured/mobile homes — 29 real estate listings in target ZIPs
+# Parma West (44129) — Active Listings Under $190K
+
+**Pull date:** 2026-09-26 (Saturday)
+**Data source:** Zillow.com via Camofox browser (Zillapi: out of credits)
+**ZIP coverage:** 44129 only (44134 & 44130 blocked by Cloudflare captcha after first navigation)
+
+---
+
+## Bottom Line
+
+Eight active SFR listings in 44129 under $190K. The 3BR properties at the low end ($165K–$180K) show **10%+ gross yield potential** against Parma-adjusted FMR rent estimates ($1,398/mo for 3BR). The best lead is **6006 Snow Rd at $165K (10.2% gross yield)** — 3BR/2BA with recent listing (1 day). 2BR listings at $184K–$190K don't pencil at Parma rent levels (6.2–6.4% yield). Two listing agents control 50% of the sub-$190K inventory in this ZIP: Keller Williams (2) and EXP Realty (2).
+
+⚠️ **All rent figures are market-derived estimates, NOT property-specific.** RentZestimate data was unavailable for all listings (expected for this market). Rent assumption: 90% of Cleveland-Elyria MSA FY2025 FMR (3BR = $1,398/mo, 2BR = $988/mo).
 
 ---
 
 ## Rent Anchor
 
-| Beds | MSA FMR (FY2025) | Parma Adj. (90%) | Monthly | Annual |
-|------|------------------|-------------------|---------|--------|
-| 1BR | $903 | $813 | $813 | $9,752 |
-| 2BR | $1,098 | $988 | $988 | $11,858 |
-| 3BR | $1,553 | $1,398 | $1,398 | $16,772 |
-| 4BR | $1,810 | $1,629 | $1,629 | $19,548 |
+| Metric | Value |
+|--------|-------|
+| MSA | Cleveland-Elyria, OH |
+| FY2025 3BR FMR (40th percentile) | $1,553/mo |
+| Parma adjustment factor | 90% |
+| **Estimated 3BR rent** | **$1,398/mo** |
+| **Estimated 2BR rent** | **$988/mo** |
 
-⚠️ All rent figures are **market-derived from HUD FMR, NOT property-specific.** Two properties had Zillow `rentZestimate` values; those are noted where available. For others, the 90% Parma-adjusted FMR is used.
-
----
-
-## ZIP 44129 (Cleveland) — 4 listings, median $180,000
-
-| # | Address | Price | Beds | Baths | SqFt | Type | DoZ | Est. Rent/mo | GRM | Yield | Notes | Verdict |
-|---|---------|-------|------|-------|------|------|-----|-------------|-----|-------|-------|---------|
-| 1 | [6006 Snow Rd, Cleveland, OH 44129](https://www.zillow.com/homedetails/6006-Snow-Rd-Cleveland-OH-44129/2057037610_zpid/) | $165,000 | 3 | 2 | 1188 | SFR | 1d | $1,398 | 9.8 | 10.2% | 3D Tour | **take** |
-| 2 | [7611 Newport Ave, Parma, OH 44129](https://www.zillow.com/homedetails/7611-Newport-Ave-Parma-OH-44129/33547825_zpid/) | $174,900 | 3 | 1 | 1092 | SFR | 2d | $1,398 | 10.4 | 9.6% | Additional storage | **take selectively** |
-| 3 | [7101 Brownfield Dr, Parma, OH 44129](https://www.zillow.com/homedetails/7101-Brownfield-Dr-Parma-OH-44129/33561440_zpid/) | $180,000 | 3 | 1 | 2186 | SFR | 10d | $1,398 | 10.7 | 9.3% | Price cut: $9,900 (9/26) | **take selectively** |
-| 4 | [6211 Dartworth Dr, Parma, OH 44129](https://www.zillow.com/homedetails/6211-Dartworth-Dr-Parma-OH-44129/33561552_zpid/) | $184,000 | 2 | 1 | 1085 | SFR | 15d | $988 | 15.5 | 6.4% | Open: Sat 12-1:30pm (9/26) | **pass** |
-
-## ZIP 44134 (Parma) — 15 listings, median $174,900
-
-| # | Address | Price | Beds | Baths | SqFt | Type | DoZ | Est. Rent/mo | GRM | Yield | Notes | Verdict |
-|---|---------|-------|------|-------|------|------|-----|-------------|-----|-------|-------|---------|
-| 1 | [5651 Broadview Rd APT B5, Parma, OH 44134](https://www.zillow.com/homedetails/5651-Broadview-Rd-APT-B5-Parma-OH-44134/33556290_zpid/) | $99,900 | 2 | 1 | 720 | Condo | 22d | $988 | 8.4 | 11.9% | Price cut: $5,000 (9/25) | **take selectively** |
-| 2 | [5651 Broadview Rd APT D7, Parma, OH 44134](https://www.zillow.com/homedetails/5651-Broadview-Rd-APT-D7-Parma-OH-44134/33556311_zpid/) | $100,000 | 1 | 1 | 525 | Condo | 9d | $813 | 10.3 | 9.8% | Low-maintenance corner unit | **negotiate** |
-| 3 | [6478 State Rd APT G12, Parma, OH 44134](https://www.zillow.com/homedetails/6478-State-Rd-APT-G12-Parma-OH-44134/33560806_zpid/) | $149,900 | 3 | 2 | 1408 | Condo | 4d | $1,398 | 8.9 | 11.2% | Price cut: $10,000 (9/22) | **take selectively** |
-| 4 | [5565 Treetop Ct #132, Parma, OH 44134](https://www.zillow.com/homedetails/5565-Treetop-Ct-132-Parma-OH-44134/33556015_zpid/) | $159,900 | 2 | 3 | 1674 | Condo | 10d | $988 | 13.5 | 7.4% | Price cut: $10,000 (9/21) | **pass** |
-| 5 | [5512 Sandpiper Dr #G-21, Cleveland, OH 44134](https://www.zillow.com/homedetails/5512-Sandpiper-Dr-G-21-Cleveland-OH-44134/465530157_zpid/) | $162,000 | 2 | 3 | 1470 | Condo | 2d | $988 | 13.7 | 7.3% | 2 days on Zillow | **pass** |
-| 6 | [4107 Kenmore Ave, Parma, OH 44134](https://www.zillow.com/homedetails/4107-Kenmore-Ave-Parma-OH-44134/33554362_zpid/) | $168,000 | 2 | 1 | 806 | SFR | 22d | $988 | 14.2 | 7.1% | Manageable yard | **pass** |
-| 7 | [2701 Tuxedo Ave, Parma, OH 44134](https://www.zillow.com/homedetails/2701-Tuxedo-Ave-Parma-OH-44134/33553807_zpid/) | $169,400 | 3 | 1 | 996 | SFR | 86d | $1,398 | 10.1 | 9.9% | Comfortable single-level living | **take selectively** |
-| 8 | [4420 Torrington Ave, Parma, OH 44134](https://www.zillow.com/homedetails/4420-Torrington-Ave-Parma-OH-44134/33554315_zpid/) | $174,900 | 3 | 1 | 882 | SFR | 37d | $1,398 | 10.4 | 9.6% | Price cut: $25,000 (9/9) | **take selectively** |
-| 9 | [4431 Redfern Rd, Parma, OH 44134](https://www.zillow.com/homedetails/4431-Redfern-Rd-Parma-OH-44134/33560046_zpid/) | $179,900 | 3 | 2 | 1200 | SFR | 4d | $1,398 | 10.7 | 9.3% | Newer furnace | **take selectively** |
-| 10 | [6468 State Rd APT L16, Parma, OH 44134](https://www.zillow.com/homedetails/6468-State-Rd-APT-L16-Parma-OH-44134/33560904_zpid/) | $183,000 | 3 | 2 | 2188 | Condo | 9d | $1,788 | 8.5 | 11.7% | 🏷️ Rent Zest: $1,788/mo. Price cut: $15,000 (9/22) | **take selectively** |
-| 11 | [4320 Tuxedo Ave, Parma, OH 44134](https://www.zillow.com/homedetails/4320-Tuxedo-Ave-Parma-OH-44134/33552058_zpid/) | $184,900 | 3 | 1 | 1322 | SFR | 33d | $1,398 | 11.0 | 9.1% | Price cut: $10,000 (9/10) | **take selectively** |
-| 12 | [5753 W 46th St, Parma, OH 44134](https://www.zillow.com/homedetails/5753-W-46th-St-Parma-OH-44134/33555154_zpid/) | $184,900 | 3 | 1 | 2012 | SFR | 8d | $1,398 | 11.0 | 9.1% | Fenced yard | **take selectively** |
-| 13 | [3211 North Ave, Parma, OH 44134](https://www.zillow.com/homedetails/3211-North-Ave-Parma-OH-44134/33552738_zpid/) | $185,000 | 4 | 1 | 1124 | SFR | 2d | $1,629 | 9.5 | 10.6% | Flexible floor plan | **take** |
-| 14 | [3021 Tuxedo Ave, Parma, OH 44134](https://www.zillow.com/homedetails/3021-Tuxedo-Ave-Parma-OH-44134/33553539_zpid/) | $185,000 | 3 | 1 | 1298 | SFR | 29d | $1,398 | 11.0 | 9.1% | Price cut: $14,900 (9/10) | **take selectively** |
-| 15 | [2303 Tuxedo Ave, Parma, OH 44134](https://www.zillow.com/homedetails/2303-Tuxedo-Ave-Parma-OH-44134/33555528_zpid/) | $185,000 | 3 | 1 | 1294 | SFR | 134d | $1,398 | 11.0 | 9.1% | Price cut: $10,000 (9/22) | **take selectively** |
-
-## ZIP 44130 (Parma) — 10 listings, median $159,900
-
-| # | Address | Price | Beds | Baths | SqFt | Type | DoZ | Est. Rent/mo | GRM | Yield | Notes | Verdict |
-|---|---------|-------|------|-------|------|------|-----|-------------|-----|-------|-------|---------|
-| 1 | [5880 Woolman Ct #76, Parma, OH 44130](https://www.zillow.com/homedetails/5880-Woolman-Ct-76-Parma-OH-44130/461377887_zpid/) | $75,500 | 3 | 1 | 1250 | Condo | 52d | $1,609 | 3.9 | 25.6% | FSBO. 🏷️ Rent Zest: $1,609/mo. No-outlet street | **take** |
-| 2 | [10408 N Church Dr APT 420, Parma Heights, OH 44130](https://www.zillow.com/homedetails/10408-N-Church-Dr-APT-420-Parma-Heights-OH-44130/33581861_zpid/) | $137,000 | 2 | 1 | — | Condo | 149d | $988 | 11.6 | 8.7% | Inviting corner unit | **negotiate** |
-| 3 | [6475 Princeton Ct APT 203, Cleveland, OH 44130](https://www.zillow.com/homedetails/6475-Princeton-Ct-APT-203-Cleveland-OH-44130/2067100773_zpid/) | $139,900 | 2 | 2 | 1144 | Condo | 113d | $988 | 11.8 | 8.5% | Clean meticulously maintained condo | **negotiate** |
-| 4 | [6435 Princeton Ct APT 201, Cleveland, OH 44130](https://www.zillow.com/homedetails/6435-Princeton-Ct-APT-201-Cleveland-OH-44130/465459079_zpid/) | $145,000 | 2 | 2 | 1144 | Condo | 5d | $988 | 12.2 | 8.2% | Private balcony | **pass** |
-| 5 | [9012 W Pleasant Valley Rd, Cleveland, OH 44130](https://www.zillow.com/homedetails/9012-W-Pleasant-Valley-Rd-Cleveland-OH-44130/33573743_zpid/) | $149,900 | 3 | 2 | 1176 | SFR | 53d | $1,398 | 8.9 | 11.2% | Covered main entry | **take** |
-| 6 | [6395 Princeton Ct #H-103, Parma Heights, OH 44130](https://www.zillow.com/homedetails/6395-Princeton-Ct-H-103-Parma-Heights-OH-44130/71969496_zpid/) | $159,900 | 2 | 2 | 1144 | Condo | 71d | $988 | 13.5 | 7.4% | Private front patio | **pass** |
-| 7 | [6331 Alderwood Rd, Parma Heights, OH 44130](https://www.zillow.com/homedetails/6331-Alderwood-Rd-Parma-Heights-OH-44130/33578008_zpid/) | $173,000 | 3 | 1 | 1218 | SFR | 4d | $1,398 | 10.3 | 9.7% | One-floor living | **take selectively** |
-| 8 | [9298 Newkirk Dr, Parma Heights, OH 44130](https://www.zillow.com/homedetails/9298-Newkirk-Dr-Parma-Heights-OH-44130/33578611_zpid/) | $174,900 | 3 | 1 | 1370 | SFR | 49d | $1,398 | 10.4 | 9.6% | Beautiful landscaping | **take selectively** |
-| 9 | [12929 W Pleasant Valley Rd, Parma, OH 44130](https://www.zillow.com/homedetails/12929-W-Pleasant-Valley-Rd-Parma-OH-44130/33574259_zpid/) | $179,900 | 3 | 1 | 968 | SFR | 56d | $1,398 | 10.7 | 9.3% | Enclosed patio | **take selectively** |
-| 10 | [5883 Clearview Dr, Parma Heights, OH 44130](https://www.zillow.com/homedetails/5883-Clearview-Dr-Parma-Heights-OH-44130/33577088_zpid/) | $179,900 | 2 | 2 | 1364 | SFR | 1d | $988 | 15.2 | 6.6% | Open: Sun 1-2:30pm (9/27) | **pass** |
+Source: U.S. HUD FY2025 FMR, Parma submarket adjustment per internal baselines.
 
 ---
 
-## Summary Statistics
+## Ranked Listings — 44129 (sorted by price, lowest first)
 
-| ZIP | Count | Min | Median | Max | Median $/sqft | Avg GRM | Avg Yield |
-|-----|-------|-----|--------|-----|---------------|---------|-----------|
-| 44129 | 4 | $165,000 | $180,000 | $184,000 | $152 | 11.6 | 8.9% |
-| 44134 | 15 | $99,900 | $174,900 | $185,000 | $135 | 10.8 | 9.5% |
-| 44130 | 10 | $75,500 | $159,900 | $179,900 | $136 | 10.9 | 10.5% |
-
----
-
-## Data Source Stack
-
-| Tier | Source | Status | Detail |
-|------|--------|--------|--------|
-| 1 | Zillapi MCP | ❌ Out of credits | First call returned credit exhaustion; subsequent calls unreachable per skill protocol |
-| 2 | Camofox → Zillow `__NEXT_DATA__` | ✅ Success | Single page load captured 43/52 listings in combined bbox |
-| Rent | HUD FMR (hardcoded) | ✅ Used | Cleveland-Elyria MSA FY2025, 90% Parma adjustment |
+| # | Address | Price | Beds | Baths | Sqft | $/Sqft | Est. Rent/mo | Est. Gross Yield | GRM | DOM | Notes | Verdict |
+|---|---------|-------|------|-------|------|--------|-------------|-----------------|-----|-----|-------|---------|
+| 1 | [6006 Snow Rd, Cleveland](https://www.zillow.com/homedetails/6006-Snow-Rd-Cleveland-OH-44129/2057037610_zpid/) | $165,000 | 3 | 2 | 1,188 | $139 | $1,398 | **10.2%** | 9.8 | 1 | 3D Tour, newly listed today, Keller Williams Living | **TAKE selectively** |
+| 2 | [7611 Newport Ave, Parma](https://www.zillow.com/homedetails/7611-Newport-Ave-Parma-OH-44129/33547825_zpid/) | $174,900 | 3 | 1 | 1,092 | $160 | $1,398 | **9.6%** | 10.4 | 3 | Additional storage, KW Greater Metropolitan | **TAKE selectively** |
+| 3 | [7101 Brownfield Dr, Parma](https://www.zillow.com/homedetails/7101-Brownfield-Dr-Parma-OH-44129/33561440_zpid/) | $180,000 | 3 | 1 | 2,186 | $82 | $1,398 | **9.3%** | 10.7 | 11 | Price cut $9,900 today (9/26), largest sqft in set, EXP Realty | **NEGOTIATE** (push below $175K) |
+| 4 | [6211 Dartworth Dr, Parma](https://www.zillow.com/homedetails/6211-Dartworth-Dr-Parma-OH-44129/33561552_zpid/) | $184,000 | 2 | 1 | 1,085 | $170 | $988 | **6.4%** | 15.5 | 16 | Price cut $5,000 (9/22), Russell Real Estate | **PASS** (2BR doesn't pencil) |
+| 5 | [6507 Forest Ave, Parma](https://www.zillow.com/homedetails/6507-Forest-Ave-Parma-OH-44129/33550416_zpid/) | $189,900 | 3 | 2 | 1,026 | $185 | $1,398 | **8.8%** | 11.3 | 2 | Classic character, RE/MAX Above & Beyond | **NEGOTIATE** |
+| 6 | [5821 Merkle Ave, Parma](https://www.zillow.com/homedetails/5821-Merkle-Ave-Parma-OH-44129/33551587_zpid/) | $189,900 | 2 | 2 | 1,235 | $154 | $988 | **6.2%** | 16.0 | 1 | Partially fenced yard, EXP Realty | **PASS** (2BR, weakest yield) |
+| 7 | [5597 W 54th St, Parma](https://www.zillow.com/homedetails/5597-W-54th-St-Parma-OH-44129/33553876_zpid/) | $189,900 | 3 | 1 | 1,636 | $116 | $1,398 | **8.8%** | 11.3 | 23 | Beautiful curb appeal, EXP Realty, sitting 23 days | **NEGOTIATE** (stale listing) |
+| 8 | [6311 Thornton Dr, Parma](https://www.zillow.com/homedetails/6311-Thornton-Dr-Parma-OH-44129/33562283_zpid/) | $190,000 | 3 | 2 | 1,176 | $162 | $1,398 | **8.8%** | 11.3 | 38 | Berkshire Hathaway, longest DOM (38 days) | **NEGOTIATE** (motivated seller?) |
 
 ---
 
-## Zillapi Status
+## Market Summary
 
-⛔ **Zillapi is out of credits for this billing cycle.** All listing data in this report comes from Camofox browser extraction of Zillow's `__NEXT_DATA__` embedded JSON. This captured 43 of 52 properties listed in the combined bounding box.
+| Metric | Value |
+|--------|-------|
+| Active listings under $190K | 8 |
+| Median price | $184,950 |
+| Median $/sqft | $157 |
+| Median DOM | 7 |
+| 3BR avg yield (est.) | 9.3% |
+| 2BR avg yield (est.) | 6.3% |
+| Avg GRM (3BR) | 10.7 |
+| Avg GRM (2BR) | 15.8 |
 
-⚠️ **Captcha limitation:** Only one Zillow page load per IP is possible. The combined bounding box approach was used to cover all three ZIPs in one shot. Individual ZIP drill-downs are not possible until credits refresh or IP rotates.
+---
 
-**Direct Zillow search URLs for manual follow-up:**
-- ZIP 44129: <https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/>
-- ZIP 44134: <https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/>
-- ZIP 44130: <https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/>
+## Agent / Broker Concentration
+
+| Broker | Listings |
+|--------|----------|
+| EXP Realty, LLC. | 3 (37.5%) |
+| Keller Williams (Living + Greater Metropolitan) | 2 (25.0%) |
+| RE/MAX Above & Beyond | 1 |
+| Russell Real Estate Services | 1 |
+| Berkshire Hathaway HomeServices | 1 |
+
+---
+
+## Buy Box — 44129 SFR (First-Pass)
+
+| Parameter | 3BR Target | 3BR Stretch | 2BR (Avoid) |
+|-----------|-----------|-------------|-------------|
+| All-in basis | ≤ $170,000 | ≤ $185,000 | ≤ $140,000 |
+| Target rent | $1,400/mo | $1,400/mo | $1,000/mo |
+| Target gross yield | ≥ 9.5% | ≥ 8.5% | ≥ 8.0% |
+| Target GRM | ≤ 10.5 | ≤ 11.8 | ≤ 12.5 |
+| Rehab tolerance | ≤ $15K | ≤ $25K | ≤ $15K |
+| Preferred ZIPs | 44129, 44134 | 44129, 44134, 44130 | — |
+
+---
+
+## Final Recommendations
+
+### Best current SFR lead
+**6006 Snow Rd — $165,000 (3BR/2BA, 1,188 sqft)**
+- 10.2% estimated gross yield, best in the set
+- New listing (1 day), act quickly
+- Keller Williams Living listing — schedule showing now
+- ⚠️ Verify condition, foundation, roof, HVAC before committing
+- At $165K with $1,398 est rent: GRM of 9.8 is strong for Parma
+
+### Value-add candidate
+**7101 Brownfield Dr — $180,000 (3BR/1BA, 2,186 sqft)**
+- Largest sqft (2,186), just got $9,900 price cut today
+- At $180K asking, $82/sqft is cheapest per-foot in set
+- If negotiated to $170K: 9.9% yield, GRM 10.1
+- Caveat: 1BA may limit rent ceiling; check if 2nd bath can be added
+
+### Avoid
+- **All 2BR listings at current pricing** — 6.2-6.4% gross yield doesn't cover costs after financing
+- **6507 Forest Ave at $189,900** — highest $/sqft ($185), tight yield at 8.8%, only makes sense below $175K
+
+### ZIPs not covered
+- **44134** — blocked by Cloudflare captcha; Zillapi was out of credits. Try on next cycle.
+- **44130** — same. Both need fresh Zillapi credits or user's own browser.
+
+---
+
+## Data Quality Notes
+
+- **Rent estimates:** Derived from Cleveland-Elyria MSA FY2025 FMR (3BR = $1,553) × 90% Parma adjustment = $1,398. Not property-specific. Actual rents may vary ±15%.
+- **Zillapi:** Out of credits for this cycle. All data from single Camofox browser pull of Zillow search results.
+- **44134 / 44130:** Blocked by Cloudflare "Press & Hold" captcha on second navigation (IP-based rate limiting). Only one Zillow search per IP per session.
+- **Missing fields:** rentZestimate, zestimate, taxes, year built all unavailable (not populated in Zillow search results for this market).
+
+---
+
+*Generated: 2026-09-26 by Hermes Agent (Loki profile) — real-estate-submarket-screening skill v1.0.0*
