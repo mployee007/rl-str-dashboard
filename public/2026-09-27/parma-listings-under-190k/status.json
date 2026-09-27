@@ -1,0 +1,1 @@
+{"timestamp": "2026-09-27T00:00:00Z", "status": "partial", "zips_covered": ["44129"], "zips_blocked": ["44134", "44130"], "block_reason": "Cloudflare Press & Hold captcha (IP-based rate limit after first Zillow navigation)", "listings_found": 8, "data_source": "Zillow.com via Camofox browser (__NEXT_DATA__ extraction)", "zillapi_status": "Out of credits"}
