@@ -1,0 +1,42 @@
+{
+  "generated": "2026-09-29",
+  "session": "10yr-bond-futures-1000-playbook",
+  "sources": [
+    {
+      "title": "CME Group - Micro Treasury futures (product comparison)",
+      "url": "https://www.cmegroup.com/markets/interest-rates/micro-treasury-futures.html",
+      "used_for": "Micro Ultra 10Y (MTN) and 10-Year Yield (10Y) contract size, tick, initial margin (~$300 / ~$320), settlement",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "CME Group - 10-Year T-Note Futures Margins",
+      "url": "https://www.cmegroup.com/markets/interest-rates/us-treasury/10-year-us-treasury-note.margins.html",
+      "used_for": "ZN maintenance margin $1,875 USD; live quote ZNZ6 104'110",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "Ironbeam - Futures Margins (day vs overnight table)",
+      "url": "https://www.ironbeam.com/margins",
+      "used_for": "Day-trade and overnight margins for micros, minis, full-size contracts, FX, crypto, grains",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "Ironbeam - 10-Year U.S. Treasury Note Futures (ZN) Contract Specifications",
+      "url": "https://www.ironbeam.com/knowledge-base/10-year-u-s-treasury-note-futures-zn-contract-specifications/",
+      "used_for": "ZN contract size $100,000 face, tick 1/32 = $31.25",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "Ironbeam - Micro 10-Year Yield Futures (10Y) Contract Specifications",
+      "url": "https://www.ironbeam.com/knowledge-base/micro-10-year-yield-futures-10y-contract-specifications/",
+      "used_for": "10Y contract description, trading hours, symbol",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "CME Group - 10-Year T-Note Futures Contract Specs",
+      "url": "https://www.cmegroup.com/markets/interest-rates/us-treasury/10-year-us-treasury-note.contractSpecs.html",
+      "used_for": "Contract reference (page JS-rendered; specs cross-checked via Ironbeam)",
+      "retrieved": "2026-09-29"
+    }
+  ]
+}
