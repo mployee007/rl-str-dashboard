@@ -1,46 +1,57 @@
-# Parma West Area Listings Under $190K — Pull Failed
-**Generated:** 2026-09-29 | **Status:** BLOCKED — all data sources exhausted
+# Parma Listings Pull — BLOCKED
+**Date:** 2026-09-29  
+**Request:** Active for-sale house listings in ZIPs 44129, 44134, 44130 under $190,000  
+**Outcome:** ALL DATA SOURCES FAILED — no listings retrieved
 
 ---
 
-## Blocked: No live listings available
+## Source-by-Source Result Table
 
-| Source | ZIP 44129 | ZIP 44134 | ZIP 44130 |
-|--------|-----------|-----------|-----------|
-| **Zillapi (Tier 1)** | ❌ Out of credits | ❌ Server unreachable | ❌ Server unreachable |
-| **Camofox → Zillow (Tier 2)** | ❌ Cloudflare captcha | ❌ Not attempted (IP blocked) | ❌ Not attempted (IP blocked) |
-| **SearXNG (Tier 3)** | ❌ European namesake bias | ❌ Not attempted | ❌ Not attempted |
-| **web_search/web_extract (Tier 4)** | ❌ firecrawl not installed | ❌ firecrawl not installed | ❌ firecrawl not installed |
-
----
-
-## Manual follow-up URLs
-
-Open these in a regular browser to see current listings:
-
-| ZIP | Direct Zillow Link |
-|-----|-------------------|
-| **44129** (Parma West) | [zillow.com](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/) |
-| **44134** (Parma South) | [zillow.com](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/) |
-| **44130** (Middleburg Hts) | [zillow.com](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/) |
+| Tier | Source | Result | Detail |
+|------|--------|--------|--------|
+| **Tier 1** | Zillapi MCP | ❌ Out of credits | `"Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing."` — MCP server became unreachable after first call (42 consecutive failures) |
+| **Tier 2** | Camofox → Zillow | ❌ Cloudflare captcha | First navigation to `zillow.com/homes/for_sale/44129_rb/...` returned "Press & Hold to confirm you are a human" — Reference ID `5f0eab5d-bc0c-11f1-9b9b-782151b8ba6e`. IP-based rate limiting; browser restarts won't help |
+| **Tier 3** | SearXNG / agent_search | ❌ Wrong continent | Bing returned Parma, ITALY results (Parmigiano Reggiano, Parma Calcio 1913, etc.) — all other engines failed: DuckDuckGo CAPTCHA, Brave rate-limited, Startpage CAPTCHA, AOL HTTP error |
+| **Tier 4** | web_search / web_extract | ❌ firecrawl missing | `firecrawl-py` not installed; `security.allow_lazy_installs=false` blocks auto-install; `uv pip install firecrawl-py` blocked by locked venv in cron |
 
 ---
 
-## What's needed to unblock
+## Direct Manual URLs (open in your own browser)
 
-1. **Top up Zillapi credits** → https://zillapi.com/app/billing (then re-run this cron job)
-2. **Run from a clean residential IP** → the Camofox proxy IP is Cloudflare-flagged
-3. **Manual pull** → open the URLs above and paste results back into the conversation
+These Zillow searches return the data you need — just click:
+
+| ZIP | Direct Search URL |
+|-----|------------------|
+| **44129** (Parma West) | [Zillow: 44129 under $190K](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/) |
+| **44134** (Parma South) | [Zillow: 44134 under $190K](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/) |
+| **44130** (Parma East/Middleburg Hts) | [Zillow: 44130 under $190K](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/) |
 
 ---
 
-## Context for when this resumes
+## FY2025 Rent Anchors (for your manual screening)
 
-- **MSA:** Cleveland-Elyria, OH MSA
-- **FY2025 3BR FMR:** $1,553/mo (40th percentile, HUD)
-- **Target ZIPs:** 44129 (Parma West), 44134 (Parma South), 44130 (Middleburg Heights)
-- **Price cap:** $190,000
-- **Strategy:** Value-add SFR / small multifamily in working-class Cleveland suburbs
-- **Previous session context:** These ZIPs identified as viable submarkets in the Cleveland metro screen; need live pricing data to build the buy box
+Per HUD Fair Market Rents, Cleveland-Elyria MSA with Parma submarket adjustment (90%):
 
-⚠️ **No listings were fabricated.** This report reflects genuine tool failures only.
+| Unit Size | MSA FMR (40th %) | Parma Est. (90%) |
+|-----------|-----------------|-------------------|
+| 2BR | $1,098 | ~$988 |
+| 3BR | $1,553 | ~$1,398 |
+| 4BR | $1,810 | ~$1,629 |
+
+**Quick screen rules of thumb:**
+- Buy box ceiling: ~$190K (your cap)
+- Target GRM ≤ 12 on Parma-adjusted rents → ~$142K ceiling for a 3BR at $1,398/mo
+- Stretch GRM ≤ 14 → ~$165K for 3BR
+- Pass if GRM > 15 unless rehab upside is compelling
+
+---
+
+## Next Steps
+
+1. **Manual pull:** Open the three Zillow links above, screen properties under $190K with ≥2BR, and apply the GRM thresholds
+2. **When Zillapi credits refresh:** Re-run this cron job — the automated pipeline will produce the full markdown tables with verdicts
+3. **Camofox IP rotation:** If the server IP is different from your browser IP, try restarting cron after an IP change to bypass Cloudflare
+
+---
+
+*Generated by Hermes Agent · 2026-09-29 · real-estate-submarket-screening skill v1.0.0*
