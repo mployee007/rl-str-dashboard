@@ -1,8 +1,61 @@
 {
-  "generated_at": "2026-09-29T22:58:12.246691+00:00",
+  "generated_at": "2026-09-29T23:13:34.852818+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 88,
   "sessions": [
+    {
+      "id": "2026-09-29/parma-listings-under-190k",
+      "date": "2026-09-29",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-29T23:02:34.631202",
+      "file_count": 4,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-29/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "44129_raw.json",
+            "rel_path": "44129_raw.json",
+            "size": 3085,
+            "updated_at": "2026-09-29T07:42:21.426864",
+            "previewable": true,
+            "public_href": "public/2026-09-29/parma-listings-under-190k/44129_raw.json"
+          },
+          {
+            "name": "parma-listings-raw.json",
+            "rel_path": "parma-listings-raw.json",
+            "size": 3759,
+            "updated_at": "2026-09-29T23:01:40.890366",
+            "previewable": true,
+            "public_href": "public/2026-09-29/parma-listings-under-190k/parma-listings-raw.json"
+          },
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 6974,
+            "updated_at": "2026-09-29T23:02:34.631202",
+            "previewable": true,
+            "public_href": "public/2026-09-29/parma-listings-under-190k/parma-listings.md"
+          },
+          {
+            "name": "parma_44129_raw.json",
+            "rel_path": "parma_44129_raw.json",
+            "size": 4005,
+            "updated_at": "2026-09-29T19:57:05.788736",
+            "previewable": true,
+            "public_href": "public/2026-09-29/parma-listings-under-190k/parma_44129_raw.json"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-29/10yr-rate-trade-plan",
       "date": "2026-09-29",
@@ -44,59 +97,6 @@
         "csv": [],
         "image": [],
         "other": []
-      }
-    },
-    {
-      "id": "2026-09-29/parma-listings-under-190k",
-      "date": "2026-09-29",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-29T19:57:05.788736",
-      "file_count": 4,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-29/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "44129_raw.json",
-            "rel_path": "44129_raw.json",
-            "size": 3085,
-            "updated_at": "2026-09-29T07:42:21.426864",
-            "previewable": true,
-            "public_href": "public/2026-09-29/parma-listings-under-190k/44129_raw.json"
-          },
-          {
-            "name": "parma-listings-raw.json",
-            "rel_path": "parma-listings-raw.json",
-            "size": 4326,
-            "updated_at": "2026-09-29T04:37:33.156153",
-            "previewable": true,
-            "public_href": "public/2026-09-29/parma-listings-under-190k/parma-listings-raw.json"
-          },
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 7602,
-            "updated_at": "2026-09-29T19:56:26.084772",
-            "previewable": true,
-            "public_href": "public/2026-09-29/parma-listings-under-190k/parma-listings.md"
-          },
-          {
-            "name": "parma_44129_raw.json",
-            "rel_path": "parma_44129_raw.json",
-            "size": 4005,
-            "updated_at": "2026-09-29T19:57:05.788736",
-            "previewable": true,
-            "public_href": "public/2026-09-29/parma-listings-under-190k/parma_44129_raw.json"
-          }
-        ]
       }
     },
     {
