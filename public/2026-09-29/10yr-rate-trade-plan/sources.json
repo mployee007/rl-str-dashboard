@@ -1,0 +1,48 @@
+{
+  "generated": "2026-09-29",
+  "session": "10yr-rate-trade-plan",
+  "sources": [
+    {
+      "title": "Yahoo Finance chart API - ^TNX (10-year Treasury yield)",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=2mo&interval=1d",
+      "used_for": "10Y yield level (5.255%), 44-session history, trend/MA calculation",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "Yahoo Finance chart API - ^TYX / ^FVX / ^IRX",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=1mo&interval=1d",
+      "used_for": "30Y 5.594%, 5Y 5.063%, 13W 4.065% - curve shape (bear steepener)",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "Yahoo Finance chart API - ZN=F (10-Year T-Note futures)",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZN%3DF?range=2mo&interval=1d",
+      "used_for": "ZN price 104.42, downtrend confirmation, 44-day low",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "CNBC - 10-year Treasury yield rockets to 19-year high",
+      "url": "https://www.cnbc.com/2026/09/23/treasury-yields-oil-inflation-fed.html",
+      "used_for": "Context: 19-year high, 30Y at 5.398%, inflation + activity drivers",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "CNN - 10-year Treasury yield hits 5.1% for first time in 19 years",
+      "url": "https://www.cnn.com/2026/09/23/investing/us-bond-market-fed",
+      "used_for": "Context: strong business activity + intensifying inflation concerns",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "Federal Reserve Board - FOMC meeting calendar 2026",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "used_for": "Remaining 2026 FOMC dates: Oct 27-28, Dec 8-9 (direct curl blocked; obtained via search results)",
+      "retrieved": "2026-09-29"
+    },
+    {
+      "title": "BLS release schedule + FinanceCalendar",
+      "url": "https://www.bls.gov/schedule/2026/home.htm",
+      "used_for": "NFP (Employment Situation) Oct 2, 2026; CPI Oct 14, 2026",
+      "retrieved": "2026-09-29"
+    }
+  ]
+}

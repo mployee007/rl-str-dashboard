@@ -1,8 +1,51 @@
 {
-  "generated_at": "2026-09-29T20:07:34.467392+00:00",
+  "generated_at": "2026-09-29T20:23:11.982111+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 87,
+  "session_count": 88,
   "sessions": [
+    {
+      "id": "2026-09-29/10yr-rate-trade-plan",
+      "date": "2026-09-29",
+      "title": "10yr-rate-trade-plan",
+      "summary": "**Session:** 2026-09-29 \u00b7 Andromeda / #loki **Deliverable:** `artifacts/exports/10yr-rate-trade-plan.pdf` (2 pages) **Instrument:** Micro 10-Year Yield futures (10Y) - 10Y yield **5.255%** \u2014 a **19-year high** (highest since 2007). Confirmed, accelerating uptrend in yields. - Bon",
+      "updated_at": "2026-09-29T20:08:25.421360",
+      "file_count": 7,
+      "export_count": 2,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-29/10yr-rate-trade-plan",
+      "status": "completed",
+      "standard_previews": {
+        "decisions.md": "# Decisions - 10yr-rate-trade-plan - 2026-09-29\n\n1. **Trade with trend, but not at the extreme.** Trend is unambiguously up in yields, but the\n   yield sits at a 44-day high / 19-year high after a parabolic leg. Decision: build a\n   *pullback-entry* trend-continuation plan (enter 5.12\u20135.17%), NOT a market-order chase at 5.255%.\n   Rationale: buying the top of a vertical leg has poor location and poor stop placement.\n\n2. **Primary instrument: Micro 10-Year Yield futures (10Y).** Chosen over ZN because ZN's overnight\n   margin ($2,063) exceeds the account. The micro gives direct yield exposure at $10/bp with $330\n   overnight margin.\n\n3. **Stop placed at the 10-day SMA (5.07%), not an arbitrary distance.** The 10-day SMA (5.076) is\n   the trend-defining level; a close below it is the cleanest objective invalidation.\n\n4. **Targets set at measured extensions, not round numbers.** T1 5.30% (~2R), T2 5.42% (~3.7R),\n   derived from the size of the recent breakout leg.\n\n5. **Catalyst dates treated as hard flatten triggers.** With CPI (Oct 14) and FOMC (Oct 28) able to\n   move 20-30 bp in a session \u2014 more than the full target \u2014 holding through them is a coin flip.\n\n6. **Honesty on position sizing.** Did not pretend $1,000 allows proper 1-2% risk. Flagged explicitly\n   that ~7.5%/trade is the minimum viable size and that a simulator phase should come first.\n\n7. **Deliverable format = PDF companion + chat summary**, consistent with the user's preference for\n   retrievable deliverables; stored under the AGENTS.md output structure.\n",
+        "notes.md": "# Research Notes - 10yr-rate-trade-plan - 2026-09-29\n\n## Data retrieved (live)\nYahoo Finance chart API (curl worked; federalreserve.gov + bls.gov curl BLOCKED - used browser/DDG instead):\n\n| Tenor | Symbol | Level |\n|---|---|---|\n| 13-week | ^IRX | 4.065% |\n| 5-year | ^FVX | 5.063% |\n| 10-year | ^TNX | 5.255% |\n| 30-year | ^TYX | 5.594% |\n| 10Y futures | ZN=F | 104.42 |\n\n10Y yield daily path (last 10 sessions): 4.947, 4.998, 4.963, 4.968, 5.114, 5.162, 5.184, 5.240, 5.255.\n\u2192 Sharp acceleration from Sep 23 (5.114) onward.\n\nZN daily path: 106.41 (Sep 17) \u2192 104.42 (Sep 29). \u22124.36 pts since Aug 25.\n\n## Curve analysis\n- 10Y \u2212 13W = +119 bp (positively sloped, no inversion)\n- 10Y \u2212 5Y = +19 bp\n- 30Y \u2212 10Y = +34 bp\n\u2192 Bear steepener: long end leading the selloff.\n\n## Macro context (CNBC / CNN, Sep 23-25 2026)\n- \"10-year Treasury yield rockets to 19-year high\" \u2014 highest since 2007.\n- 30-year at 5.398% (Sep 23), highest since June 2007.\n- Cause: strong business activity data + intensifying inflation concerns.\n- Sep 25 snapshot: 10Y 5.17%, 2Y 4.81%.\n\n## FOMC 2026 remaining meetings\n- Sep 15-16 (concluded), **Oct 27-28**, **Dec 8-9**. Decisions 2:00pm ET second day.\n- Source: federalreserve.gov FOMC calendar (via DDG results), cross-checked with fedratecalc + atgpress.\n\n## BLS releases\n- Employment Situation (Sep 2026): **Fri Oct 2, 2026, 8:30 ET**.\n- CPI (Sep 2026): **Wed Oct 14, 2026, 8:30 ET**.\n\n## Environment gotchas\n- `curl` to federalreserve.gov and bls.gov **timed out / blocked** (tool asked for consent and timed out).\n  finance.yahoo.com curl works fine.\n- Workflow that works: `lite.duckduckgo.com/lite/?q=` via browser for search; Yahoo chart API via curl for prices.\n",
+        "run-log.md": "# Run Log - 10yr-rate-trade-plan - 2026-09-29\n\n| Step | Action | Result |\n|---|---|---|\n| 1 | curl Yahoo ^TNX 2mo daily | 10Y yield history: 4.617 \u2192 5.255% |\n| 2 | curl Yahoo ZN=F 2mo daily | ZN 108.86 \u2192 104.42 |\n| 3 | Computed MAs + changes | 10d SMA 5.076 > 20d SMA 4.964; uptrend confirmed |\n| 4 | curl federalreserve.gov FOMC calendar | **BLOCKED** (timed out, no consent) |\n| 5 | curl bls.gov schedule | **BLOCKED** (timed out, no consent) |\n| 6 | curl Yahoo ^TYX/^FVX/^IRX | 30Y 5.594 / 5Y 5.063 / 13W 4.065 \u2192 bear steepener |\n| 7 | browser \u2192 DDG lite \"FOMC 2026 dates\" | Oct 27-28, Dec 8-9 confirmed |\n| 8 | browser \u2192 DDG lite \"BLS Oct 2026 releases\" | CPI Oct 14, 2026 |\n| 9 | browser \u2192 DDG lite \"jobs report Oct 2026\" | NFP Oct 2, 2026 |\n| 10 | Wrote build_tradeplan.py (fpdf2) | \u2014 |\n| 11 | Ran build | PDF written, 2 pages, 6,183 bytes |\n| 12 | pymupdf layout verification | 2 pages, **0 overflow** on both pages |\n\n## Artifacts\n- `artifacts/exports/10yr-rate-trade-plan.pdf` \u2014 deliverable\n- `artifacts/exports/build_tradeplan.py` \u2014 reproducible generator\n",
+        "sources.json": "{\n  \"generated\": \"2026-09-29\",\n  \"session\": \"10yr-rate-trade-plan\",\n  \"sources\": [\n    {\n      \"title\": \"Yahoo Finance chart API - ^TNX (10-year Treasury yield)\",\n      \"url\": \"https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=2mo&interval=1d\",\n      \"used_for\": \"10Y yield level (5.255%), 44-session history, trend/MA calculation\",\n      \"retrieved\": \"2026-09-29\"\n    },\n    {\n      \"title\": \"Yahoo Finance chart API - ^TYX / ^FVX / ^IRX\",\n      \"url\": \"https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=1mo&interval=1d\",\n      \"used_for\": \"30Y 5.594%, 5Y 5.063%, 13W 4.065% - curve shape (bear steepener)\",\n      \"retrieved\": \"2026-09-29\"\n    },\n    {\n      \"title\": \"Yahoo Finance chart API - ZN=F (10-Year T-Note futures)\",\n      \"url\": \"https://query1.finance.yahoo.com/v8/finance/chart/ZN%3DF?range=2mo&interval=1d\",\n      \"used_for\": \"ZN price 104.42, downtrend confirmation, 44-day low\",\n      \"retrieved\": \"2026-09-29\"\n    },\n    {\n      \"title\": \"CNBC - 10-year Treasury yield rockets to 19-year high\",\n      \"url\": \"https://www.cnbc.com/2026/09/23/treasury-yields-oil-inflation-fed.html\",\n      \"used_for\": \"Context: 19-year high, 30Y at 5.398%, inflation + activity drivers\",\n      \"retrieved\": \"2026-09-29\"\n    },\n    {\n      \"title\": \"CNN - 10-year Treasury yield hits 5.1% for first time in 19 years\",\n      \"url\": \"https://www.cnn.com/2026/09/23/investing/us-bond-market-fed\",\n      \"used_for\": \"Context: strong business activity + intensifying inflation concerns\",\n      \"retrieved\": \"2026-09-29\"\n    },\n    {\n      \"title\": \"Federal Reserve Board - FOMC meeting calendar 2026\",\n      \"url\": \"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\",\n      \"used_for\": \"Remaining 2026 FOMC dates: Oct 27-28, Dec 8-9 (direct curl blocked; obtained via search results)\",\n      \"retrieved\": \"2026-09-29\"\n    },\n    {\n      \"title\": \"BLS release schedule + FinanceCalendar\",\n      \"url\": \"https://www.bls.gov/schedule/2026/home.htm\",\n      \"used_for\": \"NFP (Employment Situation) Oct 2, 2026; CPI Oct 14, 2026\",\n      \"retrieved\": \"2026-09-29\"\n    }\n  ]\n}\n",
+        "summary.md": "# 10-Year Rate Trade Plan\n\n**Session:** 2026-09-29 \u00b7 Andromeda / #loki\n**Deliverable:** `artifacts/exports/10yr-rate-trade-plan.pdf` (2 pages)\n**Instrument:** Micro 10-Year Yield futures (10Y)\n\n## Setup (Sep 29, 2026)\n- 10Y yield **5.255%** \u2014 a **19-year high** (highest since 2007). Confirmed, accelerating uptrend in yields.\n- Bond prices (ZN 104.42) in a confirmed downtrend (44-day low).\n- Curve is a **bear steepener**: 13W 4.065% / 5Y 5.063% / 10Y 5.255% / 30Y 5.594%.\n- Driver: strong business activity + intensifying inflation concerns.\n\n## The Plan (trend-continuation, pullback entry)\n| Parameter | Value |\n|---|---|\n| Direction | LONG yield (short price), 1 contract |\n| Entry zone | 5.12% \u2013 5.17% |\n| Hard stop | 5.07% (~7.5 bp, ~$75) |\n| Target 1 | 5.30% = +$155 (~2R) \u2192 stop to breakeven |\n| Target 2 | 5.42% = +$275 (~3.7R) |\n\n## Scenarios (1 contract, $10/bp)\n| Scenario | Yield path | P&L |\n|---|---|---|\n| Conservative | 5.145 \u2192 5.260 | +$115 |\n| Moderate (T1) | 5.145 \u2192 5.300 | +$155 |\n| Optimistic (T2) | 5.145 \u2192 5.420 | +$275 |\n| Stop-out | 5.145 \u2192 5.070 | \u2212$75 |\n\n## Catalyst calendar\n- **Fri Oct 2, 2026** 8:30 ET \u2014 Employment Situation (NFP, Sep)\n- **Wed Oct 14, 2026** 8:30 ET \u2014 CPI (Sep)\n- **Tue\u2013Wed Oct 27\u201328, 2026** 2:00 ET \u2014 FOMC decision\n- **Tue\u2013Wed Dec 8\u20139, 2026** 2:00 ET \u2014 FOMC decision\n\nRule: flatten before every one.\n"
+      },
+      "files": {
+        "export": [
+          {
+            "name": "10yr-rate-trade-plan.pdf",
+            "rel_path": "artifacts/exports/10yr-rate-trade-plan.pdf",
+            "size": 6183,
+            "updated_at": "2026-09-29T20:08:14.064404",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "build_tradeplan.py",
+            "rel_path": "artifacts/exports/build_tradeplan.py",
+            "size": 8421,
+            "updated_at": "2026-09-29T20:08:10.871417",
+            "previewable": false,
+            "public_href": null
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-29/parma-listings-under-190k",
       "date": "2026-09-29",
