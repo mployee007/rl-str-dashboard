@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-09-29T18:34:34.229054+00:00",
+  "generated_at": "2026-09-29T18:50:11.719806+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 86,
+  "session_count": 87,
   "sessions": [
+    {
+      "id": "2026-09-29/10yr-bond-futures-1000-playbook",
+      "date": "2026-09-29",
+      "title": "10yr-bond-futures-1000-playbook",
+      "summary": "",
+      "updated_at": "2026-09-29T18:50:08.952377",
+      "file_count": 1,
+      "export_count": 1,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-29/10yr-bond-futures-1000-playbook",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [
+          {
+            "name": "build_cheatsheet.py",
+            "rel_path": "artifacts/exports/build_cheatsheet.py",
+            "size": 10339,
+            "updated_at": "2026-09-29T18:50:08.952377",
+            "previewable": false,
+            "public_href": null
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-09-29/parma-listings-under-190k",
       "date": "2026-09-29",
