@@ -1,8 +1,53 @@
 {
-  "generated_at": "2026-09-30T11:06:36.425385+00:00",
+  "generated_at": "2026-09-30T11:22:13.820203+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 89,
   "sessions": [
+    {
+      "id": "2026-09-30/parma-listings-under-190k",
+      "date": "2026-09-30",
+      "title": "parma-listings-under-190k",
+      "summary": "",
+      "updated_at": "2026-09-30T11:14:42.161357",
+      "file_count": 3,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-09-30/parma-listings-under-190k",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "parma-listings-raw.json",
+            "rel_path": "parma-listings-raw.json",
+            "size": 5623,
+            "updated_at": "2026-09-30T11:14:42.161357",
+            "previewable": true,
+            "public_href": "public/2026-09-30/parma-listings-under-190k/parma-listings-raw.json"
+          },
+          {
+            "name": "parma-listings.md",
+            "rel_path": "parma-listings.md",
+            "size": 8771,
+            "updated_at": "2026-09-30T11:14:42.161357",
+            "previewable": true,
+            "public_href": "public/2026-09-30/parma-listings-under-190k/parma-listings.md"
+          },
+          {
+            "name": "parma_raw.json",
+            "rel_path": "parma_raw.json",
+            "size": 2657,
+            "updated_at": "2026-09-30T02:05:32.648323",
+            "previewable": true,
+            "public_href": "public/2026-09-30/parma-listings-under-190k/parma_raw.json"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-09-29/10yr-rate-trade-plan",
       "date": "2026-09-29",
@@ -60,51 +105,6 @@
         "csv": [],
         "image": [],
         "other": []
-      }
-    },
-    {
-      "id": "2026-09-30/parma-listings-under-190k",
-      "date": "2026-09-30",
-      "title": "parma-listings-under-190k",
-      "summary": "",
-      "updated_at": "2026-09-30T08:10:50.029223",
-      "file_count": 3,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-09-30/parma-listings-under-190k",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "parma-listings-raw.json",
-            "rel_path": "parma-listings-raw.json",
-            "size": 3933,
-            "updated_at": "2026-09-30T08:10:50.029223",
-            "previewable": true,
-            "public_href": "public/2026-09-30/parma-listings-under-190k/parma-listings-raw.json"
-          },
-          {
-            "name": "parma-listings.md",
-            "rel_path": "parma-listings.md",
-            "size": 8515,
-            "updated_at": "2026-09-30T08:10:29.278243",
-            "previewable": true,
-            "public_href": "public/2026-09-30/parma-listings-under-190k/parma-listings.md"
-          },
-          {
-            "name": "parma_raw.json",
-            "rel_path": "parma_raw.json",
-            "size": 2657,
-            "updated_at": "2026-09-30T02:05:32.648323",
-            "previewable": true,
-            "public_href": "public/2026-09-30/parma-listings-under-190k/parma_raw.json"
-          }
-        ]
       }
     },
     {
