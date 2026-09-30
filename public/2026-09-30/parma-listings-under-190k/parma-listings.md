@@ -1,144 +1,120 @@
-# Parma West (44129) — Active SFR Listings Under $190K
+# Parma Area — For-Sale Listings Under $190K
 
 **Pull date:** 2026-09-30
-**Source:** Zillow.com via Camofox browser (`__NEXT_DATA__` extraction)
-**Rent baseline:** Cleveland-Elyria MSA FY2025 FMR × 90% (Parma working-class suburb adjustment)
-**Zillapi status:** CREDITS EXHAUSTED — fell through to Tier 2 browser extraction
+**Fresh data:** ❌ NOT AVAILABLE — Zillapi out of credits, Camofox captcha-blocked
+**Data shown:** From 2026-09-29 pull (1 day stale). DOM values aged +1.
+**Source:** Zillow.com (Camofox browser → `__NEXT_DATA__` extraction, 9/29 pull)
+**Rent anchor:** Cleveland-Elyria MSA FY2025 FMR, Parma-adjusted (90% of MSA) ⚠️ Market-derived — NOT property-specific
+**ZIPs covered:** 44129 only. 44134 and 44130 blocked by Zillow captcha.
+
+---
+
+## Source Status
+
+| Source | Status | Result |
+|--------|--------|--------|
+| Zillapi MCP | ❌ Out of credits | "Out of credits for this cycle" |
+| Camofox → Zillow 44129 | ❌ Captcha-blocked | Cloudflare "Press & Hold" — IP rate-limited |
+| Camofox → Zillow 44134 | ❌ Captcha-blocked | Never reached — single nav per IP |
+| Camofox → Zillow 44130 | ❌ Captcha-blocked | Never reached — single nav per IP |
+| Prior data (9/29) | ✅ Available | 7 listings for 44129; 44134/44130 not covered |
+
+---
+
+## ⚠️ STALE DATA WARNING
+
+The listings below are from the **2026-09-29 pull** — DOM values have been aged +1 day but may not reflect new listings, price changes, or off-market removals since then. Treat all data as approximate.
+
+---
 
 ## Bottom Line
 
-7 active SFR listings in 44129 under $190K. **Best lead: 6006 Snow Rd ($165K, 3/2, GRM 9.8)** — cheapest entry and strongest cash-flow candidate. **Deep-value standout: 7101 Brownfield Dr ($180K, 3/1, $82/sqft)** with a recent $9,900 price cut on an oversized 2,186 sqft lot. All 2BR listings at this cap fail to pencil (GRM > 14). Rent estimates are market-derived from HUD FMR — verify with property-level rent comps before bidding.
-
-⚠️ **44134 and 44130 NOT pulled.** Zillow's IP-based rate limiting allows only one search results page load per cycle. The combined bounding box with `44129_rb/` anchor only returned 44129 listings. Submitting as a partial report.
+**7 active SFR listings under $190K in ZIP 44129 (as of 9/29, aged to 9/30).** Two properties stood out on 9/29: **6006 Snow Rd ($165K)** as the best cash-flow lead (GRM 9.8, 3bd/2ba), and **7101 Brownfield Dr ($180K)** as the best value-add play ($82/sqft, seller cut $9,900 on 9/26). 44134 and 44130 remain uncovered.
 
 ---
 
-## 44129 Active Listings (sorted by price)
+## Rent Methodology
 
-| # | Address | Price | Beds | Baths | Sqft | $/sqft | Tax Assessed | DOM | Notes | Est. Rent/mo | GRM | Verdict |
-|---|---------|-------|------|-------|------|--------|-------------|-----|-------|-------------|-----|---------|
-| 1 | [6006 Snow Rd, Cleveland, OH 44129](https://www.zillow.com/homedetails/2057037610_zpid/) | $165,000 | 3 | 2 | 1,188 | $139 | — | 5 | 3D Tour | $1,398 ⚠️ | 9.8 | **TAKE** |
-| 2 | [7611 Newport Ave, Parma, OH 44129](https://www.zillow.com/homedetails/33547825_zpid/) | $174,900 | 3 | 1 | 1,092 | $160 | $117,500 | 6 | Additional storage | $1,398 ⚠️ | 10.4 | **NEGOTIATE** |
-| 3 | [7101 Brownfield Dr, Parma, OH 44129](https://www.zillow.com/homedetails/33561440_zpid/) | $180,000 | 3 | 1 | 2,186 | $82 | $156,500 | 14 | Price cut: $9,900 (9/26) | $1,398 ⚠️ | 10.7 | **TAKE SELECTIVELY** |
-| 4 | [6211 Dartworth Dr, Parma, OH 44129](https://www.zillow.com/homedetails/33561552_zpid/) | $184,000 | 2 | 1 | 1,085 | $170 | $151,100 | 19 | Price cut: $5,000 (9/22) | $988 ⚠️ | 15.5 | **NEGOTIATE** |
-| 5 | [5821 Merkle Ave, Parma, OH 44129](https://www.zillow.com/homedetails/33551587_zpid/) | $189,900 | 2 | 2 | 1,235 | $154 | $135,800 | 4 | Partially fenced yard | $988 ⚠️ | 16.0 | **PASS** |
-| 6 | [5597 W 54th St, Parma, OH 44129](https://www.zillow.com/homedetails/33553876_zpid/) | $189,900 | 3 | 1 | 1,636 | $116 | $156,900 | 26 | Beautiful curb appeal | $1,398 ⚠️ | 11.3 | **NEGOTIATE** |
-| 7 | [6311 Thornton Dr, Parma, OH 44129](https://www.zillow.com/homedetails/33562283_zpid/) | $190,000 | 3 | 2 | 1,176 | $162 | $174,700 | 41 | 41 days on Zillow | $1,398 ⚠️ | 11.3 | **NEGOTIATE** |
+All `rentZestimate` and `zestimate` fields returned `null` in `__NEXT_DATA__` — standard for Midwest metros. Rent estimates use:
 
----
+| Bedrooms | Cleveland-Elyria MSA FY2025 FMR | Parma 90% Adjustment | Used |
+|----------|--------------------------------|-----------------------|------|
+| 2BR | $1,098 | $988 | **$988/mo** |
+| 3BR | $1,553 | $1,398 | **$1,398/mo** |
 
-## Verdict Details
-
-### [6006 Snow Rd, Cleveland, OH 44129](https://www.zillow.com/homedetails/2057037610_zpid/) — **TAKE**
-
-- **Price:** $165,000 | 3bd/2ba | 1,188 sqft | 5 DOM
-- **Est. rent:** $1,398/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 9.8 | **$/sqft:** $139
-- **Rationale:** GRM 9.8 < 10 — strong cash flow
-- **Agent:** Keller Williams Living
-- **Listing notes:** 3D Tour
-
-### [7611 Newport Ave, Parma, OH 44129](https://www.zillow.com/homedetails/33547825_zpid/) — **NEGOTIATE**
-
-- **Price:** $174,900 | 3bd/1ba | 1,092 sqft | 6 DOM
-- **Est. rent:** $1,398/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 10.4 | **$/sqft:** $160
-- **Tax assessed:** $117,500 (ask is 33% above assessment)
-- **Rationale:** GRM 10.4 — pencils if rent verifies; ⚠️ ask 33% above tax assessed — verify value
-- **Agent:** Keller Williams Greater Metropolitan
-- **Listing notes:** Additional storage
-
-### [7101 Brownfield Dr, Parma, OH 44129](https://www.zillow.com/homedetails/33561440_zpid/) — **TAKE SELECTIVELY**
-
-- **Price:** $180,000 | 3bd/1ba | 2,186 sqft | 14 DOM
-- **Est. rent:** $1,398/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 10.7 | **$/sqft:** $82
-- **Tax assessed:** $156,500 (ask is 13% above assessment)
-- **Rationale:** GRM 10.7 — pencils if rent verifies; $82/sqft — deep value; price cut signal
-- **Agent:** EXP Realty, LLC.
-- **Listing notes:** Price cut: $9,900 (9/26)
-
-### [6211 Dartworth Dr, Parma, OH 44129](https://www.zillow.com/homedetails/33561552_zpid/) — **NEGOTIATE**
-
-- **Price:** $184,000 | 2bd/1ba | 1,085 sqft | 19 DOM
-- **Est. rent:** $988/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 15.5 | **$/sqft:** $170
-- **Tax assessed:** $151,100 (ask is 18% above assessment)
-- **Rationale:** GRM 15.5 > 14 — can't pencil at ask; price cut = motivated seller
-- **Agent:** Russell Real Estate Services
-- **Listing notes:** Price cut: $5,000 (9/22)
-
-### [5821 Merkle Ave, Parma, OH 44129](https://www.zillow.com/homedetails/33551587_zpid/) — **PASS**
-
-- **Price:** $189,900 | 2bd/2ba | 1,235 sqft | 4 DOM
-- **Est. rent:** $988/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 16.0 | **$/sqft:** $154
-- **Tax assessed:** $135,800 (ask is 28% above assessment)
-- **Rationale:** GRM 16.0 > 14 — can't pencil at ask; ⚠️ ask 28% above tax assessed — verify value
-- **Agent:** EXP Realty, LLC.
-- **Listing notes:** Partially fenced yard
-
-### [5597 W 54th St, Parma, OH 44129](https://www.zillow.com/homedetails/33553876_zpid/) — **NEGOTIATE**
-
-- **Price:** $189,900 | 3bd/1ba | 1,636 sqft | 26 DOM
-- **Est. rent:** $1,398/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 11.3 | **$/sqft:** $116
-- **Tax assessed:** $156,900 (ask is 17% above assessment)
-- **Rationale:** GRM 11.3 — pencils if rent verifies; $116/sqft — below-market sqft
-- **Agent:** EXP Realty, LLC.
-- **Listing notes:** Beautiful curb appeal
-
-### [6311 Thornton Dr, Parma, OH 44129](https://www.zillow.com/homedetails/33562283_zpid/) — **NEGOTIATE**
-
-- **Price:** $190,000 | 3bd/2ba | 1,176 sqft | 41 DOM
-- **Est. rent:** $1,398/mo ⚠️ (market-derived, not property-specific)
-- **GRM:** 11.3 | **$/sqft:** $162
-- **Tax assessed:** $174,700 (ask is 8% above assessment)
-- **Rationale:** GRM 11.3 — pencils if rent verifies; 41 DOM — stale, leverage for negotiation
-- **Agent:** Berkshire Hathaway HomeServices Professional Realty
-- **Listing notes:** 41 days on Zillow
+Source: U.S. HUD FY2025 Fair Market Rents (40th percentile gross rent). Verify at [huduser.gov](https://www.huduser.gov/portal/datasets/fmr.html).
 
 ---
 
-## Buy Box: Parma 44129 SFR
+## 44129 — Active Listings (Price Low → High) — Data from 9/29, aged +1 DOM
 
-| Parameter | Target | Stretch | Notes |
-|-----------|--------|---------|-------|
-| **ZIPs** | 44129 | 44134, 44130 | 44129 pulled; 44134/44130 TBD next cycle |
-| **Property type** | SFR 3/1+ | SFR 2/1 (if GRM < 12) | Skip 2BR at >$170K — can't pencil |
-| **All-in basis** | <$170K | <$190K | 6006 Snow at $165K is the current benchmark |
-| **Target rent** | $1,400+/mo (3BR) | $1,200+/mo (2BR) | ⚠️ Market-estimated; verify with rent comps |
-| **Target GRM** | <10 | <12 | Only 6006 Snow ($165K) clears <10 |
-| **Target $/sqft** | <$100 | <$130 | 7101 Brownfield at $82/sqft is exceptional |
-| **Rehab tolerance** | $15-25K cosmetic | $40K+ for systems | Check age of roof/HVAC on all pre-1970 builds |
-| **AVOID** | 2BR >$180K | GRM >14 | 6211 Dartworth, 5821 Merkle fail both |
+| # | Address | Price | Beds | Baths | Sqft | $/Sqft | DOM* | Est. Rent/mo | GRM | Tax Assessed | Ask vs Tax | Notes | Verdict |
+|---|---------|-------|------|-------|------|--------|------|-------------|-----|-------------|------------|-------|---------|
+| 1 | [6006 Snow Rd](https://www.zillow.com/homedetails/6006-Snow-Rd-Cleveland-OH-44129/2057037610_zpid/) | $165,000 | 3 | **2** | 1,188 | $139 | 5 | $1,398 | **9.8** | — | — | 3D Tour, Cleveland address but 44129 ZIP | **TAKE** |
+| 2 | [7611 Newport Ave](https://www.zillow.com/homedetails/7611-Newport-Ave-Parma-OH-44129/33547825_zpid/) | $174,900 | 3 | 1 | 1,092 | $160 | 6 | $1,398 | 10.4 | $117,500 | +48.9% | Additional storage, 1-bath limits rent | **NEGOTIATE** |
+| 3 | [7101 Brownfield Dr](https://www.zillow.com/homedetails/7101-Brownfield-Dr-Parma-OH-44129/33561440_zpid/) | $180,000 | 3 | 1 | **2,186** | **$82** | 14 | $1,398 | 10.7 | $156,500 | +15.0% | 🔻 Price cut $9,900 (9/26), largest sqft | **TAKE SELECTIVELY** |
+| 4 | [6211 Dartworth Dr](https://www.zillow.com/homedetails/6211-Dartworth-Dr-Parma-OH-44129/33561552_zpid/) | $184,000 | 2 | 1 | 1,085 | $170 | 19 | $988 | 15.5 | $151,100 | +21.8% | 🔻 Price cut $5,000 (9/22), only 2bd | **PASS** |
+| 5 | [5821 Merkle Ave](https://www.zillow.com/homedetails/5821-Merkle-Ave-Parma-OH-44129/33551587_zpid/) | $189,900 | 2 | 2 | 1,235 | $154 | 4 | $988 | 16.0 | $135,800 | +39.8% | Partially fenced yard, large tax gap | **PASS** |
+| 6 | [5597 W 54th St](https://www.zillow.com/homedetails/5597-W-54th-St-Parma-OH-44129/33553876_zpid/) | $189,900 | 3 | 1 | 1,636 | $116 | 26 | $1,398 | 11.3 | $156,900 | +21.0% | Stale, decent $/sqft, negotiable | **NEGOTIATE** |
+| 7 | [6311 Thornton Dr](https://www.zillow.com/homedetails/6311-Thornton-Dr-Parma-OH-44129/33562283_zpid/) | $190,000 | 3 | **2** | 1,176 | $162 | 41 | $1,398 | 11.3 | $174,700 | +8.8% | Stale 41 DOM, tightest tax gap | **NEGOTIATE** |
 
----
+*\*DOM values shown are from 9/29 pull + 1 day aged. Actual DOM may differ.*
 
-## Final Direct Recommendations
-
-| Category | Pick | Rationale |
-|----------|------|-----------|
-| **Best SFR lead** | [6006 Snow Rd](https://www.zillow.com/homedetails/2057037610_zpid/) — $165K | Lowest price, best GRM (9.8), 3BR/2BA, only 5 DOM — move fast |
-| **Best value play** | [7101 Brownfield Dr](https://www.zillow.com/homedetails/33561440_zpid/) — $180K | $82/sqft on 2,186 sqft, $9,900 price cut, motivated seller |
-| **Best negotiation target** | [5597 W 54th St](https://www.zillow.com/homedetails/33553876_zpid/) — $189.9K | 26 DOM, 3BR, $116/sqft — offer $170-175K |
-| **Skip** | 6211 Dartworth ($184K 2BR), 5821 Merkle ($190K 2BR) | GRM >14 on 2BR — can't cash flow even with discount |
-| **Stale watch** | [6311 Thornton Dr](https://www.zillow.com/homedetails/33562283_zpid/) — $190K | 41 DOM, tight tax gap — offer $170K if it sits another 2 weeks |
+**GRM** = Price / (Est. Monthly Rent × 12). Lower = better cash flow.
+**Ask vs Tax** = (Ask − Tax Assessed) / Tax Assessed. Larger gaps may indicate overpricing.
 
 ---
 
-## Coverage Gaps
+## Verdict Summary
 
-| ZIP | Status | Reason |
-|-----|--------|--------|
-| **44129** | Pulled (7 listings) | Full extraction via `__NEXT_DATA__` |
-| **44134** | NOT pulled | IP captcha block on 2nd navigation |
-| **44130** | NOT pulled | IP captcha block on 2nd navigation |
+### 🟢 TAKE — Strong Cash Flow
+- **6006 Snow Rd ($165K, 3bd/2ba)** — GRM 9.8, $139/sqft, 2 bathrooms. Best cash-flow candidate. May have gone under contract since 9/29.
 
-**Next cycle:** Pull 44134 and 44130 individually (2 separate cron runs). Use direct path-based URLs:
-- `https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/`
-- `https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/`
+### 🟡 TAKE SELECTIVELY — Value Play
+- **7101 Brownfield Dr ($180K, 3bd/1ba)** — $82/sqft, 2,186 sqft (largest by 34%). Seller cut $9,900 on 9/26. Could push rent above FMR with this square footage.
+
+### 🟠 NEGOTIATE — Price Reduction Needed
+- **7611 Newport Ave ($174,900)** — Needs ~$155-160K for GRM under 10. 1-bath limits rent.
+- **5597 W 54th St ($189,900)** — 26 DOM, push to $170-175K.
+- **6311 Thornton Dr ($190,000)** — 41 DOM, tight tax gap. Push below assessed ($175K).
+
+### 🔴 PASS — Doesn't Pencil
+- **6211 Dartworth Dr ($184K)** — GRM 15.5, 2bd. Not viable for cash-flow.
+- **5821 Merkle Ave ($189,900)** — GRM 16.0, tax gap 39.8%. Overpriced by ~$50K+.
 
 ---
 
-*Rent estimates use HUD FY2025 Cleveland-Elyria MSA Fair Market Rents adjusted to 90% for Parma. No property-level rentZestimate data available (Zillow does not populate this field in search results for this market). Verify all rents with local comps before underwriting.*
+## Buy Box — 44129 SFR
+
+| Metric | Target | Stretch |
+|--------|--------|---------|
+| All-in basis | $150K–$175K | $190K |
+| Beds/Baths | 3bd/1.5+ba | 3bd/1ba |
+| Sqft | 1,100–1,600 | 2,000+ |
+| Target rent | $1,400–$1,500/mo | $1,600/mo |
+| Target GRM | < 10.5 | < 12.0 |
+| Target gross yield | > 9.5% | > 8.3% |
+| Rehab tolerance | $15K cosmetic | $30K systems |
+| Max $/sqft | < $140 | < $160 |
+
+**Avoid:**
+- 2-bedroom homes above $150K (can't support rent basis)
+- 3-bedroom/1-bath above $180K without verified rent upside
+- Properties > 30% above tax assessed value without rehab justification
+- Any listing with GRM > 14 at Parma-adjusted rents
+
+---
+
+## 44134 & 44130 — Still Uncovered
+
+Both ZIPs have been consistently blocked across multiple pull attempts due to Zillow's single-navigation-per-IP captcha.
+
+**Manual follow-up URLs:**
+- **44134:** [Parma East under $190K](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/)
+- **44130:** [Middleburg Heights under $190K](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/)
+
+**Recommendation:** Separate cron pulls on different days, or use a VPN/proxy rotation to pull each ZIP from a different IP.
+
+---
+
+*Generated 2026-09-30 by Hermes Agent (Loki profile). Listings sourced from 9/29 Zillow pull — 1 day stale. Rent estimates are HUD FY2025 FMR-derived, not property-specific. Verify individual property rents and current listing status before making offers.*
