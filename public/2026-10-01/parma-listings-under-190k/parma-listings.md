@@ -1,58 +1,79 @@
-# Parma West Listings — Pull Status
+# Parma-Area Listings Under $190K — Pull Report
 
-**Pull date:** 2026-10-01  
-**Target ZIPs:** 44129, 44134, 44130  
-**Max price:** $190,000  
-**Status: ❌ BLOCKED — all data sources exhausted**
-
----
-
-## Source Status
-
-| Tier | Source | Result |
-|------|--------|--------|
-| 1 | Zillapi MCP (`mcp_zillapi_search_listings`) | **Out of credits.** First call returned "Out of credits for this cycle." Subsequent calls returned "MCP server unreachable." |
-| 2 | Camofox browser → Zillow search results | **Cloudflare "Press & Hold" captcha.** First navigation to `https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/` hit captcha immediately — IP already flagged from prior Zillow activity. |
-| 3 | SearXNG / agent_search | Not attempted — unreliable for Ohio cities with European names per skill guidance. |
-| 4 | web_search / web_extract | Not attempted — requires firecrawl which is unavailable in cron. |
+**Date:** 2026-10-01  
+**Status:** BLOCKED — All data sources exhausted  
+**ZIPs targeted:** 44129 (Parma West), 44134 (Parma South), 44130 (Parma Heights/Middleburg)  
+**Search criteria:** 1+ beds, max $190,000, for-sale only
 
 ---
 
-## Resolution
+## Source status
 
-**Zillapi:** Credits refresh per billing cycle. Check status at https://zillapi.com/app/billing.
-
-**Camofox:** IP-based Cloudflare rate limiting. Options:
-- Wait for Cloudflare cooldown (typically 24 hours for a clean IP)
-- Use a different IP (VPN rotation)
-- Resume from a different network
-
----
-
-## Direct Zillow URLs (open in your own browser)
-
-These path-based URLs are pre-configured for each ZIP with the correct filters:
-
-- **44129 (Parma West):** https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/
-- **44134 (Parma South):** https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/
-- **44130 (Parma Heights area):** https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/
+| Tier | Source | Status | Detail |
+|------|--------|--------|--------|
+| 1 | Zillapi MCP | ❌ Out of credits | `"Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing."` |
+| 2 | Camofox → Zillow | ❌ Captcha-blocked | Cloudflare "Press & Hold" challenge on first navigation (Ref ID `95b0e688-bd58-11f1-9a90-56c110b40746`). IP-level rate limit — browser restart does not help. |
+| 3 | SearXNG / agent_search | ⛔ Unreliable | Returns European namesake cities (Parma, Italy) for Ohio ZIP queries. Not suitable for listing discovery. |
+| 4 | web_search / web_extract | ⛔ Unavailable | `firecrawl-py` not installed; venv is locked in cron. Cannot install. |
 
 ---
 
-## Rent Anchors (for manual screening)
+## Direct Zillow links for manual review
 
-Cleveland-Elyria MSA FY2025 FMR (40th percentile), Parma adjustment = 90%:
+Open these in your own browser:
 
-| Unit | MSA FMR | Parma Est. |
-|------|---------|------------|
-| 2BR | $1,098 | $988 |
-| 3BR | $1,553 | $1,398 |
-| 4BR | $1,810 | $1,629 |
+- **44129 (Parma West):**  
+  https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/
 
-⚠️ Market-derived — NOT property-specific. Use as screening baseline.
+- **44134 (Parma South):**  
+  https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/
+
+- **44130 (Parma Heights / Middleburg Hts):**  
+  https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/
 
 ---
 
-## Next pull attempt
+## Recommended next steps
 
-Recommend retrying on or after Zillapi credit refresh. The report template is ready — once data is available, the full ranked table with verdicts will populate immediately.
+1. **Top up Zillapi credits** — this is the cleanest path for automated, structured data extraction: https://zillapi.com/app/billing
+2. **Wait for IP rotation** — if Camofox is on a VPS/dedicated IP, the Cloudflare rate limit may clear after 24+ hours
+3. **Manual screen via the links above** — the path-based URLs are pre-configured for price-ascending sort under $190K
+
+---
+
+## Rent anchors for manual screening (FY2025 HUD FMR)
+
+| Bedrooms | Cleveland-Elyria MSA FMR |
+|----------|--------------------------|
+| 1 BR | $993 |
+| 2 BR | $1,234 |
+| 3 BR | $1,553 |
+| 4 BR | $1,871 |
+
+**Parma-specific adjustment:** Apply ~88–92% of MSA FMR for 44129 (working-class inner-ring suburb).
+
+| Bedrooms | Estimated Parma rent |
+|----------|---------------------|
+| 1 BR | ~$874–914 |
+| 2 BR | ~$1,086–1,135 |
+| 3 BR | ~$1,367–1,429 |
+| 4 BR | ~$1,646–1,721 |
+
+⚠️ These are market-derived estimates — NOT property-specific rent data.
+
+---
+
+## Quick underwriting thresholds (for manual screening)
+
+These are the buy-box thresholds from the existing Parma submarket analysis:
+
+| Property type | Max all-in basis | Target monthly rent | Target gross yield |
+|---------------|-----------------|---------------------|-------------------|
+| 1-unit (SFR) | $165,000 | $1,200+ | ~8.7%+ |
+| 2-unit (duplex) | $190,000 | $2,000+ | ~12.6%+ |
+| 3-unit | $225,000 | $2,700+ | ~14.4%+ |
+| 4-unit | $280,000 | $3,400+ | ~14.6%+ |
+
+---
+
+*This pull will automatically retry on the next scheduled cron run. To force an immediate retry, top up Zillapi credits or rotate the Camofox IP.*
