@@ -1,82 +1,53 @@
 # Parma West Listings Screen — Under $190K
+**Date:** 2026-10-01 UTC  
+**Run type:** Scheduled cron  
+**Status: ❌ BLOCKED — NO DATA RETRIEVED**
 
-**Date:** 2026-10-01  
-**Status:** ⛔ BLOCKED — all data sources exhausted  
-**Target ZIPs:** 44129, 44134, 44130  
-**Price Cap:** $190,000  
-**Property Types:** 1–4 unit houses (for-sale only)
+## Executive Summary
 
----
+All five data sources failed. Zillapi is out of credits, the IP is Cloudflare-captcha'd on Zillow's web UI, AgentSearch misroutes Ohio queries to other states, and web_search requires firecrawl (unavailable in cron). Zero listings were retrieved across all three target ZIPs (44129, 44134, 44130).
 
-## Bottom Line
+## Source Failure Log
 
-**Cannot produce live listing data today.** Zillapi is out of credits for this billing cycle, and the Zillow.com fallback via Camofox browser hit a Cloudflare "Press & Hold" captcha on first navigation (IP-based rate limiting — not solvable by restarting the browser). No meaningful listing data could be extracted from any source.
+| Tier | Source | Tool | Error |
+|------|--------|------|-------|
+| 1 | Zillapi MCP | `mcp_zillapi_search_listings` | Out of credits (first call). MCP server unreachable after (calls 2–3). |
+| 2 | Zillow + Camofox | `browser_navigate` | Cloudflare "Press & Hold" captcha — Reference ID `1f557e05-bd8b-11f1-b822-eaf11a746896` |
+| 2 | Zillow + AgentSearch | `browser_fetch` | HTTP 403 "Access to this page has been denied" |
+| 3 | SearXNG (Bing) | `mcp_agent_search_http_search` | Returned Baltimore MD listings — "Parma Ohio" query misrouted |
+| 4 | web_search | `web_search` | Blocked — `firecrawl-py` not installed, lazy installs disabled |
 
-The report below documents all attempts, provides the baseline rent anchors and submarket context that would have been used for verdicts, and offers direct Zillow URLs for manual review.
+## Rent Anchors (FY2025 HUD FMR)
 
----
+For reference when listings are available, the Cleveland-Elyria MSA Fair Market Rents:
 
-## Data Source Attempt Log
+| Bedrooms | MSA FMR | Parma Adjusted (90%) |
+|----------|---------|---------------------|
+| 1BR | $903 | $813 |
+| 2BR | $1,098 | $988 |
+| 3BR | $1,553 | $1,398 |
+| 4BR | $1,810 | $1,629 |
 
-| Source | ZIP(s) | Result |
-|---|---|---|
-| Zillapi MCP — search_listings | 44129 | ❌ "Out of credits for this cycle" |
-| Zillapi MCP — search_listings | 44134 | ❌ MCP server unreachable (51 consecutive failures) |
-| Zillapi MCP — search_listings | 44130 | ❌ MCP server unreachable (51 consecutive failures) |
-| Camofox → Zillow path-based URL | 44129 | ❌ Cloudflare "Press & Hold" captcha |
-| Camofox → Zillow path-based URL | 44134 | ⏭️ Skipped (captcha on first nav — retries blocked) |
-| Camofox → Zillow path-based URL | 44130 | ⏭️ Skipped (captcha on first nav — retries blocked) |
-| SearXNG / agent_search | All | ⏭️ Not attempted (unreliable for Ohio city names per skill) |
-| web_search / web_extract | All | ⏭️ Not attempted (firecrawl blocked in cron) |
+These are the buy-box rent anchors for screening when data becomes available. ⚠️ Market-derived — NOT property-specific.
 
----
+## Direct Zillow Links (Manual Follow-Up)
 
-## Rent Anchors (for verdict use when listings are available)
+Open these in your browser to view current listings:
 
-**Cleveland-Elyria MSA FY2025 FMR (Parma adjustment = 90% of MSA):**
+- **44129:** https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/
+- **44134:** https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/
+- **44130:** https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/
 
-| Bedrooms | MSA FMR | Parma Estimate |
-|---|---|---|
-| 2BR | $1,098 | $988/mo |
-| 3BR | $1,553 | $1,398/mo |
-| 4BR | $1,810 | $1,629/mo |
+## Resolution
 
-**Verdict thresholds** (using Parma-estimated rents):
-- **Take** — GRM ≤ 12, gross yield ≥ 8.3% (e.g., 3BR at ≤ $200K with ≥ $1,400 rent)
-- **Negotiate** — GRM 12–15, gross yield 6.7–8.3%
-- **Pass** — GRM > 15, gross yield < 6.7%, or flagged condition/block issues
+1. **Zillapi credits:** Top up at https://zillapi.com/app/billing — the credit pool covers all three bounding-box calls
+2. **IP rotation:** If the VPS IP is permanently flagged, Camofox won't work until the IP changes
+3. **Next run:** The cron will retry this task. Status file at `/opt/data/parma-pull-status.txt`
 
----
+## File Manifest
 
-## Submarket Context
-
-| ZIP | Neighborhood | Character | Investor Fit | Notes |
-|---|---|---|---|---|
-| **44129** | Parma West | Dense working-class suburb, older housing stock (1940s–60s), stable blocks | Value-add SFR, small multifamily hunting ground | Strongest rental demand of the three; closer to commercial corridors |
-| **44134** | Parma South | Similar to 44129, slightly more residential, some newer construction | Stabilized hold SFR | Lower turnover, fewer multifamily opportunities |
-| **44130** | Middleburg Heights / Parma border | Mix of SFHs and light industrial/commercial | Value-add SFR, potential for commuter-tenant base | Near I-71 access; some blocks border commercial zones |
-
----
-
-## Direct Zillow URLs for Manual Review
-
-Open these in a regular browser (no captcha restrictions):
-
-- **ZIP 44129:** [Zillow — 44129 under $190K](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/)
-- **ZIP 44134:** [Zillow — 44134 under $190K](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/)
-- **ZIP 44130:** [Zillow — 44130 under $190K](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/)
-
-All three sort cheapest-first and filter 1+ beds ≤ $190K.
-
----
-
-## Resolution Paths
-
-1. **Top up Zillapi credits** at https://zillapi.com/app/billing — then rerun this cron job.
-2. **Wait for Camofox captcha cooldown** — IP-based, typically hours. The cron job will retry on its next scheduled run.
-3. **Manual review** — use the direct URLs above, apply the GRM/gross yield thresholds from the rent anchors table, and flag properties per the verdict logic.
-
----
-
-*Generated by Hermes Agent / Loki profile — Real Estate Submarket Screening skill*  
-*Rent anchors: U.S. HUD FY2025 FMR, Cleveland-Elyria MSA; Parma adjustment factor 0.90*
+| File | Path |
+|------|------|
+| Full report | `/opt/data/outputs/2026-10-01/parma-listings-under-190k/parma-listings.md` |
+| Quick ref | `/opt/data/parma-latest-listings.md` |
+| Status log | `/opt/data/parma-pull-status.txt` |
