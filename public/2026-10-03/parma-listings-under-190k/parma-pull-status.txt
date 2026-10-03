@@ -1,0 +1,37 @@
+PARMA LISTINGS PULL STATUS — 2026-10-03
+=========================================
+
+STATUS: BLOCKED — all data sources exhausted.
+
+SOURCES TRIED:
+
+1. Zillapi MCP (Tier 1)
+   - 44129 search: "Out of credits for this cycle"
+   - 44134 search: "MCP server unreachable after 60 consecutive failures" (post-credit-exhaustion)
+   - 44130 search: "MCP server unreachable after 60 consecutive failures" (post-credit-exhaustion)
+   - Resolution: Credits need to be topped up at https://zillapi.com/app/billing
+
+2. Camofox Browser → Zillow (Tier 2)
+   - URL: https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/
+   - Result: Cloudflare "Press & Hold" captcha (Reference ID: 27d0f71b-bf24-11f1-8966-7c4bb619f3f5)
+   - IP appears pre-flagged; captcha challenges cannot be solved via Camofox
+   - Resolution: Wait for IP cooldown (hours to days) or use a different IP
+
+3. SearXNG / agent_search (Tier 3) — not attempted
+   - Known to return European namesake results for Ohio cities (Parma → Parma, Italy)
+   - Unreliable for property listings; used only for general market data
+
+4. web_search / web_extract (Tier 4) — not attempted
+   - Requires firecrawl-py which is unavailable in hermetic venv
+   - Real estate sites block with captchas
+
+DIRECT ZILLOW URLS (open in your own browser):
+
+- 44129 (Parma West): https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/
+- 44134 (Parma East/South): https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/
+- 44130 (Middleburg Heights area): https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/
+
+NEXT STEPS:
+- Top up Zillapi credits: https://zillapi.com/app/billing
+- Or wait for Camofox IP cooldown (typically 12-24 hours)
+- Will retry on next scheduled run
