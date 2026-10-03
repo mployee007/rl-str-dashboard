@@ -1,71 +1,127 @@
-# Parma Sub-$190K Listing Screen — BLOCKED
+# Parma Listings Screen — Under $190K
 
-**Date:** 2026-10-03  
-**ZIPs:** 44129 (Parma West), 44134 (Parma SE), 44130 (Parma SW)  
-**Price cap:** $190,000  
-**Status:** ❌ All data sources exhausted — zero listings retrieved
-
----
-
-## Source Exhaustion Table
-
-| Tier | Source | Status | Detail |
-|------|--------|--------|--------|
-| 1 | **Zillapi MCP** | ❌ Out of credits | First call: "Out of credits for this cycle." Calls 2-3: MCP server unreachable (62+ consecutive failures). |
-| 2 | **Camofox browser → Zillow** | ❌ Cloudflare captcha | "Press & Hold" challenge on first navigation (44129). Cannot solve — HTTP 422. IP-based rate limiting. |
-| 3 | **SearXNG (agent_search)** | ❌ Wrong geography | Bing returned Parma, Italy results. site:zillow.com filter returned zero listing results. All other engines down (Brave, DDG, Startpage — captchas/rate limits). |
-| 4 | **web_search / web_extract** | ❌ firecrawl missing | `firecrawl-py` unavailable; `security.allow_lazy_installs=false` in cron prevents install. |
+**Date:** 2026-10-03 (automated cron)
+**Target ZIPs:** 44129, 44134, 44130
+**Status:** ⚠️ BLOCKED — No live listing data available
 
 ---
 
-## Direct Zillow URLs (Manual Follow-Up)
+## Data Source Status
 
-These are path-based URLs with `pricea_sort` (ascending price) — paste directly into a browser:
+| Source | Result |
+|--------|--------|
+| **Zillapi MCP** (`mcp_zillapi_search_listings`) | ❌ Out of credits. "Out of credits for this cycle. Top up or upgrade at https://zillapi.com/app/billing" |
+| **Zillapi MCP** (subsequent calls) | ❌ MCP server unreachable (34 consecutive failures after credit exhaustion) |
+| **Camofox → Zillow search results** | ❌ IP rate-limited. Cloudflare "Press & Hold" captcha on first navigation to `https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/`. Reference ID `33d126bd-bf70-11f1-8dd7-962db5c62b8f`. Camofox cannot solve Press & Hold challenges. |
+| **SearXNG / agent_search** | ⛔ Not attempted — unreliable for Ohio cities with European namesakes; listing sites all captcha-blocked |
+| **web_search / web_extract** | ⛔ Not attempted — requires firecrawl (unavailable in cron) |
 
-| ZIP | Neighborhood | URL |
-|-----|-------------|-----|
-| **44129** | Parma West | [Zillow →](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/) |
-| **44134** | Parma SE | [Zillow →](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/) |
-| **44130** | Parma SW | [Zillow →](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/) |
+**All three tiers exhausted.** Resuming requires: either Zillapi credit top-up, a fresh IP for Camofox, or manual browser lookups.
 
 ---
 
-## Rent Anchor (For Verdict Reference)
+## Market Context: Cleveland-Elyria MSA → Parma Submarket
 
-Per the skill's hardcoded FY2025 HUD FMR baselines — **Cleveland-Elyria MSA**:
+### Rent Anchors (FY2025 HUD Fair Market Rents — 40th percentile gross rent)
 
-| Unit Size | MSA FMR | Parma Adj (90%) |
-|-----------|---------|-----------------|
+Cleveland-Elyria MSA baseline with Parma adjustment (90% of MSA):
+
+| Unit | MSA FMR | Parma Est. (90%) |
+|------|---------|-------------------|
 | Studio | $824 | $742 |
 | 1BR | $903 | $813 |
 | 2BR | $1,098 | $988 |
-| 3BR | $1,553 | $1,398 |
+| **3BR** | **$1,553** | **$1,398** |
 | 4BR | $1,810 | $1,629 |
 
-**Buy-box quick reference at $190K cap and 90% FMR:**
+⚠️ Market-derived — NOT property-specific. FMRs are 40th percentile gross rents; actual property-level rents vary by condition, block quality, and unit mix.
 
-| Property Type | Target GRM | Implied Rent Needed | Verdict Threshold |
-|---------------|-----------|---------------------|-------------------|
-| 2BR SFR (2BR FMR $988) | 12× | $190K ÷ $988 × 12 = GRM 16.0 | Negotiate — GRM > 14 |
-| 3BR SFR (3BR FMR $1,398) | 12× | $190K ÷ $1,398 × 12 = GRM 11.3 | Take selectively — GRM < 12 |
-| Duplex (2× 2BR $1,976) | 10× | $190K ÷ $1,976 × 12 = GRM 8.0 | Take — strong cash flow |
-| 3-4 unit | 8-10× | Depends on unit mix | Take if per-unit basis < $50K |
+---
 
-⚠️ **NOTE:** All rent figures are market-derived (HUD FMR × Parma adjustment), NOT property-specific. Actual rentZestimates were unavailable from all data sources. Diligence individual properties before underwriting.
+## Buy Box Derivation (Under $190K Cap)
+
+Using the 3BR Parma-adjusted FMR of $1,398/mo as the benchmark:
+
+### Target Metrics
+
+| Metric | Value |
+|--------|-------|
+| **Annual gross rent (3BR)** | $16,776 |
+| **Target GRM** | 8–10 (Midwest working-class suburb) |
+| **Target basis (GRM 8)** | ~$134,000 |
+| **Stretch basis (GRM 10)** | ~$168,000 |
+| **Target gross yield** | 10%–12.5% |
+| **Cash buyer target** | GRM ≤ 8 (≈ $134K on 3BR) |
+| **Financed target** | GRM ≤ 10 (≈ $168K on 3BR) |
+
+### By Property Type
+
+| Type | MSA Rent Est. (Parma adj.) | Target Basis (GRM 8) | Stretch Basis (GRM 10) | Gross Yield at $190K |
+|------|---------------------------|----------------------|------------------------|------------------------|
+| 1BR | $813/mo | ~$78,000 | ~$97,500 | 5.1% |
+| 2BR | $988/mo | ~$95,000 | ~$118,500 | 6.2% |
+| 3BR | $1,398/mo | ~$134,000 | ~$168,000 | 8.8% |
+| 4BR | $1,629/mo | ~$156,000 | ~$195,000 | 10.3% |
+
+**Key takeaway:** At the $190K cap, only 3BR and 4BR properties approach viable gross yields. 1BR and 2BR at $190K are almost certainly **pass** unless rents significantly exceed FMR estimates (unlikely for Parma).
+
+---
+
+## ZIP-Level Direct Zillow URLs
+
+Open these in your own browser to see live listings:
+
+### 44129 — Parma West
+**URL:** https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/
+
+### 44134 — Parma South
+**URL:** https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/
+
+### 44130 — Parma Heights / Middleburg Heights area
+**URL:** https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/
+
+---
+
+## Submarket Ranking (from prior thesis context)
+
+| ZIP | Area | Investor Fit | Verdict |
+|-----|------|-------------|---------|
+| **44129** | Parma West | Stabilized SFR hold; older housing stock (1940s-60s), decent block quality, strong rental demand | **Negotiate selectively** — target GRM ≤ 10 |
+| **44134** | Parma South | Value-add SFR; more entry-level price points, higher rehab likelihood, block-by-block variability | **Take selectively** — best chance at sub-$150K entries |
+| **44130** | Parma Hts / Midburg Hts fringe | Mixed; stretches into more commercial corridors, smaller housing stock | **Negotiate** — verify block quality before bidding |
+
+---
+
+## Verdict Logic (for manual review)
+
+When looking at live listings, apply these filters:
+
+- **Pass** immediately if:
+  - GRM > 12 at asking price (e.g., 3BR at $190K renting < $1,320/mo)
+  - Major systems deferred (roof, HVAC, foundation) with no rehab discount
+  - Block has >2 visibly distressed properties within 3 doors
+  - Price cut > 60 days without contract — market is telling you something
+
+- **Negotiate** if:
+  - GRM 10–12 and property is in solid mechanical condition
+  - Recent price cut and DOM > 30 days
+  - Occupied with below-market tenant (can reposition at turnover)
+
+- **Take** if:
+  - GRM ≤ 8 with verified rents (rare at current pricing)
+  - Off-market or pre-MLS at wholesale pricing
+  - Distressed property with clear rehab path and 70% ARV basis
 
 ---
 
 ## Next Steps
 
-1. **Refresh Zillapi credits** at [zillapi.com/app/billing](https://zillapi.com/app/billing) — re-run this cron job or manually trigger the pull.
-2. **Manual browser pull:** Open the direct Zillow URLs above in a non-Cloudflare-flagged browser session.
-3. **Camofox IP rotation:** If rotating IPs is possible, a fresh IP may bypass the Zillow captcha for one navigation.
-4. **Resume when credits refresh:** This cron job will re-attempt on next schedule. The skill workflow is fully scripted — it will auto-detect credit availability and route accordingly.
+1. **Top up Zillapi credits** at https://zillapi.com/app/billing and re-run the cron job
+2. **Or use a fresh IP** for Camofox — the current IP is rate-limited by Cloudflare
+3. **Manual review** — open the direct Zillow URLs above and apply the buy-box filters
+4. **Re-run** when either data path is restored: `parma-listings-under-190k` cron
 
 ---
 
-## Files Saved
-
-- `/opt/data/parma-pull-status.txt` — error summary
-- `/opt/data/outputs/2026-10-03/parma-listings-under-190k/parma-listings.md` — this report
-- `/opt/data/parma-latest-listings.md` — NOT written (no listing data to populate)
+*Report generated by Hermes Agent (Loki profile) — 2026-10-03*
+*Rent anchors: U.S. HUD FY2025 Fair Market Rents, Cleveland-Elyria MSA*
