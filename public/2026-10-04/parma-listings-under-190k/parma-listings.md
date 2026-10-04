@@ -1,54 +1,95 @@
-# Parma, OH — Active For-Sale Listings Under $190K
+# Parma West Area — Sub-$190K Listing Screen
 
-**Pull date:** 2026-10-04  
-**Target ZIPs:** 44129 (Parma West), 44134 (Parma SE), 44130 (Parma SW)  
-**Price cap:** $190,000  
-**Status:** ⛔ BLOCKED — all automated data sources unavailable
-
-## Source Attempt Summary
-
-| # | Source | Result |
-|---|--------|--------|
-| 1 | Zillapi MCP `search_listings` | ❌ Out of credits — 44129 returned credit exhaustion; 44134/44130 unreachable |
-| 2 | Camofox Browser → Zillow | ❌ Cloudflare "Press & Hold" captcha on first navigation (HTTP 422 on click) |
-| 3 | AgentSearch `browser_fetch` | ❌ HTTP 403 PerimeterX "Access Denied" |
-| 4 | Direct `curl` | ❌ PerimeterX JS captcha page |
-
-**Root cause:** IP-level rate limiting by Zillow/Cloudflare + Zillapi credit pool exhausted.
-
-## Parma Market Context (from cached data)
-
-For reference while listings are unavailable:
-
-| Metric | Value |
-|--------|-------|
-| MSA | Cleveland-Elyria, OH |
-| MSA 3BR FMR (FY2025) | $1,553/mo (40th percentile) |
-| Parma-adjusted 3BR est. | ~$1,398/mo (90% of MSA) |
-| Parma-adjusted 2BR est. | ~$988/mo (90% of MSA) |
-| Parma ZIP median home values | $150K–$220K range (ZORI, est.) |
-| Investor profile | Working-class suburb, stabilized rental hold / light value-add SFR |
-
-**⚠️ Rent estimates are market-derived — NOT property-specific.**
-
-## Manual Follow-Up URLs
-
-Open these in a standard browser (not blocked):
-
-| ZIP | Direct Zillow Search |
-|-----|----------------------|
-| **44129** | [Parma West — under $190K, 1+ bed](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/) |
-| **44134** | [Parma SE — under $190K, 1+ bed](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/) |
-| **44130** | [Parma SW — under $190K, 1+ bed](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/) |
-
-## Next Steps
-
-1. **Manual pull:** Open the URLs above in a browser, copy listing data into the report.
-2. **Zillapi credits:** Top up at https://zillapi.com/app/billing — then re-run this cron job.
-3. **IP rotation:** If Camofox needs a different exit IP, configure a proxy or VPN before the next pull.
-4. **Resume:** Once data is available, the processing pipeline (filter → verdict → markdown table → buy box) is ready and will produce the standard deliverable.
+**Date:** 2026-10-04 (Sunday)  
+**Status:** ⛔ BLOCKED — All data sources exhausted  
+**Target ZIPs:** 44129 (Parma West), 44134 (Parma South), 44130 (Parma Heights / Middleburg)  
+**Price cap:** $190,000 | **Min beds:** 1 | **Sort:** Price ascending
 
 ---
 
-*Status file: `/opt/data/parma-pull-status.txt`*  
-*Fallback timestamp: 2026-10-04T00:00:00Z*
+## Data Source Status
+
+| Tier | Source | Result |
+|------|--------|--------|
+| 1 | Zillapi MCP (`mcp_zillapi_search_listings`) | ❌ Out of credits. "Out of credits for this cycle. Top up at zillapi.com." |
+| 2 | Camofox → Zillow path-based URL (`44129_rb/`) | ❌ Cloudflare "Press & Hold" captcha. Ref ID: `bc1a5898-c008-11f1-be17-3032643d72db`. IP-based rate limiting. |
+| 3 | SearXNG / agent_search | ❌ Not viable — returns European namesake cities for Ohio towns (Parma → Italy) |
+| 4 | web_search / web_extract | ❌ Blocked — `firecrawl-py` unavailable in cron/locked-venv environment |
+
+**Root cause:** Zillapi credit pool exhausted + this IP already rate-limited by Zillow's Cloudflare from a prior session. Neither refreshing the browser session nor restarting Camofox resolves IP-based rate limiting.
+
+---
+
+## Rent Anchors (For Reference When Listings Resume)
+
+Using the Cleveland-Elyria MSA FY2025 HUD Fair Market Rents with Parma submarket adjustment:
+
+| Unit Size | MSA FMR (40th %ile) | Parma Adj. (90%) |
+|-----------|---------------------|-------------------|
+| 1BR | $903 | $813 |
+| 2BR | $1,098 | $988 |
+| 3BR | $1,553 | $1,398 |
+| 4BR | $1,810 | $1,629 |
+
+⚠️ **All rent figures are market-derived — NOT property-specific.** Verify against actual rent rolls and local comps.
+
+---
+
+## Implied Buy Box Thresholds ($190K Cap)
+
+Using Parma-adjusted 3BR FMR of $1,398/mo as the baseline:
+
+| Property Type | Target All-In Basis | Stretch Basis | Target Monthly Rent | Target Gross Yield | GRM Target |
+|---------------|---------------------|---------------|---------------------|--------------------|------------|
+| 1-unit (3BR) | ≤$150K | ≤$190K | ≥$1,400 | ≥11.2% | ≤9.0 |
+| 2-unit | ≤$170K | ≤$190K | ≥$2,200 | ≥12.9% | ≤7.7 |
+| 3-unit | ≤$180K | ≤$190K | ≥$3,200 | ≥17.8% | ≤5.6 |
+| 4-unit | ≤$190K | ≤$190K | ≥$4,000 | ≥21.1% | ≤4.8 |
+
+**Formula:** Gross yield = (monthly rent × 12 × units) / purchase price. GRM = purchase price / (monthly rent × 12 × units).
+
+**Key:** At the $190K cap in Parma, 3-4 unit properties with verified rents can pencil. SFRs at $190K stretch are thin — need rents at/above MSA FMR to break 11% gross yield. The sweet spot is sub-$150K SFRs or $170-190K duplexes.
+
+---
+
+## ZIP-Level Context (No Live Listings)
+
+### 44129 — Parma West
+- **Character:** Established working-class suburb. Mix of 1940s-1960s ranches, bungalows, and cape cods. Blocks vary meaningfully — south of Brookpark tends weaker.
+- **Investor fit:** Value-add SFR zone. Best for stabilized rental holds in solid blocks, BRRRR candidates in transitional blocks.
+- **Avoid:** Deep-discount blocks with high tenant turnover, flood-zone pockets near Big Creek.
+
+### 44134 — Parma South
+- **Character:** Similar to 44129 but slightly further from employment centers. Strong Polish-American community roots. More 1950s-1970s stock.
+- **Investor fit:** Stabilized-hold SFR. Lower turnover than 44129 on average. Good for long-term buy-and-hold.
+- **Avoid:** Blocks backing up to industrial along the southern edge.
+
+### 44130 — Parma Heights / Middleburg
+- **Character:** Slightly more suburban feel, more 1960s-1980s construction. Parts border stronger Middleburg Heights. Greenbriar / Big Creek Parkway access.
+- **Investor fit:** Mixed — some SFR value-add, some small multifamily. Watch school district boundaries (Berea vs Parma).
+- **Avoid:** Overpaying for cosmetic flips that price in retail premiums.
+
+---
+
+## Direct Zillow URLs (Manual Follow-Up)
+
+Open these in your own browser (not rate-limited):
+
+| ZIP | Direct URL |
+|-----|-----------|
+| 44129 | [Zillow → 44129 under $190K](https://www.zillow.com/homes/for_sale/44129_rb/1-_beds/0-190000_price/pricea_sort/) |
+| 44134 | [Zillow → 44134 under $190K](https://www.zillow.com/homes/for_sale/44134_rb/1-_beds/0-190000_price/pricea_sort/) |
+| 44130 | [Zillow → 44130 under $190K](https://www.zillow.com/homes/for_sale/44130_rb/1-_beds/0-190000_price/pricea_sort/) |
+
+---
+
+## Verdict
+
+**Cannot produce live listings or verdicts today.** Both programmatic access paths (Zillapi credits and Camofox browser) are blocked. The rent anchors and buy-box thresholds above remain actionable — when listings resume, sort by price ascending on the direct Zillow URLs and apply the GRM/yield thresholds from the buy box.
+
+**To resume:** Retry when Zillapi credits refresh (check zillapi.com billing), or run from a different IP address to bypass the Cloudflare rate limit. A single successful Zillapi pull of 44129 with $190K cap + `pricea_sort` would produce the full listing table this report was designed for.
+
+---
+
+*Generated by Hermes Agent (Loki) — 2026-10-04*  
+*Status file: `/opt/data/parma-pull-status.txt`*
