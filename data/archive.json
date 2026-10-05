@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T09:41:29.648635+00:00",
+  "generated_at": "2026-10-05T09:56:52.996626+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 94,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-10-05",
       "title": "parma-listings-under-190k",
       "summary": "",
-      "updated_at": "2026-10-05T06:41:17.914684",
-      "file_count": 1,
+      "updated_at": "2026-10-05T09:43:36.904803",
+      "file_count": 2,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -22,10 +22,18 @@
         "image": [],
         "other": [
           {
+            "name": "44129_raw.json",
+            "rel_path": "44129_raw.json",
+            "size": 7008,
+            "updated_at": "2026-10-05T09:43:36.904803",
+            "previewable": true,
+            "public_href": "public/2026-10-05/parma-listings-under-190k/44129_raw.json"
+          },
+          {
             "name": "parma-listings.md",
             "rel_path": "parma-listings.md",
-            "size": 2415,
-            "updated_at": "2026-10-05T06:41:17.914684",
+            "size": 7926,
+            "updated_at": "2026-10-05T09:43:36.903802",
             "previewable": true,
             "public_href": "public/2026-10-05/parma-listings-under-190k/parma-listings.md"
           }

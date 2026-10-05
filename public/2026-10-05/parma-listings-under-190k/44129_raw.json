@@ -1,0 +1,255 @@
+[
+  {
+    "zpid": "2057037610",
+    "address": "6006 Snow Rd, Cleveland, OH 44129",
+    "price": 165000,
+    "priceDisplay": "$165,000",
+    "beds": 3,
+    "baths": 2,
+    "area": 1188,
+    "zip": "44129",
+    "city": "Cleveland",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 10,
+    "detailUrl": "https://www.zillow.com/homedetails/6006-Snow-Rd-Cleveland-OH-44129/2057037610_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Keller Williams Living",
+    "taxAssessedValue": null,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33550279",
+    "address": "5814 Forest Ave, Parma, OH 44129",
+    "price": 170000,
+    "priceDisplay": "$170,000",
+    "beds": 3,
+    "baths": 1,
+    "area": 1092,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 2,
+    "detailUrl": "https://www.zillow.com/homedetails/5814-Forest-Ave-Parma-OH-44129/33550279_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "CENTURY 21 DePiero & Associates, Inc.",
+    "taxAssessedValue": 145500,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33547825",
+    "address": "7611 Newport Ave, Parma, OH 44129",
+    "price": 174900,
+    "priceDisplay": "$174,900",
+    "beds": 3,
+    "baths": 1,
+    "area": 1092,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 11,
+    "detailUrl": "https://www.zillow.com/homedetails/7611-Newport-Ave-Parma-OH-44129/33547825_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Keller Williams Greater Metropolitan",
+    "taxAssessedValue": 117500,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33547727",
+    "address": "7514 Manhattan Ave, Parma, OH 44129",
+    "price": 175000,
+    "priceDisplay": "$175,000",
+    "beds": 3,
+    "baths": 1,
+    "area": null,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 1,
+    "detailUrl": "https://www.zillow.com/homedetails/7514-Manhattan-Ave-Parma-OH-44129/33547727_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Platinum Real Estate",
+    "taxAssessedValue": 129700,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33551238",
+    "address": "5903 Bradley Ave, Parma, OH 44129",
+    "price": 179900,
+    "priceDisplay": "$179,900",
+    "beds": 3,
+    "baths": 1,
+    "area": 1685,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 4,
+    "detailUrl": "https://www.zillow.com/homedetails/5903-Bradley-Ave-Parma-OH-44129/33551238_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Regal Realty, Inc.",
+    "taxAssessedValue": 132200,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33561440",
+    "address": "7101 Brownfield Dr, Parma, OH 44129",
+    "price": 180000,
+    "priceDisplay": "$180,000",
+    "beds": 3,
+    "baths": 1,
+    "area": 2186,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 19,
+    "detailUrl": "https://www.zillow.com/homedetails/7101-Brownfield-Dr-Parma-OH-44129/33561440_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "EXP Realty, LLC.",
+    "taxAssessedValue": 156500,
+    "rentZestimate": null,
+    "priceCut": "$9,900 on 9/26"
+  },
+  {
+    "zpid": "33551587",
+    "address": "5821 Merkle Ave, Parma, OH 44129",
+    "price": 189900,
+    "priceDisplay": "$189,900",
+    "beds": 2,
+    "baths": 2,
+    "area": 1235,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 9,
+    "detailUrl": "https://www.zillow.com/homedetails/5821-Merkle-Ave-Parma-OH-44129/33551587_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "EXP Realty, LLC.",
+    "taxAssessedValue": 135800,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33553876",
+    "address": "5597 W 54th St, Parma, OH 44129",
+    "price": 189900,
+    "priceDisplay": "$189,900",
+    "beds": 3,
+    "baths": 1,
+    "area": 1636,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 31,
+    "detailUrl": "https://www.zillow.com/homedetails/5597-W-54th-St-Parma-OH-44129/33553876_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "EXP Realty, LLC.",
+    "taxAssessedValue": 156900,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33561761",
+    "address": "6040 W 54th St, Parma, OH 44129",
+    "price": 189900,
+    "priceDisplay": "$189,900",
+    "beds": 3,
+    "baths": 2,
+    "area": 1632,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 3,
+    "detailUrl": "https://www.zillow.com/homedetails/6040-W-54th-St-Parma-OH-44129/33561761_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Life Stages Realty, LLC",
+    "taxAssessedValue": 147400,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33561977",
+    "address": "6802 Ackley Rd, Parma, OH 44129",
+    "price": 189900,
+    "priceDisplay": "$189,900",
+    "beds": 3,
+    "baths": 2,
+    "area": 1244,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 73,
+    "detailUrl": "https://www.zillow.com/homedetails/6802-Ackley-Rd-Parma-OH-44129/33561977_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Keller Williams Citywide",
+    "taxAssessedValue": 172200,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33563840",
+    "address": "8107 Dartworth Dr, Parma, OH 44129",
+    "price": 189900,
+    "priceDisplay": "$189,900",
+    "beds": 3,
+    "baths": 1,
+    "area": 1399,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 19,
+    "detailUrl": "https://www.zillow.com/homedetails/8107-Dartworth-Dr-Parma-OH-44129/33563840_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Joseph Walter Realty, LLC.",
+    "taxAssessedValue": 162000,
+    "rentZestimate": null
+  },
+  {
+    "zpid": "33562283",
+    "address": "6311 Thornton Dr, Parma, OH 44129",
+    "price": 190000,
+    "priceDisplay": "$190,000",
+    "beds": 3,
+    "baths": 2,
+    "area": 1176,
+    "zip": "44129",
+    "city": "Parma",
+    "statusText": "House for sale",
+    "homeType": "SINGLE_FAMILY",
+    "daysOnZillow": 46,
+    "detailUrl": "https://www.zillow.com/homedetails/6311-Thornton-Dr-Parma-OH-44129/33562283_zpid/",
+    "listingSubType": {
+      "is_FSBA": true
+    },
+    "brokerName": "Berkshire Hathaway HomeServices Professional Realty",
+    "taxAssessedValue": 174700,
+    "rentZestimate": null
+  }
+]
