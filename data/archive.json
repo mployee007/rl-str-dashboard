@@ -1,8 +1,78 @@
 {
-  "generated_at": "2026-10-08T13:38:40.554677+00:00",
+  "generated_at": "2026-10-08T13:54:05.051953+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 95,
+  "session_count": 97,
   "sessions": [
+    {
+      "id": "2026-10-08/nq-futures-ema-vwap-tutorial",
+      "date": "2026-10-08",
+      "title": "nq-futures-ema-vwap-tutorial",
+      "summary": "**Session:** nq-futures-ema-vwap-tutorial **Date:** 2026-10-08 **Source:** Discord (Andromeda / #loki) - Built a complete, standalone tutorial/playbook for trading NQ/MNQ futures using a 72/210/420 EMA stack + session-anchored VWAP strategy - Retrieved live CME contract specifica",
+      "updated_at": "2026-10-08T13:40:22.242333",
+      "file_count": 6,
+      "export_count": 1,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-10-08/nq-futures-ema-vwap-tutorial",
+      "status": "completed",
+      "standard_previews": {
+        "decisions.md": "# Decisions \u2014 NQ Futures EMA/VWAP Tutorial\n\n## 2026-10-08\n\n### Decision: Use options-strategy-playbooks skill format as structural template\n- **Context:** Needed a canonical playbook structure for a futures strategy tutorial\n- **Options considered:** Freeform markdown, options-playbook format, video script\n- **Decision:** Adapted the options-strategy-playbooks outline (sections 1-13 structure, canonical + snapshot pattern) for futures\n- **Consequence:** Consistent format across trading strategy playbooks; easy to integrate future research\n\n### Decision: Store canonical playbook in inputs/reference/\n- **Context:** Playbook should persist and be updatable across sessions\n- **Options considered:** Session-only output, AGENTS.md, inputs/reference/\n- **Decision:** `inputs/reference/nq-futures-ema-vwap-playbook.md` as canonical, with session snapshot in `outputs/.../artifacts/exports/`\n- **Consequence:** Follows established project convention for reusable reference files\n\n### Decision: Retrieve live CME contract specs via browser\n- **Context:** Firecrawl/web_extract unavailable; searches returning garbage\n- **Options considered:** Trust user-provided numbers, try browser, skip verification\n- **Decision:** Used browser to navigate to CME contract spec pages and extract verified specs\n- **Consequence:** Confirmed NQ @ $20/point, MNQ @ $2/point, tick sizes, and session hours from official source",
+        "notes.md": "# Notes \u2014 NQ Futures EMA/VWAP Tutorial\n\n## User Context\n- Hermes Tompkins (Solomon) \u2014 building trading strategy educational resources\n- Previously built options credit spreads playbook (inputs/reference/options-credit-spreads-playbook.md)\n- This is the futures counterpart \u2014 same pedagogical approach, different instrument\n\n## Key Observations\n- Strategy is trend-continuation, not mean-reversion \u2014 designed for 0-1 trades per day\n- Edge comes from patience (three-filter agreement), not frequency\n- Position sizing formula is the most important section \u2014 \"size contracts from risk, not risk from contracts\"\n- NQ at ~31,200 (Oct 2026) means 10-point stop = $200/contract \u2014 non-trivial for small accounts\n- RTH-only chart template is non-negotiable per the strategy author\n\n## Future Research Ideas (not yet requested)\n- Backtesting framework for EMA stack setups\n- Adding ES (S&P 500 futures) as a correlated confirmation filter\n- Integrating economic calendar API for automatic event-day warnings",
+        "run-log.md": "# Run Log \u2014 NQ Futures EMA/VWAP Tutorial\n\n## 2026-10-08\n\n### 13:38 UTC \u2014 Session initialized\n- Created output structure: `outputs/2026-10-08/nq-futures-ema-vwap-tutorial/`\n- Loaded options-strategy-playbooks skill for structural template\n- Loaded output-organization skill for file conventions\n\n### 13:39 UTC \u2014 Contract spec research\n- Web search (SearXNG) degraded \u2014 Bing-only results, mostly AWS noise\n- CME curl blocked (JS challenge)\n- Retrieved NQ specs via browser \u2192 confirmed $20/point, $5/tick, RTH hours\n- Retrieved MNQ specs via browser \u2192 confirmed $2/point, $0.50/tick\n\n### 13:40 UTC \u2014 Playbook written\n- Wrote canonical playbook: `inputs/reference/nq-futures-ema-vwap-playbook.md` (~16KB, 13 sections)\n- Includes: instrument specs table, chart setup, entry/exit rules, risk sizing formula + tables, worked examples, pre-trade checklist, journal template, common mistakes, glossary\n\n### 13:40 UTC \u2014 Session files written\n- summary.md, sources.json, decisions.md, run-log.md initialized\n- Snapshot mirrored to artifacts/exports/",
+        "sources.json": "{\n  \"sources\": [\n    {\n      \"url\": \"https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.contractSpecs.html\",\n      \"description\": \"CME E-mini Nasdaq-100 (NQ) contract specifications \u2014 retrieved live via browser\",\n      \"date_accessed\": \"2026-10-08\",\n      \"key_data\": \"Contract unit $20 x index, tick 0.25 pts = $5.00, Globex code NQ\"\n    },\n    {\n      \"url\": \"https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html\",\n      \"description\": \"CME Micro E-mini Nasdaq-100 (MNQ) contract specifications \u2014 retrieved live via browser\",\n      \"date_accessed\": \"2026-10-08\",\n      \"key_data\": \"Contract unit $2 x index, tick 0.25 pts = $0.50, Globex code MNQ\"\n    },\n    {\n      \"url\": \"https://www.cmegroup.com/markets/equities/nasdaq.html\",\n      \"description\": \"CME Nasdaq futures and options overview page\",\n      \"date_accessed\": \"2026-10-08\"\n    }\n  ],\n  \"_note\": \"Strategy rules and parameters provided directly by user (Hermes Tompkins). CME specs confirmed via browser.\"\n}",
+        "summary.md": "# NQ Futures EMA/VWAP Tutorial \u2014 Summary\n\n**Session:** nq-futures-ema-vwap-tutorial\n**Date:** 2026-10-08\n**Source:** Discord (Andromeda / #loki)\n\n## What was accomplished\n- Built a complete, standalone tutorial/playbook for trading NQ/MNQ futures using a 72/210/420 EMA stack + session-anchored VWAP strategy\n- Retrieved live CME contract specifications for both NQ (E-mini) and MNQ (Micro) via browser\n- Structured the playbook as a canonical reference under `inputs/reference/`\n- Included: instrument specs, chart setup, entry/exit rules, position sizing formulas, worked examples, risk tables, pre-trade checklist, session journal template, common mistakes, and glossary\n\n## What's pending\n- Nothing \u2014 playbook is complete and delivered"
+      },
+      "files": {
+        "export": [
+          {
+            "name": "nq-futures-ema-vwap-playbook.md",
+            "rel_path": "artifacts/exports/nq-futures-ema-vwap-playbook.md",
+            "size": 15981,
+            "updated_at": "2026-10-08T13:40:22.242333",
+            "previewable": true,
+            "public_href": "public/2026-10-08/nq-futures-ema-vwap-tutorial/artifacts/exports/nq-futures-ema-vwap-playbook.md"
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
+    {
+      "id": "2026-10-08/nq-futures-mavwap-tutorial",
+      "date": "2026-10-08",
+      "title": "nq-futures-mavwap-tutorial",
+      "summary": "**Date:** 2026-10-08 **Request:** Create a tutorial/playbook for NQ/MNQ futures using a three-EMA stack (72/210/420) with session-anchored VWAP strategy. **Deliverable:** - Canonical playbook created at `inputs/reference/nq-futures-mavwap-playbook.md` - Snapshot mirrored to this",
+      "updated_at": "2026-10-08T13:39:45.303390",
+      "file_count": 6,
+      "export_count": 1,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-10-08/nq-futures-mavwap-tutorial",
+      "status": "completed",
+      "standard_previews": {
+        "decisions.md": "# Decisions Log\n\n## 2026-10-08 \u2014 Initial playbook creation\n\n| Decision | Rationale |\n|---|---|\n| Canonical file at `inputs/reference/nq-futures-mavwap-playbook.md` | Follows existing convention from credit spreads playbook |\n| 15-section structure with numbered sections | More sections than the options playbook because futures add contract specs, platform config, and transition planning |\n| RTH-only as a hard requirement, not a suggestion | User explicitly called this out; 24h charts dilute the 420 EMA |\n| MNQ-first with explicit transition criteria | User said \"micros until the system proves itself\"; made the transition checklist concrete and measurable |\n| Scale-out at 1:1 and 2:1 with VWAP hard exit | User provided the exit framework; structured it as a two-half system with VWAP as the override |\n| Contract-sizing formula with worked examples | This is the operational core of the risk rules; two account levels shown to cover both micro and full-size |\n| \"Three filters must agree\" as the central thesis | The user's \"real refinement\" paragraph makes this the core edge \u2014 encoded it everywhere |\n| FOMC/CPI/NFP sit-out rule with fallback | User specified these; added the \"halve size, double stop\" fallback for those who insist on trading them |",
+        "notes.md": "# Session Notes\n\n## Strategy source\nThe strategy was provided verbatim by the user. Key structural adaptations for futures (vs. equities):\n- Contract sizing from stop distance (not shares)\n- RTH-only session template requirement for EMA accuracy\n- Section 1256 tax treatment\n- Explicit MNQ \u2192 NQ transition plan\n- Point-value math throughout ($20 NQ, $2 MNQ)\n\n## Design decisions\n- Followed the same canonical playbook structure as `options-credit-spreads-playbook.md` for consistency\n- Added futures-specific sections: contract specs, platform setup, Section 1256\n- Emphasized the \"three filters must agree\" rule as the central discipline\n- Included worked contract-sizing examples at two account levels\n- Added study drills so the user can practice the math and pattern recognition\n- Made the \"sit out\" days (FOMC/CPI/NFP) explicit with a fallback rule\n\n## Open items / future additions\n- Live trade examples (need real MNQ trades with screenshots)\n- Win-rate and expectancy tracking after 20+ trades\n- Potential integration with a price-alert cron job (similar to the credit spreads trigger-price-alerts skill)",
+        "run-log.md": "# Run Log \u2014 2026-10-08\n\n| Step | Action | Result |\n|---|---|---|\n| 1 | Loaded `options-strategy-playbooks` skill | Got structure and conventions |\n| 2 | Read existing credit spreads playbook | Used as format reference \u2014 same canonical style |\n| 3 | Read AGENTS.md | Confirmed output structure convention |\n| 4 | Created output directory structure | `outputs/2026-10-08/nq-futures-mavwap-tutorial/artifacts/exports/` |\n| 5 | Wrote canonical playbook | `inputs/reference/nq-futures-mavwap-playbook.md` (16,501 bytes) |\n| 6 | Mirrored snapshot to session output | `artifacts/exports/nq-futures-mavwap-playbook.md` |\n| 7 | Created session support files | summary.md, notes.md, sources.json, decisions.md, run-log.md |",
+        "sources.json": "{\n  \"primary\": {\n    \"strategy\": \"User-provided EMA stack + VWAP futures strategy, adapted from equities system\"\n  },\n  \"references\": [\n    {\n      \"title\": \"CME E-mini Nasdaq-100 Futures Contract Specs\",\n      \"url\": \"https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.contractSpecs.html\"\n    },\n    {\n      \"title\": \"CME Micro E-mini Nasdaq-100 Futures Contract Specs\",\n      \"url\": \"https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html\"\n    },\n    {\n      \"title\": \"IRS Topic No. 429, Traders in Securities (Section 1256)\",\n      \"url\": \"https://www.irs.gov/taxtopics/tc429\"\n    }\n  ],\n  \"related_playbooks\": [\n    \"inputs/reference/options-credit-spreads-playbook.md\"\n  ]\n}",
+        "summary.md": "# Session Summary \u2014 NQ Futures EMA Stack + VWAP Tutorial\n\n**Date:** 2026-10-08\n**Request:** Create a tutorial/playbook for NQ/MNQ futures using a three-EMA stack (72/210/420) with session-anchored VWAP strategy.\n\n**Deliverable:**\n- Canonical playbook created at `inputs/reference/nq-futures-mavwap-playbook.md`\n- Snapshot mirrored to this session's `artifacts/exports/`\n\n**What was built:**\nA 15-section living playbook covering:\n1. Strategy definition\n2. Why futures and why NQ\n3. Chart setup (RTH-only, EMA stack, VWAP anchoring)\n4. Session rules and trading window\n5. Three-filter entry system (EMA stack + VWAP + rejection candle)\n6. Scale-out exit rules and VWAP hard-exit\n7. Risk rules with contract-sizing math and worked examples\n8. Daily routine (pre-market, session, post-session)\n9. Trade log template\n10. Common mistakes\n11. MNQ \u2192 NQ transition plan\n12. Study drills with answer keys\n13. Terminology reference\n14. Platform-specific notes (RTH templates, VWAP anchoring)\n15. Update protocol and sources"
+      },
+      "files": {
+        "export": [
+          {
+            "name": "nq-futures-mavwap-playbook.md",
+            "rel_path": "artifacts/exports/nq-futures-mavwap-playbook.md",
+            "size": 16501,
+            "updated_at": "2026-10-08T13:39:29.815414",
+            "previewable": true,
+            "public_href": "public/2026-10-08/nq-futures-mavwap-tutorial/artifacts/exports/nq-futures-mavwap-playbook.md"
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-10-06/parma-listings-under-190k",
       "date": "2026-10-06",

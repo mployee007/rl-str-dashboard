@@ -1,0 +1,22 @@
+{
+  "primary": {
+    "strategy": "User-provided EMA stack + VWAP futures strategy, adapted from equities system"
+  },
+  "references": [
+    {
+      "title": "CME E-mini Nasdaq-100 Futures Contract Specs",
+      "url": "https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.contractSpecs.html"
+    },
+    {
+      "title": "CME Micro E-mini Nasdaq-100 Futures Contract Specs",
+      "url": "https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html"
+    },
+    {
+      "title": "IRS Topic No. 429, Traders in Securities (Section 1256)",
+      "url": "https://www.irs.gov/taxtopics/tc429"
+    }
+  ],
+  "related_playbooks": [
+    "inputs/reference/options-credit-spreads-playbook.md"
+  ]
+}

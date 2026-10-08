@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "url": "https://www.cmegroup.com/markets/equities/nasdaq/e-mini-nasdaq-100.contractSpecs.html",
+      "description": "CME E-mini Nasdaq-100 (NQ) contract specifications — retrieved live via browser",
+      "date_accessed": "2026-10-08",
+      "key_data": "Contract unit $20 x index, tick 0.25 pts = $5.00, Globex code NQ"
+    },
+    {
+      "url": "https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html",
+      "description": "CME Micro E-mini Nasdaq-100 (MNQ) contract specifications — retrieved live via browser",
+      "date_accessed": "2026-10-08",
+      "key_data": "Contract unit $2 x index, tick 0.25 pts = $0.50, Globex code MNQ"
+    },
+    {
+      "url": "https://www.cmegroup.com/markets/equities/nasdaq.html",
+      "description": "CME Nasdaq futures and options overview page",
+      "date_accessed": "2026-10-08"
+    }
+  ],
+  "_note": "Strategy rules and parameters provided directly by user (Hermes Tompkins). CME specs confirmed via browser."
+}
