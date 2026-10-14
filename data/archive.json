@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-10-14T16:38:59.519266+00:00",
+  "generated_at": "2026-10-14T16:54:24.797100+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 97,
+  "session_count": 98,
   "sessions": [
+    {
+      "id": "2026-12-14/cxmt-memory-research",
+      "date": "2026-12-14",
+      "title": "cxmt-memory-research",
+      "summary": "",
+      "updated_at": "2026-10-14T16:43:42.315087",
+      "file_count": 0,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-12-14/cxmt-memory-research",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-10-08/nq-futures-ema-vwap-tutorial",
       "date": "2026-10-08",
