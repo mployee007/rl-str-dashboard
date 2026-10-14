@@ -1,0 +1,22 @@
+{
+  "primary_sources": [
+    {"name": "SemiAnalysis — China's CXMT Is Set to Challenge DRAM Incumbents", "url": "https://newsletter.semianalysis.com/p/chinas-cxmt-is-set-to-challenge-dram", "authors": "Ray Wang, Myron Xie, Dylan Patel et al.", "date": "2026-06-23", "type": "paid_newsletter"},
+    {"name": "EE Times — CXMT IPO: Where China's Largest DRAM Maker Stands", "url": "https://www.eetimes.com/", "date": "2026-07-27", "type": "industry_analysis"},
+    {"name": "Wikipedia — ChangXin Memory Technologies", "url": "https://en.wikipedia.org/wiki/ChangXin_Memory_Technologies", "date": "continuously_updated", "type": "encyclopedia"},
+    {"name": "BusinessKorea — Korean Chip Stocks Slide on China's DRAM Push", "url": "https://www.businesskorea.co.kr/", "date": "2026-10-13", "type": "news"},
+    {"name": "CXMT Official Product Page", "url": "https://www.cxmt.com/en/product.html", "date": "2026", "type": "official"},
+    {"name": "GIGAZINE — Chinese memory company CXMT announced 4F² DDR5 RDIMMs", "url": "https://gigazine.net/", "date": "2026-10-14", "type": "tech_news"},
+    {"name": "Hardware Busters — CXMT Server DDR5 Goes 4F² by Year-End", "url": "https://www.hardwarebusters.com/", "date": "2026-10-14", "type": "tech_analysis"},
+    {"name": "BigGo Finance — Gigabyte DDR5 Motherboards Fully Compatible with CXMT Memory", "url": "https://biggo.com/", "date": "2026-08", "type": "industry_news"},
+    {"name": "The Geostrata — The Sanctions Trap: How CXMT Turned US Export Controls Useless", "url": "https://www.thegeostrata.com/", "date": "2026-07-28", "type": "policy_analysis"},
+    {"name": "SCMP / SemiWiki — Chinese memory module makers ramp up production", "url": "https://www.scmp.com/", "date": "2026-05-15", "type": "news"}
+  ],
+  "secondary_sources": [
+    "Reuters (via EE Times and SemiAnalysis citations)",
+    "TrendForce Q1 2026 DRAM revenue ranking",
+    "Counterpoint Research September 2026 market share data",
+    "ZeroHedge / FT on equipment stockpiling",
+    "CSIS on China's 50% indigenization rule"
+  ],
+  "raw_research_path": "/opt/data/cxmt_research/"
+}
