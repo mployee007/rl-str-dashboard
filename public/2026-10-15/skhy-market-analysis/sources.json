@@ -1,0 +1,12 @@
+{
+  "ticker": "SKHY",
+  "company": "SK hynix Inc. (ADR)",
+  "as_of": "2026-10-15",
+  "sources": [
+    {"name": "StockAnalysis overview", "url": "https://stockanalysis.com/stocks/skhy/", "used_for": "price, market cap, PE, EPS, analyst target, ratings, 52wk range"},
+    {"name": "StockAnalysis financials", "url": "https://stockanalysis.com/stocks/skhy/financials/", "used_for": "revenue, net income, margins, cash/debt, FCF, dividend, valuation history"},
+    {"name": "24/7 Wall St (CXMT server memory)", "url": "https://247wallst.com/investing/2026/10/14/sk-hynix-sinks-5-as-chinas-cxmt-aims-at-server-memory-western-digital-drops-4-micron-falls-3/", "used_for": "CXMT competitive threat, Q2 FY26 results, Micron tightness read-through"},
+    {"name": "24/7 Wall St (HBM4 equipment delay)", "url": "https://247wallst.com/investing/2026/10/14/sk-hynix-delays-hbm4-equipment-orders-as-its-stock-falls-5-days-straight/", "used_for": "HBM4 delay, analyst ratings breakdown, valuation multiples, Seoul price"},
+    {"name": "Invezz (chips-to-customers risk)", "url": "https://invezz.com/news/2026/10/15/samsung-sk-hynix-stocks-crash-9-11-as-risk-shifts-from-chips-to-customers/", "used_for": "AI capex financing risk, Samsung/SK Hynix Seoul moves"}
+  ]
+}
