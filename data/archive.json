@@ -1,16 +1,45 @@
 {
-  "generated_at": "2026-10-16T19:01:07.209491+00:00",
+  "generated_at": "2026-10-16T19:16:34.037353+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 101,
+  "session_count": 102,
   "sessions": [
+    {
+      "id": "2026-10-16/portfolio-analysis",
+      "date": "2026-10-16",
+      "title": "portfolio-analysis",
+      "summary": "",
+      "updated_at": "2026-10-16T19:16:23.945204",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-10-16/portfolio-analysis",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "full-analysis.md",
+            "rel_path": "full-analysis.md",
+            "size": 19223,
+            "updated_at": "2026-10-16T19:16:23.945204",
+            "previewable": true,
+            "public_href": "public/2026-10-16/portfolio-analysis/full-analysis.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-10-16/cloud-pure-plays-comparative-model",
       "date": "2026-10-16",
       "title": "cloud-pure-plays-comparative-model",
       "summary": "**Session:** cloud-pure-plays-comparative-model **Date:** 2026-10-16 **Source:** Discord (Andromeda / #loki) - - Gather financial data for 7 companies - Build comparative tables (revenue, margins, debt, growth) - SWOT analysis per company - Competitive overlap mapping - Final del",
-      "updated_at": "2026-10-16T18:35:50.091982",
-      "file_count": 6,
-      "export_count": 3,
+      "updated_at": "2026-10-16T19:13:58.274412",
+      "file_count": 9,
+      "export_count": 6,
       "csv_count": 0,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-10-16/cloud-pure-plays-comparative-model",
@@ -22,6 +51,22 @@
       },
       "files": {
         "export": [
+          {
+            "name": "batch1_pt_targets.md",
+            "rel_path": "artifacts/exports/batch1_pt_targets.md",
+            "size": 22505,
+            "updated_at": "2026-10-16T19:13:17.521471",
+            "previewable": true,
+            "public_href": "public/2026-10-16/cloud-pure-plays-comparative-model/artifacts/exports/batch1_pt_targets.md"
+          },
+          {
+            "name": "batch2_pt_targets.md",
+            "rel_path": "artifacts/exports/batch2_pt_targets.md",
+            "size": 19498,
+            "updated_at": "2026-10-16T19:13:17.521471",
+            "previewable": true,
+            "public_href": "public/2026-10-16/cloud-pure-plays-comparative-model/artifacts/exports/batch2_pt_targets.md"
+          },
           {
             "name": "cloud-pure-plays-comparative-model.md",
             "rel_path": "artifacts/exports/cloud-pure-plays-comparative-model.md",
@@ -45,6 +90,14 @@
             "updated_at": "2026-10-16T18:35:48.902983",
             "previewable": true,
             "public_href": "public/2026-10-16/cloud-pure-plays-comparative-model/artifacts/exports/datacenter_reit_research.md"
+          },
+          {
+            "name": "portfolio-8-company-pt-analysis.md",
+            "rel_path": "artifacts/exports/portfolio-8-company-pt-analysis.md",
+            "size": 7634,
+            "updated_at": "2026-10-16T19:13:58.274412",
+            "previewable": true,
+            "public_href": "public/2026-10-16/cloud-pure-plays-comparative-model/artifacts/exports/portfolio-8-company-pt-analysis.md"
           }
         ],
         "csv": [],
