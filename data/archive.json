@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T15:54:36.969187+00:00",
+  "generated_at": "2026-10-20T16:10:37.002325+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 103,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-10-20",
       "title": "chicago-daycare",
       "summary": "**Bottom line:** Childcare in Chicago is profitable, but the profit is in the **home/group-home tiers**, not big centers. Start small, graduate only on waitlist depth. | Tier | Capacity | Startup | Net/yr (moderate) | Payback | Verdict | |---|---|---|---|---|---| | Day Care Home",
-      "updated_at": "2026-10-20T02:24:43.539107",
-      "file_count": 22,
+      "updated_at": "2026-10-20T16:05:07.581231",
+      "file_count": 23,
       "export_count": 1,
       "csv_count": 1,
       "image_count": 0,
@@ -45,6 +45,14 @@
         ],
         "image": [],
         "other": [
+          {
+            "name": "5-month-plan.md",
+            "rel_path": "5-month-plan.md",
+            "size": 15801,
+            "updated_at": "2026-10-20T16:05:07.581231",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/5-month-plan.md"
+          },
           {
             "name": "brightwheel_il.html",
             "rel_path": "inputs/raw/brightwheel_il.html",
