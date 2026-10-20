@@ -1,8 +1,133 @@
 {
-  "generated_at": "2026-10-20T02:02:35.099888+00:00",
+  "generated_at": "2026-10-20T02:18:35.164082+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 102,
+  "session_count": 103,
   "sessions": [
+    {
+      "id": "2026-10-20/chicago-daycare",
+      "date": "2026-10-20",
+      "title": "chicago-daycare",
+      "summary": "",
+      "updated_at": "2026-10-20T02:17:33.342571",
+      "file_count": 13,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-10-20/chicago-daycare",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "brightwheel_il.html",
+            "rel_path": "inputs/raw/brightwheel_il.html",
+            "size": 197803,
+            "updated_at": "2026-10-20T02:15:45.780683",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/brightwheel_il.html"
+          },
+          {
+            "name": "businesscom_startdaycare.html",
+            "rel_path": "inputs/raw/businesscom_startdaycare.html",
+            "size": 121563,
+            "updated_at": "2026-10-20T02:11:05.522968",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/businesscom_startdaycare.html"
+          },
+          {
+            "name": "care_cost_chicago.html",
+            "rel_path": "inputs/raw/care_cost_chicago.html",
+            "size": 253358,
+            "updated_at": "2026-10-20T02:11:06.445967",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/care_cost_chicago.html"
+          },
+          {
+            "name": "ccap.html",
+            "rel_path": "inputs/raw/ccap.html",
+            "size": 89146,
+            "updated_at": "2026-10-20T02:10:28.323004",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/ccap.html"
+          },
+          {
+            "name": "cfs1000.pdf",
+            "rel_path": "inputs/raw/cfs1000.pdf",
+            "size": 72674,
+            "updated_at": "2026-10-20T02:15:47.093682",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "childcareaware_il.html",
+            "rel_path": "inputs/raw/childcareaware_il.html",
+            "size": 167402,
+            "updated_at": "2026-10-20T02:10:27.806005",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/childcareaware_il.html"
+          },
+          {
+            "name": "dcfs_licensing.md",
+            "rel_path": "inputs/raw/dcfs_licensing.md",
+            "size": 134,
+            "updated_at": "2026-10-20T02:12:25.429888",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/dcfs_licensing.md"
+          },
+          {
+            "name": "gsearch_costs.md",
+            "rel_path": "inputs/raw/gsearch_costs.md",
+            "size": 134,
+            "updated_at": "2026-10-20T02:12:25.607888",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/gsearch_costs.md"
+          },
+          {
+            "name": "ladybug_ilcost.html",
+            "rel_path": "inputs/raw/ladybug_ilcost.html",
+            "size": 82058,
+            "updated_at": "2026-10-20T02:14:08.634784",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/ladybug_ilcost.html"
+          },
+          {
+            "name": "procare_test.html",
+            "rel_path": "inputs/raw/procare_test.html",
+            "size": 220237,
+            "updated_at": "2026-10-20T02:17:33.342571",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/procare_test.html"
+          },
+          {
+            "name": "sbb_il.html",
+            "rel_path": "inputs/raw/sbb_il.html",
+            "size": 67702,
+            "updated_at": "2026-10-20T02:15:46.366683",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/sbb_il.html"
+          },
+          {
+            "name": "willowtree_tuition.html",
+            "rel_path": "inputs/raw/willowtree_tuition.html",
+            "size": 120523,
+            "updated_at": "2026-10-20T02:14:04.588788",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/willowtree_tuition.html"
+          },
+          {
+            "name": "strip_html.py",
+            "rel_path": "strip_html.py",
+            "size": 494,
+            "updated_at": "2026-10-20T02:09:40.877050",
+            "previewable": false,
+            "public_href": null
+          }
+        ]
+      }
+    },
     {
       "id": "2026-10-16/portfolio-analysis",
       "date": "2026-10-16",
