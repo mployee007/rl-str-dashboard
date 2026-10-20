@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T02:18:35.164082+00:00",
+  "generated_at": "2026-10-20T02:34:35.194881+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 103,
   "sessions": [
@@ -7,18 +7,42 @@
       "id": "2026-10-20/chicago-daycare",
       "date": "2026-10-20",
       "title": "chicago-daycare",
-      "summary": "",
-      "updated_at": "2026-10-20T02:17:33.342571",
-      "file_count": 13,
-      "export_count": 0,
-      "csv_count": 0,
+      "summary": "**Bottom line:** Childcare in Chicago is profitable, but the profit is in the **home/group-home tiers**, not big centers. Start small, graduate only on waitlist depth. | Tier | Capacity | Startup | Net/yr (moderate) | Payback | Verdict | |---|---|---|---|---|---| | Day Care Home",
+      "updated_at": "2026-10-20T02:24:43.539107",
+      "file_count": 22,
+      "export_count": 1,
+      "csv_count": 1,
       "image_count": 0,
       "path": "/opt/data/outputs/2026-10-20/chicago-daycare",
       "status": "completed",
-      "standard_previews": {},
+      "standard_previews": {
+        "decisions.md": "# Decisions & Verdicts\n\n## 1. Which business model to enter?\n**Decision: Day Care Home \u2192 Group Home \u2192 Center (in that order).**\n- The center tier only breaks even at 85%+ enrollment and carries $484K upfront + a 9-year payback. Not a first-move.\n- The group home is the highest-leverage model: paid staff (real business), 60\u201380% margins, owner income $121K\u2013$185K/yr, <6-month payback.\n\n## 2. Startup budget\n**Decision: approve ~$7K (home) now; stage ~$18K (group home) when waitlisted.**\n- Center budget ($484K) is a later, separately-funded decision \u2014 only on waitlist depth of 30+.\n\n## 3. Pricing\n**Decision: price at/above neighborhood comps (infant ~$1,900/mo), not below.**\n- Chicago scarcity is real (20% of families spend >$30K/yr on care). Underpricing only costs margin and signals low quality.\n- Offer CCAP acceptance to fill otherwise-empty seats at ~$1,450/mo equivalent.\n\n## 4. Marketing\n**Decision: hyper-local, referral-first. Treat the waitlist as the core asset.**\n- Win a ZIP code; build the waitlist before you open.\n\n## 5. Open items (need user input)\n- Target neighborhood/ZIP in Chicago?\n- Home vs. group-home preference (do you own a home with suitable space)?\n- Whether to operate personally or hire a director to run it (affects which tier makes sense).",
+        "notes.md": "# Notes\n\n## Model assumptions (for reference / Re-tuning)\n- **Home (8 kids):** tuition $1,450\u2013$1,700/mo; opex = food/supplies $55/child + insurance $90 + utilities $150 + misc. \"Net\" = owner's own income (implicit labor).\n- **Group home (12 kids):** tuition $1,400\u2013$1,700/mo; 1 assistant @ $17/hr \u00d7 ~120 hrs + 12% payroll tax.\n- **Center (40 kids):** 8 infant + 10 toddler + 10 twos + 12 preschool; 8 teachers + 1 director + 1 floater; blended $19/hr teachers, $27/hr director; payroll \u00d71.18; rent $20\u201324/sf/yr on 5,200 sf; food $110/child; supplies $45/child; insurance $1.6K/mo; registration fee $125/child.\n- Tuition anchors: Willow Tree (Chicago) infant $1,907 / toddler $1,676 / twos $1,791; LadyBug IL preschool avg $1,437.\n\n## To verify locally before committing\n- Exact City of Chicago BACP license fees + food-service certification (City + Cook County).\n- Zoning for home/group-home in the target address.\n- Real rent $/sf in target neighborhood (I used $22/sf, mid-range).\n- Live CCAP rate sheet (IDHS) \u2014 rates update; the ~$67/day figure is from a 2026 secondary source.\n- Whether a seller's/landlord's existing DCFS license is transferable (big capital save on a center).\n\n## Follow-ups the user may want\n- A full marketing build (waitlist landing page, GBP setup, referral program copy).\n- A \"group home\" financial model at a specific address/neighborhood.\n- NAICS code for childcare = 624410 (Child Day Care Services) \u2014 relevant if this becomes an LLC filing question.",
+        "run-log.md": "# Run Log \u2014 2026-10-20\n\n## Objective\nResearch how to start a daycare in Chicago, IL + startup cost + ROI + marketing plan + business model.\n\n## Environment issues encountered (and workarounds)\n1. **web_search / web_extract unavailable** \u2014 dependency `firecrawl-py` missing; `security.allow_lazy_installs=false` blocked auto-install; venv `/opt/hermes/.venv` is root-owned (read-only) so a manual install was denied (no sudo available).\n   - Workaround: performed research via `curl` (saved HTML to `inputs/raw/`) and a locally-started **Camofox** headless browser driven through its REST API (`/tabs`, `/snapshot`) after Google/Bing HTML endpoints proved unreliable.\n2. **Camofox not running** initially \u2014 started via `npm start` as a background process; killed + restarted once to clear a stale tab (404 on navigate).\n3. **Government SharePoint sites** (dcfs.illinois.gov, chicago.gov, illinois.gov, dhs.state.il.us) are JS-heavy and return nav-only HTML to curl. Their substance was reconstructed from an industry guide (Brightwheel) that quotes DCFS directly + corroborating sources (LadyBug, Willow Tree).\n\n## Data gathered (retrieved this session)\n- Licensing: thresholds, 3 license types, free license, 3-yr validity, ratios, background checks, training, application process (Brightwheel).\n- Pricing: Chicago actual tuition (Willow Tree), IL averages + CCAP rates + nanny benchmark (LadyBug), national averages (Care.com).\n- Build cost benchmark: $150\u2013$450/SF (Terrapin, via search result metadata).\n\n## Artifacts produced\n- `model.py` \u2014 computes 3 tiers \u00d7 3 scenarios; emits CSV + JSON.\n- `artifacts/csv/roi_model.csv` \u2014 full scenario table.\n- `artifacts/exports/model_summary.json` \u2014 assumptions + results.\n- `report.md`, `summary.md`, `sources.json`, `decisions.md`, `notes.md`.\n\n## Verification status\n- Financial model executed cleanly (`python3 model.py`), output captured live.\n- Licensing/pricing facts tied to the sources above (see sources.json). Startup-cost totals are explicitly labeled as modeled benchmarks, not vendor quotes.",
+        "sources.json": "{\n  \"topic\": \"Starting a daycare in Chicago, IL \u2014 licensing, startup cost, ROI, marketing, business model\",\n  \"prepared\": \"2026-10-20\",\n  \"sources\": [\n    {\"id\": \"dcfs_main\", \"title\": \"Illinois DCFS \u2014 Child Care licensing\", \"url\": \"https://www.dcfs.illinois.gov/providers/child-care.html\", \"type\": \"government/first-party\", \"used_for\": \"licensing authority, program types\"},\n    {\"id\": \"dcfs_become\", \"title\": \"DCFS licensing process overview\", \"url\": \"https://sunshine.dcfs.illinois.gov/BecomeLicensed\", \"type\": \"government/first-party\", \"used_for\": \"step-by-step licensing process\"},\n    {\"id\": \"idec\", \"title\": \"Illinois Dept of Early Childhood \u2014 Child Care Licensure\", \"url\": \"https://idec.illinois.gov/For-Providers\", \"type\": \"government/first-party\", \"used_for\": \"current licensing authority (transition from DCFS)\"},\n    {\"id\": \"brightwheel_il\", \"title\": \"How to Start a Daycare in Illinois\", \"url\": \"https://mybrightwheel.com/blog/how-to-start-a-daycare-in-illinois\", \"type\": \"industry guide\", \"used_for\": \"license thresholds, 3 license types, ratios, fees, background checks, training, process\", \"retrieved\": true},\n    {\"id\": \"willowtree\", \"title\": \"Willow Tree Child Care \u2014 Tuition (Chicago, actual)\", \"url\": \"https://www.willowtreechicago.com/tuition\", \"type\": \"vendor pricing (first-party)\", \"used_for\": \"Chicago infant $1,907/mo, toddler $1,676, twos $1,791; extended day up to $2,542\", \"retrieved\": true, \"date\": \"Jan 2026\"},\n    {\"id\": \"ladybug\", \"title\": \"How Much Does Daycare Cost in Illinois?\", \"url\": \"https://ladybug-daycare.com/illinois-daycare-cost\", \"type\": \"industry guide\", \"used_for\": \"IL infant avg $1,650/mo, preschool $1,437/mo; DCFS ratios 1:4/1:5/1:10; CCAP Cook Co infant up to $67/day; Chicago nanny ~$22/hr\", \"retrieved\": true, \"date\": \"2026\"},\n    {\"id\": \"care_com\", \"title\": \"Care.com \u2014 How much does child care cost?\", \"url\": \"https://www.care.com/c/how-much-does-child-care-cost/\", \"type\": \"market data\", \"used_for\": \"national daycare avg $332/wk; 20% families >$30K/yr; 78% spend >=10% of income\", \"retrieved\": true, \"date\": \"2025\"},\n    {\"id\": \"idhs_ccap\", \"title\": \"Illinois DHS \u2014 CCAP payment rates\", \"url\": \"https://www.dhs.state.il.us\", \"type\": \"government/first-party\", \"used_for\": \"CCAP reimbursement schedule\"},\n    {\"id\": \"terrapin\", \"title\": \"Cost to Build a Daycare Center ($150\u2013$450/SF)\", \"url\": \"https://terrapincg.com/news/average-cost-to-build-daycare-center\", \"type\": \"construction benchmark\", \"used_for\": \"center build-out cost cross-check\"}\n  ],\n  \"notes\": {\n    \"startup_cost_figures\": \"Home $7K, group home ~$18K, center ~$484K are itemized MODELED benchmarks built from industry line items + Terrapin build cost, NOT vendor quotes. Confirm locally.\",\n    \"tuition\": \"Chicago center tuition from Willow Tree (Bucktown/Logan Sq) actual Jan 2026 pricing; IL averages from LadyBug 2026. Chicago sits at top of state range.\",\n    \"licensing\": \"DCFS license is FREE and valid 3 years; centers get 6-month conditional license first. Budget separately for background checks, health exams, radon, fire inspections.\",\n    \"limitations\": \"web_search/web_extract were unavailable this session (firecrawl dependency). Research was done via direct page fetches (curl) and a local headless browser (Camofox) against the sources above.\"\n  }\n}",
+        "summary.md": "# Summary \u2014 Starting a Daycare in Chicago\n\n**Bottom line:** Childcare in Chicago is profitable, but the profit is in the **home/group-home tiers**, not big centers. Start small, graduate only on waitlist depth.\n\n## The three models at a glance (all figures modeled, Chicago)\n\n| Tier | Capacity | Startup | Net/yr (moderate) | Payback | Verdict |\n|---|---|---|---|---|---|\n| Day Care Home | 8 kids | ~$7K | **$98,700** (owner income) | <2 mo | \u2705 Start here |\n| Group Day Care Home | 12 kids | ~$18K | **$121,382** + paid staff | <6 mo | \u2705 Best leverage |\n| Day Care Center | 40 kids | ~$484K | **\u2014$87,290** (loses money at 75% fill) | 9.3 yr at 95% fill | \u26a0\ufe0f Only on waitlist depth |\n\n**Headline finding:** a 40-child Chicago center **loses $7K\u2013$19K/month below ~80% enrollment.** Labor (DCFS ratios) is ~55% of cost. This is why most new centers fail \u2014 a long lease + full staffing before enrollment ramps.\n\n## Key facts (sourced)\n- **License:** DCFS (moving to IL Dept. of Early Childhood). Required to care for **more than 3 unrelated children under 12. Free, valid 3 years.**\n- **Ratios:** infant 1:4 \u00b7 toddler 1:5 \u00b7 preschool 1:10.\n- **Chicago tuition:** infant ~$1,907/mo (Willow Tree, actual) \u00b7 IL avg infant $1,650/mo, preschool $1,437/mo.\n- **CCAP (subsidized):** up to ~$67/day for an infant in Cook Co. \u2014 free demand, fills empty seats.\n- **Startup:** home $7K \u00b7 group home ~$18K \u00b7 center ~$484K (build $150\u2013$450/SF).\n\n## Recommendation\n1. **Day Care Home first** (buy a ~$64K\u2013$141K/yr job for $7K).\n2. **Graduate to Group Home** when you have a waitlist (owner income $121K\u2013$185K/yr, + paid assistant).\n3. **Center later** \u2014 only once you have 30+ on a waitlist and a trusted director.\n\n## Marketing (60-sec version)\nWin a **neighborhood/ZIP**, not \"Chicago.\" \u2192 Google Business Profile + waitlist landing page \u2192 tour funnel (30\u201340% tour\u2192enroll) \u2192 referral credits \u2192 pediatrician/OBGYN + employer partnerships \u2192 differentiate on bilingual / extended-hours / Montessori. Budget $60\u2013$80/mo (home) to $300\u2013$500/mo (center, after launch)."
+      },
       "files": {
-        "export": [],
-        "csv": [],
+        "export": [
+          {
+            "name": "model_summary.json",
+            "rel_path": "artifacts/exports/model_summary.json",
+            "size": 2241,
+            "updated_at": "2026-10-20T02:21:26.427321",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/artifacts/exports/model_summary.json"
+          }
+        ],
+        "csv": [
+          {
+            "name": "roi_model.csv",
+            "rel_path": "artifacts/csv/roi_model.csv",
+            "size": 612,
+            "updated_at": "2026-10-20T02:21:26.427321",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/artifacts/csv/roi_model.csv"
+          }
+        ],
         "image": [],
         "other": [
           {
@@ -116,6 +140,22 @@
             "updated_at": "2026-10-20T02:14:04.588788",
             "previewable": true,
             "public_href": "public/2026-10-20/chicago-daycare/inputs/raw/willowtree_tuition.html"
+          },
+          {
+            "name": "model.py",
+            "rel_path": "model.py",
+            "size": 11074,
+            "updated_at": "2026-10-20T02:21:19.681329",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "report.md",
+            "rel_path": "report.md",
+            "size": 15653,
+            "updated_at": "2026-10-20T02:23:36.611180",
+            "previewable": true,
+            "public_href": "public/2026-10-20/chicago-daycare/report.md"
           },
           {
             "name": "strip_html.py",

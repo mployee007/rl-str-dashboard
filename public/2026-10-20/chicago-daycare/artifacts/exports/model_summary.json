@@ -1,0 +1,134 @@
+{
+  "home_startup_total": 7000,
+  "home_startup_items": {
+    "furnishings/toys/equipment": 3000,
+    "safety (gates, outlet, first-aid, fire)": 800,
+    "background checks/health/radon": 700,
+    "insurance deposit & legal (LLC/etc)": 900,
+    "marketing launch (signage, web, flyers)": 800,
+    "contingency": 800
+  },
+  "center_startup_total": 484067,
+  "center_startup_items": {
+    "lease deposit (2 mo @ $22/sf)": 19067,
+    "build-out/renovation to DCFS+city code (~$45/sf x 5,200sf)": 234000,
+    "furnishings/equipment/toy/curriculum": 60000,
+    "kitchen + food-service permit": 15000,
+    "licensing/compliance/fire/health/radon": 12000,
+    "technology (software, CCTV, door)": 8000,
+    "marketing launch": 12000,
+    "working capital (3 mo payroll buffer)": 80000,
+    "contingency (10%)": 44000
+  },
+  "tuition_assumptions": {
+    "infant": 1907,
+    "toddler": 1676,
+    "twos": 1791,
+    "preschool": 1437
+  },
+  "center_capacity": 40,
+  "center_sqft": 5200,
+  "home_rows": [
+    [
+      "HOME",
+      "conservative",
+      8,
+      4.4,
+      6380,
+      987,
+      5393,
+      84.5,
+      64716
+    ],
+    [
+      "HOME",
+      "moderate",
+      8,
+      6.0,
+      9300,
+      1075,
+      8225,
+      88.4,
+      98700
+    ],
+    [
+      "HOME",
+      "optimistic",
+      8,
+      7.6,
+      12920,
+      1163,
+      11757,
+      91.0,
+      141084
+    ]
+  ],
+  "center_rows": [
+    [
+      "GROUP_HOME",
+      "conservative",
+      12,
+      6.6000000000000005,
+      9240,
+      3703,
+      5537,
+      59.9,
+      66446
+    ],
+    [
+      "GROUP_HOME",
+      "moderate",
+      12,
+      9.0,
+      13950,
+      3835,
+      10115,
+      72.5,
+      121382
+    ],
+    [
+      "GROUP_HOME",
+      "optimistic",
+      12,
+      11.399999999999999,
+      19380,
+      3967,
+      15413,
+      79.5,
+      184958
+    ],
+    [
+      "CENTER",
+      "conservative",
+      40,
+      23,
+      38729,
+      57601,
+      -18873,
+      -48.7,
+      -226474
+    ],
+    [
+      "CENTER",
+      "moderate",
+      40,
+      31,
+      52434,
+      59708,
+      -7274,
+      -13.9,
+      -87290
+    ],
+    [
+      "CENTER",
+      "optimistic",
+      40,
+      39,
+      66139,
+      61815,
+      4325,
+      6.5,
+      51894
+    ]
+  ]
+}

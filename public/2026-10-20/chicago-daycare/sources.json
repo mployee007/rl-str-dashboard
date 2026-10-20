@@ -1,0 +1,21 @@
+{
+  "topic": "Starting a daycare in Chicago, IL — licensing, startup cost, ROI, marketing, business model",
+  "prepared": "2026-10-20",
+  "sources": [
+    {"id": "dcfs_main", "title": "Illinois DCFS — Child Care licensing", "url": "https://www.dcfs.illinois.gov/providers/child-care.html", "type": "government/first-party", "used_for": "licensing authority, program types"},
+    {"id": "dcfs_become", "title": "DCFS licensing process overview", "url": "https://sunshine.dcfs.illinois.gov/BecomeLicensed", "type": "government/first-party", "used_for": "step-by-step licensing process"},
+    {"id": "idec", "title": "Illinois Dept of Early Childhood — Child Care Licensure", "url": "https://idec.illinois.gov/For-Providers", "type": "government/first-party", "used_for": "current licensing authority (transition from DCFS)"},
+    {"id": "brightwheel_il", "title": "How to Start a Daycare in Illinois", "url": "https://mybrightwheel.com/blog/how-to-start-a-daycare-in-illinois", "type": "industry guide", "used_for": "license thresholds, 3 license types, ratios, fees, background checks, training, process", "retrieved": true},
+    {"id": "willowtree", "title": "Willow Tree Child Care — Tuition (Chicago, actual)", "url": "https://www.willowtreechicago.com/tuition", "type": "vendor pricing (first-party)", "used_for": "Chicago infant $1,907/mo, toddler $1,676, twos $1,791; extended day up to $2,542", "retrieved": true, "date": "Jan 2026"},
+    {"id": "ladybug", "title": "How Much Does Daycare Cost in Illinois?", "url": "https://ladybug-daycare.com/illinois-daycare-cost", "type": "industry guide", "used_for": "IL infant avg $1,650/mo, preschool $1,437/mo; DCFS ratios 1:4/1:5/1:10; CCAP Cook Co infant up to $67/day; Chicago nanny ~$22/hr", "retrieved": true, "date": "2026"},
+    {"id": "care_com", "title": "Care.com — How much does child care cost?", "url": "https://www.care.com/c/how-much-does-child-care-cost/", "type": "market data", "used_for": "national daycare avg $332/wk; 20% families >$30K/yr; 78% spend >=10% of income", "retrieved": true, "date": "2025"},
+    {"id": "idhs_ccap", "title": "Illinois DHS — CCAP payment rates", "url": "https://www.dhs.state.il.us", "type": "government/first-party", "used_for": "CCAP reimbursement schedule"},
+    {"id": "terrapin", "title": "Cost to Build a Daycare Center ($150–$450/SF)", "url": "https://terrapincg.com/news/average-cost-to-build-daycare-center", "type": "construction benchmark", "used_for": "center build-out cost cross-check"}
+  ],
+  "notes": {
+    "startup_cost_figures": "Home $7K, group home ~$18K, center ~$484K are itemized MODELED benchmarks built from industry line items + Terrapin build cost, NOT vendor quotes. Confirm locally.",
+    "tuition": "Chicago center tuition from Willow Tree (Bucktown/Logan Sq) actual Jan 2026 pricing; IL averages from LadyBug 2026. Chicago sits at top of state range.",
+    "licensing": "DCFS license is FREE and valid 3 years; centers get 6-month conditional license first. Budget separately for background checks, health exams, radon, fire inspections.",
+    "limitations": "web_search/web_extract were unavailable this session (firecrawl dependency). Research was done via direct page fetches (curl) and a local headless browser (Camofox) against the sources above."
+  }
+}
