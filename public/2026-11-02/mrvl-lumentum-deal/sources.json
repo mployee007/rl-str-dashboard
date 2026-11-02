@@ -1,0 +1,46 @@
+{
+  "brief": "Marvell Technology (MRVL) acquisition of Lumentum (LITE), $115B all-stock",
+  "generated": "2026-11-02",
+  "sources": [
+    {
+      "type": "primary",
+      "title": "Marvell and Lumentum to Combine, Creating a Category Leader in AI Connectivity",
+      "publisher": "Marvell Technology IR / Business Wire",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+      "businesswire": "https://www.businesswire.com/news/home/20261102374788/en/",
+      "retrieved": "2026-11-02",
+      "notes": "Definitive terms: 4.500x fixed exchange ratio, $115B EV, ~$1,132/share, 23.9% premium to Oct 28 2026 unaffected close, 67/33 ownership, >$1B synergies, close H1 CY2028, board composition, advisors."
+    },
+    {
+      "type": "quote",
+      "title": "MRVL quote & statistics (real-time, intraday)",
+      "publisher": "StockAnalysis.com",
+      "url": "https://stockanalysis.com/stocks/mrvl/",
+      "retrieved": "2026-11-02T13:53-05:00",
+      "notes": "$175.55, -10.62%; prev close $196.40; 52w 70.69-329.88; mcap $153.88B; shares 876.93M; PT $339.55; est. earnings Dec 1 2026."
+    },
+    {
+      "type": "quote",
+      "title": "LITE quote & statistics (real-time, intraday)",
+      "publisher": "StockAnalysis.com",
+      "url": "https://stockanalysis.com/stocks/lite/",
+      "retrieved": "2026-11-02T13:52-05:00",
+      "notes": "$698.13, -16.96%; prev close $840.70; 52w 184.20-1,143.00; mcap $63.21B; revenue ttm $3.74B +103.2%; fwd PE 27.73; PT $1,162.07."
+    },
+    {
+      "type": "news-index",
+      "title": "Google News aggregation of Nov 2 2026 coverage",
+      "publisher": "Google News RSS",
+      "url": "https://news.google.com/rss/search?q=Marvell+Lumentum",
+      "retrieved": "2026-11-02",
+      "notes": "Corroborates: $115B all-stock deal, largest tech M&A on record; Reuters/Bloomberg Oct 29 advanced-talks reports; Stifel downgrade of LITE; Northland upgrades of COHR/AAOI; CNBC interview with Murphy and Hurlston."
+    },
+    {
+      "type": "primary",
+      "title": "Marvell Q2 FY2027 results (prior quarter, for baseline)",
+      "publisher": "Marvell IR press release #1031",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results",
+      "notes": "Q2 FY27 revenue $2.739B (+37% YoY), data center +46% YoY, reported Aug 27 2026."
+    }
+  ]
+}
