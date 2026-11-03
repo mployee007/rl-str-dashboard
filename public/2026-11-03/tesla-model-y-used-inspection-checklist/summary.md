@@ -10,9 +10,14 @@
 |---|---|
 | `model-y-inspection-checklist.md` | Full reference version — 11 sections, sourced, with rationale for every check |
 | `artifacts/model-y-inspection-checklist.pdf` | **Printable 7-page field checklist** with write-in boxes, verdict tables, and a red-flag walk-away section |
-| `artifacts/build_pdf.py` | Reproducible PDF build script |
+| `artifacts/model-y-inspection-checklist-ipad.pdf` | **Interactive iPad edition** — 12 pages, 122 tappable checkboxes, 7 fillable text fields, 12 outline bookmarks, 14.5pt touch targets |
+| `artifacts/build_pdf.py` | Reproducible build script (print edition) |
+| `artifacts/build_ipad_pdf.py` | Reproducible build script (iPad interactive edition) |
+| `artifacts/verify_ipad.py` | Validates form fields, field sizes, and outline on the interactive build |
 | `artifacts/nhtsa_recalls.py` | Pulls live recall-campaign counts from the NHTSA API |
 | `sources.json` | Every source used, with what it supported |
+
+**Reader requirement for the iPad edition:** Apple Books and the Files preview will render it but will not let you tick the boxes. Adobe Acrobat Reader (free) or PDF Expert are needed for the form fields. Markup or GoodNotes work if you'd rather draw on it.
 
 ## The thesis
 
