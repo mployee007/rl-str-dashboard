@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T07:39:23.645463+00:00",
+  "generated_at": "2026-11-03T07:55:23.716380+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 106,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-11-03",
       "title": "chicago-curbside-ev-charger-rules",
       "summary": "**Session:** 2026-11-03 **Question:** Can you install a Level 1 or Level 2 EV charger outside at the curb in residential Chicago? **Answer:** No at the curb. Yes on your own property, with a permit. **1. The curb is not a permitting problem.** The sidewalk, parkway, and curb are",
-      "updated_at": "2026-11-03T07:36:48.523227",
-      "file_count": 36,
+      "updated_at": "2026-11-03T07:53:48.392439",
+      "file_count": 42,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -28,12 +28,28 @@
         "image": [],
         "other": [
           {
+            "name": "final.txt",
+            "rel_path": "artifacts/60653/final.txt",
+            "size": 546,
+            "updated_at": "2026-11-03T07:53:48.392439",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/final.txt"
+          },
+          {
             "name": "plug.txt",
             "rel_path": "artifacts/60653/plug.txt",
             "size": 162,
             "updated_at": "2026-11-03T07:36:48.523227",
             "previewable": true,
             "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/plug.txt"
+          },
+          {
+            "name": "plug_target.txt",
+            "rel_path": "artifacts/60653/plug_target.txt",
+            "size": 22696,
+            "updated_at": "2026-11-03T07:53:31.461484",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/plug_target.txt"
           },
           {
             "name": "s2_Hyde+Park+University+Chicago+EV+charging+station+public.txt",
@@ -74,6 +90,38 @@
             "updated_at": "2026-11-03T07:36:46.180229",
             "previewable": true,
             "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/scinfo.txt"
+          },
+          {
+            "name": "search_chargers.py",
+            "rel_path": "artifacts/60653/search_chargers.py",
+            "size": 991,
+            "updated_at": "2026-11-03T07:53:40.467460",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "t2_1200+E+53rd+St+Chicago+Target+EV+charging+PlugShare.txt",
+            "rel_path": "artifacts/60653/t2_1200+E+53rd+St+Chicago+Target+EV+charging+PlugShare.txt",
+            "size": 11920,
+            "updated_at": "2026-11-03T07:53:20.501513",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/t2_1200+E+53rd+St+Chicago+Target+EV+charging+PlugShare.txt"
+          },
+          {
+            "name": "t2_Hyde+Park+Target+Chicago+electric+car+charger+ChargePoint.txt",
+            "rel_path": "artifacts/60653/t2_Hyde+Park+Target+Chicago+electric+car+charger+ChargePoint.txt",
+            "size": 11106,
+            "updated_at": "2026-11-03T07:53:22.886507",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/t2_Hyde+Park+Target+Chicago+electric+car+charger+ChargePoint.txt"
+          },
+          {
+            "name": "target.txt",
+            "rel_path": "artifacts/60653/target.txt",
+            "size": 11736,
+            "updated_at": "2026-11-03T07:53:15.044528",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/target.txt"
           },
           {
             "name": "pole.txt",
