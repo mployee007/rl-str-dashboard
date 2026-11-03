@@ -23,6 +23,15 @@
 | 19 | Patched underscore run to `______ %`, rebuilt | 7 pages |
 | 20 | Vision QA page 3 again | **PASS** — retention table complete with all 4 rows, intact on one page, no remaining layout issues |
 | 21 | Wrote `summary.md`, `notes.md`, `decisions.md`, `sources.json` | Complete |
+| 22 | **iPad edition requested.** fpdf2 2.9.0 has no AcroForm support; installed ReportLab | Built `build_ipad_pdf.py` |
+| 23 | First iPad build: 12 pages, 122 checkboxes, 7 text fields, 12 outline entries | Passed structural verification |
+| 24 | Vision QA pages 1, 2, 4, 11 | Minor: 13pt boxes slightly small; cover columns marginally misaligned |
+| 25 | Bumped checkboxes to 14.5pt, recentred on text baseline, widened text indent | Rebuilt; re-verified 122 cb / 7 fields / 12 bookmarks |
+| 26 | **Emailed both versions.** System python3 had no Google API deps and couldn't install (PEP 668); installed into `/opt/data/.venv` | `google-api-python-client` + `google-auth-oauthlib` working |
+| 27 | Confirmed authenticated sending account | `hermes@solomontompkins.com`, token auto-refreshed |
+| 28 | Confirmed recipient with user before sending | `solomon@solomontompkins.com` |
+| 29 | Sent via Gmail API with MIMEMultipart (no `--attachment` flag exists in google_api.py) | messageId `1a1a1eba2dbf339f` |
+| 30 | **Read the sent message back** and verified headers + both attachments | Confirmed: both PDFs present, correct sizes and MIME type, message in SENT |
 
 ## Final state
 
