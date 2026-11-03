@@ -1,0 +1,115 @@
+Title: Curbside Charging - ComEd Customer Innovation
+
+URL Source: https://innovate.comed.com/be-pilots/curbside-charging/
+
+Markdown Content:
+[Skip to content](https://innovate.comed.com/be-pilots/curbside-charging/#content)
+
+[![Image 1: ComEd, An Exelon Company, Customer Innovation](https://innovate.comed.com/wp-content/uploads/2025/11/comed-logo-R-CI-lockup-long-rgb-white.png)](https://innovate.comed.com/)
+
+*   [Visit ComEd.com](https://www.comed.com/)
+
+[![Image 2: ComEd, An Exelon Company, Customer Innovation](https://innovate.comed.com/wp-content/uploads/2025/11/comed-logo-R-CI-lockup-long-rgb-white.png)](https://innovate.comed.com/)
+
+*   [Visit ComEd.com](https://www.comed.com/)
+
+*   [Resources](https://innovate.comed.com/resources/)
+*   [Projects](https://innovate.comed.com/projects/)
+*   [RFPs](https://innovate.comed.com/rfps/)
+*   [Submit](https://innovate.comed.com/submit/)
+*   [EE R&D](https://innovate.comed.com/energy-efficiency-rd/)
+*   [BE Pilots](https://innovate.comed.com/be-pilots/curbside-charging/#)
+    *   [BE Pilots](https://innovate.comed.com/be-pilots/)
+    *   [Request for Proposals](https://innovate.comed.com/be-rd-rfps/)
+    *   [Submit a BE Pilot Idea](https://innovate.comed.com/be-pilots/submit-a-be-pilot-idea/)
+    *   [Air Quality Monitoring](https://innovate.comed.com/be-pilots/air-quality-monitoring/)
+    *   [Backup Power Capabilities](https://innovate.comed.com/be-pilots/backup-power-capabilities/)
+    *   [Curbside Charging](https://innovate.comed.com/be-pilots/curbside-charging/)
+    *   [Electric School Bus Vehicle-to-Grid Pilot](https://innovate.comed.com/be-pilots/electric-school-bus-vehicle-to-grid-pilot/)
+    *   [EV Energy Management System (EMS)](https://innovate.comed.com/be-pilots/ev-ems/)
+    *   [Pole-Mounted Charging Pilot](https://innovate.comed.com/be-pilots/pole-mounted-charging-pilot/)
+    *   [Residential Optimized Charging](https://innovate.comed.com/be-pilots/residential-optimized-charging/)
+    *   [Rideshare Needs and Gap Assessment Pilot](https://innovate.comed.com/be-pilots/rideshare-needs-and-gaps-assessment-pilot/)
+    *   [Submetering](https://innovate.comed.com/be-pilots/submetering/)
+
+*   [SP&P](https://innovate.comed.com/strategic-programs-and-pilots/)
+*   [COF](https://innovate.comed.com/community-of-the-future/)
+*   [News & Events](https://innovate.comed.com/be-pilots/curbside-charging/#)
+    *   [News](https://innovate.comed.com/news/)
+    *   [Events](https://innovate.comed.com/events/)
+
+*   [Keep in Touch](https://innovate.comed.com/keep-in-touch/)
+
+*   [Resources](https://innovate.comed.com/resources/)
+*   [Projects](https://innovate.comed.com/projects/)
+*   [RFPs](https://innovate.comed.com/rfps/)
+*   [Submit](https://innovate.comed.com/submit/)
+*   [EE R&D](https://innovate.comed.com/energy-efficiency-rd/)
+*   [BE Pilots](https://innovate.comed.com/be-pilots/curbside-charging/#)
+    *   [BE Pilots](https://innovate.comed.com/be-pilots/)
+    *   [Request for Proposals](https://innovate.comed.com/be-rd-rfps/)
+    *   [Submit a BE Pilot Idea](https://innovate.comed.com/be-pilots/submit-a-be-pilot-idea/)
+    *   [Air Quality Monitoring](https://innovate.comed.com/be-pilots/air-quality-monitoring/)
+    *   [Backup Power Capabilities](https://innovate.comed.com/be-pilots/backup-power-capabilities/)
+    *   [Curbside Charging](https://innovate.comed.com/be-pilots/curbside-charging/)
+    *   [Electric School Bus Vehicle-to-Grid Pilot](https://innovate.comed.com/be-pilots/electric-school-bus-vehicle-to-grid-pilot/)
+    *   [EV Energy Management System (EMS)](https://innovate.comed.com/be-pilots/ev-ems/)
+    *   [Pole-Mounted Charging Pilot](https://innovate.comed.com/be-pilots/pole-mounted-charging-pilot/)
+    *   [Residential Optimized Charging](https://innovate.comed.com/be-pilots/residential-optimized-charging/)
+    *   [Rideshare Needs and Gap Assessment Pilot](https://innovate.comed.com/be-pilots/rideshare-needs-and-gaps-assessment-pilot/)
+    *   [Submetering](https://innovate.comed.com/be-pilots/submetering/)
+
+*   [SP&P](https://innovate.comed.com/strategic-programs-and-pilots/)
+*   [COF](https://innovate.comed.com/community-of-the-future/)
+*   [News & Events](https://innovate.comed.com/be-pilots/curbside-charging/#)
+    *   [News](https://innovate.comed.com/news/)
+    *   [Events](https://innovate.comed.com/events/)
+
+*   [Keep in Touch](https://innovate.comed.com/keep-in-touch/)
+
+# Curbside Charging
+
+### Pilot Objectives
+
+ComEd launched the Curbside pilot to test a utility supported, make-ready–based approach for deploying EV charging infrastructure in the public right-of-way (ROW). The pilot was explicitly designed to address access gaps for customers without off-street parking and to evaluate whether curb-adjacent charging can be deployed in a manner that is technically feasible, cost controlled, and scalable within municipal environments.
+
+### Participant Characteristics
+
+Three municipalities and four sites participated in the pilot, they were selected based on available distribution capacity, site feasibility, and municipal host readiness. Table 1 below details these installations.
+
+**Municipality****Number of Ports and Type****Site Characteristics**
+Dixon(4) DCFC Commerce, High Transit*, EIEC Adjacent
+Oswego(2) DCFC Commerce, High Transit*, EIEC Adjacent
+Oswego(4) Level 2 MUD, Public Recreation Commerce, High Transit*, EIEC Adjacent
+Sandwich(2) Level 2 Culture/Arts, Civic/Administrative, EIEC
+
+_Table 1. Curbside_ _Pilot Installation Sites, *High Transit characteristic defined per the Illinois Department of Transportation’s Annual Average Daily Traffic Map._
+
+### Pilot Status
+
+Pilot construction activities are expected to conclude in May 2026. An Executive Summary is**[available here](https://innovate.comed.com/wp-content/uploads/2026/03/ComEd-Curbside-BE-Executive-Summary.pdf).**
+
+### Submissions Due
+
+### Outcomes to Date
+
+Curbside installations exhibited unique challenges compared to typical off‑street make‑ready projects. Unlike standard make‑ready projects, curbside sites required individualized designs due to variations in curb geometry, underground utilities, sidewalk and roadway restoration needs, and the coordination of multiple authorities having jurisdiction (AHJs). These complexities limited opportunities for standardization and increased overall effort per site.
+
+In addition, early learnings have shown that municipalities are not a monolithic group and that they reveal distinct sub categories that vary significantly in staffing levels, internal expertise, permitting processes, and familiarity with EV charging infrastructure. Across all categories, municipalities expressed a clear need for more robust support services, including hands-on technical guidance, procurement assistance, and templates for site evaluation and community engagement.
+
+### Schedule
+
+**BE Pilot****Lead Vendor****Award Date****Pilot In-Field Start Date****Pilot In-Field End Date**
+**Curbside Charging Construction**MJ Electric September 2024 September 2025 March 2026
+**Curbside Charging Design and PM**HBK September 2024 June 2025 March 2026
+**Curbside Charging Evaluator**Electric Power Engineers November 2024 January 2025 December 2026
+
+[RFP Bidding Process](https://innovate.comed.com/bepilots/#rfp-bidding-process)
+
+[Download Pilot Plan](https://innovate.comed.com/wp-content/uploads/2023/07/BE-Pilot-Evaluation-Process-and-Criteria-_25JULY2023-for-web2.pdf)
+
+[Read the RFI](https://innovate.comed.com/wp-content/uploads/2023/11/BEP-Curbside-Charging-RFI.pdf)
+
+ © 2026 Commonwealth Edison Company. All Rights Reserved. 
+
+[Privacy Policy](https://www.exeloncorp.com/privacy-policy)[Terms of Use](https://www.exeloncorp.com/terms-and-conditions)

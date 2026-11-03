@@ -1,0 +1,74 @@
+{
+  "generated": "2026-11-03",
+  "question": "Can you install a Level 1 or Level 2 EV charger outside at the curb in residential Chicago?",
+  "verdict": "No for private residents at the curb (public way); yes on private property with a City electrical permit and licensed contractor.",
+  "sources": [
+    {
+      "id": "chicago-ordinance-o2026-0025394",
+      "title": "Amendment of Municipal Code Chapter 9-64 establishing Electric Vehicle Curbside Charging Pilot Program",
+      "url": "https://chicityclerkelms.chicago.gov/Matter/?matterId=FF451379-4D54-F111-BEC6-001DD80B0E39",
+      "document_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/7183ff23-bbe2-4282-92a2-963aff526341.pdf",
+      "type": "primary-official",
+      "verified": true,
+      "access_method": "City Clerk legislative record fetched for status; ordinance PDF downloaded (scanned image, 3 pages) and read visually after rendering with pymupdf",
+      "what_it_supported": "Ordinance O2026-0025394 passed City Council 7/15/2026 (recommended to pass by Committee on Transportation and Public Way 7/8/2026). Inserts Municipal Code 9-64-220 (unauthorized use of EV-reserved spaces; fines under 9-100-020, immediate tow on public way) and 9-64-225 (Electric Vehicle Public Charging Pilot Program). 9-64-225 defines an eligible charging station as equipment 'owned by the City of Chicago and operated for public use', authorizes the CDOT Commissioner to install/operate/maintain or contract for curbside stations on the public way and in public parking lots, allows the Traffic Compliance Administrator to set variable fees, and sunsets the program June 30, 2030.",
+      "notes": "The 'owned by the City of Chicago and operated for public use' definition is the decisive language: no resident-application pathway exists in the ordinance."
+    },
+    {
+      "id": "chicago-electrical-code-14X-7-705.3",
+      "title": "Chicago Electrical Code § 14X-7-705.3 Extension cords",
+      "url": "https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2676187",
+      "type": "primary-official",
+      "verified": true,
+      "access_method": "Full section text retrieved via r.jina.ai reader proxy, HTTP 200",
+      "what_it_supported": "Extension and flexible cords may not be used as a substitute for permanent wiring; may not be affixed to structures; may not be subject to environmental damage or physical impact; extension cords marked for indoor use may not be used outdoors; extension cords may only be used with portable appliances and may only be plugged directly into a permanent receptacle serving one portable appliance. Relocatable power taps may not extend through walls/floors/doors. (Amend Coun. J. 2-19-20, p. 14473, Art. V, § 38)",
+      "notes": "Fatal to the extension-cord-to-the-curb workaround on at least four separate grounds."
+    },
+    {
+      "id": "chicago-dept-buildings-evse",
+      "title": "Requirements for Electric Vehicle Readiness — EVSE-ready and EVSE-installed spaces",
+      "url": "https://www.chicago.gov/city/en/depts/bldgs/supp_info/chicago-energy-conservation-code/EVSE-2023.html",
+      "type": "primary-official",
+      "verified": true,
+      "access_method": "Full page retrieved via proxy, HTTP 200",
+      "what_it_supported": "Chicago Zoning Ordinance definitions: EVSE-ready space requires conduit and wiring for a 40-ampere, 208- or 240-volt dedicated branch circuit terminating at a receptacle or junction box within 3 feet of the parking space. For projects with first building permit application on/after Nov 1, 2023, 100% of off-street spaces serving dwelling units must be EVSE-ready or EVSE-installed. Aligned with the Illinois Electric Vehicle Charging Act (765 ILCS 1085). EVSE energy management systems may reduce required capacity for EVSE-installed spaces but not EVSE-ready spaces.",
+      "notes": "This is the technical standard to build to, and the reason newer buildings already have the infrastructure."
+    },
+    {
+      "id": "chicago-drive-electric",
+      "title": "Drive Electric Chicago — permitting, rebates, and CDOT framework",
+      "url": "https://www.chicago.gov/city/en/progs/env/drive-electric-chicago.html",
+      "type": "primary-official",
+      "verified": true,
+      "access_method": "Full page retrieved via proxy, HTTP 200 (29 KB)",
+      "what_it_supported": "EV charger installation and maintenance must be conducted by a licensed contractor; non-permitted or non-compliant chargers may be fined 200% of the initial permit fee plus $200-500 per day of violation. City targets permit issuance within 5 business days of a complete application and inspections within 10 business days of a request. CDOT is developing a framework plan that includes piloting curbside charging. Lists ComEd rebates, Illinois EPA EV rebate cycles, and the federal 30C credit (30%, up to $1,000).",
+      "notes": "The federal 30C reference on this page is likely stale — see flag in the deliverable."
+    },
+    {
+      "id": "illinois-ev-charging-act",
+      "title": "Illinois Electric Vehicle Charging Act — Public Act 103-0053 (765 ILCS 1085)",
+      "url": "https://www.ilga.gov/Legislation/publicacts/view/103-0053",
+      "type": "primary-official",
+      "verified": true,
+      "access_method": "Public act full text retrieved via proxy, HTTP 200 (27 KB)",
+      "what_it_supported": "Renters and condominium unit owners, regardless of parking arrangement, have rights to install EV charging. An association may not unreasonably restrict the installation or use of an EV charging system within a unit owner's unit or deeded/designated parking space; approval must follow the same process as any alteration request and may not be unreasonably delayed or denied; a system installed by a unit owner is that owner's property and not part of the common elements; insurance and architectural-compliance conditions apply. Also underpins the EV-capable new-construction requirement.",
+      "notes": "This is the statutory basis for the 'right to charge' for renters and condo owners."
+    },
+    {
+      "id": "comed-curbside-pilot",
+      "title": "ComEd Customer Innovation — Curbside Charging pilot",
+      "url": "https://innovate.comed.com/be-pilots/curbside-charging/",
+      "type": "primary-utility",
+      "verified": true,
+      "access_method": "Full page retrieved via proxy, HTTP 200",
+      "what_it_supported": "ComEd curbside make-ready pilot participating sites are Dixon (4 DCFC), Oswego (2 DCFC, 4 Level 2), and Sandwich (2 Level 2). Construction expected to conclude May 2026. Explicitly designed to address access gaps for customers without off-street parking.",
+      "notes": "Chicago is not a participating municipality. Rules this out as a Chicago option."
+    }
+  ],
+  "uncertainties_and_flags": [
+    "Federal 30C alternative fuel refueling property credit: Chicago.gov still links it, but the credit was terminated for property placed in service after June 30, 2026 under the 2025 federal tax legislation. Presented as 'verify, likely expired' rather than asserted as available.",
+    "The ordinance text was a scanned image PDF with no text layer; it was read visually at 140 dpi. Quoted language is accurate to the rendering but a licensed attorney should confirm exact punctuation against the enrolled copy before relying on it in a dispute.",
+    "No attempt was made to quantify permit fees, since Chicago's fee depends on project scope via the City's permit fee calculator.",
+    "Curb-cut feasibility varies block by block and by alderman; presented qualitatively."
+  ]
+}

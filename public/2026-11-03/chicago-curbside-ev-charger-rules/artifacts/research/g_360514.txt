@@ -1,0 +1,1211 @@
+Title: Official Government Website of the Illinois General Assembly
+
+URL Source: https://www.ilga.gov/Legislation/publicacts/view/103-0053
+
+Markdown Content:
+*   [Bill Status](https://www.ilga.gov/Legislation/BillStatus?DocNum=40&GAID=17&DocTypeID=SB&LegId=142908&SessionID=112)
+*   [Full Text](https://www.ilga.gov/Legislation/publicacts/view/103-0053#)
+*   [Printer Friendly Version](https://www.ilga.gov/Legislation/PublicActs/PrinterFriendly/103-0053)
+*   [PDF](https://www.ilga.gov/Documents/Legislation/PublicActs/103/PDF/103-0053.pdf)
+
+## Public Act 103-0053
+
+Public Act 0053 103RD GENERAL ASSEMBLY
+
+**Public Act 103-0053**
+SB0040 Enrolled LRB103 04654 LNS 49662 b
+```
+
+```
+```AN ACT concerning regulation.`
+```
+
+```
+``**```
+Be it enacted by the People of the State of Illinois,
+```**
+**`represented in the General Assembly:`**
+```
+
+```
+
+```
+
+```
+```Section 1.``Short title.``This Act may be cited as the`
+`Electric Vehicle Charging Act.`
+```Section 5.``Legislative intent.`
+```
+Electric vehicles are an
+```
+```
+important tool to fight the climate crisis, tackle air
+```
+```
+pollution, and provide safe, clean, and affordable personal
+```
+```
+transportation. The State should encourage urgent and
+```
+```
+widespread adoption of electric vehicles. Since most current
+```
+```
+electric vehicle owners are single-family homeowners who
+```
+```
+charge at home, providing access to home charging for those in
+```
+```
+multi-unit dwellings is crucial to wider electric vehicle
+```
+`adoption. This includes small multifamily residences and`
+`condominium unit owners and renters, regardless of parking`
+```
+space ownership and regardless of
+income. Therefore, a
+```
+```
+significant portion of parking spaces in
+new and renovated
+```
+```
+residential developments shall
+be capable of electric vehicle
+```
+```
+charging. Additionally, renters
+and condominium unit owners
+```
+```
+shall be able to install charging
+equipment for electric
+```
+```
+vehicles under reasonable conditions.
+```
+```Section 10.``Applicability.``This Act applies to newly`
+
+`constructed single-family homes and multi-unit residential`
+`buildings that have parking spaces and are constructed after`
+`the effective date of this Act.`
+```Section 15.``Definitions.`
+```
+As used in this Act:
+```
+```"Affordable housing development" means (i) any housing`
+`that is subsidized by the federal or State government or (ii)`
+`any housing in which at least 20% of the dwelling units are`
+`subject to covenants or restrictions that require that the`
+`dwelling units to be sold or rented at prices that preserve`
+```
+them as affordable housing for a period of at least 10 years.
+```
+``
+```
+"Association" has the meaning set forth in subsection (o)
+```
+```
+of Section 2 of the Condominium Property Act or Section 1-5 of
+```
+```
+the Common Interest Community Association Act, as applicable.
+```
+```"Electric vehicle" means a vehicle that is exclusively`
+`powered by and refueled by electricity, plugs in to charge,`
+`and is licensed to drive on public roadways. "Electric`
+`vehicle" does not include electric mopeds, electric`
+`off-highway vehicles, hybrid electric vehicles, or`
+`extended-range electric vehicles that are equipped, fully or`
+`partially, with conventional fueled propulsion or auxiliary`
+```
+engines.
+```
+``
+```
+"Electric
+vehicle charging system" means a device that is:
+```
+````
+```
+(1)   used to provide electricity to an electric
+```
+```
+vehicle;
+```
+````
+```
+(2)   designed to ensure that a safe connection has been
+```
+
+```
+made between the electric grid and the electric vehicle;
+```
+```
+and
+```
+````
+```
+(3)   able to communicate with the vehicle's control
+```
+```
+system so that electricity flows at an appropriate voltage
+```
+```
+and current level. An electric vehicle charging system may
+```
+```
+be wall mounted or pedestal style, may provide multiple
+```
+```
+cords to connect with electric vehicles, and shall:
+```
+``````
+```
+(i)   be certified by Underwriters Laboratories or
+```
+```
+have been granted an equivalent certification; and
+```
+``````
+```
+(ii)   comply with the current version of Article
+```
+```
+625 of the National Electrical Code.
+```
+```"Electric vehicle supply equipment" or "EVSE" means a`
+```
+conductor,
+including an ungrounded, grounded, and equipment
+```
+```
+grounding
+conductor, and electric vehicle connectors,
+```
+```
+attachment plugs,
+and all other fittings, devices, power
+```
+```
+outlets, and
+apparatuses installed specifically for the
+```
+```
+purpose of
+transferring energy between the premises wiring and
+```
+```
+the
+electric vehicle.
+```
+```"EV-capable" means parking spaces that have the electrical`
+`panel capacity and conduit installed during construction to`
+`support future implementation of electric vehicle charging`
+`with 208-volt or 240-volt or greater, 40-ampere or greater`
+`circuits. Each EV-capable space shall feature a continuous`
+`raceway or cable assembly installed between an enclosure or`
+`outlet located within 3 feet of the EV-capable space and a`
+`suitable panelboard or other onsite electrical distribution`
+
+`equipment. The electrical distribution equipment to which the`
+`raceway or cable assembly connects shall have sufficient`
+`dedicated space and spare electrical capacity for a 2-pole`
+`circuit breaker or set of fuses. Reserved capacity shall be no`
+`less than 40A 208/240V for each EV-capable space unless`
+`EV-capable spaces will be controlled by an energy management`
+`system providing load management in accordance with NFPA 70,`
+`shall have a minimum capacity of 4.1 kilovolt-ampere per`
+`space, or have a minimum capacity of 2.7 kilovolt-ampere per`
+`space when all of the parking spaces are designed to be`
+`EV-capable spaces, EV-ready spaces, or EVSE-installed spaces.`
+`The electrical enclosure or outlet and the electrical`
+`distribution equipment directory shall be marked "For future`
+`electric vehicle supply equipment (EVSE)." This strategy`
+`ensures the reduction of up-front costs for electric vehicle`
+`charging station installation by providing the electrical`
+`elements that are difficult to install during a retrofit.`
+`Anticipating the use of dual-head EVSE, the same circuit may`
+```
+be used to support charging in adjacent EV-capable spaces.
+
+For
+```
+`purposes of this Act, "EV capable" shall not be construed to`
+`require a developer or builder to install or run wire or cable`
+`from the electrical panel through the conduit or raceway to`
+`the terminus of the conduit.`
+```"EV-ready" means parking spaces that are provided with a`
+`branch circuit and either an outlet, junction box, or`
+`receptacle that will support an installed EVSE. Each branch`
+
+`circuit serving EV-ready spaces shall terminate at an outlet`
+`or enclosure, located within 3 feet of each EV-ready space it`
+`serves. The panelboard or other electrical distribution`
+`equipment directory shall designate the branch circuit as "For`
+`electric vehicle supply equipment (EVSE)" and the outlet or`
+`enclosure shall be marked "For electric vehicle supply`
+`equipment (EVSE)." The capacity of each branch circuit serving`
+`multiple EV-ready spaces designed to be controlled by an`
+`energy management system providing load management in`
+`accordance with NFPA 70, shall have a minimum capacity of 4.1`
+`kilovolt-ampere per space, or have a minimum capacity of 2.7`
+`kilovolt-ampere per space when all of the parking spaces are`
+`designed to be EV-capable spaces, EV-ready spaces, or EVSE`
+`spaces.`
+```"EVSE-installed" means electric vehicle supply equipment`
+`that is fully installed from the electrical panel to the`
+```
+parking space.
+```
+```"Large multifamily residence" means a single residential`
+```
+building that accommodates 5 families or more.
+```
+```"Level 1" means a 120-volt 20-ampere minimum branch`
+`circuit.`
+```"Level 2" means a 208-volt to 240-volt 40-ampere branch`
+`circuit.`
+``
+```
+"New" means newly constructed.
+```
+``
+```
+"Reasonable restriction" means a restriction that does not
+```
+```
+significantly increase the cost of the electric vehicle
+```
+
+```
+charging station or electric vehicle charging system or
+```
+```
+significantly decrease its efficiency or specified
+```
+```
+performance.
+```
+```"Single-family residence" means a detached single-family`
+```
+residence on a single lot.
+```
+```"Small multifamily residence" means a single residential`
+```
+building that accommodates 2 to 4 families.
+```
+```Section 20.``EV-capable parking space requirement.``A new`
+`single-family residence or a small multifamily residence shall`
+`have at least one EV-capable parking space for each`
+`residential unit that has dedicated parking, unless any`
+`subsequently adopted building code requires additional`
+`EV-capable  parking spaces, EV-ready parking spaces, or`
+```
+installed EVSE. A new single-family residence or
+small
+```
+```
+multifamily residence that qualifies as an affordable
+housing
+```
+```
+development shall have one EV-capable parking space
+for each
+```
+`code-required parking space if the owner is issued a building`
+`permit 24 months after the effective date of this Act. Where`
+`code-required parking exceeds one parking space per dwelling`
+`unit, only one parking space per dwelling unit is required to`
+`be EV-capable.`
+```Section 25.`
+```
+Residential requirements.
+```
+```(a) All building permits issued 90 days after the`
+`effective date of this Act shall require a new, large`
+
+`multifamily residential building or a large multifamily`
+`residential building being renovated by a developer converting`
+`the property to an association to have 100% of its total`
+```
+parking spaces EV-capable.
+However, nothing in this Act shall
+```
+`be construed to require that in the case of a developer`
+`converting the property to an association, no EV-capable or`
+`EV-ready mandate shall apply if it would necessitate the`
+`developer having to excavate an existing surface lot or other`
+`parking facility in order to retro-fit the parking lot or`
+`facility with the necessary conduit and wiring.`
+```(b) The following requirements and timelines shall apply`
+`for affordable housing. A new construction single-family`
+`residence or small multifamily residence that qualifies as an`
+`affordable housing development under the same project`
+`ownership and is located on a campus with centralized parking`
+```
+areas is subject to the requirements and timelines below.
+```
+```All building permits issued 24 months after the effective`
+`date of this Act shall require a new construction large`
+`multifamily residence that qualifies as an affordable housing`
+`development to have the following, unless additional`
+`requirements are required under a subsequently adopted`
+```
+building code:
+```
+`````(1) For permits issued 24 months after the effective`
+`date of this Act, a minimum of 40% EV-capable parking`
+`spaces.`
+`````(2) For permits issued 5 years after the effective`
+
+`date of this Act, a minimum of 50% EV-capable parking`
+`spaces.`
+`````(3) For permits issued 10 years after the effective`
+`date of this Act, a minimum of 70% EV-capable parking`
+```
+spaces.
+```
+```(d)   An accessible parking space is not required by this`
+`Section if no accessible parking spaces are required by the`
+`local zoning code.`
+```Section 30.`
+```
+Electric vehicle charging system policy
+for
+```
+```
+unit owners.
+```
+``
+```
+(a) Any covenant, restriction, or condition contained in
+```
+```
+any deed, contract, security interest, or other instrument
+```
+```
+affecting the transfer or sale of any interest in a
+```
+```
+condominium or common interest community, and any provision of
+```
+```
+a governing document that effectively prohibits or
+```
+```
+unreasonably restricts the installation or use of an electric
+```
+```
+vehicle charging system within a unit owner's unit or a
+```
+```
+designated parking space, including, but not limited to, a
+```
+```
+deeded parking space, a parking space in a unit owner's
+```
+```
+exclusive use common area, or a parking space that is
+```
+```
+specifically designated for use by a particular unit owner, or
+```
+```
+is in conflict with this Section, is void and unenforceable.
+```
+``
+```
+(b) This Section does not apply to provisions that impose
+```
+```
+a reasonable restriction on an electric vehicle charging
+```
+`system. Any electric vehicle charging system installed by a`
+
+`unit owner pursuant to this Section is the property of that`
+`unit owner and in no case will be deemed a part of the common`
+```
+elements or common area.
+```
+``
+```
+(c) An electric vehicle charging system shall meet
+```
+```
+applicable health and safety standards and requirements
+```
+```
+imposed by State and local authorities and all other
+```
+```
+applicable zoning, land use, or other ordinances or land use
+```
+```
+permits.
+```
+``
+```
+(d) If approval is required for the installation or use of
+```
+```
+an electric vehicle charging system, the association shall
+```
+```
+process and approve the application in the same manner as an
+```
+`application for approval of an alteration, modification, or`
+`improvement to common elements or common areas or an`
+```
+architectural modification to
+the property, and the
+```
+```
+association shall not unreasonably
+delay the approval or
+```
+```
+denial  of the application. The approval or
+denial of an
+```
+```
+application shall be in writing. If an
+application is not
+```
+```
+denied in writing within 60 days from the
+date of the receipt
+```
+```
+of the application, the application shall
+be deemed approved
+```
+```
+unless the delay is the result of a
+reasonable request for
+```
+```
+additional information.
+```
+``
+```
+(e) If the electric vehicle charging system is to be
+```
+```
+placed in a common area or exclusive use common area, as
+```
+```
+designated by the condominium or common interest community
+```
+```
+association, the following applies:
+```
+`````(1)   The unit owner shall first obtain prior written`
+
+```
+approval from
+the association to install the electric
+```
+```
+vehicle charging
+system and the association shall approve
+```
+```
+the installation
+if the unit owner agrees, in writing, to:
+```
+``````
+```
+(A)   comply with the association's architectural
+```
+`standards or other reasonable conditions and`
+`restrictions for the installation of the electric`
+```
+vehicle
+charging system;
+```
+```````(B)   engage a licensed and insured electrical`
+```
+contractor to
+install the electric vehicle charging
+```
+`system. The electrical contractor shall name the`
+`association, its officers, directors, and agents as`
+`additional insured and shall provide a certificate of`
+`insurance to the association evidencing such`
+```
+additional insured status;
+```
+``````
+```
+(C)   within 14 days after approval, provide a
+```
+`certificate of insurance that names the association,`
+```
+its officers, directors, and agents as
+an additional
+```
+```
+insured party under the unit owner's
+insurance policy
+```
+```
+as required under paragraph (3);
+```
+``````
+```
+(D)   pay for both the costs associated with the
+```
+```
+installation of and the electricity usage associated
+```
+```
+with the electric vehicle charging system; and
+```
+```````(E)   be responsible for damage to the common`
+`elements or common areas or other units resulting from`
+`the installation, use, and removal of the electric`
+```
+vehicle charging system.
+```
+
+````
+```
+(2)   The unit owner, and each successive unit owner of
+```
+```
+the electric vehicle charging system, is responsible for:
+```
+``````
+```
+(A) costs for damage to the electric vehicle
+```
+```
+charging system, common area, exclusive use common
+```
+```
+area, or separate interests resulting from the
+```
+```
+installation, maintenance, repair, removal, or
+```
+```
+replacement of the electric vehicle charging system;
+```
+``````
+```
+(B) costs for the maintenance, repair, and
+```
+```
+replacement of the electric vehicle charging system
+```
+```
+until it has been removed, and for the restoration of
+```
+```
+the common area after removal;
+```
+``````
+```
+(C) costs of electricity associated with the
+```
+```
+charging system, which shall be based on:
+```
+````````
+```
+(i)   an embedded submetering device; or
+```
+`````````(ii)   a reasonable calculation of cost, based`
+```
+on
+the average miles driven, efficiency of the
+```
+```
+electric vehicle calculated by the United States
+```
+```
+Environmental Protection Agency, and the cost of
+```
+```
+electricity for the common area; and
+```
+``````
+```
+(D) disclosing to a prospective buyer the
+```
+```
+existence of any electric vehicle charging system of
+```
+```
+the unit owner and the related responsibilities of the
+```
+```
+unit owner under this Section.
+```
+````
+```
+(3) The purpose of the costs under paragraph (2) is
+```
+```
+for the reasonable reimbursement of electricity usage and
+```
+```
+shall not be set to deliberately exceed the reasonable
+```
+
+```
+reimbursement.
+```
+````
+```
+(4) The unit owner of the electric vehicle charging
+```
+```
+system, whether the electric vehicle charging system is
+```
+```
+located within the common area or exclusive use common
+```
+```
+area, shall, at all times, maintain a liability coverage
+```
+```
+policy. The unit owner that submitted the application to
+```
+```
+install the electric vehicle charging system shall
+provide
+```
+```
+the association with the corresponding certificate
+of
+```
+```
+insurance within 14 days after approval of the
+```
+```
+application. The unit owner, and each successive unit
+```
+```
+owner, shall provide the association with the certificate
+```
+```
+of insurance annually thereafter.
+```
+````
+```
+(5) A unit owner is not required to maintain a
+```
+```
+homeowner liability coverage policy for an existing
+```
+```
+National Electrical Manufacturers Association standard
+```
+```
+alternating current power plug.
+```
+``
+```
+(f) Except as provided in subsection (g), the installation
+```
+```
+of an electric vehicle charging system for the exclusive use
+```
+```
+of a unit owner in a common area that is not an exclusive use
+```
+`common area may be authorized by the association, subject to`
+```
+applicable law, only if
+installation in the unit owner's
+```
+```
+designated parking space is
+impossible or unreasonably
+```
+```
+expensive. In such an event, the
+association shall enter into
+```
+```
+a license agreement with the unit
+owner for the use of the
+```
+```
+space in a common area, and the unit
+owner shall comply with
+```
+```
+all of the requirements in subsection
+(e).
+```
+
+``
+```
+(g) An association may install an electric vehicle
+```
+```
+charging system in the common area for the use of all unit
+```
+```
+owners and members of the association. The association shall
+```
+```
+develop appropriate terms of use for the electric vehicle
+```
+```
+charging system.
+```
+``
+```
+(h) An association that willfully violates this Section
+```
+```
+shall be liable to the unit owner for actual damages and shall
+```
+```
+pay a civil penalty to the unit owner not to exceed $500.
+```
+``
+```
+(i) In any action by a unit owner requesting to have an
+```
+```
+electric vehicle charging system installed and seeking to
+```
+```
+enforce compliance with this Section, the court shall award
+```
+`reasonable attorney's fees to a prevailing party.`
+```Section 35.`
+```
+Electric vehicle charging system policy for
+```
+```
+renters.
+```
+``
+```
+(a)   Notwithstanding any provision in the lease to the
+```
+```
+contrary and subject to subsection (b):
+```
+````
+```
+(1) a tenant may install, at the tenant's expense for
+```
+`the tenant's own use, a level 1 receptacle or outlet, a`
+`level 2 receptacle or outlet, or a level 2 electric`
+`vehicle charging system on or in the leased premises;`
+````
+```
+(2) a landlord shall not assess or charge a tenant any
+```
+```
+fee for the placement or use of an electric vehicle
+```
+```
+charging system, except that:
+```
+``````
+```
+(A) the landlord may:
+```
+````````
+```
+(i) require reimbursement for the actual cost
+```
+
+```
+of electricity provided by the landlord that was
+```
+`used by the electric vehicle charging system;`
+`````````(ii) charge a reasonable fee for access. If`
+```
+the
+electric vehicle charging system is part of a
+```
+```
+network for which a network fee is charged, the
+```
+```
+landlord's reimbursement may include the amount of
+```
+```
+the network fee. Nothing in this subparagraph
+```
+```
+requires a landlord to impose upon a tenant a fee
+```
+```
+or charge other than the rental payments specified
+```
+```
+in the lease;
+or
+```
+`````````(iii) charge a security deposit to cover costs`
+`to restore the property to its original condition`
+`if the tenant removes the electric vehicle`
+`charging system.`
+``````
+```
+(B)   the landlord may require reimbursement for
+the
+```
+```
+cost of the installation of the electric vehicle
+```
+```
+charging system, including any additions or upgrades
+```
+```
+to existing wiring directly attributable to the
+```
+```
+requirements of the electric vehicle charging system,
+```
+```
+if the landlord places or causes the electric vehicle
+```
+```
+charging system to be placed at the request of the
+```
+```
+tenant; and
+```
+``````
+```
+(C)   if the tenant desires to place an electric
+```
+```
+vehicle charging system in an area accessible to other
+```
+```
+tenants, the landlord may assess or charge the tenant
+```
+```
+a reasonable fee to reserve a specific parking space
+```
+
+```
+in which to install the electric vehicle charging
+```
+```
+system.
+```
+``
+```
+(b)   A landlord may require a tenant to comply with:
+```
+````
+```
+(1)   bona fide safety requirements consistent with an
+```
+```
+applicable building code or recognized safety standard for
+```
+```
+the protection of persons and property;
+```
+````
+```
+(2)   a requirement that the electric vehicle charging
+```
+```
+system be registered with the landlord within 30 days
+```
+```
+after installation; or
+```
+````
+```
+(3)   reasonable aesthetic provisions that govern the
+```
+```
+dimensions, placement, or external appearance of an
+```
+```
+electric vehicle charging system.
+```
+``
+```
+(c)   A tenant may place an electric vehicle charging system
+```
+```
+if:
+```
+````
+```
+(1) the electric vehicle charging system is in
+```
+```
+compliance with all applicable requirements adopted by a
+```
+```
+landlord under subsection (b); and
+```
+````
+```
+(2) the tenant agrees, in writing, to:
+```
+``````
+```
+(A) comply with the landlord's design
+```
+```
+specifications for the installation of an electric
+```
+```
+vehicle charging system;
+```
+``````
+```
+(B) engage the services of a duly licensed and
+```
+```
+registered electrical contractor familiar with the
+```
+```
+installation and code requirements of an electric
+```
+```
+vehicle charging system; and
+```
+``````
+```
+(C) provide, within 14 days after receiving the
+```
+
+```
+landlord's consent for the installation, a certificate
+```
+```
+of insurance naming the landlord as an additional
+```
+```
+insured party on the tenant's renter's insurance
+```
+```
+policy for any claim related to the installation,
+```
+```
+maintenance, or use of the electric vehicle charging
+```
+```
+system or, at the landlord's option, reimbursement to
+```
+```
+the landlord for the actual cost of any increased
+```
+```
+insurance premium amount attributable to the electric
+```
+```
+vehicle charging system, notwithstanding any provision
+```
+```
+to the contrary in the lease. The tenant shall provide
+```
+```
+reimbursement for an increased insurance premium
+```
+```
+amount within 14 days after the tenant receives the
+```
+```
+landlord's invoice for the amount attributable to the
+```
+```
+electric vehicle charging system.
+```
+``
+```
+(d) If the landlord consents to a tenant's installation of
+```
+```
+an electric vehicle charging system on property accessible to
+```
+```
+other tenants, including a parking space, carport, or garage
+```
+```
+stall, then, unless otherwise specified in a written agreement
+```
+```
+with the landlord:
+```
+````
+```
+(1) The tenant, and each successive tenant with
+```
+```
+exclusive rights to the area where the electric vehicle
+```
+```
+charging system is installed, is responsible for costs for
+```
+```
+damages to the electric vehicle charging system and to any
+```
+```
+other property of the landlord or another tenant resulting
+```
+```
+from the installation, maintenance, repair, removal, or
+```
+```
+replacement of the electric vehicle charging system.
+```
+
+``````
+```
+(A) Costs under this paragraph shall be based on:
+```
+````````
+```
+(i) an embedded submetering device; or
+```
+`````````(ii) a reasonable calculation of cost, based`
+```
+on
+the average miles driven, efficiency of the
+```
+```
+electric vehicle calculated by the United States
+```
+```
+Environmental Protection Agency, and the cost of
+```
+```
+electricity for the common area.
+```
+``````
+```
+(B) The purpose of the costs under this paragraph
+```
+```
+is for reasonable reimbursement of electricity usage
+```
+```
+and shall not be set to deliberately exceed that
+```
+```
+reasonable reimbursement.
+```
+````
+```
+(2) Each successive tenant with exclusive rights to
+```
+```
+the area where the electric vehicle charging system is
+```
+```
+installed shall assume responsibility for the repair,
+```
+```
+maintenance, removal, and replacement of the electric
+```
+```
+vehicle charging system until the electric vehicle
+```
+```
+charging system is removed.
+```
+````
+```
+(3) The tenant, and each successive tenant with
+```
+```
+exclusive rights to the area where the electric vehicle
+```
+```
+charging system is installed, shall, at all times, have
+```
+```
+and maintain an insurance policy covering the obligations
+```
+```
+of the tenant under this subsection and shall name the
+```
+```
+landlord as an additional insured party under the policy.
+```
+````
+```
+(4)  The tenant, and each successive tenant with
+```
+```
+exclusive rights to the area where the electric vehicle
+```
+```
+charging system is installed, is responsible for removing
+```
+
+```
+the system if reasonably necessary or convenient for the
+```
+```
+repair, maintenance, or replacement of any property of the
+```
+```
+landlord, whether or not leased to another tenant.
+```
+``
+```
+(e) An electric vehicle charging system installed at the
+```
+```
+tenant's cost is the property of the tenant. Upon termination
+```
+```
+of the lease, if the electric vehicle charging system is
+```
+```
+removable, the tenant may either remove it or sell it to the
+```
+```
+landlord or another tenant for an agreed price. Nothing in
+```
+```
+this subsection requires the landlord or another tenant to
+```
+```
+purchase the electric vehicle charging system.
+```
+``
+```
+(f) A landlord that willfully violates this Section shall
+```
+```
+be liable to the tenant for actual damages, and shall pay a
+```
+```
+civil penalty to the tenant in an amount not to exceed $1,000.
+```
+``
+```
+(g) In any action by a tenant requesting to have an
+```
+```
+electric vehicle charging system installed and seeking to
+```
+```
+enforce compliance with this Section, the court shall award
+```
+```
+reasonable attorney's fees to a prevailing plaintiff.
+```
+```(h)  A tenant whose landlord is an owner in an association`
+`and who desires to install an electric vehicle charging`
+`station must obtain approval to do so through the tenant's`
+`landlord or owner and in accordance with those provisions of`
+`this Act applicable to associations.`
+```
+
+```
+
+Effective Date: 1/1/2024

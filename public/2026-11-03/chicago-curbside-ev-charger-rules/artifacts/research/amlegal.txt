@@ -1,0 +1,52 @@
+Title: 14X-7-705.3 Extension cords.
+
+URL Source: https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2676187
+
+Markdown Content:
+## CHAPTER 14X-7 ELECTRICAL REQUIREMENTS
+
+Every habitable space must contain not less than two separate and remote receptacle outlets. Every laundry area must contain not less than one grounding-type receptacle or a receptacle with a ground fault circuit interrupter. Every bathroom and toilet room that contains a lavatory must contain not less than one receptacle. All receptacle outlets must have the appropriate faceplate cover for the location.
+
+Every public corridor, interior stairway, exterior exit stairway, toilet room, kitchen, bathroom, laundry room, boiler room, and furnace room must contain not less than one electric luminaire.
+
+(Amend Coun. J. 2-19-20, p. 14473, Art. V, § 37)
+
+In public corridors, interior stairways, and exterior exit stairways, the luminaires must provide the minimum level of illuminance required by Section [14X-5-505.6](https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2675911#JD_14X-5-505.6).
+
+(Amend Coun. J. 2-19-20, p. 14473, Art. V, § 37)
+
+Electrical motors must be maintained free from excessive accumulations of oil, dirt, waste and debris.
+
+An emergency electrical system must be provided in accordance with Article 700 of the Chicago Electrical Code.
+
+Known electrical hazards must be abated. Electrical wiring, devices, appliances, and other equipment that is modified or damaged and constitutes an electrical shock or fire hazard may not be used.
+
+Use of multiplug adapters, such as cube adapters, unfused plug strips, and any similar device not complying with the Chicago Electrical Code, is prohibited.
+
+Relocatable power taps must be of the polarized or grounded type, equipped with overcurrent protection, and must be listed in accordance with UL 1363.
+
+Relocatable power taps may only be directly connected to a permanently installed receptacle.
+
+Relocatable power tap cords may not extend through walls, ceilings, floors, under doors or floor coverings, or be subject to environmental or physical damage.
+
+Extension cords and flexible cords may not be used as a substitute for permanent wiring and must be listed and labeled in accordance with UL 817. Extension cords and flexible cords may not be affixed to structures, extended through walls, ceilings, or floors, or under doors or floor coverings, nor shall such cords be subject to environmental damage or physical impact. Extension cords may only be used with portable appliances. Extension cords marked for indoor use may not be used outdoors.
+
+Extension cords may only be plugged directly into a permanent receptacle and shall serve only one portable appliance.
+
+The ampacity of the extension cords must be not less than the rated capacity of the portable appliance supplied by the cord.
+
+Extension cords must be maintained in good condition without splices, deterioration, or damage.
+
+(Amend Coun. J. 2-19-20, p. 14473, Art. V, § 38)
+
+Extension cords must be grounded where serving grounded portable appliances.
+
+Where not prohibited by other sections of the Chicago Construction Codes, portable, electric space heaters may be used in all occupancies in accordance with Sections [14X-7-705.4.1](https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2676200#JD_14X-7-705.4.1) through [14X-7-705.4.4](https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2676206#JD_14X-7-705.4.4).
+
+Only listed and labeled portable, electric space heasters may be used.
+
+Portable, electric space heaters may only be plugged directly into a permanent receptacle.
+
+Portable, electric space heaters may not be plugged into extension cords.
+
+Portable, electric space heaters may not be operated within 3 feet (914 mm) of any combustible materials. Portable, electric space heaters may only be operated in locations for which they are listed.

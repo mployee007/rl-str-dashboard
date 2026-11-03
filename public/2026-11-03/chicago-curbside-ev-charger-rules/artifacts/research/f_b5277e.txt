@@ -1,0 +1,68 @@
+Title: Requirements for Electric Vehicle Readiness
+
+URL Source: https://www.chicago.gov/city/en/depts/bldgs/supp_info/chicago-energy-conservation-code/EVSE-2023.html
+
+Markdown Content:
+Language
+
+In 2020, the City Council amended the Chicago Zoning Ordinance to require that certain new off-street parking spaces be built with electrical infrastructure facilitating the installation of electric vehicle supply equipment (EVSE) either at the time of construction or in the future. These requirements apply to projects where the first building permit application for the project is started on or after November 1, 2020. In alignment with the Illinois Electric Vehicle Charging Act (Public Act 103-53 or 765 ILCS 1085/), the City Council amended these requirements in 2023 for projects where the first building permit application is started on or after November 1, 2023.
+
+The minimum quantity and configuration of EVSE-ready and EVSE-installed parking spaces is verified as part of the zoning review of a building permit application.
+
+Electrical requirements related to EVSE-ready and EVSE-installed parking spaces are verified as part of the electrical review of a building permit application and during electrical inspections of permitted work.
+
+### What are EVSE-ready spaces and EVSE-installed spaces?
+
+The Chicago Zoning Ordinance defines these terms:
+
+**EVSE-ready space.** A parking space having _electric vehicle supply equipment infrastructure_ installed so as to provide conduit and wiring for a 40-ampere, 208- or 240-volt dedicated branch circuit terminating at a receptacle or junction box within 3 feet of the parking space. For two adjacent parking spaces, a single branch circuit is allowed. The electrical panel directory and receptacle or junction box must be permanently marked “For future electric vehicle supply equipment.”
+
+**EVSE-installed space.**A parking space having _electric vehicle supply equipment infrastructure_ installed so as to be an _EVSE-ready space_ and with _electric vehicle supply equipment_ installed within 3 feet of the parking space.
+
+**Electric vehicle supply equipment or EVSE.**The equipment as defined by the [2017] National Electrical Code and adopted in Section 14E-6-625 of the Municipal Code of Chicago [Article 625 of the _Chicago Electrical Code_], that includes the conductors, including the ungrounded, grounded, and equipment grounding conductors, and the electric vehicle connectors, attachment plugs, and all other fittings, devices, power outlets, or apparatus installed specifically for the purpose of transferring energy between premises wiring and an _electric vehicle_.
+
+**Electric vehicle supply equipment infrastructure.**The electrical infrastructure necessary to support installation of _electric vehicle supply equipment_, including, but not limited to, the design load placed on electrical panels and service equipment to support the additional electrical demand, the panel capacity to support additional feeder/branch circuits, raceways, and wiring.
+
+### How many EVSE-ready spaces are required?
+
+_This section describes requirements for projects where the first building permit application for the project is started (deposit fee paid) on or after November 1, 2023. Different requirements may apply to projects where the first building permit application for the project was started between November 1, 2020 and October 31, 2023._
+
+*   100 percent of off-street parking spaces serving dwelling units intended for household living (as that term is defined in the Chicago Zoning Ordinance) must be EVSE-ready or EVSE-installed 
+    *   For projects that qualify as an affordable housing development, this requirement may be reduced through the administrative adjustment process
+    *   "Affordable housing development" means (i) any housing that is subsidized by the federal or State government or (ii) any housing in which at least 20% of the dwelling units are subject to covenants or restrictions that require that the dwelling units to be sold or rented at prices that preserve them as affordable housing for a period of at least 10 years. (Electric Vehicle Charging Act, 765 ILCS 1085/15)
+
+*   20 percent of accessory parking spaces serving nonresidential uses and 20 percent of non-accessory parking spaces must be EVSE-ready or EVSE-installed
+
+*   20 percent of off-street parking spaces must be EVSE-ready or EVSE-installed
+
+*   No requirements
+
+*   20 percent of parking spaces must be EVSE-ready or EVSE-installed
+
+*   No requirements
+
+*   No requirements
+
+*   20 percent of parking spaces must be EVSE-ready or EVSE-installed
+
+*   No requirements
+
+*   No requirements
+
+### Are EVSE-ready and EVSE-installed parking spaces required to be accessible for people with disabilities?
+
+Yes at least one EVSE-ready or EVSE-installed space must be accessible for people with disabilities if other provisions of the Zoning Ordinance or Building Code require accessible parking spaces to be provided.
+
+Section 17-10-1011-C of the Zoning Ordinance specifies the minimum number of EVSE-ready or EVSE-installed spaces that must be accessible.
+
+Accessible EVSE-installed parking spaces can be used by automobiles other than electric vehicles provided such automobile bears an appropriate handicapped parking decal or device.
+
+### How do I make EVSE accessible for People with Disabilities?
+
+The U.S. Access Board, a federal agency that issues accessibility guidelines under the Americans with Disabilities Act(ADA) and other laws, has published recommendations for making electric vehicle charging stations accessible to and usable by people with disabilities:[https://www.access-board.gov/ta/tad/ev/](https://www.access-board.gov/ta/tad/ev/)
+
+### Am I allowed to use an EVSE energy management system?
+
+Yes.The required electrical capacity to serve either EVSE-installed spaces or EVSE-ready spaces in a parking area with EVSE-installed spaces connected to an EVSE energy management system may be determined based on the use of an EVSE energy management system that is designed by an Illinois-licensed professional engineer and is capable of providing at least 12 kWh to each space over an 8-hour period when all spaces are occupied by charging electric vehicles(at least 1.5 kW average power delivered).
+
+The required electrical capacity to serve EVSE-ready spaces cannot be reduced based on the possible future installation of an EVSE energy management system.

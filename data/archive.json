@@ -1,8 +1,187 @@
 {
-  "generated_at": "2026-11-03T07:07:23.541709+00:00",
+  "generated_at": "2026-11-03T07:23:23.582882+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 105,
+  "session_count": 106,
   "sessions": [
+    {
+      "id": "2026-11-03/chicago-curbside-ev-charger-rules",
+      "date": "2026-11-03",
+      "title": "chicago-curbside-ev-charger-rules",
+      "summary": "**Session:** 2026-11-03 **Question:** Can you install a Level 1 or Level 2 EV charger outside at the curb in residential Chicago? **Answer:** No at the curb. Yes on your own property, with a permit. **1. The curb is not a permitting problem.** The sidewalk, parkway, and curb are",
+      "updated_at": "2026-11-03T07:20:35.354461",
+      "file_count": 24,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-03/chicago-curbside-ev-charger-rules",
+      "status": "completed",
+      "standard_previews": {
+        "decisions.md": "# Decisions\n\n## D1 \u2014 Check whether the law changed before answering from memory\n**Decision:** Search for a current Chicago curbside program rather than answering from general knowledge that \"cities don't allow private curb chargers.\"\n**Why:** General knowledge on this was six months stale. A curbside pilot ordinance was introduced in May 2026 and *passed* in July 2026. Answering from memory would have missed the single most relevant fact in the response.\n\n## D2 \u2014 Verify the ordinance status at the City Clerk, not at a summary site\n**Decision:** Go to chicityclerkelms.chicago.gov for the legislative record after councilmatic showed only \"Introduced\" and \"Referred.\"\n**Why:** Councilmatic's history was incomplete \u2014 it showed the May introduction but not the July passage. The Clerk record showed `Status 90-Final / Sub Status Passed / Final Action Date 7/15/2026`. A secondary source would have had me tell the user the pilot doesn't exist yet. That would have been flatly wrong.\n\n## D3 \u2014 Read the ordinance text visually rather than trusting the title\n**Decision:** Download the enrolled PDF, discover it was a scanned image with no text layer, render at 140 dpi, and read it with vision.\n**Why:** The title \u2014 \"establishing Electric Vehicle Curbside Charging Pilot Program\" \u2014 reads like it might create a resident-application pathway. Only the definition (\"owned by the City of Chicago and operated for public use\") settles that it doesn't. The title alone would have produced the wrong answer. This is the crux of the whole response and it was worth the extra calls.\n\n## D4 \u2014 Lead with the extension-cord violation\n**Decision:** Dedicate a full section to why running a cord to the curb doesn't work, with the specific code section.\n**Why:** It's the workaround essentially every Chicago renter or rowhouse owner attempts, and it's the one thing that could get them fined or sued. Giving them the actual code citation is what makes the advice stick \u2014 \"it's not allowed\" is ignorable; \"\u00a7 14X-7-705.3 prohibits cords for anything but portable appliances, and a car isn't one\" is not.\n\n## D5 \u2014 Include the right-to-charge law even though it wasn't asked\n**Decision:** Cover the Illinois EV Charging Act protections for renters and condo owners.\n**Why:** The user's actual problem is \"I want to charge at home and I may not control the parking.\" The curb is the wrong solution to that problem, and the right-to-charge statute is the right one. Answering only the literal question would have been technically correct and practically useless.\n\n## D6 \u2014 Flag the federal 30C credit as probably dead\n**Decision:** Present the 30C credit as \"verify, likely expired\" rather than repeating Chicago.gov's still-live link.\n**Why:** Chicago's page hasn't been updated for the 2025 tax legislation that terminated the credit for property placed in service after June 30, 2026. Repeating it as available would set the user up to budget around money they won't get. Better to flag the conflict than to pick the more convenient answer.\n",
+        "notes.md": "# Notes \u2014 research trail\n\n## Search backend still broken\n`web_search` / `web_extract` remain down (`search.firecrawl` unavailable, lazy installs disabled, system venv not writable). All research this session ran through `curl https://r.jina.ai/<url>` as a reader proxy, plus direct fetches to City Clerk and American Legal Publishing. Worked reliably at HTTP 200 for every target except a councilmatic PDF proxy link.\n\n## The two-step that mattered\n1. **Councilmatic** showed the ordinance with history entries only for 5/20/2026 (Introduced, Referred). Easy to conclude \"pending.\"\n2. **City Clerk record** showed three actions including `7/15/2026 City Council Passed`. The councilmatic page was stale.\n\nLesson: for Chicago legislation, the City Clerk ELS record is the authority on status. Councilmatic is better for reading and worse for currency.\n\n## The document that decided it\nThe enrolled ordinance PDF is a **scanned image** \u2014 205 KB, 3 pages, 2 extractable characters. Rendered at 140 dpi and read with the vision tool. The operative language:\n\n> \"The term 'electric vehicle charging station' means any facility or equipment that is owned by the City of Chicago and operated for public use to charge a battery or other energy storage device of an electric vehicle.\"\n\nThat definition is the whole answer. The program is City-owned public charging, not a residential permitting scheme.\n\n## Chicago's electrical code on cords \u2014 full text worth knowing\n\u00a7 14X-7-705.3 prohibits, among other things:\n- using extension cords as a substitute for permanent wiring\n- affixing cords to structures\n- extending cords through walls, ceilings, floors, or under doors/floor coverings\n- subjecting cords to environmental damage or physical impact\n- **using indoor-rated cords outdoors**\n- using cords for anything other than **portable appliances**\n- plugging into anything but a permanent receptacle, one appliance per cord\n\nA car is not a portable appliance. That line alone kills the porch-outlet-to-curb plan.\n\n## Numbers worth keeping\n- Unpermitted charger fine: **200% of initial permit fee + $200\u2013500/day**\n- City service targets: permit issuance **5 business days**, inspection **10 business days**\n- Chicago EVSE-ready definition: **40A, 208/240V, dedicated branch circuit terminating within 3 ft of the space**\n- 100% of off-street spaces serving dwelling units must be EVSE-ready for permits filed on/after **Nov 1, 2023**\n- Curbside pilot sunset: **June 30, 2030**\n- ComEd curbside pilot municipalities: **Dixon, Oswego, Sandwich**\n\n## Open items\n- Federal 30C status is a genuine conflict between Chicago.gov (still linking it) and the 2025 tax legislation (terminated for property placed in service after 6/30/2026). Flagged rather than resolved.\n- Chicago permit fee is scope-dependent \u2014 not quantifiable without the City's fee calculator and actual project details.\n- Curb-cut feasibility is block-by-block and alderman-dependent.\n",
+        "run-log.md": "# Run Log \u2014 2026-11-03\n\n| # | Action | Result |\n|---|---|---|\n| 1 | Created session output dir | `outputs/2026-11-03/chicago-curbside-ev-charger-rules/` |\n| 2 | 4x DDG searches via r.jina.ai proxy (Chicago EV permit, curbside pilot, Illinois right-to-charge, extension cord code) | **SUCCESS** \u2014 HTTP 200, 12\u201314 KB each |\n| 3 | Extracted result URLs from captures | 40 unique URLs including chicago.gov, ComEd, ILGA, amlegal |\n| 4 | Fetched councilmatic O2026-0025394 record | SUCCESS \u2014 showed Introduced/Referred only (later proved incomplete) |\n| 5 | Fetched Chicago Dept of Buildings EVSE page | SUCCESS \u2014 EVSE-ready definition, 100% residential requirement |\n| 6 | Fetched Chicago.gov Drive Electric Chicago | SUCCESS \u2014 permit/fine structure, licensed contractor rule, tool targets |\n| 7 | Fetched ComEd curbside pilot + ILGA PA 103-0053 | SUCCESS \u2014 ComEd municipalities; IL right-to-charge text |\n| 8 | Fetched amlegal \u00a7 14X-7-705.3 | SUCCESS \u2014 full extension cord prohibitions |\n| 9 | Ordinance PDF via councilmatic proxy | **FAILED** \u2014 293 bytes, proxy returned error page |\n| 10 | Fetched City Clerk ELS matter page | **SUCCESS \u2014 decisive.** Status 90-Final / Passed / 7/15/2026 |\n| 11 | Direct download of ordinance PDF from Azure blob | SUCCESS \u2014 205,070 bytes, 3 pages |\n| 12 | Text extraction from ordinance PDF | **FAILED** \u2014 scanned image, 2 extractable chars |\n| 13 | Rendered 3 pages at 140 dpi with pymupdf | SUCCESS |\n| 14 | Vision read of pages 1 and 2 | SUCCESS \u2014 verbatim text obtained, including the \"owned by the City of Chicago and operated for public use\" definition and the 6/30/2030 sunset |\n| 15 | Cross-checked IL act tenant/association provisions | SUCCESS \u2014 can't unreasonably restrict, owner pays/owns, insurance conditions |\n| 16 | Wrote brief, summary, decisions, notes, sources.json | Complete |\n\n## Final state\n\n- **Deliverable:** `chicago-curbside-ev-charger-rules.md` \u2014 verdict-first brief with location matrix, 2026 pilot analysis, code citations, and practical alternatives\n- **Sources:** 6 primary/secondary, all verified, 4 flags documented\n- **Evidence retained:** ordinance PDF + page renders, City Clerk record, code text, in `artifacts/research/`\n\n## Unresolved\n- Web search backend still requires an environment fix.\n- Federal 30C credit status flagged as conflicting, not resolved.\n",
+        "sources.json": "{\n  \"generated\": \"2026-11-03\",\n  \"question\": \"Can you install a Level 1 or Level 2 EV charger outside at the curb in residential Chicago?\",\n  \"verdict\": \"No for private residents at the curb (public way); yes on private property with a City electrical permit and licensed contractor.\",\n  \"sources\": [\n    {\n      \"id\": \"chicago-ordinance-o2026-0025394\",\n      \"title\": \"Amendment of Municipal Code Chapter 9-64 establishing Electric Vehicle Curbside Charging Pilot Program\",\n      \"url\": \"https://chicityclerkelms.chicago.gov/Matter/?matterId=FF451379-4D54-F111-BEC6-001DD80B0E39\",\n      \"document_url\": \"https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/7183ff23-bbe2-4282-92a2-963aff526341.pdf\",\n      \"type\": \"primary-official\",\n      \"verified\": true,\n      \"access_method\": \"City Clerk legislative record fetched for status; ordinance PDF downloaded (scanned image, 3 pages) and read visually after rendering with pymupdf\",\n      \"what_it_supported\": \"Ordinance O2026-0025394 passed City Council 7/15/2026 (recommended to pass by Committee on Transportation and Public Way 7/8/2026). Inserts Municipal Code 9-64-220 (unauthorized use of EV-reserved spaces; fines under 9-100-020, immediate tow on public way) and 9-64-225 (Electric Vehicle Public Charging Pilot Program). 9-64-225 defines an eligible charging station as equipment 'owned by the City of Chicago and operated for public use', authorizes the CDOT Commissioner to install/operate/maintain or contract for curbside stations on the public way and in public parking lots, allows the Traffic Compliance Administrator to set variable fees, and sunsets the program June 30, 2030.\",\n      \"notes\": \"The 'owned by the City of Chicago and operated for public use' definition is the decisive language: no resident-application pathway exists in the ordinance.\"\n    },\n    {\n      \"id\": \"chicago-electrical-code-14X-7-705.3\",\n      \"title\": \"Chicago Electrical Code \u00a7 14X-7-705.3 Extension cords\",\n      \"url\": \"https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2676187\",\n      \"type\": \"primary-official\",\n      \"verified\": true,\n      \"access_method\": \"Full section text retrieved via r.jina.ai reader proxy, HTTP 200\",\n      \"what_it_supported\": \"Extension and flexible cords may not be used as a substitute for permanent wiring; may not be affixed to structures; may not be subject to environmental damage or physical impact; extension cords marked for indoor use may not be used outdoors; extension cords may only be used with portable appliances and may only be plugged directly into a permanent receptacle serving one portable appliance. Relocatable power taps may not extend through walls/floors/doors. (Amend Coun. J. 2-19-20, p. 14473, Art. V, \u00a7 38)\",\n      \"notes\": \"Fatal to the extension-cord-to-the-curb workaround on at least four separate grounds.\"\n    },\n    {\n      \"id\": \"chicago-dept-buildings-evse\",\n      \"title\": \"Requirements for Electric Vehicle Readiness \u2014 EVSE-ready and EVSE-installed spaces\",\n      \"url\": \"https://www.chicago.gov/city/en/depts/bldgs/supp_info/chicago-energy-conservation-code/EVSE-2023.html\",\n      \"type\": \"primary-official\",\n      \"verified\": true,\n      \"access_method\": \"Full page retrieved via proxy, HTTP 200\",\n      \"what_it_supported\": \"Chicago Zoning Ordinance definitions: EVSE-ready space requires conduit and wiring for a 40-ampere, 208- or 240-volt dedicated branch circuit terminating at a receptacle or junction box within 3 feet of the parking space. For projects with first building permit application on/after Nov 1, 2023, 100% of off-street spaces serving dwelling units must be EVSE-ready or EVSE-installed. Aligned with the Illinois Electric Vehicle Charging Act (765 ILCS 1085). EVSE energy management systems may reduce required capacity for EVSE-installed spaces but not EVSE-ready spaces.\",\n      \"notes\": \"This is the technical standard to build to, and the reason newer buildings already have the infrastructure.\"\n    },\n    {\n      \"id\": \"chicago-drive-electric\",\n      \"title\": \"Drive Electric Chicago \u2014 permitting, rebates, and CDOT framework\",\n      \"url\": \"https://www.chicago.gov/city/en/progs/env/drive-electric-chicago.html\",\n      \"type\": \"primary-official\",\n      \"verified\": true,\n      \"access_method\": \"Full page retrieved via proxy, HTTP 200 (29 KB)\",\n      \"what_it_supported\": \"EV charger installation and maintenance must be conducted by a licensed contractor; non-permitted or non-compliant chargers may be fined 200% of the initial permit fee plus $200-500 per day of violation. City targets permit issuance within 5 business days of a complete application and inspections within 10 business days of a request. CDOT is developing a framework plan that includes piloting curbside charging. Lists ComEd rebates, Illinois EPA EV rebate cycles, and the federal 30C credit (30%, up to $1,000).\",\n      \"notes\": \"The federal 30C reference on this page is likely stale \u2014 see flag in the deliverable.\"\n    },\n    \n\n[truncated]",
+        "summary.md": "# Summary \u2014 Chicago Curbside EV Charger Rules\n\n**Session:** 2026-11-03\n**Question:** Can you install a Level 1 or Level 2 EV charger outside at the curb in residential Chicago?\n**Answer:** No at the curb. Yes on your own property, with a permit.\n\n## The three findings that drive the answer\n\n**1. The curb is not a permitting problem.** The sidewalk, parkway, and curb are City right-of-way. Chicago issues public-way permits for awnings, signs, caf\u00e9 seating, and construction \u2014 not for privately owned EV charging equipment. There is no application to file.\n\n**2. Chicago passed a curbside charging program in 2026, but it is not for residents.** Ordinance O2026-0025394 passed City Council on 7/15/2026, inserting Municipal Code \u00a7 9-64-225. It authorizes the CDOT Commissioner to install and operate curbside chargers \u2014 but defines an eligible station as equipment *\"owned by the City of Chicago and operated for public use.\"* The ordinance contains no resident-application pathway and sunsets on June 30, 2030. This is the City building public infrastructure, not homeowners building private chargers.\n\n**3. The extension-cord workaround is a code violation, not a gray area.** Chicago Electrical Code \u00a7 14X-7-705.3 prohibits using extension cords as a substitute for permanent wiring, affixing them to structures, subjecting them to environmental damage, using indoor-rated cords outdoors, and using cords for anything but portable appliances. A car charging overnight across a sidewalk from a front porch outlet fails on at least four of those at once \u2014 before you get to sidewalk obstruction, ADA, and liability.\n\n## What actually works for a Chicago resident without a driveway\n\n| Path | Practicality |\n|---|---|\n| Rent/find off-street parking with an outlet | Best. A garage space solves the problem entirely. |\n| Illinois right-to-charge (renters) | Strong. Statutory right to install with written landlord approval; landlord cannot unreasonably deny. |\n| Condo/HOA installation | Strong. Association cannot unreasonably restrict; owner pays, owns, and insures. |\n| Curb cut / new parking pad | Possible, expensive, aldermanic approval, restricted on many residential blocks. |\n| City curbside pilot | Advocate only. 311 and your alderman. No application exists. |\n| ComEd curbside pilot | Not applicable \u2014 Dixon, Oswego, Sandwich only. |\n\n## Practical spec to build to\n\nChicago defines an EVSE-ready space as having conduit and wiring for a **40-amp, 208/240V dedicated branch circuit terminating within 3 feet of the parking space.** Build to that even if installing Level 1 now \u2014 it's the difference between a $300 job and a $3,000 one later.\n\n## Consequences of doing it unpermitted\n\nFine of **200% of the initial permit fee**, plus **$200\u2013500 per day** the property is in violation.\n\n## Files\n\n- `chicago-curbside-ev-charger-rules.md` \u2014 the full brief\n- `sources.json` \u2014 six primary sources, all verified, with flags on the two uncertain items\n- `artifacts/research/` \u2014 raw source captures and the ordinance PDF plus page renders\n"
+      },
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "amlegal.txt",
+            "rel_path": "artifacts/research/amlegal.txt",
+            "size": 3937,
+            "updated_at": "2026-11-03T07:19:23.873574",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/amlegal.txt"
+          },
+          {
+            "name": "clerk.txt",
+            "rel_path": "artifacts/research/clerk.txt",
+            "size": 2885,
+            "updated_at": "2026-11-03T07:19:12.059593",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/clerk.txt"
+          },
+          {
+            "name": "f_131016.txt",
+            "rel_path": "artifacts/research/f_131016.txt",
+            "size": 29222,
+            "updated_at": "2026-11-03T07:18:49.759630",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/f_131016.txt"
+          },
+          {
+            "name": "f_24bedd.txt",
+            "rel_path": "artifacts/research/f_24bedd.txt",
+            "size": 1634,
+            "updated_at": "2026-11-03T07:18:43.490640",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/f_24bedd.txt"
+          },
+          {
+            "name": "f_b5277e.txt",
+            "rel_path": "artifacts/research/f_b5277e.txt",
+            "size": 6431,
+            "updated_at": "2026-11-03T07:18:45.693637",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/f_b5277e.txt"
+          },
+          {
+            "name": "g_0af9d3.txt",
+            "rel_path": "artifacts/research/g_0af9d3.txt",
+            "size": 7746,
+            "updated_at": "2026-11-03T07:18:52.298626",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/g_0af9d3.txt"
+          },
+          {
+            "name": "g_360514.txt",
+            "rel_path": "artifacts/research/g_360514.txt",
+            "size": 27046,
+            "updated_at": "2026-11-03T07:18:54.929621",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/g_360514.txt"
+          },
+          {
+            "name": "get_ordinance.py",
+            "rel_path": "artifacts/research/get_ordinance.py",
+            "size": 688,
+            "updated_at": "2026-11-03T07:19:27.868568",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "ord.txt",
+            "rel_path": "artifacts/research/ord.txt",
+            "size": 293,
+            "updated_at": "2026-11-03T07:19:07.488601",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/ord.txt"
+          },
+          {
+            "name": "ord_p1.png",
+            "rel_path": "artifacts/research/ord_p1.png",
+            "size": 610217,
+            "updated_at": "2026-11-03T07:19:35.110556",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "ord_p2.png",
+            "rel_path": "artifacts/research/ord_p2.png",
+            "size": 465487,
+            "updated_at": "2026-11-03T07:19:35.200556",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "ord_p3.png",
+            "rel_path": "artifacts/research/ord_p3.png",
+            "size": 272599,
+            "updated_at": "2026-11-03T07:19:35.272556",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "ordinance.pdf",
+            "rel_path": "artifacts/research/ordinance.pdf",
+            "size": 205070,
+            "updated_at": "2026-11-03T07:19:30.312564",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "ordinance.txt",
+            "rel_path": "artifacts/research/ordinance.txt",
+            "size": 2,
+            "updated_at": "2026-11-03T07:19:31.121562",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/ordinance.txt"
+          },
+          {
+            "name": "q_Chicago+EV+charger+permit+requirements+residential+installation.txt",
+            "rel_path": "artifacts/research/q_Chicago+EV+charger+permit+requirements+residential+installation.txt",
+            "size": 12544,
+            "updated_at": "2026-11-03T07:15:44.313961",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/q_Chicago+EV+charger+permit+requirements+residential+installation.txt"
+          },
+          {
+            "name": "q_Chicago+curbside+EV+charging+pilot+program+right+of+way.txt",
+            "rel_path": "artifacts/research/q_Chicago+curbside+EV+charging+pilot+program+right+of+way.txt",
+            "size": 13716,
+            "updated_at": "2026-11-03T07:15:46.715956",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/q_Chicago+curbside+EV+charging+pilot+program+right+of+way.txt"
+          },
+          {
+            "name": "q_Chicago+municipal+code+extension+cord+across+sidewalk+prohibited.txt",
+            "rel_path": "artifacts/research/q_Chicago+municipal+code+extension+cord+across+sidewalk+prohibited.txt",
+            "size": 13891,
+            "updated_at": "2026-11-03T07:15:52.211946",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/q_Chicago+municipal+code+extension+cord+across+sidewalk+prohibited.txt"
+          },
+          {
+            "name": "q_Illinois+EV+charging+act+right+to+charge+renters+law.txt",
+            "rel_path": "artifacts/research/q_Illinois+EV+charging+act+right+to+charge+renters+law.txt",
+            "size": 13715,
+            "updated_at": "2026-11-03T07:15:49.849951",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/research/q_Illinois+EV+charging+act+right+to+charge+renters+law.txt"
+          },
+          {
+            "name": "chicago-curbside-ev-charger-rules.md",
+            "rel_path": "chicago-curbside-ev-charger-rules.md",
+            "size": 8349,
+            "updated_at": "2026-11-03T07:20:09.691501",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/chicago-curbside-ev-charger-rules.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-03/tesla-model-y-used-inspection-checklist",
       "date": "2026-11-03",

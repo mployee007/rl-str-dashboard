@@ -1,0 +1,33 @@
+Title: Ordinance O2026-0025394 - Chicago Councilmatic
+
+URL Source: https://chicago.councilmatic.org/legislation/o2026-0025394/
+
+Markdown Content:
+Amendment of Municipal Code Chapter 9-64 establishing Electric Vehicle Curbside Charging Pilot Program
+
+### Sponsors
+
+|  | Sponsor | Ward |
+| --- | --- | --- |
+| ![Image 1: Johnson, Brandon](https://chicago.councilmatic.org/static/images/manual-headshots/johnson-brandon.jpg) | [Johnson, Brandon](https://chicago.councilmatic.org/person/johnson-brandon-e5293d9f2ef3/)Primary Sponsor |  |
+
+### History
+
+| Date | Legislative body | Action |
+| --- | --- | --- |
+| Date 2026-05-20 | Legislative body[Chicago City Council](https://chicago.councilmatic.org/committee/chicago-city-council-0c4bbe0d96e7/) | Action Referred |
+| Date 2026-05-20 | Legislative body[Chicago City Council](https://chicago.councilmatic.org/committee/chicago-city-council-0c4bbe0d96e7/) | Action Introduced |
+
+### Legislation text
+
+[Download PDF](https://proxy.councilmatic.org/?url=https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/7183ff23-bbe2-4282-92a2-963aff526341.pdf)
+
+### Additional Documents
+
+*   [O2026-0025394 Mayoral Letter.pdf](https://proxy.councilmatic.org/?url=https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/a3cb62bb-43ae-4bfd-b10d-cdce747ce58d.pdf)
+
+### Tools
+
+[RSS updates for this legislation](https://chicago.councilmatic.org/legislation/o2026-0025394/rss/ "RSS feed for Legislation Ordinance O2026-0025394")
+
+[View on the Chicago City Clerk website](https://chicityclerkelms.chicago.gov/Matter/?matterId=FF451379-4D54-F111-BEC6-001DD80B0E39)
