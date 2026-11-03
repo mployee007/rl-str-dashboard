@@ -1,0 +1,47 @@
+Title: Pole-Mounted Charging Pilot - ComEd Customer Innovation
+
+URL Source: https://innovate.comed.com/be-pilots/pole-mounted-charging-pilot/
+
+Published Time: Tue, 03 Nov 2026 07:33:18 GMT
+
+Markdown Content:
+In support of ComEd’s transportation electrification and grid reliability efforts, this pilot will evaluate the feasibility and performance of pole-mounted EV charging by assessing installation and maintenance costs, charger utilization and reliability, user experience and adoption barriers, and the impacts of charging activity on electric system load and metering accuracy.
+
+![Image 1](https://innovate.comed.com/wp-content/uploads/2026/08/Picture2.png)
+
+## Objectives
+
+This pilot represents ComEd’s next phase of curbside charging exploration, building upon BE Plan 1 Curbside Charging pilot – for more information on Plan 1 work see[**that pilot page**](https://innovate.comed.com/beneficial-electrification-pilots/curbside-charging/)**.**
+
+In lieu of traditional ground-mounted Level 2 chargers, this pilot field-tests deployment of pole-mounted curbside chargers that are less expensive and more rapidly deployable than traditional ground-mounted chargers. The pilot aims to add charging in neighborhoods and at sites, including multi-unit dwellings (MUDs), where traditional charging stations are unavailable or impractical. ComEd is working with Voltpost Air as a vendor to implement the pilot.
+
+The pilot has three objectives:
+
+**Objective 1:**Evaluate the cost and time–and savings in both–associated with pole-mounted EV charging installation and maintenance across municipal light poles, ComEd-owned utility poles and MUD use cases.
+
+**Objective 2:** Assess charger utilization and uptime across various geographic contexts, such as urban and suburban/residential areas, commercial districts, and transit hubs, including curbside and parking lot locations, as well as an Equity Investment Eligible Communities (EIECs) MUD location. As importantly, ComEd aims to assess the motivations and barriers of those using the chargers.
+
+**Objective 3:**Compare the performance of ComEd’s utility-grade meter and the Voltpost Air product’s internal digital meter. Assess peak load impacts of charging at different times.
+
+### Vendors and Schedule
+
+**BE Pilot****Lead Vendor****Evaluator****Award Date****Pilot In-Field Start Date****Pilot In-Field End Date**
+Pole-Mounted Charging Voltpost Air Apex Analytics May 2026 December 2026 December 2027
+
+### Participants
+
+ComEd and its vendors will collaborate with customers to identify charging station locations across a variety of settings, including urban neighborhoods, residential communities, commercial districts, transit hubs, and parking facilities, with a focus on serving EIECs where possible. Chargers will be installed on a mixture of poles owned by municipalities, ComEd and a private owner (specifically the owner of a MUD).
+
+### Submissions Due
+
+### Progress
+
+**Target completion date:** December 2027
+
+**Current stage:** Implementation planning
+
+**Latest progress:** Voltpost is currently coordinating with ComEd to establish a test charging site on ComEd property to demonstrate the technology and establish the installation process. Site identification is also beginning for public test sites.
+
+### Outcomes
+
+Project is still in progress; check back for outcomes later in the project!

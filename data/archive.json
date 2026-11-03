@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T07:23:23.582882+00:00",
+  "generated_at": "2026-11-03T07:39:23.645463+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 106,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-11-03",
       "title": "chicago-curbside-ev-charger-rules",
       "summary": "**Session:** 2026-11-03 **Question:** Can you install a Level 1 or Level 2 EV charger outside at the curb in residential Chicago? **Answer:** No at the curb. Yes on your own property, with a permit. **1. The curb is not a permitting problem.** The sidewalk, parkway, and curb are",
-      "updated_at": "2026-11-03T07:20:35.354461",
-      "file_count": 24,
+      "updated_at": "2026-11-03T07:36:48.523227",
+      "file_count": 36,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -27,6 +27,102 @@
         "csv": [],
         "image": [],
         "other": [
+          {
+            "name": "plug.txt",
+            "rel_path": "artifacts/60653/plug.txt",
+            "size": 162,
+            "updated_at": "2026-11-03T07:36:48.523227",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/plug.txt"
+          },
+          {
+            "name": "s2_Hyde+Park+University+Chicago+EV+charging+station+public.txt",
+            "rel_path": "artifacts/60653/s2_Hyde+Park+University+Chicago+EV+charging+station+public.txt",
+            "size": 11345,
+            "updated_at": "2026-11-03T07:36:30.055248",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/s2_Hyde+Park+University+Chicago+EV+charging+station+public.txt"
+          },
+          {
+            "name": "s2_Illinois+Equity+Investment+Eligible+Community+EV+charger+grants+ComEd.txt",
+            "rel_path": "artifacts/60653/s2_Illinois+Equity+Investment+Eligible+Community+EV+charger+grants+ComEd.txt",
+            "size": 13268,
+            "updated_at": "2026-11-03T07:36:32.662245",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/s2_Illinois+Equity+Investment+Eligible+Community+EV+charger+grants+ComEd.txt"
+          },
+          {
+            "name": "s_EV+charging+stations+Chicago+Bronzeville+60653.txt",
+            "rel_path": "artifacts/60653/s_EV+charging+stations+Chicago+Bronzeville+60653.txt",
+            "size": 11268,
+            "updated_at": "2026-11-03T07:36:25.007253",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/s_EV+charging+stations+Chicago+Bronzeville+60653.txt"
+          },
+          {
+            "name": "s_Tesla+Supercharger+near+Bronzeville+Hyde+Park+Chicago+south+side.txt",
+            "rel_path": "artifacts/60653/s_Tesla+Supercharger+near+Bronzeville+Hyde+Park+Chicago+south+side.txt",
+            "size": 11322,
+            "updated_at": "2026-11-03T07:36:26.852251",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/s_Tesla+Supercharger+near+Bronzeville+Hyde+Park+Chicago+south+side.txt"
+          },
+          {
+            "name": "scinfo.txt",
+            "rel_path": "artifacts/60653/scinfo.txt",
+            "size": 56217,
+            "updated_at": "2026-11-03T07:36:46.180229",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/60653/scinfo.txt"
+          },
+          {
+            "name": "pole.txt",
+            "rel_path": "artifacts/charging-options/pole.txt",
+            "size": 3374,
+            "updated_at": "2026-11-03T07:33:21.962461",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/charging-options/pole.txt"
+          },
+          {
+            "name": "s2_Chicago+monthly+parking+garage+EV+charger+overnight.txt",
+            "rel_path": "artifacts/charging-options/s2_Chicago+monthly+parking+garage+EV+charger+overnight.txt",
+            "size": 12305,
+            "updated_at": "2026-11-03T07:32:57.407490",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/charging-options/s2_Chicago+monthly+parking+garage+EV+charger+overnight.txt"
+          },
+          {
+            "name": "s2_ComEd+pole-mounted+charging+pilot+Chicago+streetlight+charger.txt",
+            "rel_path": "artifacts/charging-options/s2_ComEd+pole-mounted+charging+pilot+Chicago+streetlight+charger.txt",
+            "size": 14051,
+            "updated_at": "2026-11-03T07:32:54.666493",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/charging-options/s2_ComEd+pole-mounted+charging+pilot+Chicago+streetlight+charger.txt"
+          },
+          {
+            "name": "s_PlugShare+ChargePoint+EVgo+Chicago+residential+charging+stations.txt",
+            "rel_path": "artifacts/charging-options/s_PlugShare+ChargePoint+EVgo+Chicago+residential+charging+stations.txt",
+            "size": 11545,
+            "updated_at": "2026-11-03T07:32:50.448498",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/charging-options/s_PlugShare+ChargePoint+EVgo+Chicago+residential+charging+stations.txt"
+          },
+          {
+            "name": "s_Tesla+Supercharger+Chicago+locations+2026.txt",
+            "rel_path": "artifacts/charging-options/s_Tesla+Supercharger+Chicago+locations+2026.txt",
+            "size": 12113,
+            "updated_at": "2026-11-03T07:32:46.982502",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/charging-options/s_Tesla+Supercharger+Chicago+locations+2026.txt"
+          },
+          {
+            "name": "tesla_find.txt",
+            "rel_path": "artifacts/charging-options/tesla_find.txt",
+            "size": 386,
+            "updated_at": "2026-11-03T07:33:24.751458",
+            "previewable": true,
+            "public_href": "public/2026-11-03/chicago-curbside-ev-charger-rules/artifacts/charging-options/tesla_find.txt"
+          },
           {
             "name": "amlegal.txt",
             "rel_path": "artifacts/research/amlegal.txt",
