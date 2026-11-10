@@ -1,0 +1,39 @@
+{
+  "generated": "2026-11-03",
+  "subject": "NVIDIA Corp (NVDA) SWOT analysis",
+  "data_as_of": "2026-11-03 (latest reported quarter: Q2 FY2027, ended 2026-07-26)",
+  "key_figures": {
+    "market_cap": "~$4.31 trillion (2nd most valuable company globally)",
+    "ttm_revenue": "~$303 billion",
+    "q2_fy2027_revenue": "$96.2B (+106% YoY)",
+    "q2_fy2027_non_gaap_eps": "$2.22",
+    "fy2026_revenue": "$215.9B (+65% YoY)",
+    "fy2026_q4_revenue": "$68.1B (+73% YoY)",
+    "gaap_gross_margin": "~75%",
+    "trailing_pe": "~39x",
+    "forward_pe_fy2027": "~37x",
+    "forward_pe_fy2028": "~19x",
+    "data_center_share": "~90% of revenue"
+  },
+  "sources": [
+    {"id": "nvidia-q2-fy2027", "topic": "Latest earnings", "detail": "Q2 FY2027 (ended 2026-07-26): revenue $96.2B, +18% QoQ, +106% YoY; non-GAAP EPS $2.22 (beat by $0.13). Data center dominant."},
+    {"id": "nvidia-fy2026", "topic": "Prior fiscal year", "detail": "FY2026 (ended 2026-01-25): revenue $215.9B, +65%; Q4 $68.1B, +73% YoY."},
+    {"id": "valuation", "topic": "Market cap and multiples", "detail": "Market cap ~$4.31T (2nd most valuable). Trailing P/E ~39.07; forward P/E ~37 (FY2027E), ~19 (FY2028E). Sourced via FMP/macrotrends-derived snippets retrieved through the r.jina.ai reader proxy."},
+    {"id": "nvidia-margins", "topic": "Margins", "detail": "GAAP gross margin 75.0%, non-GAAP 75.2% (recovered from ~71-73% during Blackwell ramp)."},
+    {"id": "nvidia-roadmap", "topic": "Product cadence", "detail": "Blackwell in volume production; Rubin 2026 (336B transistors, 50 PFLOPS NVFP4); Vera Rubin NVL144 (3.3x training/inference); Rubin Ultra H2 2027; Feynman next. Annual architecture cadence."},
+    {"id": "china-export", "topic": "China / export controls", "detail": "H20 license required Apr 2025 -> $4.5B charge (Q1 FY2026) and $2.5B unshipped revenue; H200 conditional approval Dec 2025 with 25% tariff + 50% volume cap + per-shipment licenses."},
+    {"id": "competition", "topic": "Custom ASIC / AMD", "detail": "Broadcom is design partner for Google TPU, Meta MTIA, Microsoft Maia, and OpenAI custom silicon; Broadcom + Marvell ~95% of custom ASIC co-design market. AMD MI350/MI400 competing."},
+    {"id": "hyperscaler-capex", "topic": "AI capex", "detail": "Big 4 + Oracle capex ~$720-745B for 2026; Amazon ~$200-220B; Microsoft raised guidance to $125-145B citing component costs; total AI infra est. $1.2-1.3T."}
+  ],
+  "methodology_notes": [
+    "Web search / web_extract backends were unavailable (missing firecrawl dependency), so all research used the r.jina.ai reader proxy against DuckDuckGo HTML and direct pages.",
+    "Search snippets mixed articles from Nov 2025 and Nov 2026; the revenue timeline was reconciled by cross-checking 'up X% YoY' against known historical quarters. The $57B 'up 62% YoY' figure is Q3 FY2026 (Oct 2025), NOT the current quarter; the latest reported quarter is Q2 FY2027 ($96.2B).",
+    "stockanalysis.com returned a JS/cookie wall (476 bytes); NVIDIA's news site returned a consent wall; valuation figures therefore came from aggregator snippets rather than a single authoritative page, and are labeled as approximate.",
+    "Q3 FY2027 results (expected ~Nov 18-20 2026) had not been reported as of the analysis date."
+  ],
+  "limitations": [
+    "Market cap and P/E figures are point-in-time and approximate (snippet-sourced); treat as directional, not authoritative to the dollar.",
+    "Forward P/E of ~19x for FY2028 embeds consensus earnings estimates that assume continued rapid growth; the actual figure depends on earnings delivery.",
+    "This is informational analysis, not investment advice."
+  ]
+}
