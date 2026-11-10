@@ -1,8 +1,125 @@
 {
-  "generated_at": "2026-11-10T14:03:49.250732+00:00",
+  "generated_at": "2026-11-10T14:19:49.290351+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 106,
+  "session_count": 107,
   "sessions": [
+    {
+      "id": "2026-11-03/nvidia-swot",
+      "date": "2026-11-03",
+      "title": "nvidia-swot",
+      "summary": "",
+      "updated_at": "2026-11-10T14:19:35.175002",
+      "file_count": 12,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-03/nvidia-swot",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "a_NVIDIA+Blackwell+Rubin+roadmap+2026+GB300.txt",
+            "rel_path": "artifacts/research/a_NVIDIA+Blackwell+Rubin+roadmap+2026+GB300.txt",
+            "size": 13865,
+            "updated_at": "2026-11-10T14:16:08.035060",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/a_NVIDIA+Blackwell+Rubin+roadmap+2026+GB300.txt"
+          },
+          {
+            "name": "a_NVIDIA+earnings+revenue+Q3+FY2027+data+center.txt",
+            "rel_path": "artifacts/research/a_NVIDIA+earnings+revenue+Q3+FY2027+data+center.txt",
+            "size": 14459,
+            "updated_at": "2026-11-10T14:16:03.731061",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/a_NVIDIA+earnings+revenue+Q3+FY2027+data+center.txt"
+          },
+          {
+            "name": "b_AI+data+center+capex+2026+2027+hyperscaler+spending.txt",
+            "rel_path": "artifacts/research/b_AI+data+center+capex+2026+2027+hyperscaler+spending.txt",
+            "size": 13205,
+            "updated_at": "2026-11-10T14:16:16.190058",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/b_AI+data+center+capex+2026+2027+hyperscaler+spending.txt"
+          },
+          {
+            "name": "b_NVIDIA+China+export+restrictions+H20+2026.txt",
+            "rel_path": "artifacts/research/b_NVIDIA+China+export+restrictions+H20+2026.txt",
+            "size": 13582,
+            "updated_at": "2026-11-10T14:16:13.227059",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/b_NVIDIA+China+export+restrictions+H20+2026.txt"
+          },
+          {
+            "name": "b_NVIDIA+competition+AMD+Broadcom+custom+ASIC+hyperscaler+2026.txt",
+            "rel_path": "artifacts/research/b_NVIDIA+competition+AMD+Broadcom+custom+ASIC+hyperscaler+2026.txt",
+            "size": 13947,
+            "updated_at": "2026-11-10T14:16:11.381059",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/b_NVIDIA+competition+AMD+Broadcom+custom+ASIC+hyperscaler+2026.txt"
+          },
+          {
+            "name": "c_NVIDIA+%244.5+billion+charge+export+China.txt",
+            "rel_path": "artifacts/research/c_NVIDIA+%244.5+billion+charge+export+China.txt",
+            "size": 14050,
+            "updated_at": "2026-11-10T14:16:55.294047",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/c_NVIDIA+%244.5+billion+charge+export+China.txt"
+          },
+          {
+            "name": "c_NVIDIA+gross+margin+Blackwell+2026+74.txt",
+            "rel_path": "artifacts/research/c_NVIDIA+gross+margin+Blackwell+2026+74.txt",
+            "size": 14533,
+            "updated_at": "2026-11-10T14:16:53.137048",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/c_NVIDIA+gross+margin+Blackwell+2026+74.txt"
+          },
+          {
+            "name": "d_NVIDIA+forward+price+earnings+ratio+2026+valuation.txt",
+            "rel_path": "artifacts/research/d_NVIDIA+forward+price+earnings+ratio+2026+valuation.txt",
+            "size": 12323,
+            "updated_at": "2026-11-10T14:18:17.692024",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/d_NVIDIA+forward+price+earnings+ratio+2026+valuation.txt"
+          },
+          {
+            "name": "d_NVIDIA+market+capitalization+trillion+November+2026.txt",
+            "rel_path": "artifacts/research/d_NVIDIA+market+capitalization+trillion+November+2026.txt",
+            "size": 12174,
+            "updated_at": "2026-11-10T14:18:15.881025",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/d_NVIDIA+market+capitalization+trillion+November+2026.txt"
+          },
+          {
+            "name": "nvnews.txt",
+            "rel_path": "artifacts/research/nvnews.txt",
+            "size": 22237,
+            "updated_at": "2026-11-10T14:17:42.939034",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/nvnews.txt"
+          },
+          {
+            "name": "sa.txt",
+            "rel_path": "artifacts/research/sa.txt",
+            "size": 476,
+            "updated_at": "2026-11-10T14:17:39.768035",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/artifacts/research/sa.txt"
+          },
+          {
+            "name": "nvidia-swot.md",
+            "rel_path": "nvidia-swot.md",
+            "size": 10360,
+            "updated_at": "2026-11-10T14:19:35.175002",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-swot/nvidia-swot.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-03/tesla-model-y-used-inspection-checklist",
       "date": "2026-11-03",

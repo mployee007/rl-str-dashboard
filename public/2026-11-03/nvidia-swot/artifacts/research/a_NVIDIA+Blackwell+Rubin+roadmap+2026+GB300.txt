@@ -1,0 +1,74 @@
+Title: NVIDIA Blackwell Rubin roadmap 2026 GB300 at DuckDuckGo
+
+URL Source: https://duckduckgo.com/html/?q=NVIDIA+Blackwell+Rubin+roadmap+2026+GB300
+
+Final URL: https://html.duckduckgo.com/html/?q=NVIDIA+Blackwell+Rubin+roadmap+2026+GB300
+
+Markdown Content:
+[](https://html.duckduckgo.com/html/?q=NVIDIA+Blackwell+Rubin+roadmap+2026+GB300)
+
+[](https://html.duckduckgo.com/html/ "DuckDuckGo")
+
+## [NVIDIA GPU Roadmap 2026-2030: Rubin, Rubin Ultra, Feynman](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fvrlatech.com%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2030%2F&rut=e764ddd7750c1f1947e491b1586b5074c4f16a5f772534958453da5cb50aca77)
+
+[![Image 1](https://external-content.duckduckgo.com/ip3/vrlatech.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fvrlatech.com%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2030%2F&rut=e764ddd7750c1f1947e491b1586b5074c4f16a5f772534958453da5cb50aca77)[vrlatech.com/nvidia-gpu-roadmap-2026-2030/](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fvrlatech.com%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2030%2F&rut=e764ddd7750c1f1947e491b1586b5074c4f16a5f772534958453da5cb50aca77)
+
+[**NVIDIA** GPU **roadmap****2026**-2030: **Blackwell** now, **Rubin** H2 **2026**, **Rubin** Ultra H2 2027, Feynman 2028. Confirmed vs rumored timelines by tier.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fvrlatech.com%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2030%2F&rut=e764ddd7750c1f1947e491b1586b5074c4f16a5f772534958453da5cb50aca77)
+
+## [NVIDIA GPU roadmap 2026-2028: Blackwell in production, Vera Rubin H2 ...](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sourcebyspec.com%2Fnews%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2028%2Dblackwell%2Din%2Dproduction%2Dvera%2Drubin%2Dh2%2D2026%2Drubin.html&rut=bee286f0e577acbf98892fb221be88a01483ff4839c75e1af2983bab8c1d984e)
+
+[![Image 2](https://external-content.duckduckgo.com/ip3/www.sourcebyspec.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sourcebyspec.com%2Fnews%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2028%2Dblackwell%2Din%2Dproduction%2Dvera%2Drubin%2Dh2%2D2026%2Drubin.html&rut=bee286f0e577acbf98892fb221be88a01483ff4839c75e1af2983bab8c1d984e)[www.sourcebyspec.com/news/nvidia-gpu-roadmap-2026-2028-blackwell-in-production-vera-rubin-h2-2026-rubin.html](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sourcebyspec.com%2Fnews%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2028%2Dblackwell%2Din%2Dproduction%2Dvera%2Drubin%2Dh2%2D2026%2Drubin.html&rut=bee286f0e577acbf98892fb221be88a01483ff4839c75e1af2983bab8c1d984e)
+
+[**NVIDIA's** GPU **roadmap** through 2028 pins **Blackwell** in volume production, ships Vera **Rubin** in H2 **2026** with 336B transistors and 50 PFLOPS NVFP4 inference, and schedules **Rubin** Ultra for H2 2027, anchored by an annual architecture cadence confirmed at GTC **2026** and Computex **2026**. Compiled by the SpecForge editorial team.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sourcebyspec.com%2Fnews%2Fnvidia%2Dgpu%2Droadmap%2D2026%2D2028%2Dblackwell%2Din%2Dproduction%2Dvera%2Drubin%2Dh2%2D2026%2Drubin.html&rut=bee286f0e577acbf98892fb221be88a01483ff4839c75e1af2983bab8c1d984e)
+
+## [GPU Roadmap (Rubin, Feynman) - AI Infrastructure Knowledge Base](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dinfrastructure.net%2Fnvidia%2Dgpu%2Droadmap%2F&rut=b90dda8f4c54e0f7509315c8f47d3af8e1063e086925885c56b6488521b399db)
+
+[![Image 3](https://external-content.duckduckgo.com/ip3/ai-infrastructure.net.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dinfrastructure.net%2Fnvidia%2Dgpu%2Droadmap%2F&rut=b90dda8f4c54e0f7509315c8f47d3af8e1063e086925885c56b6488521b399db)[ai-infrastructure.net/nvidia-gpu-roadmap/](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dinfrastructure.net%2Fnvidia%2Dgpu%2Droadmap%2F&rut=b90dda8f4c54e0f7509315c8f47d3af8e1063e086925885c56b6488521b399db)
+
+[The **NVIDIA** GPU **roadmap** ¶ Scope: The datacenter GPU/platform cadence, Hopper to **Blackwell** to **Blackwell** Ultra (B300/**GB300**) to Vera **Rubin** to Feynman, covering what each generation changes (precision, NVLink, memory, rack scale) and how to plan procurement and software against a moving target. What it is ¶ **NVIDIA** ships a new datacenter GPU architecture on a roughly annual cadence, each paired ...](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dinfrastructure.net%2Fnvidia%2Dgpu%2Droadmap%2F&rut=b90dda8f4c54e0f7509315c8f47d3af8e1063e086925885c56b6488521b399db)
+
+## [GPU Shipment Tracker Blackwell to Rubin 2026 - Presenc AI](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fpresenc.ai%2Fresearch%2Fgpu%2Dshipment%2Dtracker%2Dblackwell%2Drubin%2D2026&rut=3782a4c79a6c3f9b3c27b2ac42ccf2b7c6f0a964df1bd12b0956794bb6fbff5a)
+
+[![Image 4](https://external-content.duckduckgo.com/ip3/presenc.ai.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fpresenc.ai%2Fresearch%2Fgpu%2Dshipment%2Dtracker%2Dblackwell%2Drubin%2D2026&rut=3782a4c79a6c3f9b3c27b2ac42ccf2b7c6f0a964df1bd12b0956794bb6fbff5a)[presenc.ai/research/gpu-shipment-tracker-blackwell-rubin-2026](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fpresenc.ai%2Fresearch%2Fgpu%2Dshipment%2Dtracker%2Dblackwell%2Drubin%2D2026&rut=3782a4c79a6c3f9b3c27b2ac42ccf2b7c6f0a964df1bd12b0956794bb6fbff5a)
+
+[Research GPU Shipment Tracker **Blackwell** to **Rubin****2026****NVIDIA****Blackwell** to **Rubin** transition in **2026**: **Blackwell** 5.2M to 1.8M, **Rubin** 5.7M target capped at ~300k by TSMC N3, AMD MI400 and MI450 ramp, Intel Gaudi 3 and Falcon Shores.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fpresenc.ai%2Fresearch%2Fgpu%2Dshipment%2Dtracker%2Dblackwell%2Drubin%2D2026&rut=3782a4c79a6c3f9b3c27b2ac42ccf2b7c6f0a964df1bd12b0956794bb6fbff5a)
+
+## [Nvidia Roadmap Reveals Blackwell Ultra And Rubin Architectures Coming](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnbkomputer.com%2Fnvidia%2Droadmap%2Dreveals%2Dblackwell%2Dultra%2Dand%2Drubin%2Darchitectures%2Dcoming%2F&rut=37c46dc0feb5b33750756097556b77411da7aaee96571527d48b34f81d6be807)
+
+[![Image 5](https://external-content.duckduckgo.com/ip3/nbkomputer.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnbkomputer.com%2Fnvidia%2Droadmap%2Dreveals%2Dblackwell%2Dultra%2Dand%2Drubin%2Darchitectures%2Dcoming%2F&rut=37c46dc0feb5b33750756097556b77411da7aaee96571527d48b34f81d6be807)[nbkomputer.com/nvidia-roadmap-reveals-blackwell-ultra-and-rubin-architectures-coming/](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnbkomputer.com%2Fnvidia%2Droadmap%2Dreveals%2Dblackwell%2Dultra%2Dand%2Drubin%2Darchitectures%2Dcoming%2F&rut=37c46dc0feb5b33750756097556b77411da7aaee96571527d48b34f81d6be807)
+
+[The **NVIDIA** GPU **roadmap** ¶ Scope: The datacenter GPU/platform cadence, Hopper to **Blackwell** to **Blackwell** Ultra (B300/**GB300**) to Vera **Rubin** to Feynman, covering what each generation changes (precision, NVLink, memory, rack scale) and how to plan procurement and software against a moving target.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnbkomputer.com%2Fnvidia%2Droadmap%2Dreveals%2Dblackwell%2Dultra%2Dand%2Drubin%2Darchitectures%2Dcoming%2F&rut=37c46dc0feb5b33750756097556b77411da7aaee96571527d48b34f81d6be807)
+
+## [NVIDIA's Blackwell → Rubin roadmap - the annual cadence that priced the ...](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fquantabundance.com%2Farticles%2Fnvda%2Dblackwell%2Drubin%2Droadmap&rut=3ec91a4504bd808480ed9efecddbfdd38a24df7625b549d48ebb7c340a325f8e)
+
+[![Image 6](https://external-content.duckduckgo.com/ip3/quantabundance.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fquantabundance.com%2Farticles%2Fnvda%2Dblackwell%2Drubin%2Droadmap&rut=3ec91a4504bd808480ed9efecddbfdd38a24df7625b549d48ebb7c340a325f8e)[quantabundance.com/articles/nvda-blackwell-rubin-roadmap](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fquantabundance.com%2Farticles%2Fnvda%2Dblackwell%2Drubin%2Droadmap&rut=3ec91a4504bd808480ed9efecddbfdd38a24df7625b549d48ebb7c340a325f8e)
+
+[**NVIDIA's****Blackwell** → **Rubin****roadmap** - the annual cadence that priced the next $2T of market cap **NVIDIA** went from a two-year product cycle to annual. Hopper 2022, **Blackwell** 2024, B300/**GB300** mid-cycle 2025, **Rubin****2026**, **Rubin** Ultra 2027, Feynman 2028. Each cadence step is roughly 2-3× FLOPs and a new HBM generation.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fquantabundance.com%2Farticles%2Fnvda%2Dblackwell%2Drubin%2Droadmap&rut=3ec91a4504bd808480ed9efecddbfdd38a24df7625b549d48ebb7c340a325f8e)
+
+## [What Comes After Blackwell: Reading the GPU Roadmap | GPUaaS.com](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgpuaas.com%2Fblog%2Fgb300%2Dblackwell%2Droadmap%2D2026&rut=13c0c15467b0436a97a4eae738ee2e30b2ab736d86cb1f7224cf38919d1e8232)
+
+[![Image 7](https://external-content.duckduckgo.com/ip3/gpuaas.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgpuaas.com%2Fblog%2Fgb300%2Dblackwell%2Droadmap%2D2026&rut=13c0c15467b0436a97a4eae738ee2e30b2ab736d86cb1f7224cf38919d1e8232)[gpuaas.com/blog/gb300-blackwell-roadmap-2026](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgpuaas.com%2Fblog%2Fgb300%2Dblackwell%2Droadmap%2D2026&rut=13c0c15467b0436a97a4eae738ee2e30b2ab736d86cb1f7224cf38919d1e8232)
+
+[Sources: **NVIDIA** GTC **2026** keynote, ModulEdge Vera **Rubin** analysis, VRLA Tech GPU **roadmap**, **2026** FOUR GENERATIONS PUBLISHED FORWARD Useful, and a specific trap **NVIDIA** now publishes four generations forward. **Blackwell** now, **Rubin** in the second half of **2026**, **Rubin** Ultra in the second half of 2027, Feynman in 2028.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgpuaas.com%2Fblog%2Fgb300%2Dblackwell%2Droadmap%2D2026&rut=13c0c15467b0436a97a4eae738ee2e30b2ab736d86cb1f7224cf38919d1e8232)
+
+## [NVIDIA GPU Roadmap: RTX 50, Rubin, Rubin Ultra and Feynman](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cloudspress.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=3635c35ab508c486d8fc69accaedbfcda7b232f1be7f16426e2c4fc1fc45ab54)
+
+[![Image 8](https://external-content.duckduckgo.com/ip3/www.cloudspress.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cloudspress.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=3635c35ab508c486d8fc69accaedbfcda7b232f1be7f16426e2c4fc1fc45ab54)[www.cloudspress.com/nvidia-gpu-roadmap-blackwell-rubin-feynman-and-what-comes-next/](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cloudspress.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=3635c35ab508c486d8fc69accaedbfcda7b232f1be7f16426e2c4fc1fc45ab54)
+
+[As of August 10, **2026**, **NVIDIA** has two different GPU **roadmaps**. Its public data-center AI **roadmap** is comparatively clear: **Blackwell** and **Blackwell** Ultra lead to **Rubin** in the second half of **2026**, **Rubin** Ultra is targeted for 2027, and Feynman is the named successor expected around 2028.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cloudspress.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=3635c35ab508c486d8fc69accaedbfcda7b232f1be7f16426e2c4fc1fc45ab54)
+
+## [Nvidia announces Blackwell Ultra, Rubin roadmap plans at GTC](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fiercesensors.com%2Fai%2Fnvidia%2Dannounces%2Dblackwell%2Dultra%2Drubin%2Droadmap%2Dplans%2Dgtc&rut=37c47d8497a1a9db99d4a35689b6a0ae6b3cffc9693c5b1b3d0a14cc8d526031)
+
+[![Image 9](https://external-content.duckduckgo.com/ip3/www.fiercesensors.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fiercesensors.com%2Fai%2Fnvidia%2Dannounces%2Dblackwell%2Dultra%2Drubin%2Droadmap%2Dplans%2Dgtc&rut=37c47d8497a1a9db99d4a35689b6a0ae6b3cffc9693c5b1b3d0a14cc8d526031)[www.fiercesensors.com/ai/nvidia-announces-blackwell-ultra-rubin-roadmap-plans-gtc](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fiercesensors.com%2Fai%2Fnvidia%2Dannounces%2Dblackwell%2Dultra%2Drubin%2Droadmap%2Dplans%2Dgtc&rut=37c47d8497a1a9db99d4a35689b6a0ae6b3cffc9693c5b1b3d0a14cc8d526031)
+
+[In the second half of **2026**, **Nvidia** will introduce the Vera **Rubin** GPU, with 2x the performance of its predecessor, and the Vera **Rubin** NVL144 system, with 3.3x the training and inference performance of the **GB300** NVL72, with HBM4 memory and more.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fiercesensors.com%2Fai%2Fnvidia%2Dannounces%2Dblackwell%2Dultra%2Drubin%2Droadmap%2Dplans%2Dgtc&rut=37c47d8497a1a9db99d4a35689b6a0ae6b3cffc9693c5b1b3d0a14cc8d526031)
+
+## [NVIDIA GPU Roadmap 2026: Rubin, Feynman and RTX 60 Reality](https://duckduckgo.com/l/?uddg=https%3A%2F%2Ffreedom251.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=165a6dbe33981febeb43d8eab73fe44d25f6904b9dcd1c9fcf2a316bce01ccea)
+
+[![Image 10](https://external-content.duckduckgo.com/ip3/freedom251.com.ico)](https://duckduckgo.com/l/?uddg=https%3A%2F%2Ffreedom251.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=165a6dbe33981febeb43d8eab73fe44d25f6904b9dcd1c9fcf2a316bce01ccea)[freedom251.com/nvidia-gpu-roadmap-blackwell-rubin-feynman-and-what-comes-next/](https://duckduckgo.com/l/?uddg=https%3A%2F%2Ffreedom251.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=165a6dbe33981febeb43d8eab73fe44d25f6904b9dcd1c9fcf2a316bce01ccea)
+
+[As of August 10, **2026**, **NVIDIA** has two very different GPU **roadmaps**. Its data-center AI **roadmap** is relatively clear: **Blackwell** and **Blackwell** Ultra lead into **Rubin** in the second half of **2026**, **Rubin** Ultra is targeted for 2027, and Feynman is the next major architecture expected around 2028.](https://duckduckgo.com/l/?uddg=https%3A%2F%2Ffreedom251.com%2Fnvidia%2Dgpu%2Droadmap%2Dblackwell%2Drubin%2Dfeynman%2Dand%2Dwhat%2Dcomes%2Dnext%2F&rut=165a6dbe33981febeb43d8eab73fe44d25f6904b9dcd1c9fcf2a316bce01ccea)
+
+[Feedback](https://duckduckgo.com/feedback.html)
+
+![Image 11](https://duckduckgo.com/t/sl_h)

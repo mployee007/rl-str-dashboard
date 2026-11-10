@@ -1,0 +1,334 @@
+Title: News Archive
+
+URL Source: https://nvidianews.nvidia.com/news
+
+Markdown Content:
+[](https://www.nvidia.com/en-us)[](https://nvidianews.nvidia.com/news#)
+
+[](https://nvidianews.nvidia.com/search)
+
+PLATFORMS
+
+[![Image 5: Autonomous Machines](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/intelligent-machines.png)Autonomous Machines](https://www.nvidia.com/en-us/autonomous-machines/)
+
+[![Image 6: Cloud & Data Center](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/data-center.png)Cloud & Data Center](https://www.nvidia.com/en-us/data-center/)
+
+[![Image 7: Deep Learning & Ai](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/ai-deeplearning.png)Deep Learning & Ai](https://www.nvidia.com/en-us/deep-learning-ai/)
+
+[![Image 8: Design & Pro Visualization](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/design-visualization.png)Design & Pro Visualization](https://www.nvidia.com/en-us/design-visualization/)
+
+[![Image 9: Healthcare](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/healthcare.jpg)Healthcare](https://www.nvidia.com/en-us/healthcare/)
+
+[![Image 10: High Performance Computing](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/hpc-nvidia-mega-menu-image-hpc-188x106.jpg)High Performance Computing](https://www.nvidia.com/en-us/high-performance-computing/)
+
+[![Image 11: Self-Driving Cars](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/self-driving-cars.png)Self-Driving Cars](https://www.nvidia.com/en-us/self-driving-cars/)
+
+[![Image 12: Gaming & Entertainment](https://www.nvidia.com/content/dam/en-zz/Solutions/navigation/geforce.png)Gaming & Entertainment](https://www.nvidia.com/en-us/geforce/)
+
+other links
+
+*   [Developers](https://developer.nvidia.com/)
+*   [Industries](https://www.nvidia.com/en-us/industries/)
+*   [Shop](https://www.nvidia.com/en-us/shop/)
+*   [Drivers](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+*   [Support](https://www.nvidia.com/object/support.html)
+*   [About NVIDIA](https://www.nvidia.com/en-us/about-nvidia/)
+
+*   [View All Products](https://www.nvidia.com/page/products.html)
+*   [GPU TECHNOLOGY CONFERENCE](https://www.nvidia.com/en-us/gtc/)
+*   [NVIDIA Blog](https://blogs.nvidia.com/)
+*   [Community](https://www.nvidia.com/object/nvidia-communities.html)
+*   [Careers](https://www.nvidia.com/en-us/about-nvidia/careers/)
+*   [TECHNOLOGIES](https://www.nvidia.com/en-us/technologies/)
+
+[Newsroom](https://nvidianews.nvidia.com/)
+
+[NVIDIA in Brief](https://nvidianews.nvidia.com/_gallery/get_file/?file_id=62acc991b3aed36cab48537d&ir=1&file_ext=.pdf)
+
+[Exec Bios](https://nvidianews.nvidia.com/bios)
+
+[NVIDIA Blog](https://blogs.nvidia.com/)
+
+[Podcast](https://blogs.nvidia.com/ai-podcast/)
+
+[Media Assets](https://nvidianews.nvidia.com/multimedia)
+
+[In the News](https://nvidianews.nvidia.com/in-the-news)
+
+[Press Contacts](https://nvidianews.nvidia.com/contacts)
+
+[Online Press Kits](https://nvidianews.nvidia.com/online-press-kit)
+
+[](https://nvidianews.nvidia.com/news# "Menu")
+
+*   [NVIDIA in Brief](https://nvidianews.nvidia.com/_gallery/get_file/?file_id=62acc991b3aed36cab48537d&ir=1&file_ext=.pdf)
+*   [Exec Bios](https://nvidianews.nvidia.com/bios)
+*   [NVIDIA Blog](https://blogs.nvidia.com/)
+*   [Podcast](https://blogs.nvidia.com/ai-podcast/)
+*   [Media Assets](https://nvidianews.nvidia.com/multimedia)
+*   [In the News](https://nvidianews.nvidia.com/in-the-news)
+*   [Press Contacts](https://nvidianews.nvidia.com/contacts)
+*   [Online Press Kits](https://nvidianews.nvidia.com/online-press-kit)
+
+# News Archive
+
+[](https://nvidianews.nvidia.com/news#searchContext)
+
+Sort By: 
+
+Press releases 
+
+Blog 
+
+Year: All Years
+
+![Image 13](https://iprsoftwaremedia.com/219/files/202611/1c44cc6b9c3f0190ced9c4c0fee6383d/6af1d1ef3d633225fdf5cf8e_corl-corp-blog-promo-pack-1920x1080-1-842x450/corl-corp-blog-promo-pack-1920x1080-1-842x450_mid.jpg?v=f267f0d7-026b-453a-a9f9-a4f6f280e2d6)
+
+November 09, 2026
+
+### [Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation](https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/)
+
+ Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/)
+
+![Image 14](https://iprsoftwaremedia.com/219/files/202611/3a869738b38dcf51055748f78c9558e0/6af17de53d6332913dbbd117_korea-startups-msit-1920x1080-1-842x450/korea-startups-msit-1920x1080-1-842x450_mid.jpg?v=d4394c7d-c7ef-4491-ad0d-ede57d00f865)
+
+November 09, 2026
+
+### [NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum](https://blogs.nvidia.com/blog/korean-startup-investments-msit/)
+
+ Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT-NVIDIA AI Startup Partnership Forum at COEX. Ryu Je-myung, vice minister of science and ICT, joined NVIDIA leaders to meet with over 20 Korean startups across foundation models, physical ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/korean-startup-investments-msit/)
+
+![Image 15](https://iprsoftwaremedia.com/219/files/202611/3ef549b8c7cf8c67aaaad16c8cc8a74f/6af1539b3d6332c13862b0a9_omniverse-overall-ai-day-seoul-1920x1080-1-842x450/omniverse-overall-ai-day-seoul-1920x1080-1-842x450_mid.jpg?v=1475448b-92fe-4bbe-9dd0-a7dbbc97254a)
+
+November 08, 2026
+
+### [Korea Advances Physical AI Across Industries With NVIDIA](https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/)
+
+ Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/)
+
+![Image 16](https://iprsoftwaremedia.com/219/files/202611/28304ad297f4e58a8ca7d55602442a81/6af153a03d6332c13862b0b0_korea-agentic-ai-1920x1080-1-842x450/korea-agentic-ai-1920x1080-1-842x450_mid.jpg?v=522d0dbf-3a44-45c8-8dc9-9c2688e16eda)
+
+November 08, 2026
+
+### [Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA](https://blogs.nvidia.com/blog/korea-secure-agentic-ai/)
+
+ As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/korea-secure-agentic-ai/)
+
+![Image 17](https://iprsoftwaremedia.com/219/files/202611/936a6ec7047953d3920f28af5d729de9/6af1541d3d6332c3242f4ef1_korea-sovereign-ai-nvlink-fusion-842x450/korea-sovereign-ai-nvlink-fusion-842x450_mid.jpg?v=d1ef960e-4a0e-443a-bbdd-c56b60a92dfe)
+
+November 08, 2026
+
+### [From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration](https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/)
+
+ NVIDIA and Korea’s Ministry of Science and ICT (MSIT) are expanding their collaboration across the country’s sovereign AI ecosystem, from AI semiconductors and data center infrastructure to talent, startups, models, agents and security. The ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/)
+
+![Image 18](https://iprsoftwaremedia.com/219/files/202611/b75be4172ba348b544f7f761365c6f66/6af154233d6332c3242f4ef8_dynamo-korea-ai-day-842x450/dynamo-korea-ai-day-842x450_mid.jpg?v=521580c6-6e81-497d-ba27-8df541429dd0)
+
+November 08, 2026
+
+### [NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production](https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/)
+
+ NVIDIA is releasing Dynamo-optimized deployment recipes for Korea’s leading open models: A.X K2 from SK Telecom, K-EXAONE 2.0 from LG AI Research, Solar Open 2 from Upstage and Motif-3 from Motif Technologies. As models grow beyond the capacity of a ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/)
+
+![Image 19](https://iprsoftwaremedia.com/219/files/202611/db6ec7f33525f73ff5724d32dbd1b7fb/6aee80fa3d6332c8b445318c_nvidia-nvlink-fusion/nvidia-nvlink-fusion_mid.jpg?v=767ed6e5-2d59-4bb5-90cd-99e054407433)
+
+November 08, 2026
+
+### [NVIDIA, Rebellions and SK Telecom Announce Collaboration to Advance Sovereign AI Infrastructure With NVIDIA NVLink Fusion](https://nvidianews.nvidia.com/news/nvidia-rebellions-and-sk-telecom-announce-collaboration-to-advance-sovereign-ai-infrastructure-with-nvidia-nvlink-fusion)
+
+ NVIDIA, Rebellions and SK Telecom today announced a collaboration to advance Korea’s sovereign AI infrastructure — using NVIDIA NVLink Fusion™ to bring together NVIDIA’s open infrastructure platform, Rebellions’ Korean-designed AI processors and SK ... 
+
+[Read Press Release](https://nvidianews.nvidia.com/news/nvidia-rebellions-and-sk-telecom-announce-collaboration-to-advance-sovereign-ai-infrastructure-with-nvidia-nvlink-fusion)
+
+![Image 20](https://iprsoftwaremedia.com/219/files/202512/692f56983d6332f89cbbc58b_nvidia-logo-horiz-wht-16x9/nvidia-logo-horiz-wht-16x9_mid.png?v=44a60e3f-c4e5-4d8a-879f-ec5121ad6f4b)
+
+November 08, 2026
+
+### [A Message to Our Company](https://nvidianews.nvidia.com/news/a-message-to-our-company)
+
+ I owe my family and all of you an apology. I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did. I am deeply sorry. Throughout my life, my ... 
+
+[Read Press Release](https://nvidianews.nvidia.com/news/a-message-to-our-company)
+
+![Image 21](https://iprsoftwaremedia.com/219/files/202512/692f56983d6332f89cbbc58b_nvidia-logo-horiz-wht-16x9/nvidia-logo-horiz-wht-16x9_mid.png?v=44a60e3f-c4e5-4d8a-879f-ec5121ad6f4b)
+
+November 08, 2026
+
+### [Statement From NVIDIA Board of Directors](https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors)
+
+ The NVIDIA Board is initiating an independent investigation in light of recent reporting that founder and CEO Jensen Huang has been the target of a foreign intelligence effort. A committee of ... 
+
+[Read Press Release](https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors)
+
+![Image 22](https://iprsoftwaremedia.com/219/files/202611/a27cc51720fd9a8615299143a36e44e0/6aedf9ac3d633293bf8bf12f_telco-promo-pack-brooklyn-6g-summit-corp-blog-1920x1080-1-1/telco-promo-pack-brooklyn-6g-summit-corp-blog-1920x1080-1-1_mid.jpg?v=1ff9b9f1-1af5-4c74-99ac-b3af397698cf)
+
+November 06, 2026
+
+### [How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks](https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/)
+
+ A year ago, NVIDIA open sourced its Aerial wireless software, joining Sionna and a broader suite of open source tools for accelerating next-generation 6G network development. Together, they give researchers a foundation for testing ideas, comparing ... 
+
+[Read Blog](https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/)
+
+*   [1](https://nvidianews.nvidia.com/news?page=1 "View results for page 1")
+*   [2](https://nvidianews.nvidia.com/news?page=2 "View results for page 2")
+*   [3](https://nvidianews.nvidia.com/news?page=3 "View results for page 3")
+*   [4](https://nvidianews.nvidia.com/news?page=4 "View results for page 4")
+*   [5](https://nvidianews.nvidia.com/news?page=5 "View results for page 5")
+*   [6](https://nvidianews.nvidia.com/news?page=6 "View results for page 6")
+*    ... [515](https://nvidianews.nvidia.com/news?page=515 "Last page of results")
+*   [Next](https://nvidianews.nvidia.com/news?page=2 "Next page of results")
+*   [Last](https://nvidianews.nvidia.com/news?page=515 "Last page of results")
+
+## Media Contacts
+
+Global contacts for media inquiries.
+
+[All Contacts](https://nvidianews.nvidia.com/contacts)
+
+## Stay Informed
+
+Newsroom updates delivered to your inbox.
+
+[Subscribe](https://nvidianews.nvidia.com/alerts)
+
+Corporate Information
+
+*   [About NVIDIA](https://www.nvidia.com/en-us/about-nvidia/)
+*   [Corporate Overview](https://www.nvidia.com/en-us/about-nvidia/ai-computing/)
+*   [Technologies](https://www.nvidia.com/en-us/technologies/)
+*   [NVIDIA Research](https://www.nvidia.com/en-us/research/)
+*   [Investors](https://investor.nvidia.com/home/default.aspx)
+*   [Social Responsibility](https://www.nvidia.com/en-us/csr/)
+*   [NVIDIA Foundation](https://www.nvidia.com/en-us/foundation/)
+
+Get Involved
+
+*   [Forums](https://www.nvidia.com/en-us/forums/)
+*   [Careers](https://www.nvidia.com/en-us/about-nvidia/careers/)
+*   [Developer Home](https://developer.nvidia.com/)
+*   [Join the Developer Program](https://developer.nvidia.com/join)
+*   [NVIDIA Partner Network](https://www.nvidia.com/en-us/about-nvidia/partners/)
+*   [NVIDIA Inception](https://www.nvidia.com/en-us/deep-learning-ai/startups/)
+*   [Resources for Venture Capitalists](https://www.nvidia.com/en-us/deep-learning-ai/startups/venture-capital/)
+*   [Venture Capital (NVentures)](https://www.nventures.ai/)
+*   [Technical Training](https://www.nvidia.com/en-us/training/)
+*   [Training for IT Professionals](https://academy.nvidia.com/en/)
+*   [Professional Services for Data Science](https://www.nvidia.com/en-us/ai-data-science/professional-services/)
+
+News & Events
+
+*   [Newsroom](https://nvidianews.nvidia.com/)
+*   [NVIDIA Blog](https://blogs.nvidia.com/)
+*   [NVIDIA Technical Blog](https://developer.nvidia.com/blog/)
+*   [Webinars](https://www.nvidia.com/en-us/about-nvidia/webinar-portal/)
+*   [Stay Informed](https://www.nvidia.com/en-us/preferences/email-signup/)
+*   [Events Calendar](https://www.nvidia.com/en-us/events/)
+*   [NVIDIA GTC](https://www.nvidia.com/en-us/gtc/)
+*   [NVIDIA On-Demand](https://www.nvidia.com/en-us/on-demand/)
+
+Sign Up for NVIDIA News
+
+[Subscribe](https://www.nvidia.com/en-us/preferences/email-signup/)
+
+Follow NVIDIA
+
+[](https://www.facebook.com/NVIDIA)[](https://twitter.com/nvidia)[](https://www.linkedin.com/company/nvidia)[](https://www.instagram.com/nvidia/?hl=en)[](https://www.youtube.com/user/nvidia)
+
+[USA - United States](https://www.nvidia.com/en-us/location-selector/)
+
+*   [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/)
+*   [Your Privacy Choices](https://www.nvidia.com/en-us/about-nvidia/privacy-center/)
+*   Manage Settings
+*   [Terms of Service](https://www.nvidia.com/en-us/about-nvidia/terms-of-service/)
+*   [Accessibility](https://www.nvidia.com/en-us/about-nvidia/accessibility/)
+*   [Corporate Policies](https://www.nvidia.com/en-us/about-nvidia/company-policies/)
+*   [Product Security](https://www.nvidia.com/en-us/product-security/)
+*   [Contact](https://www.nvidia.com/en-us/contact/)
+
+Copyright © 2026 NVIDIA Corporation
+
+NVIDIA uses cookies to improve your experience on our web site. We and our third-party partners also use cookies and other tools to collect and record information you provide as well as information about your interactions with our websites for performance improvement, analytics, and to assist in marketing efforts. By clicking "Accept All", you consent to our use of cookies and other tools as described in our [Cookie Policy](https://www.nvidia.com/en-us/about-nvidia/cookie-policy/). You can manage your cookie settings by clicking on "Manage Settings." By continuing to use this site or by clicking one of the buttons below, you agree to our [Terms of Service](https://www.nvidia.com/en-us/about-nvidia/terms-of-service/) (which contains important waivers). Please see our [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/) for more information on our privacy practices.
+
+We have detected the Global Privacy Control (GPC) signal and recorded your rejection of all optional cookies on this site for this browser. You can manage your cookie settings by clicking on "Manage Settings". Please see our [Cookie Policy](https://www.nvidia.com/en-us/about-nvidia/cookie-policy/) for more information. To opt out of non-cookie personal information "sales" / "sharing" for targeted advertising purposes, please visit the [NVIDIA Preference Center](https://www.nvidia.com/en-us/about-nvidia/privacy-center/). Please see our [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/) for more information on our privacy practices.
+
+We have detected the Global Privacy Control Signal (GPC) and have opted you out of all optional cookies on this browser. You can manage your cookie settings by clicking on "Manage Settings". Please see our [Cookie Policy](https://www.nvidia.com/en-us/about-nvidia/cookie-policy/) for more information. We have also opted you out of "sharing"/"sales" of personal information outside of cookies. You can manage these settings in the NVIDIA [NVIDIA Preference Center](https://www.nvidia.com/en-us/privacy-center/). Please see our [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/) for more information.
+
+We have detected the Global Privacy Control Signal (GPC) and have opted you out of all optional cookies on this browser. You can manage your cookie settings by clicking on "Manage Settings". Please see our [Cookie Policy](https://www.nvidia.com/en-us/about-nvidia/cookie-policy/) for more information. We have also opted you out of "sharing"/"sales" of personal information outside of cookies which overrides at least one of your previous settings. You can manage them in the [NVIDIA Preference Center](https://www.nvidia.com/en-us/privacy-center/). Please see our [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/) for more information.
+
+Manage Settings
+
+Reject Optional Accept All
+
+![Image 23: Company Logo](https://cdn.cookielaw.org/logos/10ddf4ca-c072-45d0-b3ac-eead0ed93db0/6e17f6e4-c77b-4a11-9f34-c107c42e4bfc/7981.png)
+
+Cookie Settings
+
+We and our third-party partners (including social media, advertising, and analytics partners) use cookies and other tracking technologies to collect, store, monitor, and process certain information about you when you visit our website. The information collected might relate to you, your preferences, or your device. We use that information to make the site work, analyze performance and traffic on our website, provide a more personalized web experience, and assist in our marketing efforts.  
+  
+Under certain privacy laws, you have the right to direct us not to "sell" or "share" your personal information for targeted advertising. To opt-out of the "sale" and "sharing" of personal information through cookies, you must opt-out of optional cookies using the toggles below. To opt out of the "sale" and "sharing" of data collected by other means (e.g., online forms) you must also update your data sharing preferences through the [NVIDIA Preference Center](https://www.nvidia.com/en-us/about-nvidia/privacy-center/).  
+  
+Click on the different category headings below to find out more and change the settings according to your preference. You cannot opt out of Required Cookies as they are deployed to ensure the proper functioning of our website (such as prompting the cookie banner and remembering your settings, etc.). By clicking "Save and Accept" or "Decline All" at the bottom, you consent to the use of cookies and other tools as described in our [Cookie Policy](https://www.nvidia.com/en-us/about-nvidia/cookie-policy/) in accordance with your settings and accept our [Terms of Service](https://www.nvidia.com/en-us/about-nvidia/terms-of-service/) (which contains important waivers). For more information about our privacy practices, please see our [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/).
+
+Required Cookies
+
+Always Active
+
+These cookies enable core functionality such as security, network management, and accessibility. These cookies are required for the site to function and cannot be turned off.
+
+Cookies Details
+
+Performance Cookies
+
+- [x] Performance Cookies 
+
+These cookies are used to provide quantitative measures of our website visitors, such as the number of times you visit, time on page, your mouse movements, scrolling, clicks and keystroke activity on the websites; other browsing, search, or product research behavior; and what brought you to our site. These cookies may store a unique ID so that our system will remember you when you return. Information collected with these cookies is used to measure and find ways to improve website performance.
+
+Cookies Details
+
+Personalization Cookies
+
+- [x] Personalization Cookies 
+
+These cookies collect data about how you have interacted with our website to help us improve your web experience, such as which pages you have visited. These cookies may store a unique ID so that our system will remember you when you return. They may be set by us or by third party providers whose services we have added to our pages. These cookies enable us to provide enhanced website functionality and personalization as well as make the marketing messages we send to you more relevant to your interests. If you do not allow these cookies, then some or all of these services may not function properly.
+
+Cookies Details
+
+Advertising Cookies
+
+- [x] Advertising Cookies 
+
+These cookies record your visit to our websites, the pages you have visited and the links you have followed to influence the advertisements that you see on other websites. These cookies and the information they collect may be managed by other companies, including our advertising partners, and may be used to build a profile of your interests and show you relevant advertising on other sites. We and our advertising partners will use this information to make our websites and the advertising displayed on it, more relevant to your interests.
+
+Cookies Details
+
+Cookie List
+
+Clear
+*   - [x] checkbox label label 
+
+Apply Cancel
+
+Consent Leg.Interest
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+Decline All Save and Accept
+
+[![Image 24: Powered by Onetrust](https://cdn.cookielaw.org/logos/static/powered_by_logo.svg)](https://www.onetrust.com/solutions/consent-and-preferences/)
