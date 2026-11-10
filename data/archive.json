@@ -1,8 +1,117 @@
 {
-  "generated_at": "2026-11-10T19:07:50.092617+00:00",
+  "generated_at": "2026-11-10T19:23:50.156951+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 107,
+  "session_count": 108,
   "sessions": [
+    {
+      "id": "2026-11-03/nvidia-jensen-legal",
+      "date": "2026-11-03",
+      "title": "nvidia-jensen-legal",
+      "summary": "",
+      "updated_at": "2026-11-10T19:23:21.571189",
+      "file_count": 11,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-03/nvidia-jensen-legal",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "a_Jensen+Huang+SEC+DOJ+investigation+insider+trading.txt",
+            "rel_path": "artifacts/research/a_Jensen+Huang+SEC+DOJ+investigation+insider+trading.txt",
+            "size": 14066,
+            "updated_at": "2026-11-10T19:20:42.335399",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/a_Jensen+Huang+SEC+DOJ+investigation+insider+trading.txt"
+          },
+          {
+            "name": "a_Jensen+Huang+lawsuit+legal+investigation+2026.txt",
+            "rel_path": "artifacts/research/a_Jensen+Huang+lawsuit+legal+investigation+2026.txt",
+            "size": 14754,
+            "updated_at": "2026-11-10T19:20:40.390402",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/a_Jensen+Huang+lawsuit+legal+investigation+2026.txt"
+          },
+          {
+            "name": "a_Jensen+Huang+tax+audit+estate+trust+scrutiny.txt",
+            "rel_path": "artifacts/research/a_Jensen+Huang+tax+audit+estate+trust+scrutiny.txt",
+            "size": 3610,
+            "updated_at": "2026-11-10T19:20:45.005395",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/a_Jensen+Huang+tax+audit+estate+trust+scrutiny.txt"
+          },
+          {
+            "name": "b_Jensen+Huang+personal+legal+trouble.txt",
+            "rel_path": "artifacts/research/b_Jensen+Huang+personal+legal+trouble.txt",
+            "size": 14803,
+            "updated_at": "2026-11-10T19:20:51.976386",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/b_Jensen+Huang+personal+legal+trouble.txt"
+          },
+          {
+            "name": "b_NVIDIA+CEO+Jensen+Huang+controversy+news+2026.txt",
+            "rel_path": "artifacts/research/b_NVIDIA+CEO+Jensen+Huang+controversy+news+2026.txt",
+            "size": 13752,
+            "updated_at": "2026-11-10T19:20:48.069391",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/b_NVIDIA+CEO+Jensen+Huang+controversy+news+2026.txt"
+          },
+          {
+            "name": "b_NVIDIA+antitrust+DOJ+FTC+investigation+2026+Jensen+Huang.txt",
+            "rel_path": "artifacts/research/b_NVIDIA+antitrust+DOJ+FTC+investigation+2026+Jensen+Huang.txt",
+            "size": 14184,
+            "updated_at": "2026-11-10T19:20:50.146389",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/b_NVIDIA+antitrust+DOJ+FTC+investigation+2026+Jensen+Huang.txt"
+          },
+          {
+            "name": "f_07ba9a.txt",
+            "rel_path": "artifacts/research/f_07ba9a.txt",
+            "size": 24713,
+            "updated_at": "2026-11-10T19:21:41.832320",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/f_07ba9a.txt"
+          },
+          {
+            "name": "f_74cbcf.txt",
+            "rel_path": "artifacts/research/f_74cbcf.txt",
+            "size": 18137,
+            "updated_at": "2026-11-10T19:21:42.218320",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/f_74cbcf.txt"
+          },
+          {
+            "name": "g_8c7b07.txt",
+            "rel_path": "artifacts/research/g_8c7b07.txt",
+            "size": 265,
+            "updated_at": "2026-11-10T19:21:58.829298",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/g_8c7b07.txt"
+          },
+          {
+            "name": "g_a9454f.txt",
+            "rel_path": "artifacts/research/g_a9454f.txt",
+            "size": 8352,
+            "updated_at": "2026-11-10T19:22:04.544291",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/g_a9454f.txt"
+          },
+          {
+            "name": "ind.txt",
+            "rel_path": "artifacts/research/ind.txt",
+            "size": 18553,
+            "updated_at": "2026-11-10T19:23:21.571189",
+            "previewable": true,
+            "public_href": "public/2026-11-03/nvidia-jensen-legal/artifacts/research/ind.txt"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-03/nvidia-swot",
       "date": "2026-11-03",
