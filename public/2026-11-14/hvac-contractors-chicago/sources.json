@@ -1,0 +1,26 @@
+{
+  "session": "hvac-contractors-chicago",
+  "date": "2026-11-14",
+  "sources": [
+    {
+      "name": "BBB Chicago & Northern Illinois",
+      "url": "https://www.bbb.org/search?find_country=USA&find_text=HVAC+Contractors&find_loc=Chicago%2C+IL&page=1",
+      "type": "structured_json_ld",
+      "reliability": "high",
+      "notes": "Extracted JSON-LD from BBB search results page. Contains business names, addresses, phones, BBB ratings, service areas."
+    }
+  ],
+  "blocked_sources": [
+    "Yelp (iframe bot protection)",
+    "HomeAdvisor (Cloudflare challenge)",
+    "YellowPages (Cloudflare block)",
+    "Google Maps (empty snapshot)",
+    "Google search scraping (no structured results)"
+  ],
+  "data_completeness": {
+    "ratings": "partial (BBB only, no Google/Yelp review counts)",
+    "phones": "complete for top candidates",
+    "addresses": "complete for most",
+    "service_areas": "complete for most"
+  }
+}
