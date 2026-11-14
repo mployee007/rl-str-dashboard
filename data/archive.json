@@ -1,8 +1,41 @@
 {
-  "generated_at": "2026-11-14T14:04:05.513620+00:00",
+  "generated_at": "2026-11-14T14:20:05.556125+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 108,
+  "session_count": 109,
   "sessions": [
+    {
+      "id": "2026-11-14/anthropic-cofounder-profiles",
+      "date": "2026-11-14",
+      "title": "anthropic-cofounder-profiles",
+      "summary": "",
+      "updated_at": "2026-11-14T14:16:38.089878",
+      "file_count": 4,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-14/anthropic-cofounder-profiles",
+      "status": "completed",
+      "standard_previews": {
+        "notes.md": "# Notes \u2014 Anthropic Co-Founder Profiles\n\n## User Context\n- Hermes Tompkins requested founder profiles from the CNBC article\n\n## Key Takeaways\n- Anthropic IPO: Nov 19, 2026, $70-78/share, ~$1.4T valuation\n- All seven were at OpenAI, left over safety concerns\n- Founder LLC structure gives 50.1% voting control with ~10% economic stake\n- Benjamin Mann often called co-founder but excluded from Founder LLC\n- 80% philanthropy pledge is non-binding \u2014 worth noting for follow-up analysis\n\n## Observations\n- Dario and Daniela are siblings \u2014 unusual dual-founder dynamic\n- Only Jack Clark came from non-STEM (journalism)\n- Only Chris Olah dropped out of college (Thiel Fellow)\n- Jared Kaplan still holds his Johns Hopkins faculty position\n- Tom Brown is the only one with prior startup/entrepreneurial experience\n- The group spans engineering, physics, neuroscience, policy, and journalism \u2014 unusually diverse for a tech founding team\n",
+        "run-log.md": "# Run Log \u2014 Anthropic Co-Founder Profiles\n\n## 2026-11-14\n\n### ~19:12 UTC \u2014 Session start\n- User shared CNBC article link\n- Attempted web_extract (failed: firecrawl not installed)\n- Switched to browser_navigate \u2192 content truncated\n- Used terminal + Python urllib to fetch and parse article HTML\n- Successfully extracted all seven founder profiles + governance section\n\n### ~19:15 UTC \u2014 Deliverable written\n- Wrote comprehensive cofounder-profiles.md\n- Created summary.md, notes.md, sources.json, run-log.md\n- Saved to outputs/2026-11-14/anthropic-cofounder-profiles/\n",
+        "sources.json": "{\n  \"sources\": [\n    {\n      \"url\": \"https://www.cnbc.com/2026/11/14/meet-the-seven-co-founders-of-anthropic.html\",\n      \"title\": \"Meet the seven co-founders of Anthropic\",\n      \"author\": \"Isabel O'Brien\",\n      \"publisher\": \"CNBC\",\n      \"date_published\": \"2026-11-14T12:00:01+0000\",\n      \"date_accessed\": \"2026-11-14\",\n      \"type\": \"news_article\",\n      \"notes\": \"Primary source for all co-founder profiles, IPO details, and governance structure\"\n    }\n  ]\n}\n"
+      },
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "cofounder-profiles.md",
+            "rel_path": "cofounder-profiles.md",
+            "size": 12366,
+            "updated_at": "2026-11-14T14:16:38.089878",
+            "previewable": true,
+            "public_href": "public/2026-11-14/anthropic-cofounder-profiles/cofounder-profiles.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-03/nvidia-jensen-legal",
       "date": "2026-11-03",
