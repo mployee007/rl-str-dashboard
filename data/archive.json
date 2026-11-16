@@ -1,44 +1,15 @@
 {
-  "generated_at": "2026-11-16T17:00:13.695534+00:00",
+  "generated_at": "2026-11-16T17:16:13.753844+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 112,
   "sessions": [
-    {
-      "id": "2026-11-16/twitter-daily",
-      "date": "2026-11-16",
-      "title": "twitter-daily",
-      "summary": "",
-      "updated_at": "2026-11-16T16:47:38.868497",
-      "file_count": 1,
-      "export_count": 0,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-11-16/twitter-daily",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [],
-        "csv": [],
-        "image": [],
-        "other": [
-          {
-            "name": "posts-2026-11-16.md",
-            "rel_path": "posts-2026-11-16.md",
-            "size": 1783,
-            "updated_at": "2026-11-16T16:47:38.868497",
-            "previewable": true,
-            "public_href": "public/2026-11-16/twitter-daily/posts-2026-11-16.md"
-          }
-        ]
-      }
-    },
     {
       "id": "2026-11-16/twitter-content-pipeline",
       "date": "2026-11-16",
       "title": "twitter-content-pipeline",
       "summary": "",
-      "updated_at": "2026-11-16T16:46:04.186517",
-      "file_count": 2,
+      "updated_at": "2026-11-16T17:00:58.421285",
+      "file_count": 3,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -65,6 +36,43 @@
             "updated_at": "2026-11-16T16:45:02.722529",
             "previewable": true,
             "public_href": "public/2026-11-16/twitter-content-pipeline/posts-batch-001.md"
+          },
+          {
+            "name": "topic-research-nov-2026.md",
+            "rel_path": "topic-research-nov-2026.md",
+            "size": 6997,
+            "updated_at": "2026-11-16T17:00:58.421285",
+            "previewable": true,
+            "public_href": "public/2026-11-16/twitter-content-pipeline/topic-research-nov-2026.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2026-11-16/twitter-daily",
+      "date": "2026-11-16",
+      "title": "twitter-daily",
+      "summary": "",
+      "updated_at": "2026-11-16T16:47:38.868497",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-16/twitter-daily",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "posts-2026-11-16.md",
+            "rel_path": "posts-2026-11-16.md",
+            "size": 1783,
+            "updated_at": "2026-11-16T16:47:38.868497",
+            "previewable": true,
+            "public_href": "public/2026-11-16/twitter-daily/posts-2026-11-16.md"
           }
         ]
       }
