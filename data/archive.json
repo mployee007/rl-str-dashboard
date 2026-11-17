@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-11-17T11:56:16.900668+00:00",
+  "generated_at": "2026-11-17T12:12:17.000475+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 112,
+  "session_count": 113,
   "sessions": [
+    {
+      "id": "2026-11-17/twitter-daily",
+      "date": "2026-11-17",
+      "title": "twitter-daily",
+      "summary": "",
+      "updated_at": "2026-11-17T12:00:29.077977",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-17/twitter-daily",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "posts-2026-11-17.md",
+            "rel_path": "posts-2026-11-17.md",
+            "size": 1689,
+            "updated_at": "2026-11-17T12:00:29.077977",
+            "previewable": true,
+            "public_href": "public/2026-11-17/twitter-daily/posts-2026-11-17.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-16/twitter-content-pipeline",
       "date": "2026-11-16",
