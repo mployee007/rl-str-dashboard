@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-11-19T22:20:30.082662+00:00",
+  "generated_at": "2026-11-19T22:36:28.892988+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 115,
+  "session_count": 116,
   "sessions": [
+    {
+      "id": "2026-11-19/distressed-commercial-search",
+      "date": "2026-11-19",
+      "title": "distressed-commercial-search",
+      "summary": "",
+      "updated_at": "2026-11-19T22:24:37.054163",
+      "file_count": 1,
+      "export_count": 1,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-19/distressed-commercial-search",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [
+          {
+            "name": "distressed-commercial-midwest-report.md",
+            "rel_path": "artifacts/exports/distressed-commercial-midwest-report.md",
+            "size": 20129,
+            "updated_at": "2026-11-19T22:24:37.054163",
+            "previewable": true,
+            "public_href": "public/2026-11-19/distressed-commercial-search/artifacts/exports/distressed-commercial-midwest-report.md"
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-11-19/twitter-daily",
       "date": "2026-11-19",
