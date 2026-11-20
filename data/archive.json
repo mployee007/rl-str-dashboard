@@ -1,8 +1,45 @@
 {
-  "generated_at": "2026-11-20T05:16:30.180261+00:00",
+  "generated_at": "2026-11-20T05:32:30.317127+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 117,
+  "session_count": 118,
   "sessions": [
+    {
+      "id": "2026-11-20/rockford-325-7th-st",
+      "date": "2026-11-20",
+      "title": "rockford-325-7th-st",
+      "summary": "",
+      "updated_at": "2026-11-20T05:20:38.033644",
+      "file_count": 2,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-20/rockford-325-7th-st",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "financial_model.py",
+            "rel_path": "financial_model.py",
+            "size": 36619,
+            "updated_at": "2026-11-20T05:20:38.033644",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "model_results.json",
+            "rel_path": "model_results.json",
+            "size": 10510,
+            "updated_at": "2026-11-20T05:19:44.793701",
+            "previewable": true,
+            "public_href": "public/2026-11-20/rockford-325-7th-st/model_results.json"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-20/milwaukee-830-w-center",
       "date": "2026-11-20",
