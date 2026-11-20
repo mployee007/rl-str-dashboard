@@ -1,8 +1,45 @@
 {
-  "generated_at": "2026-11-20T05:32:30.317127+00:00",
+  "generated_at": "2026-11-20T05:48:30.350068+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 118,
   "sessions": [
+    {
+      "id": "2026-11-19/distressed-commercial-search",
+      "date": "2026-11-19",
+      "title": "distressed-commercial-search",
+      "summary": "",
+      "updated_at": "2026-11-20T05:38:47.655896",
+      "file_count": 2,
+      "export_count": 2,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-19/distressed-commercial-search",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [
+          {
+            "name": "distressed-commercial-midwest-report.md",
+            "rel_path": "artifacts/exports/distressed-commercial-midwest-report.md",
+            "size": 20129,
+            "updated_at": "2026-11-19T22:24:37.054163",
+            "previewable": true,
+            "public_href": "public/2026-11-19/distressed-commercial-search/artifacts/exports/distressed-commercial-midwest-report.md"
+          },
+          {
+            "name": "financial-models-and-cclba-report.md",
+            "rel_path": "artifacts/exports/financial-models-and-cclba-report.md",
+            "size": 13115,
+            "updated_at": "2026-11-20T05:38:47.655896",
+            "previewable": true,
+            "public_href": "public/2026-11-19/distressed-commercial-search/artifacts/exports/financial-models-and-cclba-report.md"
+          }
+        ],
+        "csv": [],
+        "image": [],
+        "other": []
+      }
+    },
     {
       "id": "2026-11-20/rockford-325-7th-st",
       "date": "2026-11-20",
@@ -83,35 +120,6 @@
             "public_href": "public/2026-11-20/milwaukee-830-w-center/model_results.json"
           }
         ]
-      }
-    },
-    {
-      "id": "2026-11-19/distressed-commercial-search",
-      "date": "2026-11-19",
-      "title": "distressed-commercial-search",
-      "summary": "",
-      "updated_at": "2026-11-19T22:24:37.054163",
-      "file_count": 1,
-      "export_count": 1,
-      "csv_count": 0,
-      "image_count": 0,
-      "path": "/opt/data/outputs/2026-11-19/distressed-commercial-search",
-      "status": "completed",
-      "standard_previews": {},
-      "files": {
-        "export": [
-          {
-            "name": "distressed-commercial-midwest-report.md",
-            "rel_path": "artifacts/exports/distressed-commercial-midwest-report.md",
-            "size": 20129,
-            "updated_at": "2026-11-19T22:24:37.054163",
-            "previewable": true,
-            "public_href": "public/2026-11-19/distressed-commercial-search/artifacts/exports/distressed-commercial-midwest-report.md"
-          }
-        ],
-        "csv": [],
-        "image": [],
-        "other": []
       }
     },
     {
