@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T05:00:30.272081+00:00",
+  "generated_at": "2026-11-20T05:16:30.180261+00:00",
   "source_root": "/opt/data/outputs",
   "session_count": 117,
   "sessions": [
@@ -8,8 +8,8 @@
       "date": "2026-11-20",
       "title": "milwaukee-830-w-center",
       "summary": "",
-      "updated_at": "2026-11-20T05:00:19.314371",
-      "file_count": 0,
+      "updated_at": "2026-11-20T05:10:08.702703",
+      "file_count": 3,
       "export_count": 0,
       "csv_count": 0,
       "image_count": 0,
@@ -20,7 +20,32 @@
         "export": [],
         "csv": [],
         "image": [],
-        "other": []
+        "other": [
+          {
+            "name": "REPORT.md",
+            "rel_path": "REPORT.md",
+            "size": 6541,
+            "updated_at": "2026-11-20T05:10:08.702703",
+            "previewable": true,
+            "public_href": "public/2026-11-20/milwaukee-830-w-center/REPORT.md"
+          },
+          {
+            "name": "financial_model.py",
+            "rel_path": "financial_model.py",
+            "size": 12611,
+            "updated_at": "2026-11-20T05:08:45.161685",
+            "previewable": false,
+            "public_href": null
+          },
+          {
+            "name": "model_results.json",
+            "rel_path": "model_results.json",
+            "size": 2057,
+            "updated_at": "2026-11-20T05:08:51.156687",
+            "previewable": true,
+            "public_href": "public/2026-11-20/milwaukee-830-w-center/model_results.json"
+          }
+        ]
       }
     },
     {
