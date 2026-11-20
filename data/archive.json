@@ -1,8 +1,37 @@
 {
-  "generated_at": "2026-11-20T11:56:31.560678+00:00",
+  "generated_at": "2026-11-20T12:12:31.619489+00:00",
   "source_root": "/opt/data/outputs",
-  "session_count": 118,
+  "session_count": 119,
   "sessions": [
+    {
+      "id": "2026-11-20/twitter-daily",
+      "date": "2026-11-20",
+      "title": "twitter-daily",
+      "summary": "",
+      "updated_at": "2026-11-20T12:00:50.468642",
+      "file_count": 1,
+      "export_count": 0,
+      "csv_count": 0,
+      "image_count": 0,
+      "path": "/opt/data/outputs/2026-11-20/twitter-daily",
+      "status": "completed",
+      "standard_previews": {},
+      "files": {
+        "export": [],
+        "csv": [],
+        "image": [],
+        "other": [
+          {
+            "name": "posts-2026-11-20.md",
+            "rel_path": "posts-2026-11-20.md",
+            "size": 1785,
+            "updated_at": "2026-11-20T12:00:50.468642",
+            "previewable": true,
+            "public_href": "public/2026-11-20/twitter-daily/posts-2026-11-20.md"
+          }
+        ]
+      }
+    },
     {
       "id": "2026-11-19/distressed-commercial-search",
       "date": "2026-11-19",
